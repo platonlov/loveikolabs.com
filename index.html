@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Loveiko Labs — Indie App Studio</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2308080a'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='400' fill='%23c9a96e' text-anchor='middle'>L</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -248,7 +249,7 @@
   /* APPS */
   .apps-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1px;
     background: var(--border);
     border: 1px solid var(--border);
@@ -602,7 +603,7 @@
     </p>
     <div class="hero-stats">
       <div>
-        <span class="stat-num">3</span>
+        <span class="stat-num">2</span>
         <span class="stat-label">Active apps</span>
       </div>
       <div>
@@ -625,13 +626,13 @@
 <!-- APPS -->
 <section id="apps">
   <p class="section-label reveal">Our Products</p>
-  <h2 class="section-title reveal">Three apps.<br>One mission.</h2>
+  <h2 class="section-title reveal">Two apps.<br>One mission.</h2>
 
   <div class="apps-grid reveal">
 
     <div class="app-card app-card--jewel">
       <div class="app-icon">💎</div>
-      <p class="app-num">01 / 03</p>
+      <p class="app-num">01 / 02</p>
       <h3 class="app-name">JewelSnap</h3>
       <p class="app-desc">
         Point your camera at any piece of jewelry and get instant AI identification,
@@ -652,7 +653,7 @@
 
     <div class="app-card app-card--snap">
       <div class="app-icon">📦</div>
-      <p class="app-num">02 / 03</p>
+      <p class="app-num">02 / 02</p>
       <h3 class="app-name">SnapFlip</h3>
       <p class="app-desc">
         The smart reseller's companion. Snap any item, instantly see eBay prices,
@@ -665,27 +666,6 @@
       </div>
       <a href="#" class="app-link">
         Coming Soon
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-        </svg>
-      </a>
-    </div>
-
-    <div class="app-card app-card--hire">
-      <div class="app-icon">🎯</div>
-      <p class="app-num">03 / 03</p>
-      <h3 class="app-name">HireFlow</h3>
-      <p class="app-desc">
-        Hiring automation SaaS built for the Russian market. AI voice trainer for cold callers,
-        candidate scoring pipeline, and ready-made position packages. Scale your team, fast.
-      </p>
-      <div class="app-tags">
-        <span class="tag">SaaS</span>
-        <span class="tag">AI HR</span>
-        <span class="tag">Web</span>
-      </div>
-      <a href="#" class="app-link">
-        In Development
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
         </svg>
@@ -764,12 +744,12 @@
         Have an <em>idea?</em><br>
         Let's talk.
       </h2>
-      <a href="mailto:loveykovl@gmail.com" class="contact-email">
+      <a href="/cdn-cgi/l/email-protection#1874776e7d6173776e74587f75797174367b7775" class="contact-email">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <rect x="1" y="3" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
           <path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
         </svg>
-        loveykovl@gmail.com
+        <span class="__cf_email__" data-cfemail="cba7a4bdaeb2a0a4bda78baca6aaa2a7e5a8a4a6">[email&#160;protected]</span>
       </a>
     </div>
 
@@ -801,11 +781,11 @@
   <ul class="footer-links">
     <li><a href="#apps">Apps</a></li>
     <li><a href="#about">Studio</a></li>
-    <li><a href="mailto:loveykovl@gmail.com">Email</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#0e6261786b77656178624e69636f6762206d6163">Email</a></li>
   </ul>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Custom cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
@@ -850,14 +830,4 @@
   // Scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  revealEls.forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
+    entries.forEa
