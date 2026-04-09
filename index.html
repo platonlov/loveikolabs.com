@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loveiko Labs — Indie App Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #08080a;
+    --surface: #0f0f12;
+    --border: rgba(255,255,255,0.07);
+    --text: #e8e4dc;
+    --muted: #6b6860;
+    --gold: #c9a96e;
+    --gold-dim: rgba(201,169,110,0.15);
+    --gold-glow: rgba(201,169,110,0.06);
+    --accent: #d4b896;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* Custom cursor */
+  .cursor {
+    position: fixed;
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
+    mix-blend-mode: difference;
+  }
+  .cursor-ring {
+    position: fixed;
+    width: 32px; height: 32px;
+    border: 1px solid rgba(201,169,110,0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, opacity 0.2s ease;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 150px;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 500;
+    padding: 24px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  nav.scrolled {
+    background: rgba(8,8,10,0.85);
+    backdrop-filter: blur(16px);
+    border-color: var(--border);
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 48px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 60% at 75% 30%, rgba(201,169,110,0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 70%, rgba(201,169,110,0.04) 0%, transparent 60%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+  }
+
+  .hero-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(64px, 10vw, 140px);
+    font-weight: 300;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.4s forwards;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.6s forwards;
+  }
+  .hero-desc {
+    max-width: 340px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    text-align: right;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--text);
+    display: block;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+    display: block;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.2s forwards;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  /* SECTION BASE */
+  section {
+    padding: 120px 48px;
+    position: relative;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 64px;
+  }
+
+  /* APPS */
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .app-card {
+    background: var(--bg);
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+  }
+  .app-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold-glow);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .app-card:hover { background: var(--surface); }
+  .app-card:hover::before { opacity: 1; }
+
+  .app-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .app-num {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .app-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .app-desc {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .app-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tag {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 2px;
+  }
+
+  .app-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: gap 0.2s;
+  }
+  .app-link:hover { gap: 12px; }
+  .app-link svg { transition: transform 0.2s; }
+  .app-link:hover svg { transform: translateX(4px); }
+
+  /* App color themes */
+  .app-card--jewel .app-icon { background: rgba(212, 175, 55, 0.12); color: #d4af37; }
+  .app-card--snap .app-icon { background: rgba(94, 168, 120, 0.12); color: #5ea878; }
+  .app-card--hire .app-icon { background: rgba(100, 140, 210, 0.12); color: #648cd2; }
+
+  /* ABOUT */
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-text {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .about-text p + p { margin-top: 24px; }
+
+  .about-text strong {
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  .values-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .value-item {
+    background: var(--bg);
+    padding: 28px 32px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    transition: background 0.2s;
+  }
+  .value-item:hover { background: var(--surface); }
+
+  .value-num {
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    padding-top: 2px;
+    min-width: 24px;
+  }
+
+  .value-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  .value-desc {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0 48px;
+  }
+
+  /* CONTACT */
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .contact-cta {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 60px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+  .contact-cta em { font-style: italic; color: var(--gold); }
+
+  .contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--text);
+    text-decoration: none;
+    padding: 18px 32px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .contact-email:hover {
+    border-color: var(--gold);
+    background: var(--gold-dim);
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .contact-detail-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .contact-detail-val {
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 32px 48px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .footer-logo span { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+  .footer-links a {
+    font-size: 11px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.3); }
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 20px 24px; }
+    .nav-links { display: none; }
+    section, .hero { padding-left: 24px; padding-right: 24px; }
+    .divider { margin: 0 24px; }
+    footer { padding: 24px; flex-direction: column; gap: 16px; text-align: center; }
+    .apps-grid { grid-template-columns: 1fr; }
+    .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hero-bottom { flex-direction: column; align-items: flex-start; gap: 32px; }
+    .hero-stats { text-align: left; }
+    body { cursor: auto; }
+    .cursor, .cursor-ring { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Loveiko<span>.</span>Labs</a>
+  <ul class="nav-links">
+    <li><a href="#apps">Apps</a></li>
+    <li><a href="#about">Studio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <p class="hero-label">Indie App Studio · Est. 2024</p>
+
+  <h1 class="hero-title">
+    We build<br>
+    <em>apps that</em><br>
+    people love.
+  </h1>
+
+  <div class="hero-bottom">
+    <p class="hero-desc">
+      A small, focused studio shipping AI-powered iOS apps to the App Store.
+      Precision tools for real people — built lean, shipped fast, refined always.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">3</span>
+        <span class="stat-label">Active apps</span>
+      </div>
+      <div>
+        <span class="stat-num">20+</span>
+        <span class="stat-label">Markets</span>
+      </div>
+      <div>
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Ambition</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- APPS -->
+<section id="apps">
+  <p class="section-label reveal">Our Products</p>
+  <h2 class="section-title reveal">Three apps.<br>One mission.</h2>
+
+  <div class="apps-grid reveal">
+
+    <div class="app-card app-card--jewel">
+      <div class="app-icon">💎</div>
+      <p class="app-num">01 / 03</p>
+      <h3 class="app-name">JewelSnap</h3>
+      <p class="app-desc">
+        Point your camera at any piece of jewelry and get instant AI identification,
+        valuation, and market insights. From diamonds to vintage gold — know what you're holding.
+      </p>
+      <div class="app-tags">
+        <span class="tag">AI Vision</span>
+        <span class="tag">iOS</span>
+        <span class="tag">Jewelry</span>
+      </div>
+      <a href="https://apps.apple.com/app/id6738584793" class="app-link" target="_blank">
+        App Store
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="app-card app-card--snap">
+      <div class="app-icon">📦</div>
+      <p class="app-num">02 / 03</p>
+      <h3 class="app-name">SnapFlip</h3>
+      <p class="app-desc">
+        The smart reseller's companion. Snap any item, instantly see eBay prices,
+        profit margins, and demand signals. Turn garage sale finds into real money.
+      </p>
+      <div class="app-tags">
+        <span class="tag">Resale</span>
+        <span class="tag">eBay API</span>
+        <span class="tag">iOS</span>
+      </div>
+      <a href="#" class="app-link">
+        Coming Soon
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="app-card app-card--hire">
+      <div class="app-icon">🎯</div>
+      <p class="app-num">03 / 03</p>
+      <h3 class="app-name">HireFlow</h3>
+      <p class="app-desc">
+        Hiring automation SaaS built for the Russian market. AI voice trainer for cold callers,
+        candidate scoring pipeline, and ready-made position packages. Scale your team, fast.
+      </p>
+      <div class="app-tags">
+        <span class="tag">SaaS</span>
+        <span class="tag">AI HR</span>
+        <span class="tag">Web</span>
+      </div>
+      <a href="#" class="app-link">
+        In Development
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label reveal">About the Studio</p>
+  <h2 class="section-title reveal">Built by builders,<br>for real users.</h2>
+
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <p>
+        <strong>Loveiko Labs</strong> is a lean indie studio based in Thailand,
+        building focused AI-powered tools for the App Store and beyond.
+        We don't chase trends — we solve specific problems with precision software.
+      </p>
+      <p>
+        Every app we ship starts with a clear user pain and ends with something that actually works.
+        We use <strong>AI throughout our stack</strong> — from ideation to implementation —
+        letting a small team punch way above its weight.
+      </p>
+      <p>
+        Our apps reach <strong>20+ markets globally</strong> with full localization,
+        and we operate with the speed and conviction of founders who care about craft.
+      </p>
+    </div>
+
+    <ul class="values-list reveal">
+      <li class="value-item">
+        <span class="value-num">01</span>
+        <div>
+          <p class="value-title">Ship fast. Iterate faster.</p>
+          <p class="value-desc">We launch MVPs, watch real users, and improve relentlessly. No feature bloat, no perfection paralysis.</p>
+        </div>
+      </li>
+      <li class="value-item">
+        <span class="value-num">02</span>
+        <div>
+          <p class="value-title">AI-native by default.</p>
+          <p class="value-desc">Every product we build leverages AI where it matters — not as a gimmick, but as a genuine accelerator.</p>
+        </div>
+      </li>
+      <li class="value-item">
+        <span class="value-num">03</span>
+        <div>
+          <p class="value-title">Global from day one.</p>
+          <p class="value-desc">Full App Store localization across 20+ languages. We build for the world, not just one market.</p>
+        </div>
+      </li>
+      <li class="value-item">
+        <span class="value-num">04</span>
+        <div>
+          <p class="value-title">Ruthless focus.</p>
+          <p class="value-desc">Small team, high standards. We'd rather do three things exceptionally well than ten things poorly.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="reveal">
+      <p class="section-label">Get in touch</p>
+      <h2 class="contact-cta">
+        Have an <em>idea?</em><br>
+        Let's talk.
+      </h2>
+      <a href="mailto:loveykovl@gmail.com" class="contact-email">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <rect x="1" y="3" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M1 5l7 5 7-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        loveykovl@gmail.com
+      </a>
+    </div>
+
+    <div class="contact-details reveal">
+      <div class="contact-detail">
+        <span class="contact-detail-label">Location</span>
+        <span class="contact-detail-val">Pattaya, Thailand</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Studio</span>
+        <span class="contact-detail-val">Loveiko Labs</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Platform</span>
+        <span class="contact-detail-val">iOS / App Store</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Response time</span>
+        <span class="contact-detail-val">Usually within 24h</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Loveiko<span>.</span>Labs</div>
+  <p class="footer-copy">© 2025 Loveiko Labs. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="#apps">Apps</a></li>
+    <li><a href="#about">Studio</a></li>
+    <li><a href="mailto:loveykovl@gmail.com">Email</a></li>
+  </ul>
+</footer>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top = mouseY + 'px';
+  });
+
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    ring.style.left = ringX + 'px';
+    ring.style.top = ringY + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.width = '4px';
+      cursor.style.height = '4px';
+      ring.style.width = '48px';
+      ring.style.height = '48px';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.width = '8px';
+      cursor.style.height = '8px';
+      ring.style.width = '32px';
+      ring.style.height = '32px';
+    });
+  });
+
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
