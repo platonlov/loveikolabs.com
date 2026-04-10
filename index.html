@@ -6,8 +6,10 @@
 <meta name="description" content="Loveiko Labs — a focused app studio shipping powerful iOS apps to the App Store across 20+ global markets.">
 <meta name="theme-color" content="#08080a">
 <title>Loveiko Labs — App Studio</title>
-<link rel="icon" type="image/png" href="icons/logo.png">
-<link rel="apple-touch-icon" href="icons/logo.png">
+<link rel="icon" type="image/x-icon" href="icons/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/favicons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -34,8 +36,8 @@
     background: var(--bg);
     color: var(--text);
     font-family: 'Syne', sans-serif;
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.7;
     overflow-x: hidden;
   }
 
@@ -74,7 +76,7 @@
 
   /* NAV */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 600;
     padding: 20px 48px; display: flex; align-items: center; justify-content: space-between;
     border-bottom: 1px solid transparent; transition: border-color 0.3s, background 0.3s;
   }
@@ -90,13 +92,13 @@
   }
   .nav-logo-mark svg { width: 100%; height: 100%; }
   .nav-logo-text {
-    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 14px;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 15px;
     letter-spacing: 0.14em; text-transform: uppercase; color: var(--text);
   }
-  .nav-logo-text span { color: var(--green); }
+  .nav-logo-text span { color: var(--green); text-shadow: var(--neon-text); }
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a {
-    color: var(--muted); text-decoration: none; font-size: 11px;
+    color: var(--muted); text-decoration: none; font-size: 12px;
     letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--green); }
@@ -115,7 +117,7 @@
   .burger.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
   .mobile-menu {
-    position: fixed; inset: 0; z-index: 550;
+    position: fixed; inset: 0; z-index: 590;
     background: rgba(8,8,10,0.97); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px;
     opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
@@ -168,7 +170,7 @@
   }
 
   .hero-label {
-    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase;
     color: var(--green); margin-bottom: 36px;
     opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards;
     position: relative; z-index: 1;
@@ -186,7 +188,7 @@
     text-shadow: var(--neon-text);
   }
   .hero-desc {
-    max-width: 480px; color: var(--muted); font-size: 13px; line-height: 1.8;
+    max-width: 520px; color: var(--muted); font-size: 16px; line-height: 1.8;
     margin-bottom: 56px; opacity: 0; animation: fadeUp 0.9s ease 0.55s forwards;
     position: relative; z-index: 1;
   }
@@ -197,17 +199,17 @@
   }
   .hero-stat { text-align: center; }
   .stat-num {
-    font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300;
+    font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300;
     color: var(--text); display: block; line-height: 1;
   }
   .stat-label {
-    font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--muted); margin-top: 6px; display: block;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); margin-top: 8px; display: block;
   }
   .scroll-hint {
     position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
     display: flex; flex-direction: column; align-items: center; gap: 8px;
-    color: var(--muted); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
     opacity: 0; animation: fadeIn 1s ease 1.2s forwards; z-index: 1;
   }
   .scroll-line {
@@ -220,8 +222,8 @@
   /* SECTIONS */
   section { padding: 100px 48px; position: relative; }
   .section-label {
-    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
-    color: var(--green); margin-bottom: 16px;
+    font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 20px;
     text-shadow: var(--neon-text);
   }
   .section-title {
@@ -257,13 +259,14 @@
   }
 
   .app-card {
-    background: var(--bg); padding: 40px 36px;
+    background: var(--bg); padding: 44px 40px;
     position: relative; overflow: hidden; transition: background 0.3s, box-shadow 0.4s;
     display: flex; flex-direction: column;
-    width: 340px; flex-shrink: 0;
+    width: 360px; flex-shrink: 0;
   }
   .app-card::before {
     content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 0.4s;
+    pointer-events: none;
   }
   .app-card:hover { background: var(--surface); }
   .app-card:hover::before { opacity: 1; }
@@ -277,7 +280,7 @@
     display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px;
   }
   .app-icon {
-    width: 64px; height: 64px; border-radius: 16px;
+    width: 72px; height: 72px; border-radius: 18px;
     overflow: hidden; flex-shrink: 0; position: relative; background: var(--surface);
     transition: box-shadow 0.3s;
   }
@@ -295,8 +298,8 @@
   .app-icon.img-loaded .app-icon-fallback { opacity: 0; }
 
   .app-badge {
-    font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
-    padding: 4px 9px; border-radius: 2px; font-family: 'Syne', sans-serif; font-weight: 600;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 2px; font-family: 'Syne', sans-serif; font-weight: 600;
   }
   .badge-live {
     background: rgba(106,197,112,0.12); color: var(--green);
@@ -304,26 +307,26 @@
     box-shadow: 0 0 10px rgba(106,197,112,0.08);
   }
 
-  .app-num { font-size: 10px; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 8px; }
+  .app-num { font-size: 11px; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 8px; }
   .app-name {
-    font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400;
-    letter-spacing: 0.01em; margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 400;
+    letter-spacing: 0.01em; margin-bottom: 12px;
   }
-  .app-desc { color: var(--muted); font-size: 12px; line-height: 1.8; flex: 1; }
+  .app-desc { color: var(--muted); font-size: 14px; line-height: 1.8; flex: 1; }
   .app-footer {
     display: flex; align-items: center; justify-content: space-between;
     margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border);
   }
   .app-tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .tag {
-    font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
-    padding: 3px 7px; border: 1px solid var(--border); color: var(--muted); border-radius: 2px;
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 8px; border: 1px solid var(--border); color: var(--muted); border-radius: 2px;
     transition: border-color 0.2s;
   }
   .app-card:hover .tag { border-color: rgba(255,255,255,0.12); }
   .app-link {
     display: inline-flex; align-items: center; gap: 6px;
-    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--green); text-decoration: none; white-space: nowrap;
     transition: gap 0.2s, text-shadow 0.3s; flex-shrink: 0; margin-left: 12px;
   }
@@ -337,7 +340,7 @@
 
   /* ABOUT */
   .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .about-text { color: var(--muted); font-size: 13px; line-height: 2; }
+  .about-text { color: var(--muted); font-size: 15px; line-height: 2; }
   .about-text p + p { margin-top: 20px; }
   .about-text strong { color: var(--text); font-weight: 600; }
   .values-list {
@@ -345,13 +348,13 @@
     gap: 1px; background: var(--border); border: 1px solid var(--border);
   }
   .value-item {
-    background: var(--bg); padding: 22px 26px;
+    background: var(--bg); padding: 26px 30px;
     display: flex; gap: 20px; align-items: flex-start; transition: background 0.2s;
   }
   .value-item:hover { background: var(--surface); }
-  .value-num { font-size: 10px; color: var(--green); letter-spacing: 0.1em; padding-top: 2px; min-width: 24px; text-shadow: var(--neon-text); }
-  .value-title { font-size: 13px; font-weight: 700; margin-bottom: 4px; letter-spacing: 0.03em; }
-  .value-desc { color: var(--muted); font-size: 11px; line-height: 1.7; }
+  .value-num { font-size: 12px; color: var(--green); letter-spacing: 0.1em; padding-top: 2px; min-width: 24px; text-shadow: var(--neon-text); }
+  .value-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.03em; }
+  .value-desc { color: var(--muted); font-size: 13px; line-height: 1.8; }
 
   /* NEON DIVIDER */
   .divider {
@@ -373,7 +376,7 @@
   .contact-cta em { font-style: italic; color: var(--green); text-shadow: var(--neon-text); }
   .contact-email {
     display: inline-flex; align-items: center; gap: 12px;
-    font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
+    font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 600;
     letter-spacing: 0.06em; color: var(--text); text-decoration: none;
     padding: 16px 24px; border: 1px solid var(--border); background: var(--surface);
     transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
@@ -387,18 +390,18 @@
     display: flex; flex-direction: column; gap: 4px;
     padding: 20px 0; border-bottom: 1px solid var(--border);
   }
-  .contact-detail-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
-  .contact-detail-val { font-size: 13px; color: var(--text); }
+  .contact-detail-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .contact-detail-val { font-size: 15px; color: var(--text); }
 
   footer {
     padding: 28px 48px; border-top: 1px solid var(--border);
     display: flex; align-items: center; justify-content: space-between;
   }
-  .footer-logo { font-weight: 800; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; }
-  .footer-logo span { color: var(--green); }
-  .footer-copy { font-size: 11px; color: var(--muted); }
+  .footer-logo { font-weight: 800; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .footer-logo span { color: var(--green); text-shadow: var(--neon-text); }
+  .footer-copy { font-size: 13px; color: var(--muted); }
   .footer-links { display: flex; gap: 24px; list-style: none; }
-  .footer-links a { font-size: 11px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
   .footer-links a:hover { color: var(--green); }
 
   /* ANIMATIONS */
@@ -424,14 +427,18 @@
     nav { padding: 16px 20px; }
     .nav-links { display: none; }
     .burger { display: flex; }
-    section { padding: 72px 20px; }
+    section { padding: 72px 20px; text-align: center; }
     .hero { padding: 100px 24px 64px; min-height: 100svh; }
     .hero-stats { gap: 36px; }
     .divider { margin: 0 20px; }
     footer { padding: 20px; flex-direction: column; gap: 14px; text-align: center; }
     .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .about-text { text-align: center; }
+    .contact-cta { text-align: center; }
+    .contact-email { margin: 0 auto; }
+    .contact-details { align-items: center; text-align: center; }
     .apps-scroll-wrapper { padding: 0 20px 36px; }
-    .app-card { width: 290px; padding: 32px 28px; }
+    .app-card { width: 310px; padding: 36px 30px; }
   }
 </style>
 </head>
@@ -445,7 +452,7 @@
     <div class="nav-logo-mark">
       <img src="icons/logo.png" alt="Loveiko Labs" width="32" height="32" style="border-radius:6px;">
     </div>
-    <span class="nav-logo-text">Loveiko<span>.</span>Labs</span>
+    <span class="nav-logo-text">Loveiko <span>Labs</span></span>
   </a>
   <ul class="nav-links">
     <li><a href="#apps">Apps</a></li>
@@ -499,8 +506,7 @@
 
 <section id="apps">
   <div class="apps-header reveal">
-    <p class="section-label">Our Apps &middot; Our Mission</p>
-    <h2 class="section-title section-title-center">Four apps.<br>One mission.</h2>
+    <p class="section-label" style="color: var(--text); text-shadow: none; font-size: 18px; letter-spacing: 0.22em;">Our Apps &middot; Our Mission</p>
   </div>
 
   <div class="apps-scroll-wrapper">
@@ -683,7 +689,7 @@
 </section>
 
 <footer>
-  <div class="footer-logo">Loveiko<span>.</span>Labs</div>
+  <div class="footer-logo">Loveiko <span>Labs</span></div>
   <p class="footer-copy">&copy; 2026 Loveiko Labs. All rights reserved.</p>
   <ul class="footer-links">
     <li><a href="#apps">Apps</a></li>
