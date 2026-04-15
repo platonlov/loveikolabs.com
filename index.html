@@ -27,7 +27,7 @@
     --green-glow: rgba(106,197,112,0.05);
     --neon: 0 0 20px rgba(106,197,112,0.15), 0 0 40px rgba(106,197,112,0.05);
     --neon-strong: 0 0 10px rgba(106,197,112,0.3), 0 0 30px rgba(106,197,112,0.1), 0 0 60px rgba(106,197,112,0.05);
-    --neon-text: 0 0 20px rgba(106,197,112,0.25);
+    --neon-text: 0 0 6px rgba(106,197,112,0.55), 0 0 18px rgba(106,197,112,0.3), 0 0 36px rgba(106,197,112,0.12);
   }
 
   html { scroll-behavior: smooth; }
@@ -101,7 +101,7 @@
     color: var(--muted); text-decoration: none; font-size: 12px;
     letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--green); }
+  .nav-links a:hover { color: var(--green); text-shadow: var(--neon-text); }
 
   /* BURGER MENU */
   .burger {
@@ -199,8 +199,10 @@
   }
   .hero-stat { text-align: center; }
   .stat-num {
-    font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300;
+    font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400;
     color: var(--text); display: block; line-height: 1;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: 'lnum' 1, 'tnum' 1;
   }
   .stat-label {
     font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
@@ -273,6 +275,8 @@
   .app-card:hover { box-shadow: inset 0 1px 0 rgba(106,197,112,0.1); }
   .app-card--jewel::before  { background: rgba(212,175,55,0.03); }
   .app-card--snap::before   { background: rgba(106,197,112,0.03); }
+  .app-card--watch::before  { background: rgba(140,160,190,0.03); }
+  .app-card--stack::before  { background: rgba(90,180,175,0.03); }
   .app-card--color::before  { background: rgba(220,80,80,0.03); }
   .app-card--roof::before   { background: rgba(210,100,80,0.03); }
 
@@ -303,8 +307,9 @@
   }
   .badge-live {
     background: rgba(106,197,112,0.12); color: var(--green);
-    border: 1px solid rgba(106,197,112,0.3);
-    box-shadow: 0 0 10px rgba(106,197,112,0.08);
+    border: 1px solid rgba(106,197,112,0.35);
+    text-shadow: var(--neon-text);
+    box-shadow: 0 0 14px rgba(106,197,112,0.18), inset 0 0 10px rgba(106,197,112,0.05);
   }
 
   .app-num { font-size: 11px; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 8px; }
@@ -314,8 +319,9 @@
   }
   .app-desc { color: var(--muted); font-size: 14px; line-height: 1.8; flex: 1; }
   .app-footer {
-    display: flex; align-items: center; justify-content: space-between;
+    display: flex; align-items: flex-end; justify-content: space-between;
     margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--border);
+    min-height: 76px; /* fits 2-row tags so App Store link lands on same line */
   }
   .app-tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .tag {
@@ -328,13 +334,20 @@
     display: inline-flex; align-items: center; gap: 6px;
     font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--green); text-decoration: none; white-space: nowrap;
-    transition: gap 0.2s, text-shadow 0.3s; flex-shrink: 0; margin-left: 12px;
+    text-shadow: var(--neon-text);
+    transition: gap 0.2s, text-shadow 0.3s, background 0.25s;
+    flex-shrink: 0;
+    padding: 10px 12px;
+    margin: -10px -12px -10px 0; /* bigger click target without shifting layout */
+    border-radius: 2px;
   }
-  .app-link:hover { gap: 10px; text-shadow: var(--neon-text); }
+  .app-link:hover { gap: 10px; background: rgba(106,197,112,0.08); }
 
   /* Fallback icon colours */
   .app-card--jewel .app-icon-fallback { background: rgba(212,175,55,0.1); color: #d4af37; }
   .app-card--snap  .app-icon-fallback { background: rgba(106,197,112,0.1); color: var(--green); }
+  .app-card--watch .app-icon-fallback { background: rgba(140,160,190,0.1); color: #aebad0; }
+  .app-card--stack .app-icon-fallback { background: rgba(90,180,175,0.1); color: #5ab4af; }
   .app-card--color .app-icon-fallback { background: rgba(220,80,80,0.1); color: #e05555; }
   .app-card--roof  .app-icon-fallback { background: rgba(210,100,80,0.1); color: #d26450; }
 
@@ -343,6 +356,7 @@
   .about-text { color: var(--muted); font-size: 15px; line-height: 2; }
   .about-text p + p { margin-top: 20px; }
   .about-text strong { color: var(--text); font-weight: 600; }
+  .about-text strong .accent { color: var(--green); text-shadow: var(--neon-text); }
   .values-list {
     list-style: none; display: flex; flex-direction: column;
     gap: 1px; background: var(--border); border: 1px solid var(--border);
@@ -402,7 +416,7 @@
   .footer-copy { font-size: 13px; color: var(--muted); }
   .footer-links { display: flex; gap: 24px; list-style: none; }
   .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--green); }
+  .footer-links a:hover { color: var(--green); text-shadow: var(--neon-text); }
 
   /* ANIMATIONS */
   @keyframes fadeUp {
@@ -486,7 +500,7 @@
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="stat-num">4</span>
+      <span class="stat-num">6</span>
       <span class="stat-label">Active apps</span>
     </div>
     <div class="hero-stat">
@@ -520,16 +534,16 @@
           </div>
           <span class="app-badge badge-live">Live</span>
         </div>
-        <p class="app-num">01 / 04</p>
+        <p class="app-num">01 / 06</p>
         <h3 class="app-name">JewelSnap</h3>
-        <p class="app-desc">Point your camera at any piece of jewelry and get instant identification, valuation, and market insights. From diamonds to vintage gold.</p>
+        <p class="app-desc">Point your camera at any piece of jewelry — instant AI identification, authentication, and market valuation. From grandma's heirlooms to thrift-store finds.</p>
         <div class="app-footer">
           <div class="app-tags">
             <span class="tag">AI Vision</span>
-            <span class="tag">iOS</span>
             <span class="tag">Jewelry</span>
+            <span class="tag">iOS</span>
           </div>
-          <a href="https://apps.apple.com/app/id6738584793" class="app-link" target="_blank" rel="noopener">
+          <a href="https://apps.apple.com/us/app/jewelsnap-jewelry-identifier/id6761104642" class="app-link" target="_blank" rel="noopener">
             App Store &rarr;
           </a>
         </div>
@@ -537,15 +551,15 @@
 
       <div class="app-card app-card--snap">
         <div class="app-top">
-          <div class="app-icon" id="icon-snap" data-appid="6761262922">
-            <img alt="SnapFlip">
+          <div class="app-icon img-loaded" id="icon-snap">
+            <img src="icons/snapflip.jpeg" alt="SnapFlip" class="loaded">
             <div class="app-icon-fallback">&#x1F4E6;</div>
           </div>
           <span class="app-badge badge-live">Live</span>
         </div>
-        <p class="app-num">02 / 04</p>
+        <p class="app-num">02 / 06</p>
         <h3 class="app-name">SnapFlip</h3>
-        <p class="app-desc">The reseller's companion. Snap any item, instantly see eBay prices, profit margins, and demand signals. Turn thrift finds into real money.</p>
+        <p class="app-desc">The reseller's companion. Snap any item, instantly see real eBay sold prices, profit margins, and demand signals. Turn thrift finds into real money.</p>
         <div class="app-footer">
           <div class="app-tags">
             <span class="tag">Resale</span>
@@ -553,6 +567,52 @@
             <span class="tag">iOS</span>
           </div>
           <a href="https://apps.apple.com/us/app/snapflip-thrift-scanner/id6761262922" class="app-link" target="_blank" rel="noopener">
+            App Store &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="app-card app-card--watch">
+        <div class="app-top">
+          <div class="app-icon img-loaded" id="icon-watch">
+            <img src="icons/watchsnap.jpeg" alt="WatchSnap" class="loaded">
+            <div class="app-icon-fallback">&#x231A;</div>
+          </div>
+          <span class="app-badge badge-live">Live</span>
+        </div>
+        <p class="app-num">03 / 06</p>
+        <h3 class="app-name">WatchSnap</h3>
+        <p class="app-desc">Rolex or replica? Snap a watch and get instant brand identification, market value, and an authenticity verdict. 40M counterfeits sold every year — don't be a number.</p>
+        <div class="app-footer">
+          <div class="app-tags">
+            <span class="tag">AI Vision</span>
+            <span class="tag">Watches</span>
+            <span class="tag">iOS</span>
+          </div>
+          <a href="https://apps.apple.com/us/app/watchsnap-watch-identifier/id6761362953" class="app-link" target="_blank" rel="noopener">
+            App Store &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="app-card app-card--stack">
+        <div class="app-top">
+          <div class="app-icon img-loaded" id="icon-stack">
+            <img src="icons/stacksnap.jpeg" alt="StackSnap" class="loaded">
+            <div class="app-icon-fallback">&#x1F48A;</div>
+          </div>
+          <span class="app-badge badge-live">Live</span>
+        </div>
+        <p class="app-num">04 / 06</p>
+        <h3 class="app-name">StackSnap</h3>
+        <p class="app-desc">Scan any supplement bottle — instant ingredient breakdown from the NIH DSLD database, interaction warnings, and dosage analysis. See what your $100/month stack is really doing.</p>
+        <div class="app-footer">
+          <div class="app-tags">
+            <span class="tag">Health</span>
+            <span class="tag">NIH Data</span>
+            <span class="tag">iOS</span>
+          </div>
+          <a href="https://apps.apple.com/us/app/stacksnap-supplement-tracker/id6761888709" class="app-link" target="_blank" rel="noopener">
             App Store &rarr;
           </a>
         </div>
@@ -566,16 +626,16 @@
           </div>
           <span class="app-badge badge-live">Live</span>
         </div>
-        <p class="app-num">03 / 04</p>
+        <p class="app-num">05 / 06</p>
         <h3 class="app-name">ColorCheck</h3>
-        <p class="app-desc">Precise color blindness and color vision testing. Simple, accurate tests built for anyone curious about their vision — from quick checks to detailed analysis.</p>
+        <p class="app-desc">Your AI shopping guard. Discover your color season, then point your camera at any clothing item — instant BUY or SKIP verdict matched to your palette.</p>
         <div class="app-footer">
           <div class="app-tags">
-            <span class="tag">Vision</span>
-            <span class="tag">Health</span>
+            <span class="tag">AI Style</span>
+            <span class="tag">Fashion</span>
             <span class="tag">iOS</span>
           </div>
-          <a href="https://apps.apple.com/us/app/colorcheck-vision-health/id6740013522" class="app-link" target="_blank" rel="noopener">
+          <a href="https://apps.apple.com/us/app/colorcheck-ai-color-analysis/id6761604617" class="app-link" target="_blank" rel="noopener">
             App Store &rarr;
           </a>
         </div>
@@ -583,13 +643,13 @@
 
       <div class="app-card app-card--roof">
         <div class="app-top">
-          <div class="app-icon" id="icon-roof" data-appid="6761068784">
-            <img alt="RoofingCalc Pro">
+          <div class="app-icon img-loaded" id="icon-roof">
+            <img src="icons/roofingcalc.jpeg" alt="RoofingCalc Pro" class="loaded">
             <div class="app-icon-fallback">&#x1F3E0;</div>
           </div>
           <span class="app-badge badge-live">Live</span>
         </div>
-        <p class="app-num">04 / 04</p>
+        <p class="app-num">06 / 06</p>
         <h3 class="app-name">RoofingCalc Pro</h3>
         <p class="app-desc">Professional roofing calculations at your fingertips. Instantly compute materials, costs, and estimates — built for contractors who need accuracy fast.</p>
         <div class="app-footer">
@@ -598,7 +658,7 @@
             <span class="tag">Calculator</span>
             <span class="tag">iOS</span>
           </div>
-          <a href="https://apps.apple.com/app/id6761068784" class="app-link" target="_blank" rel="noopener">
+          <a href="https://apps.apple.com/us/app/roofingcalc-pro/id6761068784" class="app-link" target="_blank" rel="noopener">
             App Store &rarr;
           </a>
         </div>
@@ -615,7 +675,7 @@
   <h2 class="section-title reveal">Built by builders,<br>for real users.</h2>
   <div class="about-inner">
     <div class="about-text reveal">
-      <p><strong>Loveiko Labs</strong> is a focused studio based in Thailand, building powerful tools for the App Store and beyond. We don't chase trends — we solve specific problems with precision software.</p>
+      <p><strong>Loveiko <span class="accent">Labs</span></strong> is a focused studio based in Thailand, building powerful tools for the App Store and beyond. We don't chase trends — we solve specific problems with precision software.</p>
       <p>Every app we ship starts with a clear user pain and ends with something that actually works. We let a fast-moving team punch way above its weight.</p>
       <p>Our apps reach <strong>20+ markets globally</strong> with full localization, and we operate with the speed and conviction of founders who care about craft.</p>
     </div>
