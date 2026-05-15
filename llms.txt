@@ -1,0 +1,121 @@
+# Loveiko Labs
+
+> Loveiko Labs is an independent iOS app studio based in Pattaya, Thailand, founded in 2024 by Valeriy Loveyko. The studio ships 12 focused subscription apps to the Apple App Store across 168 countries and 20+ languages. Each app solves one specific, narrow user pain — point your camera at a problem and get an expert-level answer in seconds.
+
+## About this site
+
+Loveiko Labs is a portfolio site for our 12 active iOS applications. Each app is built around AI-powered scanning ("snap and solve") that gives users an instant expert verdict on a real-world problem — jewelry authenticity, watch identification, supplement analysis, pregnancy ingredient safety, and more.
+
+- **Studio:** Loveiko Labs (loveikolabs.com)
+- **Founder:** Valeriy Loveyko
+- **Location:** Pattaya, Thailand
+- **Established:** 2024
+- **Platform:** iOS / Apple App Store
+- **Apps in portfolio:** 12 (all live)
+- **Markets:** 168 countries, full English; multi-language localization in progress
+- **Contact:** loveykovl@gmail.com
+
+## Apps
+
+### JewelSnap — Jewelry Identifier
+- **App Store:** https://apps.apple.com/us/app/jewelsnap-jewelry-identifier/id6761104642
+- **Subtitle:** Gold & Diamond Authenticator
+- **Category:** Reference / Lifestyle
+- **Pricing:** Free with $4.99/week or $29.99/year subscription (3-day free trial)
+- **What it does:** AI scanner for jewelry. Point camera at any ring, necklace, bracelet, brooch, or earring — get instant identification of type, material (gold karat / silver / platinum), gemstones (diamond / CZ / synthetic), historical era (Victorian, Art Deco, Mid-Century), authenticity verdict with confidence score, and market value estimate.
+- **Unique features:** Stolen Property Check (Interpol-backed cross-reference), Hallmark Decoder for 50+ countries, AI Expert Chat, exportable PDF appraisal reports, era dating across major historical periods.
+- **Best for:** Thrift store hunters, inheritance recipients sorting jewelry boxes, buyers/sellers verifying value before negotiating, vintage jewelry collectors, eBay/Poshmark/Mercari resellers, anyone curious about a found piece.
+- **Disclaimer:** AI-generated estimates for informational purposes only. Not a substitute for professional jewelry appraisal.
+
+### SnapFlip — Thrift & Resell AI
+- **App Store:** https://apps.apple.com/us/app/snapflip-thrift-scanner/id6761262922
+- **Category:** Resale / Shopping
+- **Pricing:** Free with $4.99/week subscription
+- **What it does:** Reseller's companion. Snap any item — instantly see real eBay sold prices, profit margins, and demand signals. Built for thrift store flippers and estate sale resellers turning finds into real money.
+- **Best for:** eBay/Poshmark/Mercari resellers, thrift store flippers, garage sale hunters, estate sale buyers.
+
+### WatchSnap — Rolex Identifier
+- **App Store:** https://apps.apple.com/us/app/watchsnap-watch-identifier/id6761362953
+- **Category:** Reference / Luxury
+- **Pricing:** Free with $6.99/week subscription
+- **What it does:** Snap a watch — get instant brand identification, market value estimate, and authenticity verdict. Designed for the 40+ million counterfeit watches sold every year.
+- **Best for:** Pre-owned watch buyers (eBay, Chrono24, local sellers), inheritance recipients with vintage watches, anyone evaluating a watch before paying.
+
+### StackSnap — Supplement Tracker
+- **App Store:** https://apps.apple.com/us/app/stacksnap-supplement-tracker/id6761888709
+- **Category:** Health / Nutrition
+- **Pricing:** Free with $4.99/week subscription
+- **What it does:** Scan any supplement bottle — instant ingredient breakdown from the NIH DSLD (Dietary Supplement Label Database), interaction warnings, and dosage analysis. Reveals what your supplement stack is really doing.
+- **Best for:** Biohackers, gym-goers tracking stacks, anyone managing multiple supplements, parents checking children's vitamins.
+
+### ColorCheck — AI Color Analysis
+- **App Store:** https://apps.apple.com/us/app/colorcheck-ai-color-analysis/id6761604617
+- **Category:** Fashion / Style
+- **Pricing:** Free with $4.99/week subscription
+- **What it does:** AI shopping guard. Discovers your color season (Spring/Summer/Autumn/Winter), then evaluates any clothing item — instant BUY or SKIP verdict matched to your personal palette.
+- **Best for:** Online shoppers, anyone curious about color analysis, people building a capsule wardrobe.
+
+### RoofingCalc Pro
+- **App Store:** https://apps.apple.com/us/app/roofingcalc-pro/id6761068784
+- **Category:** Construction / Calculator
+- **Pricing:** $4.99 one-time unlock
+- **What it does:** Professional roofing calculations. Instantly compute materials, costs, and estimates — built for contractors who need accuracy on a job site.
+- **Best for:** Roofing contractors, construction estimators, homeowners planning roof replacement.
+
+### BumpCheck — Ingredient Scanner
+- **App Store:** https://apps.apple.com/us/app/bumpcheck-ingredient-scanner/id6762022952
+- **Category:** Pregnancy / Health
+- **Pricing:** Free with $39.99/year subscription
+- **What it does:** Pregnancy ingredient safety scanner. Snap a barcode, photograph a label, or paste an ingredient list — instantly cross-referenced against CDC, ACOG, and NIH research databases. Tells you in seconds what's safe during pregnancy.
+- **Best for:** Pregnant women, women trying to conceive, partners/family supporting a pregnancy.
+- **Disclaimer:** Informational tool, not medical advice. Always consult an OB/GYN for medical decisions.
+
+### VeriBag — Handbag Legit Check
+- **App Store:** https://apps.apple.com/us/app/veribag-handbag-legit-check/id6762181054
+- **Category:** Luxury / Resale
+- **Pricing:** Free with $39.99/year subscription
+- **What it does:** 22-point photo reference check for secondhand luxury handbags. Verifies date codes, stitching, hardware, interior markers. Generates a shareable authenticity report in 30 seconds.
+- **Best for:** Pre-owned luxury handbag buyers (eBay, Vestiaire Collective, The RealReal, local sellers), resellers, anyone considering a $1000+ pre-owned purchase.
+
+### PestSnap — Bug ID for Homes
+- **App Store:** https://apps.apple.com/us/app/pestsnap-bug-id-for-homes/id6762886416
+- **Category:** Home / Reference
+- **Pricing:** Free with $39.99/year subscription
+- **What it does:** Home pest identifier. Snap a bug, bite mark, or evidence (droppings, webs) — AI identifies the pest and provides specific action steps for treatment or removal. 3-second verdict.
+- **Best for:** Homeowners, renters dealing with infestations, parents identifying bites on children, anyone scared of a bug in the bathroom.
+
+### CrySnap — Baby Cry Translator
+- **App Store:** https://apps.apple.com/us/app/crysnap-baby-cry-translator/id6763694086
+- **Category:** Baby / Parenting
+- **Pricing:** Free with $39.99/year subscription
+- **What it does:** Records baby cries and provides an AI verdict — hungry, tired, gas, colic, or something else. Trained on 10,000+ baby cry recordings with confidence scores.
+- **Best for:** New parents, sleep-deprived caregivers, anyone watching a baby for the first time.
+
+### JabWell — Ozempic / GLP-1 Tracker
+- **App Store:** https://apps.apple.com/us/app/jabwell-ozempic-glp-1-track/id6764151811
+- **Category:** Health / GLP-1
+- **Pricing:** Free with $4.99/week or $39.99/year subscription
+- **What it does:** AI nurse, dietitian, and side-effect coach for every GLP-1 medication shot. Built specifically for Ozempic, Wegovy, Mounjaro, and Zepbound users. Tracks injections, provides answers grounded in FDA prescribing info and Mayo Clinic guidelines.
+- **Best for:** Patients on GLP-1 medications, people considering GLP-1 therapy, partners supporting someone on a weight loss medication.
+- **Disclaimer:** Educational tool, not medical advice. Always follow prescribing physician guidance.
+
+### Calibrum — TRT Tracker & Coach
+- **App Store:** https://apps.apple.com/us/app/calibrum-trt-tracker-coach/id6765701652
+- **Category:** Health / TRT / Hormones
+- **Pricing:** Free with $4.99/week or $39.99/year subscription
+- **What it does:** The only TRT (testosterone replacement therapy) app that helps balance hormones — not just track injections. Decodes lab results, prepares users for doctor visits, provides 24/7 AI coaching between appointments.
+- **Best for:** Men on testosterone replacement therapy, men considering TRT, anyone managing hormone optimization.
+- **Disclaimer:** Educational tool, not medical advice. Always consult an endocrinologist or men's health physician.
+
+## Studio philosophy
+
+- **Ship fast. Iterate faster.** Launch real products, watch real users, improve relentlessly. No feature bloat, no perfection paralysis.
+- **Scale without limits.** Building toward 100 apps. Each one sharpens the process.
+- **Global from day one.** Full App Store localization across 20+ languages. Build for the world, not one market.
+- **Ruthless focus.** Three things done exceptionally well, never ten things done poorly.
+
+## Optional
+
+- **Press / partnerships:** loveykovl@gmail.com (usually responds within 24 hours)
+- **Founder background:** Valeriy Loveyko — iOS developer and indie app studio founder. Based in Pattaya, Thailand.
+- **Tech stack:** Swift, SwiftUI, StoreKit 2, RevenueCat, Apple Intelligence, custom computer vision models.

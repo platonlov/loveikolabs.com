@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://loveikolabs.com/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!--
+    Phase 2 will add the following URLs (uncomment after deploy):
+
+    /apps/jewelsnap/                                           priority 0.9
+    /apps/jewelsnap/faq/                                       priority 0.8
+    /compare/jewelsnap-vs-jewelry-identifier-appraisal/        priority 0.7
+    /compare/jewelsnap-vs-jewelry-identifier-value/            priority 0.7
+    /compare/jewelsnap-vs-jewelry-identifier-by-picture/       priority 0.7
+    /use-cases/identify-vintage-inherited-jewelry/             priority 0.7
+    /use-cases/check-thrift-store-jewelry-value/               priority 0.7
+    /use-cases/verify-engagement-ring-before-selling/          priority 0.7
+    /use-cases/evaluate-estate-sale-jewelry-lot/               priority 0.7
+    /use-cases/verify-jewelry-not-stolen-property/             priority 0.7
+    /best-jewelry-identifier-apps-2026/                        priority 0.8
+
+    Same structure will repeat for other 11 apps in subsequent phases.
+  -->
+
+</urlset>
