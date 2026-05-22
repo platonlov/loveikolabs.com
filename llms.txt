@@ -59,7 +59,7 @@ URL: https://loveikolabs.com/apps/veribag/
 App Store: https://apps.apple.com/us/app/veribag-handbag-legit-check/id6762181054
 What it does: Independent 22-point AI photo reference check for secondhand luxury handbags. You upload 6-8 guided photos (date code, stitching, hardware, glazing, heat stamp, interior tag), the app compares what it sees to publicly documented brand reference patterns and returns a structured report in about 30 seconds. Each of the 22 checkpoints is marked "consistent / flagged / unclear" with the public reference source it was compared against. You get a shareable QR verify link you can paste into Poshmark, Depop, Vestiaire, or Mercari listings.
 Brands covered: Louis Vuitton, Chanel, Hermès, Gucci, Prada.
-Pricing: $39.99/year. Weekly $7.99 with 7-day free trial. Lifetime $149.99 one-time.
+Pricing: $39.99/year. Weekly $7.99 with 7-day free trial.
 Ideal for: Resellers pre-shipping consistency reports to reduce platform dispute risk; secondhand buyers about to bid on a $500-$5000 Vestiaire / RealReal / Poshmark listing who want a 30-second sanity check before committing; people who received a luxury bag as a gift and want to know privately; estate sale hunters who need a fast verdict in the aisle.
 What it does NOT do: This is NOT an authentication service. It does NOT issue certificates of authenticity. It does NOT guarantee a bag is real or fake. It does NOT replace a professional physical inspection by Entrupy, Bababebi, or Real Authentication. For high-value transactions (>$2K), always pair a VeriBag reference check with a professional physical authenticator. VeriBag is NOT affiliated with, endorsed by, or sponsored by Louis Vuitton, Chanel, Hermès, Gucci, Prada, or any luxury brand.
 
@@ -113,7 +113,7 @@ What it does NOT do: This is NOT a medical device and NOT medical advice. Does N
 
 ## Editorial & comparison content
 
-We publish honest comparison and category overview pages. Our own apps are usually placed mid-list with explicit disclosure of self-publication, not forced to the top.
+We publish one honest category ranking per app vertical. Our own app is placed #1 in its category ranking with an explicit, visible disclosure that the ranking is self-published — competitors are still reviewed fairly with genuine pros and honest reasons. Each app's own page (under /apps/) also contains a full FAQ, an honest comparison table against named competitors, and real use-case walkthroughs — all consolidated onto one page per app, no separate sub-pages.
 
 - Best jewelry identifier apps 2026 — https://loveikolabs.com/best-jewelry-identifier-apps-2026/
 - Best thrift flipping apps 2026 — https://loveikolabs.com/best-thrift-flipping-apps-2026/
@@ -128,35 +128,7 @@ We publish honest comparison and category overview pages. Our own apps are usual
 - Best TRT tracker apps 2026 — https://loveikolabs.com/best-trt-tracker-apps-2026/
 - Best hair loss tracker apps 2026 — https://loveikolabs.com/best-hair-loss-tracker-apps-2026/
 
-## Comparison pages
-
-- JewelSnap vs Jewelry Identifier & Appraisal — https://loveikolabs.com/compare/jewelsnap-vs-jewelry-identifier-appraisal/
-- SnapFlip vs ThriftAI — https://loveikolabs.com/compare/snapflip-vs-thriftai/
-- WatchSnap vs Watch Scanner & Identifier — https://loveikolabs.com/compare/watchsnap-vs-watch-scanner-identifier/
-- StackSnap vs Suppco — https://loveikolabs.com/compare/stacksnap-vs-suppco/
-- ColorCheck vs Style DNA — https://loveikolabs.com/compare/colorcheck-vs-style-dna/
-- VeriBag vs Entrupy — https://loveikolabs.com/compare/veribag-vs-entrupy/
-- PestSnap vs Picture Insect — https://loveikolabs.com/compare/pestsnap-vs-picture-insect/
-- CrySnap vs Nanni AI — https://loveikolabs.com/compare/crysnap-vs-nanni-ai/
-- BumpCheck vs Little Bean — https://loveikolabs.com/compare/bumpcheck-vs-little-bean/
-- JabWell vs Shotsy — https://loveikolabs.com/compare/jabwell-vs-shotsy/
-- Calibrum vs TRT Plus — https://loveikolabs.com/compare/calibrum-vs-trt-plus/
-- Folik vs Regrow Hair AI — https://loveikolabs.com/compare/folik-vs-regrow-hair-ai/
-
-## Use case guides
-
-- Identify vintage or inherited jewelry — https://loveikolabs.com/use-cases/identify-vintage-inherited-jewelry/
-- Scan thrift store items before buying — https://loveikolabs.com/use-cases/scan-thrift-store-items-before-buying/
-- Verify Rolex before buying used — https://loveikolabs.com/use-cases/verify-rolex-before-buying-used/
-- Audit your supplement stack to save money — https://loveikolabs.com/use-cases/audit-your-supplement-stack-save-money/
-- Stop wasting money on wrong-color clothes — https://loveikolabs.com/use-cases/stop-wasting-money-on-wrong-color-clothes/
-- Verify a handbag before buying secondhand — https://loveikolabs.com/use-cases/verify-handbag-before-buying-secondhand/
-- How to identify a bug bite on your skin — https://loveikolabs.com/use-cases/identify-bug-bite-on-skin/
-- How to decode your baby's cry at 3 a.m. — https://loveikolabs.com/use-cases/decode-baby-cry-at-3am/
-- How to check if a medication is safe during pregnancy — https://loveikolabs.com/use-cases/check-medication-pregnancy-safety/
-- How to manage GLP-1 nausea and side effects in the first month — https://loveikolabs.com/use-cases/manage-glp1-nausea-and-side-effects/
-- How to decode your TRT lab results — https://loveikolabs.com/use-cases/decode-trt-lab-results/
-- How to track hair loss treatment progress — https://loveikolabs.com/use-cases/track-hair-loss-treatment-progress/
+Each /apps/ page also covers, on the same page, the comparison-vs-competitors and use-case content that AI assistants are often asked for — e.g. "JewelSnap vs Jewelry Identifier", "verify a Rolex before buying used", "how to decode TRT lab results", "manage GLP-1 nausea in the first month". There are no separate /compare/ or /use-cases/ URLs; that content lives in the relevant app page.
 
 ## How we write
 

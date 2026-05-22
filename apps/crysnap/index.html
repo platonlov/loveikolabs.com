@@ -3,25 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08080a">
 <title>CrySnap — AI Baby Cry Translator + Pediatric Nurse, Sleep Coach &amp; Lactation Consultant | Loveiko Labs</title>
-<meta name="description" content="CrySnap is an iPhone baby cry translator built around a team of three AI assistants — a pediatric nurse, a sleep coach, and a lactation consultant. 9 cry categories, 89% test accuracy, voice mode for 3 a.m. Hands-free help for new parents. $4.99/wk or $39.99/yr.">
-<meta name="keywords" content="baby cry translator, baby cry analyzer, AI baby cry, why is my baby crying, decode baby cry, colic tracker, wake windows app, AI pediatric nurse, sleep coach app, lactation consultant app, voice mode 3am, soothing sounds white noise">
+<meta name="description" content="CrySnap decodes your baby's cry in 3 seconds — 9 categories, 89% test accuracy, on-device audio. Three AI assistants: pediatric nurse (AAP-grounded), sleep coach, and lactation consultant. Voice mode for hands-free 3 a.m. help. $4.99/wk or $39.99/yr.">
+<meta name="keywords" content="baby cry translator, baby cry analyzer, AI baby cry, why is my baby crying, decode baby cry, colic tracker, wake windows app, AI pediatric nurse, sleep coach app, lactation consultant app, voice mode 3am, soothing sounds white noise, on-device baby audio, baby cry app">
 <meta name="author" content="Valeriy Loveyko / Loveiko Labs">
 <link rel="canonical" href="https://loveikolabs.com/apps/crysnap/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://loveikolabs.com/apps/crysnap/">
 <meta property="og:title" content="CrySnap — Decode Your Baby's Cry in 3 Seconds, Hands-Free at 3 A.M.">
-<meta property="og:description" content="More than a cry translator — a team of three AI assistants (pediatric nurse, sleep coach, lactation consultant) plus a voice mode so you can talk instead of type at 3 a.m.">
+<meta property="og:description" content="More than a cry translator — a team of three AI assistants (pediatric nurse, sleep coach, lactation consultant) plus voice mode so you can talk instead of type at 3 a.m. On-device audio processing. 9 cry categories, 89% test accuracy.">
 <meta property="og:image" content="https://loveikolabs.com/icons/crysnap.jpeg">
 <meta property="og:site_name" content="Loveiko Labs">
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CrySnap — AI Baby Cry Translator + Pediatric Team">
-<meta name="twitter:description" content="Record the cry. Get a calm verdict. Ask the pediatric nurse. Build a sleep plan. All in one app. Hands-free at 3 a.m.">
+<meta name="twitter:description" content="Record the cry. Get a calm verdict. Ask the pediatric nurse. Build a sleep plan. All in one app. Hands-free at 3 a.m. On-device audio — audio never leaves your phone.">
 <meta name="twitter:image" content="https://loveikolabs.com/icons/crysnap.jpeg">
 
 <link rel="icon" type="image/png" href="https://loveikolabs.com/icons/crysnap.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 
 <script type="application/ld+json">
@@ -38,9 +41,8 @@
       "applicationSubCategory": "Parenting",
       "url": "https://apps.apple.com/us/app/crysnap-baby-cry-translator/id6763694086",
       "downloadUrl": "https://apps.apple.com/us/app/crysnap-baby-cry-translator/id6763694086",
-      "description": "AI baby cry translator with three built-in AI assistants — a pediatric nurse trained on AAP guidelines, a sleep coach for wake windows and sleep regressions, and a lactation consultant for breastfeeding and pumping questions. Voice mode for hands-free 3 a.m. help. Soothing sounds library. 9 cry categories with 89% test accuracy. Built for new parents in the first 6 months.",
+      "description": "AI baby cry translator with three built-in AI assistants — a pediatric nurse trained on AAP guidelines, a sleep coach for wake windows and sleep regressions, and a lactation consultant for breastfeeding and pumping questions. Voice mode for hands-free 3 a.m. help. Soothing sounds library. 9 cry categories with 89% test accuracy. On-device audio processing. Built for new parents in the first 6 months.",
       "image": "https://loveikolabs.com/icons/crysnap.jpeg",
-      "screenshot": "https://loveikolabs.com/icons/crysnap.jpeg",
       "softwareVersion": "1.0",
       "datePublished": "2026-04-29",
       "offers": [
@@ -71,21 +73,12 @@
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "20",
+        "ratingValue": "4.9",
+        "ratingCount": "24",
         "bestRating": "5",
         "worstRating": "1"
       },
-      "creator": {
-        "@type": "Organization",
-        "name": "Loveiko Labs",
-        "url": "https://loveikolabs.com/"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Loveiko Labs",
-        "url": "https://loveikolabs.com/"
-      }
+      "creator": { "@id": "https://loveikolabs.com/#organization" }
     },
     {
       "@type": "FAQPage",
@@ -93,60 +86,117 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is CrySnap and how does it work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CrySnap is an iPhone app that records your baby's cry, analyzes the audio with a deep-learning model trained on more than 10,000 infant cry recordings, and returns the most likely meaning — hungry, tired, gas, colic, overstimulated, pain, or other — with a confidence score. Beyond the cry translation it includes three AI assistants you can chat with at any hour: a pediatric nurse trained on American Academy of Pediatrics (AAP) guidance, a sleep coach for wake windows and the 4-month regression, and a lactation consultant for breastfeeding and pumping questions. CrySnap costs $4.99 per week or $39.99 per year with a 7-day free trial."
-          }
+          "name": "What is CrySnap?",
+          "acceptedAnswer": { "@type": "Answer", "text": "CrySnap is an iPhone app that records your baby's cry and uses a deep-learning classifier to identify the most likely meaning across 9 cry categories. Beyond the cry translation it includes three AI assistants — a pediatric nurse grounded in AAP guidance, a sleep coach for wake windows and regressions, and a lactation consultant for breastfeeding questions. It also has voice mode for hands-free 3 a.m. use and a frequency-calibrated soothing-sounds library. Published by Loveiko Labs. $4.99 per week or $39.99 per year with a 7-day free trial." }
         },
         {
           "@type": "Question",
-          "name": "How accurate is the cry translation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The cry classification model reaches 89% test accuracy on 9 cry categories under research conditions. Real-world accuracy is lower because home recordings include background noise, distance from the microphone, and the natural overlap between cry types — a tired baby is often also hungry. CrySnap returns a confidence score with every result and shows the top two candidates when the model is uncertain. We treat the output as a strong starting point for the parent's own intuition, not a definitive verdict."
-          }
+          "name": "How accurate is the cry classifier?",
+          "acceptedAnswer": { "@type": "Answer", "text": "89% test accuracy on the 9-class problem under research conditions — clean audio, isolated cry, no background noise. Real-world accuracy is lower because of household noise, microphone distance, and naturally overlapping cry types (a tired baby is often also hungry). CrySnap returns a confidence score with every result and shows the top two candidates when the model is uncertain. We treat the output as a strong starting point, not a definitive verdict." }
         },
         {
           "@type": "Question",
-          "name": "How is CrySnap different from Nanni AI or Cry Analyzer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most baby cry apps are built around one job — record the cry, name the cry, done. CrySnap is built as a team of three AI assistants instead of a single tool. After the translation you can keep the conversation going with a pediatric nurse (AAP-grounded), a sleep coach (wake windows, naps, regressions), or a lactation consultant (latching, pumping, cluster feeding). It also has a voice mode for hands-free 3 a.m. use when you cannot open your eyes to read a screen, and a soothing-sounds library calibrated by frequency rather than just labeled white noise. The cry translation alone is comparable to competitors; the value compounds when the cry-plus-followup-questions workflow runs entirely in one app."
-          }
+          "name": "What are the 9 cry categories?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Hungry, tired, gas or burping, colic, discomfort (diaper, temperature, clothing), pain, overstimulated, lonely or contact-seeking, and undefined. The categories are based on documented infant cry research and the model's training labels. Every result page includes the category, a confidence score, and a typical next step (offer feed, begin wind-down routine, burp, soothe, etc.)." }
         },
         {
           "@type": "Question",
-          "name": "Does CrySnap work offline?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The cry classification itself works offline because the model runs on your iPhone — exactly so it works at 3 a.m. when WiFi is unreliable. The pediatric nurse, sleep coach, and lactation consultant assistants require an internet connection because they run on a server. The soothing sounds library is fully offline. Previously-saved cry logs and sleep tracking data are available offline."
-          }
+          "name": "How does the cry classification work technically?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The model is a convolutional neural network trained on more than 10,000 labeled infant cry recordings from multiple research datasets. It analyzes spectral features (pitch contour, frequency distribution, rhythm, and intensity) over a 5-20 second audio window. The model runs entirely on your iPhone via Core ML — that is why the cry translation works offline. Audio is processed locally and discarded after the result is returned." }
         },
         {
           "@type": "Question",
-          "name": "Does the app upload my baby's audio recordings?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Cry audio is processed on your iPhone, not on our servers. The classification model is included in the app binary, runs locally on the device, and the audio is discarded after the result is returned. This is a deliberate privacy choice — baby audio is among the most sensitive household data a phone can capture. Full details are in the privacy policy at love8ko.github.io/crysnap/privacy-policy.html."
-          }
+          "name": "Is my baby's audio uploaded anywhere?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The classification model runs locally on your iPhone. Audio is never sent to our servers and is discarded after the result. This is a deliberate privacy decision because baby audio is among the most sensitive household data a phone can capture. The pediatric nurse / sleep coach / lactation consultant chat features do use a cloud connection because they rely on large language models, but those text conversations are anonymized and do not transmit audio. Full details are in the privacy policy at love8ko.github.io/crysnap/privacy-policy.html." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does CrySnap work without internet?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Cry classification works fully offline because the model is on-device. The soothing sounds library is offline. Previously-saved sleep, feeding, and diaper logs are offline. The pediatric nurse, sleep coach, and lactation consultant chat assistants require an internet connection because they run on a server, not on your phone. If you start a chat at 3 a.m. with no WiFi, the cry translation will still work; the chat will queue until you reconnect." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the pediatric nurse assistant trained on?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The pediatric nurse uses a large language model with a system prompt grounded in publicly available American Academy of Pediatrics (AAP) guidance — current safe sleep recommendations, age-by-age developmental milestones, fever thresholds by age, normal vs concerning behavior patterns, and standard pediatric first-aid procedures. Every response that mentions a medical symptom includes a 'when to call your doctor' trigger. The AAP does not endorse or sponsor this app; we reference their publicly available guidance the way any health-information service does." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the sleep coach different from a real sleep consultant?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The sleep coach assistant offers age-appropriate wake windows, nap-schedule templates, sleep environment recommendations, and walkthroughs of common methods (Ferber, gentle, no-cry, chair method, pick-up-put-down). It does not provide one-on-one consultations, does not have access to long-term sleep data the way a paid sleep consultant would after a multi-day evaluation, and does not promise specific outcomes. For complex cases (medical sleep disorders, severe regression, special needs), a human sleep consultant or pediatric sleep clinic is still the right resource." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the lactation consultant assistant different from an IBCLC?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The lactation consultant assistant provides reference information on common breastfeeding challenges — latch positioning, supply concerns, cluster feeding, pumping schedules, weaning, mastitis warning signs, when to seek hands-on help. It cannot watch your baby latch on a video call or check tongue tie the way a board-certified International Lactation Consultant (IBCLC) can. For latching pain that does not improve, suspected tongue or lip tie, persistent supply concerns, or any nipple infection, see an IBCLC in person." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is voice mode and when do I use it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Voice mode is a hands-free mode for the 3 a.m. moment — when your baby is crying, you are holding her, and you cannot open your eyes enough to read a phone screen. Tap one button on the lock screen and just talk. The assistant responds out loud in seconds. It is built for the moment where you would otherwise be Googling 'why is my baby crying at 3am' with one hand. Voice mode is available for all three AI assistants." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the soothing sounds and do they actually work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The library includes white noise at multiple frequency bands, womb sounds, scientifically calibrated shushing (louder than most parents expect, closer to a vacuum than a whisper), lullabies in English, Spanish, French, and Mandarin, and heartbeat rhythms at maternal resting BPM. Each sound has a documented use case based on published infant soothing research. Effectiveness varies by baby — what works for a colicky 6-week-old often does not work for a 4-month-old in regression — but the library covers the main evidence-based options. All sounds loop offline and run overnight without significant battery drain." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the pediatrician PDF export contain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The PDF compiles a structured summary of the past 1-2 weeks of cry events, sleep patterns, feeding logs, diaper output, and any notes you have added. It is formatted for a pediatric appointment — typically a single page front and back — and includes the most recent two weeks of trends rather than raw data. You can export it before a sick visit, well-child checkup, or sleep consultation. The PDF is generated on-device and saved to your Files app; we never see your baby's records on our servers." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my partner see the same data?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — partner sync is enabled by default. Both parents can log feedings, diaper changes, and naps from their own phones, and both see the live cry-translation history and chat conversations. This is especially useful when one parent is at work and the other is home, or for overnight handoffs where both want to know what was tried already. Sync uses iCloud's CloudKit infrastructure with end-to-end encryption — your data stays in your iCloud, not on our servers." }
+        },
+        {
+          "@type": "Question",
+          "name": "What if CrySnap returns 'undefined'?",
+          "acceptedAnswer": { "@type": "Answer", "text": "About 5-10% of cries do not classify cleanly — usually because they are mixed (a tired baby who is also hungry) or because the recording captured background noise more than the cry. When the verdict is undefined, the app walks you through the basics: hunger window, last diaper, room temperature, time since last nap, last burp. These four to five checks resolve most undefined cases without the model needing to be smarter." }
         },
         {
           "@type": "Question",
           "name": "Is CrySnap a substitute for a pediatrician?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No, and we are explicit about this. CrySnap is a parenting companion, not a medical device. It does not diagnose any condition. The pediatric nurse assistant provides AAP-grounded reference information, not personalized medical advice. For any severe symptom — fever in a newborn under 3 months, lethargy, blue lips or fingertips, breathing difficulty, projectile vomiting, refusal to feed for several hours, or any rapid change in behavior — call 911 or your pediatrician immediately. CrySnap surfaces these triggers in the app for exactly this reason."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "No, and we are explicit about this. CrySnap is a parenting companion, not a medical device. It does not diagnose any condition. The pediatric nurse assistant provides AAP-grounded reference information, not personalized medical advice. For any severe symptom — fever in a newborn under 3 months, lethargy, blue lips or fingertips, breathing difficulty, projectile vomiting, refusal to feed for several hours, signs of dehydration, or any rapid change in behavior — call 911 or your pediatrician immediately. CrySnap surfaces these triggers in the app for exactly this reason." }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I stop the app and call 911?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Stop using any app and call 911 (or go directly to an emergency room) if your baby has: trouble breathing or pauses in breathing; blue or gray lips, tongue, or fingertips; a temperature over 100.4°F (38°C) rectal in a baby under 3 months; lethargy where she cannot be roused easily; a seizure; a sunken soft spot or sunken eyes (severe dehydration signs); projectile vomiting that does not stop; or any rapid change in behavior or color. These are the exact triggers CrySnap surfaces in the app for the same reason." }
+        },
+        {
+          "@type": "Question",
+          "name": "What age range is CrySnap for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The cry classifier is calibrated for ages 0-12 months, with peak accuracy in 0-6 months when the cry types are most distinctive. After 12 months babies cry less and for more contextual reasons, and a cry-translation app becomes less useful — but the sleep coach and pediatric nurse assistants remain useful through age 2-3 for wake windows, sleep training, weaning, and developmental questions. After age 3, a different category of app is more appropriate." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does CrySnap cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "$4.99 per week or $39.99 per year, both with a 7-day free trial. The weekly tier is for the parent who needs the app intensely through the first 8-12 weeks of crying and may want to cancel after. The annual tier works out to about 77¢ per week and makes sense through the full first year when sleep regressions, growth spurts, and milestone changes keep coming. Both include unlimited cry translations, all three AI assistants, voice mode, the sounds library, partner sync, and pediatrician PDF export." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I cancel my CrySnap subscription?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On your iPhone: Settings → tap your name at the top → Subscriptions → find CrySnap → Cancel Subscription. The cancellation takes effect at the end of the current billing period — the app continues working until then. To avoid being charged after the trial, cancel at least 24 hours before the trial ends. If you cancel within the trial, you are not charged." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is CrySnap different from Nanni AI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nanni AI by Ubenwa Intelligence Solutions is the most-installed dedicated baby cry translator on the App Store and is built around clinical credibility — they collaborate with neonatologists and emphasize their medical research provenance. They also offer a free tier with limited cry translations. CrySnap is built around a different angle: three AI assistants (pediatric nurse, sleep coach, lactation consultant) plus a voice mode for hands-free 3 a.m. use, plus on-device audio processing for stronger audio privacy. Nanni's strength is clinical authority; CrySnap's strength is the platform breadth and hands-free experience." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who builds CrySnap?",
+          "acceptedAnswer": { "@type": "Answer", "text": "CrySnap is built by Loveiko Labs, an indie iOS studio in Pattaya, Thailand, founded in 2024 by Valeriy Loveyko. The studio publishes around a dozen single-purpose AI apps including JewelSnap, WatchSnap, BumpCheck, PestSnap, and VeriBag. CrySnap is funded entirely by user subscriptions — no advertisers, no data sales, no banner ads. The 'no data selling' commitment is in the privacy policy." }
         }
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Loveiko Labs", "item": "https://loveikolabs.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Apps", "item": "https://loveikolabs.com/apps/"},
-        {"@type": "ListItem", "position": 3, "name": "CrySnap", "item": "https://loveikolabs.com/apps/crysnap/"}
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://loveikolabs.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://loveikolabs.com/apps/" },
+        { "@type": "ListItem", "position": 3, "name": "CrySnap", "item": "https://loveikolabs.com/apps/crysnap/" }
       ]
     }
   ]
@@ -155,193 +205,364 @@
 </head>
 <body>
 
-<header class="site-header">
-  <a href="/" class="logo-link">
-    <span class="logo-mark">LL</span>
-    <span class="logo-text">Loveiko Labs</span>
+<div class="ll-cursor" aria-hidden="true"></div>
+<div class="ll-cursor-ring" aria-hidden="true"></div>
+
+<header class="ll-nav">
+  <a class="ll-nav__logo" href="/">
+    <img src="/icons/logo.png" alt="Loveiko Labs">
+    <span class="ll-nav__logo-text">Loveiko <span>Labs</span></span>
   </a>
-  <nav class="site-nav">
-    <a href="/">Studio</a>
-    <a href="/apps/">All apps</a>
-    <a href="/best-baby-cry-translator-apps-2026/">Baby cry apps</a>
-  </nav>
+  <ul class="ll-nav__links">
+    <li><a href="/">Studio</a></li>
+    <li><a href="/apps/">All Apps</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
 </header>
 
-<main class="app-page">
+<main class="ll-page">
 
-  <section class="app-hero">
-    <div class="app-hero-icon">
-      <img src="https://loveikolabs.com/icons/crysnap.jpeg" alt="CrySnap baby cry translator app icon" width="120" height="120">
+  <nav class="ll-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Loveiko Labs</a><span>/</span><a href="/apps/">Apps</a><span>/</span>CrySnap
+  </nav>
+
+  <section class="ll-hero">
+    <div class="ll-hero__icon">
+      <img src="/icons/crysnap.jpeg" alt="CrySnap baby cry translator app icon" width="96" height="96">
     </div>
-    <h1>CrySnap — Decode Your Baby's Cry in 3 Seconds. At 3 A.M. Hands-Free.</h1>
-    <p class="app-hero-sub">Your baby cannot speak yet — but crying is a language. CrySnap records the cry, returns a calm verdict (hungry, tired, gas, colic, or one of nine categories) with a confidence score, then keeps a team of three AI assistants available to answer your follow-up questions: a pediatric nurse, a sleep coach, and a lactation consultant. Voice mode means you can talk instead of type when your eyes are barely open.</p>
-    <div class="app-hero-cta">
-      <a class="btn-primary" href="https://apps.apple.com/us/app/crysnap-baby-cry-translator/id6763694086?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=crysnap-landing">Download on the App Store</a>
-      <a class="btn-secondary" href="/apps/crysnap/faq/">Read the FAQ</a>
+    <p class="ll-eyebrow">iOS App · AI Audio · Parenting Health</p>
+    <h1>CrySnap — <em>decode your baby's cry</em> in 3 seconds, hands-free at 3 a.m.</h1>
+    <p class="ll-hero__sub">Your baby cannot speak yet — but crying is a language. CrySnap records the cry, returns a calm verdict (hungry, tired, gas, colic, or one of nine categories) with a confidence score, then keeps a team of three AI assistants available: a pediatric nurse, a sleep coach, and a lactation consultant. Voice mode means you can talk instead of type when your eyes are barely open. Audio never leaves your phone.</p>
+    <div class="ll-hero__rating">
+      <span class="stars">★★★★★</span> <span>4.9</span> <span class="muted">· 24 ratings on the App Store</span>
     </div>
-    <p class="app-hero-meta">iOS 17.0+ · 7-day free trial · $4.99/week or $39.99/year · Cancel anytime in Apple Settings</p>
+    <div class="ll-hero__cta">
+      <a class="ll-btn" href="https://apps.apple.com/us/app/crysnap-baby-cry-translator/id6763694086?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=crysnap" target="_blank" rel="noopener">Download on the App Store</a>
+      <a class="ll-btn ll-btn--ghost" href="#how">See how it works</a>
+    </div>
+    <p class="ll-hero__meta">iOS 17.0+ · 7-day free trial · $4.99/week or $39.99/year · Cancel anytime in Apple Settings</p>
   </section>
 
-  <section class="app-section">
+  <nav class="ll-jump" aria-label="On this page">
+    <a href="#what">What it is</a>
+    <a href="#who">Who it's for</a>
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#compare">Compare</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <section class="ll-section ll-reveal" id="what">
+    <p class="ll-kicker">Overview</p>
     <h2>What is CrySnap?</h2>
-    <p>CrySnap is an iPhone app for new parents in the first six months — the peak crying phase, when sleep is broken and every cry feels like a puzzle. Tap record, the app captures 5-20 seconds of audio, and within about three seconds it returns the most likely meaning of the cry across nine documented categories: hungry, tired, discomfort, gas or burping, colic, pain, overstimulated, lonely, or undefined. Every result includes a confidence score. The cry classifier was trained on more than 10,000 infant cry recordings and reaches 89% test accuracy on the 9-class problem under research conditions. After the translation you can ask follow-up questions to one of three built-in AI assistants without leaving the app.</p>
+    <p class="ll-lead">CrySnap is an iPhone app for new parents in the first six months — the peak crying phase, when sleep is broken and every cry feels like a puzzle.</p>
+    <p>Tap record, the app captures 5–20 seconds of audio, and within about three seconds it returns the most likely meaning of the cry across nine documented categories: hungry, tired, discomfort, gas or burping, colic, pain, overstimulated, lonely, or undefined. Every result includes a confidence score and a typical next step. The cry classifier was trained on more than 10,000 infant cry recordings — a convolutional neural network that analyzes pitch contour, frequency distribution, rhythm, and intensity — and reaches 89% test accuracy on the 9-class problem under research conditions.</p>
+    <p>After the translation you can ask follow-up questions to one of three built-in AI assistants without leaving the app: a pediatric nurse grounded in American Academy of Pediatrics guidance, a sleep coach for wake windows and regressions, and a lactation consultant for breastfeeding and pumping questions.</p>
+    <p>CrySnap is a <strong>parenting companion, not a medical device</strong>. It does not diagnose any condition and is not affiliated with the AAP. For severe symptoms — fever in a newborn under 3 months, lethargy, blue lips or fingertips, breathing difficulty — call 911 or your pediatrician immediately.</p>
   </section>
 
-  <section class="app-section">
+  <section class="ll-section ll-reveal" id="who">
+    <p class="ll-kicker">Audience</p>
+    <h2>Who CrySnap is built for</h2>
+    <div class="ll-cards">
+      <div class="ll-card">
+        <h3>New moms in the first six months</h3>
+        <p>The peak crying phase, peak sleep deprivation, peak self-doubt. CrySnap turns "I have no idea what she wants" into a calm three-second verdict and a follow-up question you can ask the pediatric nurse at 3 a.m.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Dads who want to help but feel lost</h3>
+        <p>Especially in the first month. CrySnap evens the parenting floor — if you can record a cry and read the result, you can take a shift overnight without waking your partner.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Grandparents caring for grandchildren</h3>
+        <p>Especially when guidelines have changed since they raised their own kids — back sleep, swaddle release at 8 weeks, peanut introduction at 4–6 months. The pediatric nurse is current on AAP guidance.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Anyone exhausted at 3 a.m.</h3>
+        <p>Wondering "why is he still crying". This is the moment the whole app is built for — voice mode means you can ask the assistant out loud without picking up the phone or opening your eyes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal" id="features">
+    <p class="ll-kicker">Capabilities</p>
     <h2>A team of three AI assistants — not just a cry translator</h2>
     <p>The core differentiator: every cry translation result has an "Ask more" option that hands you off to one of three specialists, each tuned for a different parenting question pattern.</p>
-    <ul>
-      <li><strong>The pediatric nurse.</strong> Ask anything about newborn care — diaper rashes, infant fever thresholds, normal vs concerning behavior, when to call your doctor. Trained on AAP (American Academy of Pediatrics) guidance. Every response includes "when to call your doctor" triggers when relevant.</li>
-      <li><strong>The sleep coach.</strong> Wake windows by age, nap scheduling, the 4-month sleep regression, room conditions, swaddling, sleep training methods (Ferber, gentle, no-cry). Custom sleep plans based on your baby's patterns once you have logged a few days of data.</li>
-      <li><strong>The lactation consultant.</strong> Breastfeeding latching issues, pumping schedules, cluster feeding, milk supply concerns, weaning. Non-judgmental about formula, combination feeding, or whatever works for your family.</li>
+    <ul class="ll-features">
+      <li><strong>The pediatric nurse.</strong> Ask anything about newborn care — diaper rashes, infant fever thresholds, normal vs concerning behavior, when to call your doctor. Trained on publicly available AAP (American Academy of Pediatrics) guidance. Every response includes "when to call your doctor" triggers when relevant. The AAP does not endorse or sponsor this app.</li>
+      <li><strong>The sleep coach.</strong> Wake windows by age, nap scheduling, the 4-month sleep regression, room conditions, swaddling, sleep training methods (Ferber, gentle, no-cry, chair method, pick-up-put-down). Custom sleep plans based on your baby's patterns once you have logged a few days of data.</li>
+      <li><strong>The lactation consultant.</strong> Breastfeeding latching issues, pumping schedules, cluster feeding, milk supply concerns, mastitis warning signs, weaning. Non-judgmental about formula, combination feeding, or whatever works for your family. For latching pain that does not improve, suspected tongue or lip tie, or any nipple infection, see an IBCLC in person.</li>
+      <li><strong>Voice mode for the 3 a.m. moment.</strong> Tap one button on the lock screen and just talk — "she will not stop crying and she just ate forty minutes ago" — and the assistant responds out loud in seconds. Hands-free, eyes-closed, baby-in-arms. Available for all three assistants.</li>
+      <li><strong>Soothing sounds library.</strong> White noise at multiple frequency bands (the higher-frequency mix mimics in-utero blood-flow sound newborns recognize most), womb sounds for the first 6–8 weeks, shushing calibrated to the volume newborns actually need (closer to a vacuum cleaner than a whisper), lullabies in English, Spanish, French, and Mandarin, and heartbeat rhythms at maternal resting BPM. All sounds loop offline overnight without significant battery drain.</li>
+      <li><strong>On-device audio processing.</strong> The classification model runs entirely on your iPhone via Core ML. Audio is never sent to servers and is discarded after the result. Baby audio is among the most sensitive household data your phone can capture — this is a deliberate privacy choice.</li>
+      <li><strong>Partner sync.</strong> Both parents log feedings, diaper changes, and naps from their own phones and see the same cry-translation history. Uses iCloud CloudKit with end-to-end encryption — your data stays in your iCloud, not on our servers.</li>
+      <li><strong>Pediatrician PDF export.</strong> A structured 1–2 week summary of cry events, sleep patterns, feeding logs, and diaper output formatted for a pediatric appointment. Generated on-device; we never see your baby's records.</li>
     </ul>
   </section>
 
-  <section class="app-section">
-    <h2>Voice mode for the 3 a.m. moment</h2>
-    <p>This is the feature parents underestimate until they use it once. At 3 a.m. when your baby is crying and you cannot open your eyes enough to read a screen, you do not want to type. Voice mode lets you tap one button on the lock screen and just talk — "she will not stop crying and she just ate forty minutes ago" — and the assistant responds out loud in seconds. Hands-free, eyes-closed, baby-in-arms. It is the same conversation you would have if you could reach a 24-hour pediatric nurse hotline, except the response is instant and you do not have to put on hold music.</p>
+  <section class="ll-section ll-reveal" id="how">
+    <p class="ll-kicker">Workflow</p>
+    <h2>How it works — 3 seconds, three steps</h2>
+    <ol class="ll-steps">
+      <li><strong>Record the cry.</strong><span>Tap record, hold the iPhone microphone close to your baby — about arm's length works well. The app captures 5–20 seconds of audio. The model analyzes spectral features on-device: pitch contour, frequency distribution, rhythm, intensity. No WiFi required.</span></li>
+      <li><strong>Read the verdict.</strong><span>In about three seconds you see the top cry category, a confidence score, and a typical next step (offer feed, begin wind-down routine, burp, bicycle legs, move to a dark quiet room). When the model is uncertain it shows the top two candidates so you can use your own intuition to decide.</span></li>
+      <li><strong>Ask the follow-up.</strong><span>Tap "Ask more" and choose your specialist — pediatric nurse, sleep coach, or lactation consultant. Type your question or tap the microphone and talk. The assistant responds in seconds. Voice mode works on the lock screen so you never have to put the baby down to unlock the phone.</span></li>
+    </ol>
+    <p>The five-step framework behind this workflow: (1) Cover the physical basics — hunger, diaper, temperature, burping. About 70% of overnight cries resolve here. (2) Identify the cry type by sound — CrySnap automates this in 3 seconds. (3) Match the soothing technique to the cry type — different cries respond to different strategies. (4) Reset if 15 minutes pass — hand off to your partner, take five deep breaths, try again. (5) Recognize the red flags and stop using any app if they appear — call 911 or your pediatrician.</p>
   </section>
 
-  <section class="app-section">
-    <h2>Soothing sounds that work</h2>
-    <p>The soothing-sounds library is not just labeled "white noise". Each sound is calibrated by frequency profile and has documented use cases:</p>
-    <ul>
-      <li><strong>White noise</strong> at multiple frequency bands — the higher-frequency mix mimics the in-utero blood-flow sound newborns recognize most.</li>
-      <li><strong>Womb sounds</strong> for the first 6-8 weeks when fourth-trimester soothing is most effective.</li>
-      <li><strong>Shushing</strong> scientifically calibrated to the volume level newborns actually need (which is louder than most parents intuit — closer to a vacuum cleaner than a whisper).</li>
-      <li><strong>Lullabies</strong> in English, Spanish, French, and Mandarin.</li>
-      <li><strong>Heartbeat rhythms</strong> at the BPM ranges that match a resting maternal heartbeat.</li>
-    </ul>
-    <p>All sounds work offline and can be looped overnight without draining the battery.</p>
+  <section class="ll-section ll-reveal" id="compare">
+    <p class="ll-kicker">Comparison</p>
+    <h2>CrySnap vs Nanni AI vs Cry Analyzer vs Baby Cry Translator</h2>
+    <p>An honest side-by-side. Nanni AI is the more clinically-validated option with a free tier; CrySnap is the broader platform with three AI specialists and voice mode. <strong>Disclosure: we build CrySnap.</strong></p>
+    <div class="ll-table-wrap">
+      <table class="ll-table">
+        <thead>
+          <tr><th>&nbsp;</th><th class="is-us">CrySnap</th><th>Nanni AI</th><th>Cry Analyzer</th><th>Baby Cry Translator (Hanva)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Cry classification</td><td class="is-us">9 categories · on-device</td><td>Multiple categories · cloud</td><td>Multi-category · claims 20M+ recordings</td><td>5 categories</td></tr>
+          <tr><td>Test accuracy</td><td class="is-us">89% on 9-class problem</td><td>Clinical corpus (Ubenwa/neonatologists)</td><td>Not publicly stated</td><td>Not publicly stated</td></tr>
+          <tr><td>Audio processing</td><td class="is-us"><span class="yes">On-device — audio never leaves phone</span></td><td>Cloud-based</td><td>Cloud-based</td><td>Cloud-based</td></tr>
+          <tr><td>Pediatric nurse chat</td><td class="is-us"><span class="yes">Yes (AAP-grounded)</span></td><td>Ask Nanni feature</td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+          <tr><td>Dedicated sleep coach</td><td class="is-us"><span class="yes">Yes (wake windows, regressions)</span></td><td>SleepGenie (coming soon)</td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+          <tr><td>Dedicated lactation consultant</td><td class="is-us"><span class="yes">Yes</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+          <tr><td>Voice mode (hands-free at 3 a.m.)</td><td class="is-us"><span class="yes">Yes</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+          <tr><td>Soothing sounds library</td><td class="is-us">Yes, frequency-calibrated</td><td><span class="no">No dedicated library</span></td><td>Basic</td><td>Basic</td></tr>
+          <tr><td>Baby tracker (sleep / feeding / diaper)</td><td class="is-us">Yes</td><td><span class="yes">Yes (most developed)</span></td><td>Basic</td><td><span class="no">No</span></td></tr>
+          <tr><td>Apple Watch support</td><td class="is-us">Planned</td><td><span class="yes">Yes</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+          <tr><td>Partner sync</td><td class="is-us">Yes (iCloud CloudKit)</td><td>Yes</td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+          <tr><td>Pediatrician PDF export</td><td class="is-us">Yes</td><td>Notes for healthcare providers</td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
+          <tr><td>Free tier</td><td class="is-us">7-day trial only</td><td><span class="yes">Yes (limited daily translations)</span></td><td>Limited free use</td><td>Trial varies</td></tr>
+          <tr><td>Pricing</td><td class="is-us">$4.99/wk · $39.99/yr</td><td>Free + premium tier</td><td>~$9.99/yr</td><td>Weekly/monthly tiers</td></tr>
+          <tr><td>Clinical collaboration disclosed</td><td class="is-us">AAP guidance referenced (not endorsed)</td><td><span class="yes">Built with neonatologists</span></td><td>Not stated</td><td>Not stated</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px;"><strong>The one-sentence verdict:</strong> Pick Nanni AI if clinical credibility and a free tier matter most. Pick CrySnap if you want three AI specialists instead of one and hands-free 3 a.m. voice mode. Pick both if you want the deepest baby tracker (Nanni) plus the multi-persona AI help (CrySnap).</p>
   </section>
 
-  <section class="app-section">
-    <h2>Who CrySnap is built for</h2>
-    <p>Four audience groups keep us focused.</p>
-    <ul>
-      <li><strong>New moms in the first six months.</strong> The peak crying phase, peak sleep deprivation, peak self-doubt. CrySnap turns "I have no idea what she wants" into a calm three-second verdict and a follow-up question you can ask the pediatric nurse.</li>
-      <li><strong>Dads who want to help but feel lost.</strong> Especially in the first month. CrySnap evens the parenting floor — if you can record a cry and read the result, you can take a shift overnight.</li>
-      <li><strong>Grandparents caring for grandchildren.</strong> Especially when guidelines have changed since they raised their own kids (back sleep, swaddle release at 8 weeks, peanut introduction at 4-6 months). The pediatric nurse is current on AAP guidance.</li>
-      <li><strong>Anyone exhausted at 3 a.m.</strong> wondering "why is he still crying". This is the moment the whole app is built for.</li>
-    </ul>
+  <section class="ll-section ll-reveal" id="scenarios">
+    <p class="ll-kicker">In the wild</p>
+    <h2>Real scenarios where CrySnap earns its keep</h2>
+    <div class="ll-scenarios">
+      <div class="ll-scenario">
+        <h3>The 3 a.m. mystery cry</h3>
+        <p>Your seven-week-old has been fed ninety minutes ago, changed at 2 a.m., and you have been rocking her for thirteen minutes. She is going from fussy to actively crying. You tap record in CrySnap — three seconds, verdict: gas. You hold her upright against your shoulder, gentle back pats. After about three minutes you hear a small burp. She stops crying within ninety seconds. You are back in bed by 3:34 a.m. This is step 1 of the five-step framework — a burp from the 1:40 a.m. feed you forgot to work through.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>The first-time dad overnight shift</h3>
+        <p>It is your turn. You have never done this alone. She starts crying at 4:15 a.m. and nothing you have tried is working. You open CrySnap, record, verdict: overstimulated — confidence 74%. You switch to voice mode and ask the pediatric nurse out loud what to try. She says: dark, quiet room, minimal input, skin-to-skin. You take her to the bedroom, lie down, hold her on your chest. She settles in twelve minutes. You did not wake your partner.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>The grandparent's first solo week</h3>
+        <p>Your parents are babysitting for a week. They raised three kids but the guidance has changed — back to sleep, no loose bedding, peanut introduction at 4–6 months. CrySnap gives them the same pediatric nurse access you have, current on AAP recommendations, available at 3 a.m. without calling you in a panic. The app also runs offline for cry classification — no WiFi setup required at the grandparents' house.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>The breastfeeding question at 2 a.m.</h3>
+        <p>She has been cluster feeding every 45 minutes and your left side is painful. You cannot wait until 9 a.m. to call the lactation consultant. You open CrySnap, switch to the lactation consultant, and ask about latch pain and cluster feeding schedules. Voice mode means you talk rather than type — one hand is holding her, the other is busy. The assistant walks you through positioning, explains that cluster feeding peaks around 3–6 weeks, and flags the specific pain pattern you should call an IBCLC about. You decide it is not that pattern and you make it through the night.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="app-section">
-    <h2>The 9 cry categories CrySnap identifies</h2>
-    <p>Based on the audio classifier's training labels, validated against pediatric audio research:</p>
-    <table class="compare-table">
-      <thead><tr><th>Category</th><th>What it sounds like</th><th>Typical next step</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Hungry</strong></td><td>Rhythmic, low-pitched, builds steadily — often with rooting</td><td>Offer feed; if recent, check positioning</td></tr>
-        <tr><td><strong>Tired</strong></td><td>Whiny, breathy, less intense — often with eye-rubbing</td><td>Begin wind-down routine</td></tr>
-        <tr><td><strong>Gas / burping</strong></td><td>Pulsed, with brief pauses; legs drawing up</td><td>Burp; bicycle legs; tummy time</td></tr>
-        <tr><td><strong>Colic</strong></td><td>Higher-pitched, sustained, inconsolable; same time daily</td><td>Soothing routine; talk to pediatrician if persistent</td></tr>
-        <tr><td><strong>Discomfort</strong></td><td>Whiny, intermittent — diaper, temperature, clothing</td><td>Check diaper, room temperature, tags</td></tr>
-        <tr><td><strong>Pain</strong></td><td>High-pitched, sudden, sustained without easy soothing</td><td>Check for visible injury; contact pediatrician if persistent</td></tr>
-        <tr><td><strong>Overstimulated</strong></td><td>Loud, escalating, accompanied by stiff posture</td><td>Quiet, dim room; reduce input</td></tr>
-        <tr><td><strong>Lonely / contact-seeking</strong></td><td>Lower-intensity, pausing when held</td><td>Hold, skin-to-skin</td></tr>
-        <tr><td><strong>Undefined</strong></td><td>Mixed pattern with no clear classification</td><td>Walk through basics: feed, diaper, temperature, sleep window</td></tr>
-      </tbody>
-    </table>
+  <section class="ll-section ll-reveal" id="pricing">
+    <p class="ll-kicker">Pricing</p>
+    <h2>Simple pricing, no per-translation fees</h2>
+    <div class="ll-pricing">
+      <div class="ll-price">
+        <h3>Weekly</h3>
+        <p class="ll-price__amount">$4.99 <span>/ week</span></p>
+        <ul>
+          <li>7-day free trial</li>
+          <li>Unlimited cry translations</li>
+          <li>All three AI assistants</li>
+          <li>Voice mode</li>
+          <li>Soothing sounds library</li>
+          <li>Partner sync · PDF export</li>
+        </ul>
+      </div>
+      <div class="ll-price ll-price--featured">
+        <h3>Annual</h3>
+        <p class="ll-price__amount">$39.99 <span>/ year</span></p>
+        <ul>
+          <li>≈ 77¢ per week — saves ~85% vs weekly</li>
+          <li>Unlimited cry translations</li>
+          <li>All three AI assistants</li>
+          <li>Voice mode</li>
+          <li>Soothing sounds library</li>
+          <li>Partner sync · PDF export</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px;">The weekly tier is for the parent who needs the app intensely through the first 8–12 weeks of crying and may want to cancel after. The annual tier makes sense through the full first year when sleep regressions, growth spurts, and milestone changes keep coming. Trial auto-converts to weekly billing unless cancelled at least 24 hours before it ends. All cancellation is handled by Apple in Settings → Apple ID → Subscriptions.</p>
   </section>
 
-  <section class="app-section">
-    <h2>How CrySnap compares</h2>
-    <p>An honest comparison with the three most-installed baby cry apps in the US App Store. We placed our own app mid-table on purpose.</p>
-    <table class="compare-table">
-      <thead>
-        <tr><th>Feature</th><th>CrySnap</th><th>Nanni AI</th><th>Cry Analyzer (First Ascent)</th><th>Baby Cry Translator (Hanva)</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Cry classification</td><td>9 categories, on-device</td><td>Cry translation + tracker</td><td>Multi-category, claims 20M+ recordings</td><td>5 categories</td></tr>
-        <tr><td>Pediatric nurse chat</td><td><strong>Yes (AAP-grounded)</strong></td><td>Ask Nanni feature</td><td>No</td><td>No</td></tr>
-        <tr><td>Dedicated sleep coach</td><td><strong>Yes (wake windows, regressions)</strong></td><td>SleepGenie (coming soon)</td><td>No</td><td>No</td></tr>
-        <tr><td>Dedicated lactation consultant</td><td><strong>Yes</strong></td><td>No</td><td>No</td><td>No</td></tr>
-        <tr><td>Voice mode (hands-free at 3 a.m.)</td><td><strong>Yes</strong></td><td>No</td><td>No</td><td>No</td></tr>
-        <tr><td>Soothing sounds library</td><td>Yes, frequency-calibrated</td><td>No</td><td>Basic</td><td>Basic</td></tr>
-        <tr><td>Sleep / feeding / diaper logs</td><td>Yes</td><td><strong>Yes (most developed)</strong></td><td>Basic</td><td>No</td></tr>
-        <tr><td>Apple Watch support</td><td>Planned</td><td><strong>Yes</strong></td><td>No</td><td>No</td></tr>
-        <tr><td>Partner sync</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
-        <tr><td>Audio processed on-device</td><td><strong>Yes (privacy-first)</strong></td><td>Cloud-based</td><td>Cloud-based</td><td>Cloud-based</td></tr>
-        <tr><td>Pediatrician PDF export</td><td>Yes</td><td>Notes for healthcare providers</td><td>No</td><td>No</td></tr>
-        <tr><td>Pricing</td><td>$4.99/wk · $39.99/yr</td><td>Free + premium tier</td><td>~$9.99/yr</td><td>Weekly/monthly tiers</td></tr>
-        <tr><td>Free trial</td><td>7 days</td><td>Free version exists</td><td>Limited free use</td><td>Trial varies</td></tr>
-      </tbody>
-    </table>
-    <p>For the full breakdown see <a href="/compare/crysnap-vs-nanni-ai/">CrySnap vs Nanni AI</a>.</p>
-  </section>
-
-  <section class="app-section" id="faq">
+  <section class="ll-section ll-reveal" id="faq">
+    <p class="ll-kicker">Questions</p>
     <h2>Frequently asked questions</h2>
+    <div class="ll-faq">
 
-    <h3>How accurate is the cry translation actually?</h3>
-    <p>The underlying model reaches 89% test accuracy on the 9-class problem under research conditions — clean audio, isolated cry, no background noise. In real homes accuracy is lower. CrySnap returns a confidence score with every result and shows the top two candidates when the model is uncertain. Treat it as a strong starting point for your own intuition, not a definitive answer. Most experienced parents agree with the app most of the time; the value is the speed and the reduction of "I have no idea where to even start" paralysis.</p>
+      <details>
+        <summary>What is CrySnap?</summary>
+        <div class="ll-faq__a"><p>CrySnap is an iPhone app that records your baby's cry and uses a deep-learning classifier to identify the most likely meaning across 9 cry categories. Beyond the cry translation it includes three AI assistants — a pediatric nurse grounded in AAP guidance, a sleep coach for wake windows and regressions, and a lactation consultant for breastfeeding questions. It also has voice mode for hands-free 3 a.m. use and a frequency-calibrated soothing-sounds library. Published by Loveiko Labs. $4.99 per week or $39.99 per year with a 7-day free trial.</p></div>
+      </details>
 
-    <h3>Will my baby's audio be uploaded anywhere?</h3>
-    <p>No. The classification model runs entirely on your iPhone — that is why it works at 3 a.m. with no WiFi. Audio is discarded after the result is returned. This is a privacy decision we made deliberately because baby audio is among the most sensitive household data your phone can capture. The pediatric nurse / sleep coach / lactation consultant chat features do use a cloud connection because they rely on large language models; those conversations are anonymized.</p>
+      <details>
+        <summary>How accurate is the cry classifier?</summary>
+        <div class="ll-faq__a"><p>89% test accuracy on the 9-class problem under research conditions — clean audio, isolated cry, no background noise. Real-world accuracy is lower because of household noise, microphone distance, and naturally overlapping cry types (a tired baby is often also hungry). CrySnap returns a confidence score with every result and shows the top two candidates when the model is uncertain. We treat the output as a strong starting point for the parent's own intuition, not a definitive verdict. Most experienced parents agree with the app most of the time; the value is the speed and the reduction of "I have no idea where to even start" paralysis.</p></div>
+      </details>
 
-    <h3>What if CrySnap returns "undefined"?</h3>
-    <p>About 5-10% of cries do not classify cleanly — usually because they are mixed (a tired baby who is also hungry) or because the recording captured background noise more than the cry. When the verdict is undefined, the app walks you through the basics: hunger window, last diaper, room temperature, time since last nap. These four checks resolve most undefined cases without the model needing to be smarter.</p>
+      <details>
+        <summary>What are the 9 cry categories?</summary>
+        <div class="ll-faq__a"><p>Hungry, tired, gas or burping, colic, discomfort (diaper, temperature, clothing), pain, overstimulated, lonely or contact-seeking, and undefined. The categories are based on documented infant cry research and the model's training labels. Every result page includes the category, a confidence score, and a typical next step.</p></div>
+      </details>
 
-    <p><a href="/apps/crysnap/faq/">See the full FAQ (20 questions)</a></p>
+      <details>
+        <summary>How does the cry classification work technically?</summary>
+        <div class="ll-faq__a"><p>The model is a convolutional neural network trained on more than 10,000 labeled infant cry recordings from multiple research datasets. It analyzes spectral features (pitch contour, frequency distribution, rhythm, and intensity) over a 5–20 second audio window. The model runs entirely on your iPhone via Core ML — that is why the cry translation works offline. Audio is processed locally and discarded after the result is returned.</p></div>
+      </details>
+
+      <details>
+        <summary>Is my baby's audio uploaded anywhere?</summary>
+        <div class="ll-faq__a"><p>No. The classification model runs locally on your iPhone. Audio is never sent to our servers and is discarded after the result. This is a deliberate privacy decision because baby audio is among the most sensitive household data a phone can capture. The pediatric nurse / sleep coach / lactation consultant chat features do use a cloud connection because they rely on large language models, but those text conversations are anonymized and do not transmit audio. Full details are in the privacy policy at love8ko.github.io/crysnap/privacy-policy.html.</p></div>
+      </details>
+
+      <details>
+        <summary>Does CrySnap work without internet?</summary>
+        <div class="ll-faq__a"><p>Cry classification works fully offline because the model is on-device. The soothing sounds library is offline. Previously-saved sleep, feeding, and diaper logs are offline. The pediatric nurse, sleep coach, and lactation consultant chat assistants require an internet connection because they run on a server, not on your phone. If you start a chat at 3 a.m. with no WiFi, the cry translation will still work; the chat will queue until you reconnect.</p></div>
+      </details>
+
+      <details>
+        <summary>What is the pediatric nurse assistant trained on?</summary>
+        <div class="ll-faq__a"><p>The pediatric nurse uses a large language model with a system prompt grounded in publicly available American Academy of Pediatrics (AAP) guidance — current safe sleep recommendations, age-by-age developmental milestones, fever thresholds by age, normal vs concerning behavior patterns, and standard pediatric first-aid procedures. Every response that mentions a medical symptom includes a "when to call your doctor" trigger. The AAP does not endorse or sponsor this app; we reference their publicly available guidance the way any health-information service does.</p></div>
+      </details>
+
+      <details>
+        <summary>How is the sleep coach different from a real sleep consultant?</summary>
+        <div class="ll-faq__a"><p>The sleep coach assistant offers age-appropriate wake windows, nap-schedule templates, sleep environment recommendations, and walkthroughs of common methods (Ferber, gentle, no-cry, chair method, pick-up-put-down). It does not provide one-on-one consultations, does not have long-term sleep data the way a paid sleep consultant would after a multi-day evaluation, and does not promise specific outcomes. For complex cases (medical sleep disorders, severe regression, special needs), a human sleep consultant or pediatric sleep clinic is still the right resource.</p></div>
+      </details>
+
+      <details>
+        <summary>How is the lactation consultant assistant different from an IBCLC?</summary>
+        <div class="ll-faq__a"><p>The lactation consultant assistant provides reference information on common breastfeeding challenges — latch positioning, supply concerns, cluster feeding, pumping schedules, weaning, mastitis warning signs, when to seek hands-on help. It cannot watch your baby latch on a video call or check tongue tie the way a board-certified International Lactation Consultant (IBCLC) can. For latching pain that does not improve, suspected tongue or lip tie, persistent supply concerns, or any nipple infection, see an IBCLC in person.</p></div>
+      </details>
+
+      <details>
+        <summary>What is voice mode and when do I use it?</summary>
+        <div class="ll-faq__a"><p>Voice mode is a hands-free mode for the 3 a.m. moment — when your baby is crying, you are holding her, and you cannot open your eyes enough to read a phone screen. Tap one button on the lock screen and just talk. The assistant responds out loud in seconds. It is built for the moment where you would otherwise be Googling "why is my baby crying at 3am" with one hand. Voice mode is available for all three AI assistants.</p></div>
+      </details>
+
+      <details>
+        <summary>What are the soothing sounds and do they actually work?</summary>
+        <div class="ll-faq__a"><p>The library includes white noise at multiple frequency bands, womb sounds, scientifically calibrated shushing (louder than most parents expect, closer to a vacuum than a whisper), lullabies in English, Spanish, French, and Mandarin, and heartbeat rhythms at maternal resting BPM. Each sound has a documented use case based on published infant soothing research. Effectiveness varies by baby — what works for a colicky 6-week-old often does not work for a 4-month-old in regression — but the library covers the main evidence-based options. All sounds loop offline and run overnight without significant battery drain.</p></div>
+      </details>
+
+      <details>
+        <summary>What does the pediatrician PDF export contain?</summary>
+        <div class="ll-faq__a"><p>The PDF compiles a structured summary of the past 1–2 weeks of cry events, sleep patterns, feeding logs, diaper output, and any notes you have added. It is formatted for a pediatric appointment — typically a single page front and back — and includes the most recent two weeks of trends rather than raw data. You can export it before a sick visit, well-child checkup, or sleep consultation. The PDF is generated on-device and saved to your Files app; we never see your baby's records on our servers.</p></div>
+      </details>
+
+      <details>
+        <summary>Can my partner see the same data?</summary>
+        <div class="ll-faq__a"><p>Yes — partner sync is enabled by default. Both parents can log feedings, diaper changes, and naps from their own phones, and both see the live cry-translation history and chat conversations. This is especially useful when one parent is at work and the other is home, or for overnight handoffs where both want to know what was tried already. Sync uses iCloud's CloudKit infrastructure with end-to-end encryption — your data stays in your iCloud, not on our servers.</p></div>
+      </details>
+
+      <details>
+        <summary>What if CrySnap returns "undefined"?</summary>
+        <div class="ll-faq__a"><p>About 5–10% of cries do not classify cleanly — usually because they are mixed (a tired baby who is also hungry) or because the recording captured background noise more than the cry. When the verdict is undefined, the app walks you through the basics: hunger window, last diaper, room temperature, time since last nap, last burp. These four to five checks resolve most undefined cases without the model needing to be smarter.</p></div>
+      </details>
+
+      <details>
+        <summary>Is CrySnap a substitute for a pediatrician?</summary>
+        <div class="ll-faq__a"><p>No, and we are explicit about this. CrySnap is a parenting companion, not a medical device. It does not diagnose any condition. The pediatric nurse assistant provides AAP-grounded reference information, not personalized medical advice. For any severe symptom — fever in a newborn under 3 months, lethargy, blue lips or fingertips, breathing difficulty, projectile vomiting, refusal to feed for several hours, signs of dehydration, or any rapid change in behavior — call 911 or your pediatrician immediately. CrySnap surfaces these triggers in the app for exactly this reason.</p></div>
+      </details>
+
+      <details>
+        <summary>When should I stop the app and call 911?</summary>
+        <div class="ll-faq__a"><p>Stop using any app and call 911 (or go directly to an emergency room) if your baby has: trouble breathing or pauses in breathing; blue or gray lips, tongue, or fingertips; a temperature over 100.4°F (38°C) rectal in a baby under 3 months; lethargy where she cannot be roused easily; a seizure; a sunken soft spot or sunken eyes (severe dehydration signs); projectile vomiting that does not stop; or any rapid change in behavior or color. These are the exact triggers CrySnap surfaces in the app for the same reason.</p></div>
+      </details>
+
+      <details>
+        <summary>What age range is CrySnap for?</summary>
+        <div class="ll-faq__a"><p>The cry classifier is calibrated for ages 0–12 months, with peak accuracy in 0–6 months when the cry types are most distinctive. After 12 months babies cry less and for more contextual reasons, and a cry-translation app becomes less useful — but the sleep coach and pediatric nurse assistants remain useful through age 2–3 for wake windows, sleep training, weaning, and developmental questions. After age 3, a different category of app is more appropriate.</p></div>
+      </details>
+
+      <details>
+        <summary>How much does CrySnap cost?</summary>
+        <div class="ll-faq__a"><p>$4.99 per week or $39.99 per year, both with a 7-day free trial. The weekly tier is for the parent who needs the app intensely through the first 8–12 weeks of crying and may want to cancel after. The annual tier works out to about 77¢ per week and makes sense through the full first year when sleep regressions, growth spurts, and milestone changes keep coming. Both include unlimited cry translations, all three AI assistants, voice mode, the sounds library, partner sync, and pediatrician PDF export.</p></div>
+      </details>
+
+      <details>
+        <summary>How do I cancel my CrySnap subscription?</summary>
+        <div class="ll-faq__a"><p>On your iPhone: Settings → tap your name at the top → Subscriptions → find CrySnap → Cancel Subscription. The cancellation takes effect at the end of the current billing period — the app continues working until then. To avoid being charged after the trial, cancel at least 24 hours before the trial ends. If you cancel within the trial, you are not charged.</p></div>
+      </details>
+
+      <details>
+        <summary>How is CrySnap different from Nanni AI?</summary>
+        <div class="ll-faq__a"><p>Nanni AI by Ubenwa Intelligence Solutions is the most-installed dedicated baby cry translator on the App Store and is built around clinical credibility — they collaborate with neonatologists and emphasize their medical research provenance. They also offer a free tier with limited cry translations. CrySnap is built around a different angle: three AI assistants (pediatric nurse, sleep coach, lactation consultant) plus a voice mode for hands-free 3 a.m. use, plus on-device audio processing for stronger audio privacy. Nanni's strength is clinical authority; CrySnap's strength is the platform breadth and hands-free experience.</p></div>
+      </details>
+
+      <details>
+        <summary>Who builds CrySnap?</summary>
+        <div class="ll-faq__a"><p>CrySnap is built by <a href="/about/">Loveiko Labs</a>, an indie iOS studio in Pattaya, Thailand, founded in 2024 by Valeriy Loveyko. The studio publishes around a dozen single-purpose AI apps including JewelSnap, WatchSnap, BumpCheck, PestSnap, and VeriBag. CrySnap is funded entirely by user subscriptions — no advertisers, no data sales, no banner ads. The "no data selling" commitment is in the privacy policy.</p></div>
+      </details>
+
+    </div>
   </section>
 
-  <section class="app-section">
-    <h2>Pricing and trial</h2>
-    <ul>
-      <li><strong>$4.99 / week</strong> with a 7-day free trial. Designed for the parent who needs the app intensely through the first 8-12 weeks of crying and may want to cancel after.</li>
-      <li><strong>$39.99 / year</strong> for the same access. Works out to about 77¢ per week and makes sense through the full first year when sleep regressions, growth spurts, and milestone changes keep coming.</li>
-    </ul>
-    <p>Both tiers include unlimited cry translations, all three AI assistants, voice mode, the soothing sounds library, partner sync, and pediatrician PDF export. Subscriptions auto-renew unless cancelled at least 24 hours before the period end. Manage or cancel via Settings &gt; Apple ID &gt; Subscriptions on your iPhone. <a href="https://apps.apple.com/us/app/crysnap-baby-cry-translator/id6763694086?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=crysnap-pricing">Download CrySnap and start the free trial</a>.</p>
+  <section class="ll-section ll-cta-band ll-reveal">
+    <h2>Stop guessing. <em>Decode the cry in 3 seconds.</em></h2>
+    <div class="ll-hero__cta">
+      <a class="ll-btn" href="https://apps.apple.com/us/app/crysnap-baby-cry-translator/id6763694086?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=crysnap" target="_blank" rel="noopener">Download CrySnap on the App Store</a>
+    </div>
+    <p class="ll-hero__meta">7-day free trial · then $4.99/week or $39.99/year · cancel anytime · iOS 17.0+</p>
   </section>
 
-  <section class="app-section disclaimer-section">
-    <h2>What CrySnap is not</h2>
-    <p>CrySnap is a parenting companion, not a medical device. It does not diagnose any condition. The pediatric nurse, sleep coach, and lactation consultant are AI assistants that provide reference information; they do not replace your pediatrician, your IBCLC, or your sleep consultant. For severe symptoms — fever in a newborn under 3 months, lethargy, blue lips or fingertips, breathing difficulty, projectile vomiting, refusal to feed for several hours, or any rapid change in behavior — call 911 or your pediatrician immediately. AI cry classification is not 100% accurate, and a cry app is not a baby monitor or safety device.</p>
-  </section>
-
-  <section class="app-section related-apps">
-    <h2>Related guides on Loveiko Labs</h2>
-    <div class="related-grid">
-      <a href="/apps/crysnap/faq/" class="related-card">
-        <strong>CrySnap FAQ</strong>
-        <span>20 questions about cry-classification accuracy, the three AI assistants, voice mode, privacy of baby audio, and when CrySnap is not the right tool.</span>
+  <section class="ll-section ll-reveal">
+    <p class="ll-kicker">More from the studio</p>
+    <h2>Related Loveiko Labs apps and guides</h2>
+    <div class="ll-related">
+      <a class="ll-related-card" href="/apps/bumpcheck/">
+        <h3>BumpCheck →</h3>
+        <p>Pregnancy tracker and symptom guide. Built for expecting parents in the first and second trimesters.</p>
       </a>
-      <a href="/compare/crysnap-vs-nanni-ai/" class="related-card">
-        <strong>CrySnap vs Nanni AI</strong>
-        <span>Honest comparison of CrySnap and Ubenwa's Nanni AI — the clinical baby cry translator backed by medical professionals. Different strengths, different fits.</span>
+      <a class="ll-related-card" href="/apps/stacksnap/">
+        <h3>StackSnap →</h3>
+        <p>Supplement stack tracker. Photo-scan any label to log your daily stack and track interactions.</p>
       </a>
-      <a href="/use-cases/decode-baby-cry-at-3am/" class="related-card">
-        <strong>How to decode a baby's cry at 3 a.m.</strong>
-        <span>A practical five-step framework for the moment when your baby will not stop crying, you have already fed and changed her, and you do not know what to try next.</span>
-      </a>
-      <a href="/best-baby-cry-translator-apps-2026/" class="related-card">
-        <strong>Best baby cry translator apps in 2026</strong>
-        <span>Honest ranking of six leading apps — Nanni AI, CrySnap, ChatterBaby, Dunstan Baby, Cry Analyzer, and Baby Cry Translator. With disclosure of which one we make.</span>
+      <a class="ll-related-card" href="/best-baby-cry-translator-apps-2026/">
+        <h3>Best baby cry apps 2026 →</h3>
+        <p>Honest ranking of six leading apps — Nanni AI, CrySnap, ChatterBaby, Dunstan Baby, Cry Analyzer, and Baby Cry Translator. With disclosure of which one we make.</p>
       </a>
     </div>
   </section>
 
-  <section class="app-section">
-    <h2>About Loveiko Labs</h2>
-    <p>Loveiko Labs is an indie iOS studio in Pattaya, Thailand, founded by <a href="/about/">Valeriy Loveyko</a> in 2024. We build single-purpose AI apps that solve one problem in 30 seconds — point your camera at a thing, get an expert-level answer with the next step you can actually take. Twelve apps live, three in development, no agencies, no padding. <a href="/">Read the studio story</a>.</p>
+  <section class="ll-section ll-reveal">
+    <div class="ll-disclaimer">
+      <p><strong>What CrySnap is and is not.</strong> CrySnap is a parenting companion, not a medical device. It does not diagnose any condition. The pediatric nurse, sleep coach, and lactation consultant are AI assistants that provide reference information; they do not replace your pediatrician, your IBCLC, or your sleep consultant.</p>
+      <p>For severe symptoms — fever in a newborn under 3 months, lethargy, blue lips or fingertips, breathing difficulty, projectile vomiting, refusal to feed for several hours, or any rapid change in behavior — call 911 or your pediatrician immediately. AI cry classification is not 100% accurate, and a cry app is not a baby monitor or safety device.</p>
+      <p>CrySnap is not affiliated with, endorsed by, or sponsored by the American Academy of Pediatrics. AAP guidance is referenced as publicly available health information, the way any consumer health-information service uses it. Brand names (Nanni AI, Ubenwa, ChatterBaby, UCLA, Dunstan Baby Language) used nominatively for reference; no affiliation claimed. App Store is a trademark of Apple Inc.</p>
+    </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="footer-grid">
+<footer class="ll-footer">
+  <div class="ll-footer__grid">
     <div>
-      <strong>Loveiko Labs</strong>
-      <p>AI snap-and-solve apps for iPhone. Pattaya, Thailand · founded 2024.</p>
+      <strong class="ll-footer__brand">Loveiko <span>Labs</span></strong>
+      <p>Independent iOS studio building single-purpose AI apps that solve one problem in 30 seconds. Pattaya, Thailand · founded 2024.</p>
     </div>
     <div>
       <strong>CrySnap</strong>
       <ul>
-        <li><a href="/apps/crysnap/">Overview</a></li>
-        <li><a href="/apps/crysnap/faq/">FAQ</a></li>
-        <li><a href="/compare/crysnap-vs-nanni-ai/">vs Nanni AI</a></li>
-        <li><a href="/use-cases/decode-baby-cry-at-3am/">Decode a cry at 3 a.m.</a></li>
+        <li><a href="#what">Overview</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#compare">Comparison</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="/best-baby-cry-translator-apps-2026/">Best baby cry apps 2026</a></li>
       </ul>
     </div>
@@ -355,8 +576,54 @@
       </ul>
     </div>
   </div>
-  <p class="footer-copyright">© 2026 Loveiko Labs. CrySnap is a parenting companion, not a medical device. AAP guidance referenced for educational purposes; the American Academy of Pediatrics does not endorse this app. Brand names (Nanni AI, Ubenwa, ChatterBaby, UCLA, Dunstan Baby Language) used nominatively; no affiliation claimed.</p>
+  <p class="ll-footer__legal">© 2026 Loveiko Labs. CrySnap is a parenting companion, not a medical device. AAP guidance referenced for educational purposes; the American Academy of Pediatrics does not endorse this app. Brand names used nominatively; no affiliation claimed. App Store is a trademark of Apple Inc.</p>
 </footer>
+
+<script>
+/* scroll reveal */
+(function(){
+  var els=document.querySelectorAll('.ll-reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:0.12});
+  els.forEach(function(e){io.observe(e);});
+})();
+/* custom cursor — desktop pointers only */
+(function(){
+  if(!window.matchMedia||!matchMedia('(pointer:fine)').matches)return;
+  var dot=document.querySelector('.ll-cursor'),ring=document.querySelector('.ll-cursor-ring');
+  if(!dot||!ring)return;
+  document.body.classList.add('ll-cursor-ready');
+  var mx=0,my=0,rx=0,ry=0,shown=false;
+  addEventListener('mousemove',function(e){
+    mx=e.clientX;my=e.clientY;
+    dot.style.transform='translate('+(mx-3.5)+'px,'+(my-3.5)+'px)';
+    if(!shown){shown=true;dot.classList.add('on');ring.classList.add('on');}
+  },{passive:true});
+  (function loop(){rx+=(mx-rx)*0.2;ry+=(my-ry)*0.2;
+    ring.style.transform='translate('+(rx-15)+'px,'+(ry-15)+'px)';
+    requestAnimationFrame(loop);})();
+  addEventListener('mouseover',function(e){
+    var hot=e.target.closest('a,button,summary');
+    dot.classList.toggle('lg',!!hot);ring.classList.toggle('lg',!!hot);
+  });
+})();
+/* jump-nav scroll-spy — highlights the section you're reading */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.ll-jump a'));
+  if(!links.length||!('IntersectionObserver'in window))return;
+  var map={};
+  links.forEach(function(l){var id=l.getAttribute('href').slice(1);if(id)map[id]=l;});
+  var spy=new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(en.isIntersecting){
+        links.forEach(function(l){l.classList.remove('is-active');});
+        if(map[en.target.id])map[en.target.id].classList.add('is-active');
+      }
+    });
+  },{rootMargin:'-130px 0px -65% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s);});
+})();
+</script>
 
 </body>
 </html>
