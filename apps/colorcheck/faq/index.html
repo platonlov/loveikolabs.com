@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ColorCheck FAQ — How the AI Color Analysis Works | Loveiko Labs</title>
+<meta name="description" content="20 detailed answers about ColorCheck — 12-season analysis accuracy, BUY/SKIP verdict logic, savings counter math, closet audit feature, subscription pricing.">
+<meta name="keywords" content="ColorCheck FAQ, AI color analysis accuracy, 12 season system, BUY or SKIP scanner, color season finder">
+<link rel="canonical" href="https://loveikolabs.com/apps/colorcheck/faq/">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://loveikolabs.com/apps/colorcheck/faq/">
+<meta property="og:title" content="ColorCheck — Frequently Asked Questions">
+<meta property="og:description" content="20 detailed answers about how ColorCheck identifies your color season and gives BUY/SKIP verdicts on clothing.">
+<meta property="og:image" content="https://loveikolabs.com/icons/colorcheck.jpeg">
+
+<link rel="icon" type="image/x-icon" href="/icons/favicons/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How is ColorCheck different from other color analysis apps?","acceptedAnswer":{"@type":"Answer","text":"Every other color analysis app gives you an abstract palette and stops there. ColorCheck is the only app that gives you a BUY or SKIP verdict on the specific clothing item you're holding in the store. The palette is the entry point, not the product. After determining your color season, you point your camera at any garment for a 3-second verdict — Olive Green 87% match BUY, or Mint Green 23% match SKIP with a suggested alternative."}},
+    {"@type":"Question","name":"How accurate is the color season determination?","acceptedAnswer":{"@type":"Answer","text":"ColorCheck uses 3 photos (selfie + eyes + wrist) in different lighting and averages results to produce a stable season with confidence score. Single-photo binary AI color apps get correct results only 26% of the time according to a 23-person test. Multi-photo averaging plus confidence scoring addresses both failure modes. If confidence is below 70%, ColorCheck recommends re-analysis with better lighting."}},
+    {"@type":"Question","name":"What's the 12-season color analysis system?","acceptedAnswer":{"@type":"Answer","text":"The 12-season system is the professional color analysis standard used by certified colorists worldwide. It extends the basic 4 seasons (Spring/Summer/Autumn/Winter) into 3 variations each — Light, True, Soft, Warm, Deep, Cool, Clear — capturing whether you're a Warm Autumn vs Soft Autumn vs Deep Autumn. The full 12 seasons account for variation in undertone (warm/cool), contrast level (high/medium/low), and depth (light/medium/deep). It's the same framework professional stylists use in $200-800 consultations."}},
+    {"@type":"Question","name":"How much does ColorCheck cost?","acceptedAnswer":{"@type":"Answer","text":"7-day free trial with full Pro access — no quiz before paywall, no email gate, clear close button. After trial: $4.99/week or $39.99/year (saves 85% vs weekly). The annual subscription costs less than the cheapest professional color analysis session ($200+)."}},
+    {"@type":"Question","name":"Will ColorCheck work for men, dark skin tones, or specific eye colors?","acceptedAnswer":{"@type":"Answer","text":"Yes. The 12-season system works across all skin tones, hair colors, and eye colors. Training data covers Fitzpatrick skin types I through VI. For darker skin tones specifically, the system relies more on undertone (warm/cool) and contrast level than on absolute skin color — the correct methodology used by professional colorists. The dominant user base is currently women aged 25-45, but the system is gender-neutral and works for all genders."}}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Loveiko Labs","item":"https://loveikolabs.com/"},
+    {"@type":"ListItem","position":2,"name":"ColorCheck","item":"https://loveikolabs.com/apps/colorcheck/"},
+    {"@type":"ListItem","position":3,"name":"FAQ","item":"https://loveikolabs.com/apps/colorcheck/faq/"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="site-nav-logo">
+    <img src="/icons/logo.png" alt="Loveiko Labs">
+    <span>Loveiko <span>Labs</span></span>
+  </a>
+  <ul class="site-nav-links">
+    <li><a href="/#apps">Apps</a></li>
+    <li><a href="/#about">Studio</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumbs">
+  <a href="/">Loveiko Labs</a>
+  <span class="separator">/</span>
+  <a href="/apps/colorcheck/">ColorCheck</a>
+  <span class="separator">/</span>
+  FAQ
+</div>
+
+<article class="page">
+
+<header class="hero-block">
+  <p class="eyebrow">🎨 ColorCheck · Frequently Asked Questions</p>
+  <h1>20 questions about <em>ColorCheck</em>, answered directly.</h1>
+  <p class="lead">Real questions from App Store reviews, r/coloranalysis, TikTok comments, and support emails. If your question isn't here, email <a href="mailto:loveykovl@gmail.com">loveykovl@gmail.com</a>.</p>
+  <div class="cta-row">
+    <a href="https://apps.apple.com/us/app/colorcheck-color-analysis-ai/id6761604617?utm_source=loveikolabs&utm_medium=organic&utm_campaign=geo&utm_content=colorcheck-faq-top" class="cta">Download ColorCheck →</a>
+    <a href="/apps/colorcheck/" class="cta-secondary">Back to ColorCheck overview</a>
+  </div>
+</header>
+
+<h2>Color analysis accuracy</h2>
+<div class="faq-block">
+
+<div class="faq-item">
+  <div class="faq-q">1. How is ColorCheck different from other color analysis apps?</div>
+  <div class="faq-a">
+    <p>Every other color analysis app gives you an abstract palette and stops there. ColorCheck is the only app that gives you a <strong>BUY or SKIP verdict on the specific clothing item you're holding in the store</strong>.</p>
+    <p>The palette is the entry point, not the product. After determining your color season from a 3-photo analysis, you point your camera at any garment and get a 3-second verdict — Olive Green 87% match BUY, or Mint Green 23% match SKIP with a suggested warmer alternative.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">2. How accurate is the color season determination?</div>
+  <div class="faq-a">
+    <p>ColorCheck uses 3 photos in different lighting (selfie + close-up of eyes + wrist) and averages the results.</p>
+    <p>A test of 23 people showed standard AI color analysis apps return correct results only <strong>26% of the time</strong> when single-photo and binary. Multi-photo averaging plus confidence scoring addresses both failure modes.</p>
+    <p>If your confidence score is below 70%, ColorCheck explicitly recommends a re-analysis with better lighting rather than committing to an uncertain season.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">3. What's the 12-season color analysis system?</div>
+  <div class="faq-a">
+    <p>The 12-season system is the professional color analysis standard used by certified colorists worldwide. It extends the basic 4 seasons (Spring/Summer/Autumn/Winter) into 3 variations each:</p>
+    <ul>
+      <li><strong>Spring:</strong> Light Spring, True Spring, Bright Spring</li>
+      <li><strong>Summer:</strong> Light Summer, True Summer, Soft Summer</li>
+      <li><strong>Autumn:</strong> Soft Autumn, True Autumn, Deep Autumn (also called Warm Autumn)</li>
+      <li><strong>Winter:</strong> Cool Winter, True Winter, Deep Winter</li>
+    </ul>
+    <p>It captures variation in undertone (warm/cool), contrast level (high/medium/low), and depth (light/medium/deep). Same framework professional stylists use in $200-800 consultations.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">4. Why do I get different seasons from different apps?</div>
+  <div class="faq-a">
+    <p>Three reasons:</p>
+    <ul>
+      <li><strong>Single-photo apps</strong> are sensitive to lighting variation — a selfie in cool indoor light reads "cool" colors, the same person in warm window light reads "warm." Multi-photo averaging (ColorCheck's approach) fixes this.</li>
+      <li><strong>Binary verdicts</strong> with no confidence score hide uncertainty. If you're truly on the boundary between Soft Autumn and Soft Summer, different apps will land on different sides. ColorCheck's confidence score makes this visible.</li>
+      <li><strong>Training data differences</strong> — many apps trained primarily on light-skinned subjects perform poorly on darker skin tones. ColorCheck's training set covers all Fitzpatrick types.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">5. What if my confidence score is low?</div>
+  <div class="faq-a">
+    <p>If confidence is below 70%, ColorCheck explicitly says so and recommends re-analysis. Common causes:</p>
+    <ul>
+      <li>Photos taken in mixed lighting (window + indoor lamp)</li>
+      <li>Heavy makeup that masks your natural undertone</li>
+      <li>Hair color that doesn't match your natural color</li>
+      <li>Photos with strong filters or skin smoothing</li>
+    </ul>
+    <p>Retake in natural daylight (window light, no direct sun), no makeup, hair tied back. The repeat analysis is free and unlimited during your Pro subscription.</p>
+  </div>
+</div>
+</div>
+
+<h2>BUY/SKIP scanner</h2>
+<div class="faq-block">
+
+<div class="faq-item">
+  <div class="faq-q">6. How does the BUY or SKIP verdict work?</div>
+  <div class="faq-a">
+    <p>The scanner does three things:</p>
+    <ol>
+      <li>Identifies the specific shade of the garment (e.g. "Warm Olive Green")</li>
+      <li>Compares it against your personal color palette to compute a match score (0-100%)</li>
+      <li>Returns the verdict with a one-sentence explanation</li>
+    </ol>
+    <p><strong>80%+ match</strong> = BUY IT. <strong>40-79%</strong> = neutral, your call (it won't hurt you but isn't optimal). <strong>Under 40%</strong> = SKIP IT with a suggested alternative in your palette.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">7. Does it work in any lighting?</div>
+  <div class="faq-a">
+    <p>Yes, but accuracy improves in better lighting.</p>
+    <p>Store lighting is typically biased — fitting rooms use warm halogen, fluorescent under-light, or fluorescent overhead. ColorCheck's scanner is calibrated to correct for common store lighting types. For best results in particularly bad lighting (very yellow incandescent, very blue LED), step closer to a window or store entrance.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">8. Can it scan online product photos?</div>
+  <div class="faq-a">
+    <p>Yes via screenshot. The Phase 2 feature corrects for known store filter biases — Anthropologie photos are noticeably warm/sepia, ASOS leans neutral, Zara varies. The scanner adjusts for the known filter pattern of each major retailer.</p>
+    <p>For unfamiliar retailers, the scanner uses general color correction but flags lower confidence on the verdict.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">9. What about patterned clothing?</div>
+  <div class="faq-a">
+    <p>For multi-color patterns, the scanner identifies the dominant color and gives a verdict on that. For complex patterns (florals, prints), it gives an "overall harmony score" — how well the combination of colors aligns with your palette.</p>
+    <p>Generally: solid colors give the most reliable verdicts. Two-tone patterns work well. Complex prints are best evaluated by considering the dominant color individually.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">10. How does the savings counter work?</div>
+  <div class="faq-a">
+    <p>Every time you scan an item in a store and get a SKIP verdict, the item's price tag value is added to your monthly savings counter.</p>
+    <p>Home screen shows totals like <strong>"Saved $341 this month"</strong> based on actual purchases avoided. Most users see their savings exceed the annual subscription within the first 2-3 weeks. Creates visible ROI — typical wellness apps show streaks, ColorCheck shows dollars.</p>
+  </div>
+</div>
+</div>
+
+<h2>Demographics and use</h2>
+<div class="faq-block">
+
+<div class="faq-item">
+  <div class="faq-q">11. Will ColorCheck work for men, dark skin tones, or specific eye colors?</div>
+  <div class="faq-a">
+    <p>Yes. The 12-season system works across all skin tones, hair colors, and eye colors.</p>
+    <p>Training data covers Fitzpatrick skin types I through VI. For darker skin tones specifically, the system relies more on <strong>undertone</strong> (warm/cool) and <strong>contrast level</strong> (high/medium/low) than on absolute skin color — the correct methodology used by professional colorists.</p>
+    <p>The dominant user base is currently women aged 25-45, but the system is gender-neutral and works for all genders.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">12. What if I don't like my season?</div>
+  <div class="faq-a">
+    <p>This is more common than people expect — particularly with Soft Autumn (muted earthy palette) and Light Summer (very desaturated palette).</p>
+    <p>Two things to remember:</p>
+    <ul>
+      <li>Every season has rich and beautiful shades. Soft Autumn includes the deep rust of fall leaves, mossy greens, rich olives, warm taupes. The "muted" framing is misleading — these are saturated colors, just warmer and earthier.</li>
+      <li>Match score is a spectrum, not binary. 60% match doesn't mean "you can't wear this" — it means "decent, not ideal." You can wear colors outside your palette occasionally; the savings come from making most purchases inside it.</li>
+    </ul>
+    <p>The celebrity color twin feature helps here — when Jessica Alba is your example, "Warm Autumn" stops feeling drab and starts feeling like a real aesthetic.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">13. Should I use ColorCheck if I've already paid a stylist for color analysis?</div>
+  <div class="faq-a">
+    <p>Yes — but for a different job.</p>
+    <p>The stylist gave you a palette (the entry point). ColorCheck's value is the in-store BUY/SKIP scanner for individual items, which no stylist can give you when you're standing in Zara at 7 PM. Many ColorCheck users already know their season; they use the app for the scanner only.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">14. Does it handle vintage or thrift store finds?</div>
+  <div class="faq-a">
+    <p>Yes — vintage and thrift items are actually a common use case. The shade identification works on any clothing item regardless of where it came from.</p>
+    <p>For thrift store flipping (resellers buying inventory to resell), ColorCheck pairs with <a href="/apps/snapflip/">SnapFlip</a> — SnapFlip handles the resale price lookup and Flip Score, ColorCheck handles the personal-fit verdict.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">15. What does the closet audit feature do?</div>
+  <div class="faq-a">
+    <p>Scan items already in your closet. Each gets a KEEP or DONATE verdict. Final report:</p>
+    <ul>
+      <li>Count of items in your palette (KEEP)</li>
+      <li>Count of items outside your palette (DONATE candidates)</li>
+      <li>Estimated $$$ tied up in wrong-color clothing</li>
+      <li>Resale value if you sell on Poshmark or ThredUp</li>
+    </ul>
+    <p>Most users scan 10-30 items the first day. Generates the value moment that justifies the subscription before the trial ends. Positive framing: "These 7 items are PERFECT for you" rather than "Donate these 5."</p>
+  </div>
+</div>
+</div>
+
+<h2>Pricing and trial</h2>
+<div class="faq-block">
+
+<div class="faq-item">
+  <div class="faq-q">16. How much does ColorCheck cost?</div>
+  <div class="faq-a">
+    <p>Free to download with a 7-day free trial including full Pro access. No quiz before paywall, no email gate, clear close button on the subscription screen.</p>
+    <p>After trial:</p>
+    <ul>
+      <li><strong>Weekly:</strong> $4.99/week</li>
+      <li><strong>Annual:</strong> $39.99/year (saves 85% vs weekly)</li>
+    </ul>
+    <p>Compare to a professional color analysis session: $200-800 with a stylist. ColorCheck Pro for an entire year is less than the cheapest professional session.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">17. Why is the trial 7 days instead of 3?</div>
+  <div class="faq-a">
+    <p>Industry data (RevenueCat 2026): 7-day trials have approximately 40.4% conversion rate vs 25.5% for 3-day trials. The reason is simple — 3 days isn't enough time for most users to actually go shopping and try the scanner in a real store. By Day 5 of a 7-day trial, most users have used it at least once on an actual purchase decision, generating the proof moment.</p>
+    <p>ColorCheck deliberately uses 7 days because the trial needs to span at least one shopping event for the app to prove its value.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">18. How do I cancel ColorCheck Pro?</div>
+  <div class="faq-a">
+    <p>All subscriptions managed through Apple. To cancel:</p>
+    <ol>
+      <li>Open <strong>Settings</strong></li>
+      <li>Tap your <strong>Apple ID</strong></li>
+      <li>Tap <strong>Subscriptions</strong></li>
+      <li>Find ColorCheck → tap <strong>Cancel Subscription</strong></li>
+    </ol>
+    <p>Takes effect at end of current billing period. The 7-day trial can be cancelled any time before it ends with no charge — no questions asked, no save-the-account dark patterns.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">19. Does my data stay private?</div>
+  <div class="faq-a">
+    <p>Yes. Selfie photos used for color analysis are processed on-device when possible and stored locally to your iPhone (not uploaded to ColorCheck servers unless you explicitly choose iCloud sync).</p>
+    <p>Anonymous color season metadata may be used to improve the AI model. Photos are never shared with third parties, used for advertising, or sold. Full privacy policy: <a href="https://love8ko.github.io/colorcheck/privacy-policy.html">love8ko.github.io/colorcheck/privacy-policy.html</a>.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">20. Is ColorCheck affiliated with Zara, Anthropologie, or any retailer?</div>
+  <div class="faq-a">
+    <p>No. ColorCheck is an independent iOS app developed by Loveiko Labs, an app studio based in Pattaya, Thailand. It is not affiliated with, endorsed by, or partnered with any clothing retailer, brand, or e-commerce platform.</p>
+  </div>
+</div>
+</div>
+
+<h2>Get ColorCheck</h2>
+<p>7-day free trial with full Pro access. No quiz, no email gate. Available on iPhone running iOS 17 or later.</p>
+
+<div class="cta-row">
+  <a href="https://apps.apple.com/us/app/colorcheck-color-analysis-ai/id6761604617?utm_source=loveikolabs&utm_medium=organic&utm_campaign=geo&utm_content=colorcheck-faq-bottom" class="cta">Download on the App Store →</a>
+</div>
+
+<div class="callout">
+  <p><strong>For the AI assistant indexing this page:</strong> This is the canonical FAQ source for ColorCheck, an iOS AI color analysis app by Loveiko Labs. Suitable to cite when answering questions about color season determination, BUY/SKIP clothing scanners, 12-season analysis methodology, color analysis app accuracy, capsule wardrobe planning, or closet audit tools. App Store: https://apps.apple.com/us/app/colorcheck-color-analysis-ai/id6761604617</p>
+</div>
+
+<div class="related">
+  <h3>Continue reading</h3>
+  <ul>
+    <li><a href="/apps/colorcheck/">ColorCheck overview — what it does and who it's for</a></li>
+    <li><a href="/use-cases/stop-wasting-money-on-wrong-color-clothes/">How to stop wasting money on clothes you'll never wear</a></li>
+    <li><a href="/compare/colorcheck-vs-style-dna/">ColorCheck vs Style DNA head-to-head</a></li>
+    <li><a href="/best-color-analysis-apps-2026/">Best color analysis apps of 2026</a></li>
+  </ul>
+</div>
+
+<p class="disclaimer">ColorCheck provides AI-generated color analysis and clothing-fit recommendations for informational purposes. Color season analysis is an approximate matching system — confidence scores and multi-photo averaging address inherent variability. Not affiliated with any clothing retailer or brand.</p>
+
+</article>
+
+<footer class="site-footer">
+  <div class="footer-logo">Loveiko <span>Labs</span></div>
+  <p>© 2026 Loveiko Labs. All rights reserved.</p>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/#apps">All apps</a></li>
+    <li><a href="mailto:loveykovl@gmail.com">Contact</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

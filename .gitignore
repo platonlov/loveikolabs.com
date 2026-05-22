@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# GEO pack source material — deployed pages live at repo root, not this folder
+GEO PACKS/

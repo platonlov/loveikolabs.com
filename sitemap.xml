@@ -1,32 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
+  <!-- ROOT -->
   <url>
     <loc>https://loveikolabs.com/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!--
-    Phase 2 will add the following URLs (uncomment after deploy):
+  <!-- ============ JEWELSNAP ============ -->
+  <url><loc>https://loveikolabs.com/apps/jewelsnap/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/jewelsnap/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-jewelry-identifier-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/jewelsnap-vs-jewelry-identifier-appraisal/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/identify-vintage-inherited-jewelry/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-    /apps/jewelsnap/                                           priority 0.9
-    /apps/jewelsnap/faq/                                       priority 0.8
-    /compare/jewelsnap-vs-jewelry-identifier-appraisal/        priority 0.7
-    /compare/jewelsnap-vs-jewelry-identifier-value/            priority 0.7
-    /compare/jewelsnap-vs-jewelry-identifier-by-picture/       priority 0.7
-    /use-cases/identify-vintage-inherited-jewelry/             priority 0.7
-    /use-cases/check-thrift-store-jewelry-value/               priority 0.7
-    /use-cases/verify-engagement-ring-before-selling/          priority 0.7
-    /use-cases/evaluate-estate-sale-jewelry-lot/               priority 0.7
-    /use-cases/verify-jewelry-not-stolen-property/             priority 0.7
-    /best-jewelry-identifier-apps-2026/                        priority 0.8
+  <!-- ============ SNAPFLIP ============ -->
+  <url><loc>https://loveikolabs.com/apps/snapflip/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/snapflip/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-thrift-flipping-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/snapflip-vs-thriftai/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/scan-thrift-store-items-before-buying/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-    Same structure will repeat for other 11 apps in subsequent phases.
-  -->
+  <!-- ============ WATCHSNAP ============ -->
+  <url><loc>https://loveikolabs.com/apps/watchsnap/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/watchsnap/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-watch-identifier-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/watchsnap-vs-watch-scanner-identifier/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/verify-rolex-before-buying-used/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ STACKSNAP ============ -->
+  <url><loc>https://loveikolabs.com/apps/stacksnap/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/stacksnap/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-supplement-tracker-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/stacksnap-vs-suppco/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/audit-your-supplement-stack-save-money/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ COLORCHECK ============ -->
+  <url><loc>https://loveikolabs.com/apps/colorcheck/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/colorcheck/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-color-analysis-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/colorcheck-vs-style-dna/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/stop-wasting-money-on-wrong-color-clothes/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ VERIBAG ============ -->
+  <url><loc>https://loveikolabs.com/apps/veribag/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/veribag/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-handbag-authentication-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/veribag-vs-entrupy/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/verify-handbag-before-buying-secondhand/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ PESTSNAP ============ -->
+  <url><loc>https://loveikolabs.com/apps/pestsnap/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/pestsnap/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-pest-identifier-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/pestsnap-vs-picture-insect/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/identify-bug-bite-on-skin/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ CRYSNAP ============ -->
+  <url><loc>https://loveikolabs.com/apps/crysnap/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/crysnap/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-baby-cry-translator-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/crysnap-vs-nanni-ai/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/decode-baby-cry-at-3am/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ BUMPCHECK ============ -->
+  <url><loc>https://loveikolabs.com/apps/bumpcheck/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/bumpcheck/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-pregnancy-ingredient-checker-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/bumpcheck-vs-little-bean/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/check-medication-pregnancy-safety/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ JABWELL ============ -->
+  <url><loc>https://loveikolabs.com/apps/jabwell/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/jabwell/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-glp1-tracker-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/jabwell-vs-shotsy/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/manage-glp1-nausea-and-side-effects/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ CALIBRUM ============ -->
+  <url><loc>https://loveikolabs.com/apps/calibrum/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/calibrum/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-trt-tracker-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/calibrum-vs-trt-plus/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/decode-trt-lab-results/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ FOLIK (NEW — FINAL APP, 12/12) ============ -->
+  <url><loc>https://loveikolabs.com/apps/folik/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://loveikolabs.com/apps/folik/faq/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/best-hair-loss-tracker-apps-2026/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/compare/folik-vs-regrow-hair-ai/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://loveikolabs.com/use-cases/track-hair-loss-treatment-progress/</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>
