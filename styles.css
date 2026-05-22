@@ -169,7 +169,7 @@ body::before {
 .ll-jump a:hover { color: var(--green); border-color: var(--green-strong); background: var(--green-dim); }
 
 /* ─────────────────────────────  SECTIONS  ─────────────────────────── */
-.ll-section { padding: 60px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 120px; }
+.ll-section { padding: 64px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 122px; }
 .ll-section:last-of-type { border-bottom: none; }
 .ll-section > h2 {
   font-family: 'Cormorant Garamond', serif; font-weight: 300;
@@ -177,20 +177,26 @@ body::before {
   margin-bottom: 8px;
 }
 .ll-section > h2 em { font-style: italic; color: var(--green); text-shadow: var(--neon-text); }
-.ll-kicker {
-  font-size: 11.5px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase;
-  color: var(--green); text-shadow: var(--neon-text); margin-bottom: 16px;
+/* kicker — high specificity so the prose rule below can never mute it */
+.ll-page p.ll-kicker, .ll-kicker {
+  font-family: 'Syne', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--green); text-shadow: var(--neon-text); margin: 0 0 14px;
 }
 .ll-section h3 {
   font-family: 'Syne', sans-serif; font-weight: 700; font-size: 18px;
   letter-spacing: 0.01em; margin-bottom: 10px; color: var(--text);
 }
-.ll-section p { color: var(--muted); font-size: 16px; line-height: 1.78; margin-bottom: 16px; }
-.ll-section p strong { color: var(--text); font-weight: 700; }
-.ll-section p em { color: var(--green); font-style: italic; }
-.ll-section a { color: var(--green); text-decoration: none; border-bottom: 1px solid var(--green-strong); transition: text-shadow 0.2s; }
-.ll-section a:hover { text-shadow: var(--neon-text); }
-.ll-lead { font-size: 18.5px !important; color: var(--text) !important; line-height: 1.7 !important; }
+/* prose — DIRECT-child paragraphs only, so component text keeps its own colour/size */
+.ll-section > p { color: var(--muted); font-size: 16px; line-height: 1.78; margin-bottom: 16px; }
+.ll-page p.ll-lead, .ll-lead { color: var(--text); font-size: 19px; line-height: 1.72; }
+.ll-section strong { color: var(--text); font-weight: 700; }
+.ll-section em { color: var(--green); font-style: italic; }
+.ll-section > p a, .ll-section li a, .ll-faq__a a {
+  color: var(--green); text-decoration: none;
+  border-bottom: 1px solid var(--green-strong); transition: text-shadow 0.2s;
+}
+.ll-section > p a:hover, .ll-section li a:hover, .ll-faq__a a:hover { text-shadow: var(--neon-text); }
 
 /* ─────────────────────────────  CARD GRID  ────────────────────────── */
 .ll-cards {
@@ -310,10 +316,10 @@ body::before {
 }
 .ll-price h3 { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .ll-price__amount {
-  font-family: 'Cormorant Garamond', serif; font-size: 42px; color: var(--text);
-  margin: 10px 0 4px; line-height: 1;
+  font-family: 'Cormorant Garamond', serif; font-size: 48px; line-height: 1;
+  color: var(--green); text-shadow: var(--neon-text); margin: 12px 0 6px;
 }
-.ll-price__amount span { font-size: 14px; color: var(--muted); font-family: 'Syne', sans-serif; }
+.ll-price__amount span { font-size: 14px; color: var(--muted); font-family: 'Syne', sans-serif; text-shadow: none; }
 .ll-price ul { list-style: none; margin-top: 16px; }
 .ll-price li {
   font-size: 13.5px; color: var(--muted); padding: 7px 0 7px 20px; position: relative;
@@ -424,6 +430,39 @@ body::before {
 .ll-cursor.on, .ll-cursor-ring.on { opacity: 1; }
 .ll-cursor.lg { width: 13px; height: 13px; }
 .ll-cursor-ring.lg { width: 48px; height: 48px; border-color: var(--green); box-shadow: var(--neon); }
+
+/* ─────────────────────  MOTION — tasteful, light  ─────────────────── */
+@keyframes ll-glow  { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+@keyframes ll-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+.ll-hero::before { animation: ll-glow 8s ease-in-out infinite; }
+.ll-hero__icon   { animation: ll-float 6s ease-in-out infinite; }
+
+/* card hover-lift */
+.ll-card:hover, .ll-related-card:hover, .ll-rank-item:hover { transform: translateY(-4px); }
+
+/* staggered reveal of grid children — translateY only, never opacity */
+.ll-cards > *, .ll-pricing > *, .ll-related > *, .ll-rank > * {
+  transition: background 0.25s, border-color 0.25s, transform 0.55s var(--ease), box-shadow 0.3s;
+}
+.ll-reveal:not(.in) .ll-cards > *,
+.ll-reveal:not(.in) .ll-pricing > *,
+.ll-reveal:not(.in) .ll-related > *,
+.ll-reveal:not(.in) .ll-rank > * { transform: translateY(22px); }
+.ll-cards > :nth-child(2), .ll-pricing > :nth-child(2), .ll-related > :nth-child(2), .ll-rank > :nth-child(2) { transition-delay: 0.07s; }
+.ll-cards > :nth-child(3), .ll-pricing > :nth-child(3), .ll-related > :nth-child(3), .ll-rank > :nth-child(3) { transition-delay: 0.14s; }
+.ll-cards > :nth-child(4), .ll-related > :nth-child(4), .ll-rank > :nth-child(4) { transition-delay: 0.21s; }
+.ll-cards > :nth-child(n+5), .ll-rank > :nth-child(n+5) { transition-delay: 0.28s; }
+
+/* jump-nav active link — set by scroll-spy */
+.ll-jump a.is-active {
+  color: var(--green); border-color: var(--green-strong);
+  background: var(--green-dim); text-shadow: var(--neon-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ll-hero::before, .ll-hero__icon { animation: none; }
+  .ll-cards > *, .ll-pricing > *, .ll-related > *, .ll-rank > * { transform: none !important; }
+}
 
 /* ─────────────────────────────  RESPONSIVE  ───────────────────────── */
 @media (max-width: 760px) {

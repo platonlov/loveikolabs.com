@@ -422,6 +422,22 @@
     dot.classList.toggle('lg',!!hot);ring.classList.toggle('lg',!!hot);
   });
 })();
+/* jump-nav scroll-spy — highlights the section you're reading */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.ll-jump a'));
+  if(!links.length||!('IntersectionObserver'in window))return;
+  var map={};
+  links.forEach(function(l){var id=l.getAttribute('href').slice(1);if(id)map[id]=l;});
+  var spy=new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(en.isIntersecting){
+        links.forEach(function(l){l.classList.remove('is-active');});
+        if(map[en.target.id])map[en.target.id].classList.add('is-active');
+      }
+    });
+  },{rootMargin:'-130px 0px -65% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s);});
+})();
 </script>
 
 </body>
