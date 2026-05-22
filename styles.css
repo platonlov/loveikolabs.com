@@ -178,7 +178,7 @@ body::before {
 }
 .ll-section > h2 em { font-style: italic; color: var(--green); text-shadow: var(--neon-text); }
 .ll-kicker {
-  font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase;
+  font-size: 11.5px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase;
   color: var(--green); text-shadow: var(--neon-text); margin-bottom: 16px;
 }
 .ll-section h3 {
@@ -194,12 +194,14 @@ body::before {
 
 /* ─────────────────────────────  CARD GRID  ────────────────────────── */
 .ll-cards {
-  display: grid; gap: 1px; margin-top: 28px;
-  grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
-  background: var(--border); border: 1px solid var(--border);
+  display: grid; gap: 16px; margin-top: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
-.ll-card { background: var(--bg); padding: 28px 26px; transition: background 0.25s; }
-.ll-card:hover { background: var(--surface); }
+.ll-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 3px;
+  padding: 28px 26px; transition: background 0.25s, border-color 0.25s;
+}
+.ll-card:hover { background: var(--surface-2); border-color: var(--green-strong); }
 .ll-card h3 { margin-bottom: 8px; }
 .ll-card p { font-size: 14.5px; line-height: 1.7; margin: 0; }
 
@@ -293,12 +295,14 @@ body::before {
 
 /* ─────────────────────────────  PRICING  ──────────────────────────── */
 .ll-pricing {
-  display: grid; gap: 1px; margin-top: 28px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  background: var(--border); border: 1px solid var(--border);
+  display: grid; gap: 16px; margin-top: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
-.ll-price { background: var(--bg); padding: 30px 26px; position: relative; }
-.ll-price--featured { background: var(--surface); }
+.ll-price {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 3px;
+  padding: 30px 26px; position: relative;
+}
+.ll-price--featured { border-color: var(--green-strong); box-shadow: var(--neon); }
 .ll-price--featured::before {
   content: 'Best value'; position: absolute; top: 0; right: 0;
   font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700;
@@ -336,16 +340,15 @@ body::before {
 
 /* ─────────────────────────────  RELATED  ──────────────────────────── */
 .ll-related {
-  display: grid; gap: 1px; margin-top: 26px;
+  display: grid; gap: 16px; margin-top: 26px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  background: var(--border); border: 1px solid var(--border);
 }
 .ll-related-card {
-  background: var(--bg); padding: 24px; text-decoration: none !important;
-  border: none !important; transition: background 0.25s;
-  display: block;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 3px;
+  padding: 24px; text-decoration: none !important; display: block;
+  transition: background 0.25s, border-color 0.25s;
 }
-.ll-related-card:hover { background: var(--surface); }
+.ll-related-card:hover { background: var(--surface-2); border-color: var(--green-strong); }
 .ll-related-card h3 { color: var(--green); text-shadow: var(--neon-text); margin-bottom: 6px; }
 .ll-related-card p { font-size: 13.5px; margin: 0; }
 
@@ -396,12 +399,31 @@ body::before {
 .ll-rank__body p { font-size: 14.5px; margin-bottom: 8px; }
 
 /* ─────────────────────────────  REVEAL  ───────────────────────────── */
-.ll-reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
-.ll-reveal.in { opacity: 1; transform: none; }
+/* translateY only — no opacity fade, so accent colours never read as dim */
+.ll-reveal { transform: translateY(24px); transition: transform 0.6s var(--ease); }
+.ll-reveal.in { transform: none; }
 @media (prefers-reduced-motion: reduce) {
-  .ll-reveal { opacity: 1; transform: none; transition: none; }
+  .ll-reveal { transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ───────────────────────  CUSTOM CURSOR (desktop)  ────────────────── */
+@media (pointer: fine) {
+  body.ll-cursor-ready,
+  body.ll-cursor-ready a,
+  body.ll-cursor-ready button,
+  body.ll-cursor-ready summary { cursor: none; }
+}
+.ll-cursor, .ll-cursor-ring {
+  position: fixed; top: 0; left: 0; border-radius: 50%;
+  pointer-events: none; opacity: 0; will-change: transform;
+  transition: opacity 0.3s, width 0.2s var(--ease), height 0.2s var(--ease), border-color 0.2s;
+}
+.ll-cursor { width: 7px; height: 7px; background: var(--green); z-index: 9999; box-shadow: 0 0 10px rgba(106,197,112,0.7); }
+.ll-cursor-ring { width: 30px; height: 30px; border: 1px solid var(--green-strong); z-index: 9998; }
+.ll-cursor.on, .ll-cursor-ring.on { opacity: 1; }
+.ll-cursor.lg { width: 13px; height: 13px; }
+.ll-cursor-ring.lg { width: 48px; height: 48px; border-color: var(--green); box-shadow: var(--neon); }
 
 /* ─────────────────────────────  RESPONSIVE  ───────────────────────── */
 @media (max-width: 760px) {
