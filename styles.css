@@ -351,12 +351,12 @@ body::before {
 }
 .ll-related-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: 3px;
-  padding: 24px; text-decoration: none !important; display: block;
+  padding: 24px; text-decoration: none !important; display: block; color: var(--text);
   transition: background 0.25s, border-color 0.25s;
 }
 .ll-related-card:hover { background: var(--surface-2); border-color: var(--green-strong); }
-.ll-related-card h3 { color: var(--green); text-shadow: var(--neon-text); margin-bottom: 6px; }
-.ll-related-card p { font-size: 13.5px; margin: 0; }
+.ll-related-card h3 { color: var(--green); text-shadow: var(--neon-text); margin-bottom: 6px; font-size: 16px; }
+.ll-related-card p { color: var(--muted); font-size: 13.5px; line-height: 1.65; margin: 0; }
 
 /* ─────────────────────────────  CTA BAND  ─────────────────────────── */
 .ll-cta-band { text-align: center; padding: 64px 0; }
