@@ -4,19 +4,19 @@
   <!-- CORE -->
   <url>
     <loc>https://loveikolabs.com/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/about/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -24,31 +24,31 @@
   <!-- APP PAGES -->
   <url>
     <loc>https://loveikolabs.com/apps/jewelsnap/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/snapflip/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/watchsnap/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/stacksnap/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/colorcheck/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -60,37 +60,68 @@
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/pestsnap/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/crysnap/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/bumpcheck/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/jabwell/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/calibrum/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://loveikolabs.com/apps/folik/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://loveikolabs.com/apps/salvora/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://loveikolabs.com/apps/cysta/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://loveikolabs.com/apps/hepatica/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://loveikolabs.com/apps/refluxora/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://loveikolabs.com/apps/roofingcalc/</loc>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -116,7 +147,7 @@
   </url>
   <url>
     <loc>https://loveikolabs.com/best-supplement-tracker-apps-2026/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -165,6 +196,37 @@
   <url>
     <loc>https://loveikolabs.com/best-hair-loss-tracker-apps-2026/</loc>
     <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://loveikolabs.com/best-eczema-tracker-apps-2026/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://loveikolabs.com/best-pcos-tracker-apps-2026/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://loveikolabs.com/best-fatty-liver-apps-2026/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://loveikolabs.com/best-acid-reflux-gerd-apps-2026/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://loveikolabs.com/best-roofing-calculator-apps-2026/</loc>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

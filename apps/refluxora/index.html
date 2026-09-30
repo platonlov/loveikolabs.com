@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08080a">
+<title>Refluxora — GERD &amp; LPR Tracker: Meals, Symptoms, Voice &amp; Throat Scores | Loveiko Labs</title>
+<meta name="description" content="Refluxora is a GERD and LPR tracker for iPhone: explore a meal from a photo, keep meals, heartburn and throat or voice symptom scores together, understand existing lab results, ask an AI assistant about your own records and export an appointment report.">
+<meta name="keywords" content="GERD tracker app, LPR tracker, acid reflux app, silent reflux app, laryngopharyngeal reflux tracker, heartburn food diary, reflux trigger tracker, throat symptoms reflux, reflux diet app, Refluxora">
+<meta name="author" content="Valeriy Loveyko / Loveiko Labs">
+<link rel="canonical" href="https://loveikolabs.com/apps/refluxora/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://loveikolabs.com/apps/refluxora/">
+<meta property="og:title" content="Refluxora — GERD &amp; LPR Tracker That Includes Your Throat">
+<meta property="og:description" content="Meals, heartburn, and throat or voice symptoms in one record. Explore a meal from a photo, understand existing labs, export a report for your appointment.">
+<meta property="og:image" content="https://loveikolabs.com/icons/refluxora.jpeg">
+<meta property="og:site_name" content="Loveiko Labs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Refluxora — GERD &amp; LPR Tracker That Includes Your Throat">
+<meta name="twitter:description" content="Meals, heartburn, and throat or voice symptoms in one record. Explore a meal from a photo, understand existing labs, export a report for your appointment.">
+<meta name="twitter:image" content="https://loveikolabs.com/icons/refluxora.jpeg">
+
+<link rel="icon" type="image/png" href="https://loveikolabs.com/icons/refluxora.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "@id": "https://loveikolabs.com/apps/refluxora/#app",
+      "name": "Refluxora - GERD & LPR Tracker",
+      "alternateName": "Refluxora",
+      "operatingSystem": "iOS 17.0+",
+      "applicationCategory": "HealthApplication",
+      "url": "https://apps.apple.com/us/app/refluxora-gerd-lpr-tracker/id6772436586",
+      "downloadUrl": "https://apps.apple.com/us/app/refluxora-gerd-lpr-tracker/id6772436586",
+      "description": "Educational tracking app for gastroesophageal reflux disease (GERD) and laryngopharyngeal reflux (LPR, silent reflux). Explore meals from a photo or description with a practical food consideration; mark meals as planned or eaten and add how you felt; record symptoms including throat and voice symptom scores; photograph an existing lab result, confirm recognized values and get an educational explanation with questions for your clinician (missing units and reference ranges are not guessed); discuss saved observations with an AI assistant that uses relevant source material; export a report for an appointment. No account required; cloud AI processing only after consent; 20 languages. Does not diagnose, prescribe treatment or replace a healthcare professional.",
+      "image": "https://loveikolabs.com/icons/refluxora.jpeg",
+      "softwareVersion": "2.0",
+      "datePublished": "2026-06-03",
+      "inLanguage": "en",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Refluxora Pro Weekly",
+          "price": "7.99",
+          "priceCurrency": "USD",
+          "description": "Auto-renewing weekly subscription. 7-day free trial for eligible new subscribers. Regional pricing applies."
+        },
+        {
+          "@type": "Offer",
+          "name": "Refluxora Pro Annual",
+          "price": "39.99",
+          "priceCurrency": "USD",
+          "description": "Auto-renewing annual subscription, billed at purchase, no trial. Regional pricing applies."
+        }
+      ],
+      "featureList": [
+        "Meal exploration from a photo or description with one practical food consideration",
+        "Mark meals as planned or eaten and add how you felt",
+        "Symptom log with throat and voice symptom scores for LPR",
+        "Existing lab result photo recognition with one-tap confirmation",
+        "Educational lab explanations — missing units and reference ranges are not guessed",
+        "AI assistant over your own saved observations, using relevant source material",
+        "Appointment report export",
+        "No account required; cloud AI processing only after consent",
+        "Interface in 20 languages"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "creator": {
+        "@id": "https://loveikolabs.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://loveikolabs.com/apps/refluxora/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Refluxora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Refluxora is an educational tracking app for GERD and LPR (silent reflux). It helps you explore meals, record symptoms including throat and voice scores, understand existing lab results and keep everything in one place, with an AI assistant and an exportable report for appointments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is LPR, and why does it need its own tracking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Laryngopharyngeal reflux (LPR), often called silent reflux, is when stomach contents reach the throat and voice box. It commonly causes throat clearing, hoarseness, chronic cough, a lump-in-the-throat sensation or postnasal drip feeling — often without classic heartburn. Heartburn-only trackers miss these symptoms, so Refluxora includes throat and voice symptom scores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Refluxora tell me my reflux triggers from one meal photo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. One photo cannot establish your personal triggers or reveal every ingredient. Refluxora gives a practical food consideration for a meal; your own triggers only become visible over time as you record meals and how you felt afterwards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Refluxora diagnose GERD or LPR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Refluxora does not diagnose, prescribe treatment or replace a healthcare professional. Diagnosis of GERD, LPR and related conditions is made by a clinician, sometimes with endoscopy, pH monitoring or laryngoscopy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the lab result feature do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You choose a photo of a lab result you already have. Refluxora shows the recognized values for you to confirm with one tap (edit only if needed), then gives an educational explanation and questions to discuss with your clinician. If units or reference ranges are missing from the report, they are not guessed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to create an account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No app account is required. After your consent, the text and photos you select are processed in the cloud. See the privacy policy linked from the App Store listing for detail."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Refluxora different from NoBurn or GERDBuddy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NoBurn and GERDBuddy are solid reflux trackers with food scanning; NoBurn also has a community and recovery plans. Refluxora adds throat and voice symptom scores for silent reflux and educational explanations of existing lab results, alongside meals and symptoms in one record."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Refluxora while taking a PPI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Many people keep tracking while on a PPI, H2 blocker or alginate prescribed by their doctor, so the follow-up visit can compare symptoms before and after. Do not start, stop or change medication based on the app — discuss it with your clinician."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Refluxora cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the US, Refluxora Pro is $7.99 per week with a 7-day free trial for eligible new subscribers, or $39.99 per year (billed at purchase, no trial). Local prices are shown before purchase. Subscriptions auto-renew unless cancelled in Apple subscription settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is reflux an emergency or a reason to see a doctor soon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seek urgent care for chest pain (especially with shortness of breath, sweating or pain spreading to the arm or jaw — it may be cardiac), vomiting blood or material that looks like coffee grounds, black stools, or severe difficulty swallowing. See a doctor soon for trouble or pain swallowing, unintentional weight loss, persistent hoarseness over three weeks, or symptoms that continue despite treatment."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://loveikolabs.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Apps",
+          "item": "https://loveikolabs.com/apps/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Refluxora",
+          "item": "https://loveikolabs.com/apps/refluxora/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="ll-cursor" aria-hidden="true"></div>
+<div class="ll-cursor-ring" aria-hidden="true"></div>
+
+<header class="ll-nav">
+  <a class="ll-nav__logo" href="/">
+    <img src="/icons/logo.png" alt="Loveiko Labs">
+    <span class="ll-nav__logo-text">Loveiko <span>Labs</span></span>
+  </a>
+  <ul class="ll-nav__links">
+    <li><a href="/">Studio</a></li>
+    <li><a href="/apps/">All Apps</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+</header>
+
+<main class="ll-page">
+
+  <nav class="ll-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Loveiko Labs</a><span>/</span><a href="/apps/">Apps</a><span>/</span>Refluxora
+  </nav>
+
+  <section class="ll-hero">
+    <div class="ll-hero__icon">
+      <img src="/icons/refluxora.jpeg" alt="Refluxora app icon" width="96" height="96">
+    </div>
+    <p class="ll-eyebrow">iOS App · Digestive Health · GERD &amp; LPR</p>
+    <h1>Refluxora — the reflux tracker that <em>remembers your throat</em></h1>
+    <p class="ll-hero__sub">Most reflux apps track heartburn and stop there. Silent reflux (LPR) shows up as throat clearing, hoarseness, a lump-in-the-throat feeling or chronic cough — often with no heartburn at all. Refluxora keeps meals, classic GERD symptoms and throat or voice symptom scores in one record, helps you think through a meal from a photo, and exports a clean report for your appointment.</p>
+    <div class="ll-hero__cta">
+      <a class="ll-btn" href="https://apps.apple.com/us/app/refluxora-gerd-lpr-tracker/id6772436586?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=refluxora" target="_blank" rel="noopener">Download on the App Store</a>
+      <a class="ll-btn ll-btn--ghost" href="#how">See how it works</a>
+    </div>
+    <p class="ll-hero__meta">iPhone · iOS 17.0+ · no account required · 7-day free trial on Weekly · 20 languages</p>
+  </section>
+
+  <nav class="ll-jump" aria-label="On this page">
+    <a href="#what">What it is</a>
+    <a href="#who">Who it's for</a>
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#compare">Compare</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <section class="ll-section ll-reveal" id="what">
+    <p class="ll-kicker">Overview</p>
+    <h2>What is Refluxora?</h2>
+    <p class="ll-lead">Refluxora is an educational tracking app for people with GERD or LPR (silent reflux) who want to understand meals, symptoms and lab results — and keep the useful details in one place for their doctor or ENT.</p>
+    <p>Reflux is personal. Coffee wrecks one person's evening and does nothing to another. Generic "foods to avoid" lists help at the start, but what actually matters is your own pattern — which is only visible if meals and symptoms are recorded together, over time.</p>
+    <p>Refluxora starts with one question at a time: describe a meal or take a photo of it, photograph a lab result you already have, or record how you feel. It gives an explanation where it can, saves the observation and shows a clear next step. It is honest about limits — one photo cannot reveal every ingredient or establish your personal triggers, and missing lab units or reference ranges are never guessed.</p>
+    <p><strong>What it is not:</strong> Refluxora does not diagnose GERD, LPR, Barrett's esophagus or anything else, does not prescribe PPIs, H2 blockers or alginates, and does not replace a gastroenterologist or ENT. AI output may be incomplete or incorrect. It is a tracker and an explainer that makes the appointment more useful.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="who">
+    <p class="ll-kicker">Audience</p>
+    <h2>Who Refluxora is built for</h2>
+    <div class="ll-cards">
+      <div class="ll-card">
+        <h3>People with classic heartburn (GERD)</h3>
+        <p>Burning after meals, worse lying down, a sour taste. Log meals and symptoms together and see which evenings go badly — instead of guessing.</p>
+      </div>
+      <div class="ll-card">
+        <h3>People with silent reflux (LPR)</h3>
+        <p>Throat clearing, hoarseness, postnasal drip feeling, chronic cough, a lump in the throat. Refluxora includes throat and voice symptom scores — the things an ENT will ask about.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Singers, teachers and heavy voice users</h3>
+        <p>When your voice is your job, hoarseness is not a minor symptom. Track voice scores alongside meals, late eating and other factors you record.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Newly told to "watch your diet"</h3>
+        <p>Explore a meal before or after you eat it and get one practical food consideration — fat content, acidity, portion or timing — rather than a 200-item forbidden list.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Preparing for a GI or ENT appointment</h3>
+        <p>Export a report of meals, symptoms and throat scores so the specialist sees weeks of data, not a two-minute recollection.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Privacy-minded users</h3>
+        <p>No app account required. Selected text and photos are processed in the cloud only after your consent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal" id="features">
+    <p class="ll-kicker">Capabilities</p>
+    <h2>What Refluxora does that most reflux apps don't</h2>
+    <ul class="ll-features">
+      <li><strong>Throat and voice symptom scores for LPR.</strong> Silent reflux is under-served by heartburn-only apps. Record throat and voice symptoms as scores next to meals and classic GERD symptoms, so LPR patterns become visible.</li>
+      <li><strong>Make sense of a meal — from a photo or a sentence.</strong> Explore ingredients and get a practical food consideration. Mark whether you planned or ate the meal, then add how you felt afterwards. Over time, your own records say more than any generic list.</li>
+      <li><strong>Understand an existing lab result.</strong> Choose a photo of a result you already have, review the recognized values and confirm them with one tap. Get an educational explanation and questions to discuss with your clinician. Missing units and reference ranges are not guessed.</li>
+      <li><strong>Ask about your own records.</strong> Discuss a saved observation with the AI assistant. Medical explanations use relevant source material; when information is missing, the assistant can ask for more context. You choose which records to share.</li>
+      <li><strong>See everything you've recorded.</strong> Meals, symptoms and throat or voice scores live together. Clearly labelled example data shows how a history grows — it is never presented as a prediction about your health.</li>
+      <li><strong>Appointment report.</strong> Export your observations as a report for a gastroenterologist, ENT or primary care visit.</li>
+    </ul>
+  </section>
+
+  <section class="ll-section ll-reveal" id="how">
+    <p class="ll-kicker">Workflow</p>
+    <h2>How to find your reflux triggers — a 4-week tracking framework</h2>
+    <p>Food and symptom diaries are one of the most practical tools for reflux. This is the simple routine Refluxora is designed for.</p>
+    <ol class="ll-steps">
+      <li><strong>Week 1 — record, don't change anything.</strong><span>Log what you eat and how you feel, including throat and voice symptoms if you have them. Note timing — late dinners and lying down soon after eating matter as much as the food itself. Resist the urge to cut everything at once.</span></li>
+      <li><strong>Week 2 — explore the meals that worry you.</strong><span>Photograph or describe the meals you suspect. Read the food consideration, eat as planned, then record how you felt 1–3 hours later. Mark meals as planned or eaten so you can see intention versus reality.</span></li>
+      <li><strong>Week 3 — test one change at a time.</strong><span>Pick one variable — an earlier dinner, smaller portions, less coffee — and keep everything else stable for a few days. One change at a time is the only way to learn what actually helps you.</span></li>
+      <li><strong>Week 4 — review and ask.</strong><span>Look back at your meals, symptoms and throat scores. Ask the AI assistant about specific saved observations. Write down the questions it helps you form.</span></li>
+      <li><strong>Before your appointment — export the report.</strong><span>Bring the report to your gastroenterologist or ENT. If you are already on a PPI or other medication, note how symptoms changed since starting it — that is exactly what the specialist needs.</span></li>
+    </ol>
+  </section>
+
+  <section class="ll-section ll-reveal" id="compare">
+    <p class="ll-kicker">Comparison</p>
+    <h2>Refluxora vs NoBurn vs GERDBuddy vs Cara Care vs Acid Reflux Diet Helper</h2>
+    <p>Based on each app's public App Store listing in October 2026. NoBurn is the most-reviewed reflux-specific tracker; Cara Care is a mature gut-health app covering IBS, IBD and GERD; Acid Reflux Diet Helper is a long-running food reference list. Refluxora is the one built around LPR throat and voice symptoms as well as heartburn.</p>
+    <div class="ll-table-wrap">
+      <table class="ll-table">
+        <thead>
+          <tr><th>&nbsp;</th><th class="is-us">Refluxora</th><th>NoBurn</th><th>GERDBuddy</th><th>Cara Care</th><th>Acid Reflux Diet Helper</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Throat / voice symptom scores (LPR)</td><td class="is-us">✓</td><td>—</td><td>partial (throat mucus noted)</td><td>—</td><td>—</td></tr>
+          <tr><td>Meal from a photo</td><td class="is-us">✓</td><td>✓ food scan</td><td>✓ meal + menu scan</td><td>partial</td><td>—</td></tr>
+          <tr><td>Meal + symptom log</td><td class="is-us">✓</td><td>✓</td><td>✓</td><td>✓</td><td>—</td></tr>
+          <tr><td>Existing lab result explanation</td><td class="is-us">✓</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>AI assistant over your records</td><td class="is-us">✓</td><td>✓ AI reflux assistant</td><td>trigger ranking</td><td>dietitian chat (IBS program)</td><td>—</td></tr>
+          <tr><td>Appointment report export</td><td class="is-us">✓</td><td>✓ reports</td><td>—</td><td>partial</td><td>—</td></tr>
+          <tr><td>Community</td><td class="is-us">—</td><td>✓</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>Static good / bad food list</td><td class="is-us">—</td><td>partial</td><td>—</td><td>✓ FODMAP database</td><td>✓ core feature</td></tr>
+          <tr><td>Account required</td><td class="is-us">No</td><td>—</td><td>—</td><td>—</td><td>No</td></tr>
+          <tr><td>Installed base</td><td class="is-us">New (June 2026)</td><td>250+ ratings</td><td>30 ratings</td><td>4.6K+ ratings</td><td>200+ ratings</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px;"><strong>Honest read:</strong> Pick NoBurn if you want the most established reflux-only tracker with a community. Pick Cara Care if you also have IBS or other gut issues. Pick Acid Reflux Diet Helper if a simple reference list is all you need. Pick Refluxora if silent reflux — throat, voice, cough — is part of your picture, or if you want meals, symptoms and existing lab results explained in one record.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="scenarios">
+    <p class="ll-kicker">In the wild</p>
+    <h2>Real scenarios where Refluxora earns its keep</h2>
+    <div class="ll-scenarios">
+      <div class="ll-scenario">
+        <h3>The singer with a morning croak</h3>
+        <p>Dana, a choir teacher, woke up hoarse most mornings but rarely had heartburn. After three weeks of logging meals and voice scores in Refluxora, the pattern pointed at late, heavy dinners. She brought the report to her ENT, who had already suspected LPR — now with data to back it.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>Which dinner was it?</h3>
+        <p>Marco had heartburn two or three nights a week and blamed tomatoes. His records showed the bad nights followed eating within an hour of bed, regardless of what was on the plate. Moving dinner earlier did more than cutting tomatoes.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>Understanding a lab report</h3>
+        <p>Anna had an H. pylori and blood panel from her GP and didn't understand the report. She photographed it, confirmed the recognized values and read an educational explanation — then wrote down three questions for her follow-up.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>The PPI check-in</h3>
+        <p>Tom started a PPI prescribed by his doctor. He kept logging in Refluxora for eight weeks so the follow-up visit could compare symptoms before and after — and discuss whether to continue, step down or investigate further.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal" id="pricing">
+    <p class="ll-kicker">Pricing</p>
+    <h2>7-day free trial, then Weekly or Annual</h2>
+    <div class="ll-pricing">
+      <div class="ll-price">
+        <h3>Refluxora Pro Weekly</h3>
+        <p class="ll-price__amount">$7.99 <span>/ week</span></p>
+        <ul>
+          <li>7-day free trial for eligible new subscribers</li>
+          <li>Meals, symptoms, throat scores, labs and AI assistant</li>
+          <li>Cancel anytime in Apple settings</li>
+        </ul>
+      </div>
+      <div class="ll-price ll-price--featured">
+        <h3>Refluxora Pro Annual</h3>
+        <p class="ll-price__amount">$39.99 <span>/ year</span></p>
+        <ul>
+          <li>≈ $0.77 / week — the better value</li>
+          <li>Everything in Weekly</li>
+          <li>Billed once per year, no trial</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px;">US prices shown; local prices are displayed in the App Store before purchase and vary by storefront. The Weekly plan starts with a 7-day free trial for eligible new subscribers; the Annual plan is billed at purchase and has no trial. Subscriptions auto-renew unless cancelled at least 24 hours before the period ends — manage in iPhone Settings → Apple ID → Subscriptions.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="faq">
+    <p class="ll-kicker">Questions</p>
+    <h2>Frequently asked questions</h2>
+    <div class="ll-faq">
+      <details>
+        <summary>What is Refluxora?</summary>
+        <div class="ll-faq__a"><p>Refluxora is an educational tracking app for GERD and LPR (silent reflux). It helps you explore meals, record symptoms including throat and voice scores, understand existing lab results and keep everything in one place, with an AI assistant and an exportable report for appointments.</p></div>
+      </details>
+      <details>
+        <summary>What is LPR, and why does it need its own tracking?</summary>
+        <div class="ll-faq__a"><p>Laryngopharyngeal reflux (LPR), often called silent reflux, is when stomach contents reach the throat and voice box. It commonly causes throat clearing, hoarseness, chronic cough, a lump-in-the-throat sensation or postnasal drip feeling — often without classic heartburn. Heartburn-only trackers miss these symptoms, so Refluxora includes throat and voice symptom scores.</p></div>
+      </details>
+      <details>
+        <summary>Can Refluxora tell me my reflux triggers from one meal photo?</summary>
+        <div class="ll-faq__a"><p>No. One photo cannot establish your personal triggers or reveal every ingredient. Refluxora gives a practical food consideration for a meal; your own triggers only become visible over time as you record meals and how you felt afterwards.</p></div>
+      </details>
+      <details>
+        <summary>Does Refluxora diagnose GERD or LPR?</summary>
+        <div class="ll-faq__a"><p>No. Refluxora does not diagnose, prescribe treatment or replace a healthcare professional. Diagnosis of GERD, LPR and related conditions is made by a clinician, sometimes with endoscopy, pH monitoring or laryngoscopy.</p></div>
+      </details>
+      <details>
+        <summary>What does the lab result feature do?</summary>
+        <div class="ll-faq__a"><p>You choose a photo of a lab result you already have. Refluxora shows the recognized values for you to confirm with one tap (edit only if needed), then gives an educational explanation and questions to discuss with your clinician. If units or reference ranges are missing from the report, they are not guessed.</p></div>
+      </details>
+      <details>
+        <summary>Do I need to create an account?</summary>
+        <div class="ll-faq__a"><p>No app account is required. After your consent, the text and photos you select are processed in the cloud. See the privacy policy linked from the App Store listing for detail.</p></div>
+      </details>
+      <details>
+        <summary>How is Refluxora different from NoBurn or GERDBuddy?</summary>
+        <div class="ll-faq__a"><p>NoBurn and GERDBuddy are solid reflux trackers with food scanning; NoBurn also has a community and recovery plans. Refluxora adds throat and voice symptom scores for silent reflux and educational explanations of existing lab results, alongside meals and symptoms in one record.</p></div>
+      </details>
+      <details>
+        <summary>Can I use Refluxora while taking a PPI?</summary>
+        <div class="ll-faq__a"><p>Yes. Many people keep tracking while on a PPI, H2 blocker or alginate prescribed by their doctor, so the follow-up visit can compare symptoms before and after. Do not start, stop or change medication based on the app — discuss it with your clinician.</p></div>
+      </details>
+      <details>
+        <summary>How much does Refluxora cost?</summary>
+        <div class="ll-faq__a"><p>In the US, Refluxora Pro is $7.99 per week with a 7-day free trial for eligible new subscribers, or $39.99 per year (billed at purchase, no trial). Local prices are shown before purchase. Subscriptions auto-renew unless cancelled in Apple subscription settings.</p></div>
+      </details>
+      <details>
+        <summary>When is reflux an emergency or a reason to see a doctor soon?</summary>
+        <div class="ll-faq__a"><p>Seek urgent care for chest pain (especially with shortness of breath, sweating or pain spreading to the arm or jaw — it may be cardiac), vomiting blood or material that looks like coffee grounds, black stools, or severe difficulty swallowing. See a doctor soon for trouble or pain swallowing, unintentional weight loss, persistent hoarseness over three weeks, or symptoms that continue despite treatment.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="ll-section ll-cta-band ll-reveal">
+    <h2>Track the reflux you feel <em>and the reflux you hear</em>.</h2>
+    <div class="ll-hero__cta">
+      <a class="ll-btn" href="https://apps.apple.com/us/app/refluxora-gerd-lpr-tracker/id6772436586?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=refluxora" target="_blank" rel="noopener">Download Refluxora on the App Store</a>
+    </div>
+    <p class="ll-hero__meta">No account required · 7-day free trial on Weekly · iOS 17.0+</p>
+  </section>
+
+  <section class="ll-section ll-reveal">
+    <p class="ll-kicker">More from the studio</p>
+    <h2>Related Loveiko Labs apps</h2>
+    <div class="ll-related">
+      <a class="ll-related-card" href="/apps/hepatica/">
+        <h3>Hepatica →</h3>
+        <p>Fatty liver diet and lab companion — photograph a plate, understand liver blood tests, prepare doctor questions.</p>
+      </a>
+      <a class="ll-related-card" href="/apps/stacksnap/">
+        <h3>StackSnap →</h3>
+        <p>Supplement scanner with interaction checks — useful if you take supplements alongside reflux medication.</p>
+      </a>
+      <a class="ll-related-card" href="/best-acid-reflux-gerd-apps-2026/">
+        <h3>Best GERD &amp; LPR apps 2026 →</h3>
+        <p>Full ranking of seven reflux apps — how Refluxora compares with NoBurn, GERDBuddy, Cara Care and others.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal">
+    <div class="ll-disclaimer">
+      <p><strong>Important medical disclaimer.</strong> Refluxora provides educational information and tracking for GERD and LPR. It is not a medical device. It does not diagnose, prescribe treatment or replace a healthcare professional. AI may be incomplete or incorrect. Talk to your doctor before changing medication or diet.</p>
+      <p><strong>Call 911 or your local emergency number for:</strong> chest pain or pressure, especially with shortness of breath, sweating, nausea or pain spreading to the arm, neck or jaw; vomiting blood or coffee-ground material; black or tarry stools; inability to swallow saliva. <strong>See a doctor soon for:</strong> difficulty or pain swallowing, unintentional weight loss, hoarseness lasting more than three weeks, persistent cough, or reflux symptoms that continue despite treatment.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ll-footer">
+  <div class="ll-footer__grid">
+    <div>
+      <strong class="ll-footer__brand">Loveiko <span>Labs</span></strong>
+      <p>Independent iOS studio building single-purpose AI apps that solve one problem in 30 seconds. Pattaya, Thailand · founded 2024.</p>
+    </div>
+    <div>
+      <strong>Refluxora</strong>
+      <ul>
+        <li><a href="#what">Overview</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#compare">Comparison</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/best-acid-reflux-gerd-apps-2026/">Best GERD &amp; LPR Apps 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Studio</strong>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/apps/">All apps</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="mailto:loveykovl@gmail.com">Press &amp; partnerships</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="ll-footer__legal">© 2026 Loveiko Labs. Refluxora is an educational tracking app, not a medical device. NoBurn, GERDBuddy, Cara Care and Acid Reflux Diet Helper are trademarks of their respective owners; Loveiko Labs is not affiliated with them. App Store is a trademark of Apple Inc.</p>
+</footer>
+
+<script>
+/* scroll reveal */
+(function(){
+  var els=document.querySelectorAll('.ll-reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:0.12});
+  els.forEach(function(e){io.observe(e);});
+})();
+/* custom cursor — desktop pointers only */
+(function(){
+  if(!window.matchMedia||!matchMedia('(pointer:fine)').matches)return;
+  var dot=document.querySelector('.ll-cursor'),ring=document.querySelector('.ll-cursor-ring');
+  if(!dot||!ring)return;
+  document.body.classList.add('ll-cursor-ready');
+  var mx=0,my=0,rx=0,ry=0,shown=false;
+  addEventListener('mousemove',function(e){
+    mx=e.clientX;my=e.clientY;
+    dot.style.transform='translate('+(mx-3.5)+'px,'+(my-3.5)+'px)';
+    if(!shown){shown=true;dot.classList.add('on');ring.classList.add('on');}
+  },{passive:true});
+  (function loop(){rx+=(mx-rx)*0.2;ry+=(my-ry)*0.2;
+    ring.style.transform='translate('+(rx-15)+'px,'+(ry-15)+'px)';
+    requestAnimationFrame(loop);})();
+  addEventListener('mouseover',function(e){
+    var hot=e.target.closest('a,button,summary');
+    dot.classList.toggle('lg',!!hot);ring.classList.toggle('lg',!!hot);
+  });
+})();
+/* jump-nav scroll-spy — highlights the section you're reading */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.ll-jump a'));
+  if(!links.length||!('IntersectionObserver'in window))return;
+  var map={};
+  links.forEach(function(l){var id=l.getAttribute('href').slice(1);if(id)map[id]=l;});
+  var spy=new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(en.isIntersecting){
+        links.forEach(function(l){l.classList.remove('is-active');});
+        if(map[en.target.id])map[en.target.id].classList.add('is-active');
+      }
+    });
+  },{rootMargin:'-130px 0px -65% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s);});
+})();
+</script>
+
+</body>
+</html>

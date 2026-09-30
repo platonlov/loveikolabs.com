@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08080a">
+<title>RoofingCalc Pro — Free Offline Roofing Calculator: Area, Squares, Pitch, Rafters &amp; Job Cost | Loveiko Labs</title>
+<meta name="description" content="RoofingCalc Pro is a completely free roofing calculator for iPhone and iPad — roof area in squares, shingle bundles, underlayment and ridge cap, pitch in ratio/degrees/percent, common, hip and valley rafter lengths, job cost estimates and PDF export. Works offline. No ads, no subscription, no data collected.">
+<meta name="keywords" content="roofing calculator app, free roofing calculator, roof pitch calculator, rafter length calculator, roofing squares calculator, shingle bundle calculator, roofing estimate app, roof area calculator offline, roofing PDF estimate, RoofingCalc Pro">
+<meta name="author" content="Valeriy Loveyko / Loveiko Labs">
+<link rel="canonical" href="https://loveikolabs.com/apps/roofingcalc/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://loveikolabs.com/apps/roofingcalc/">
+<meta property="og:title" content="RoofingCalc Pro — The Free Roofing Calculator That Works on the Roof">
+<meta property="og:description" content="Area, squares, bundles, pitch, rafters and job cost — offline, with PDF export. Free. No ads. No subscription.">
+<meta property="og:image" content="https://loveikolabs.com/icons/roofingcalc.jpeg">
+<meta property="og:site_name" content="Loveiko Labs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RoofingCalc Pro — The Free Roofing Calculator That Works on the Roof">
+<meta name="twitter:description" content="Area, squares, bundles, pitch, rafters and job cost — offline, with PDF export. Free. No ads. No subscription.">
+<meta name="twitter:image" content="https://loveikolabs.com/icons/roofingcalc.jpeg">
+
+<link rel="icon" type="image/png" href="https://loveikolabs.com/icons/roofingcalc.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "@id": "https://loveikolabs.com/apps/roofingcalc/#app",
+      "name": "RoofingCalc Pro",
+      "alternateName": "RoofingCalc Pro",
+      "operatingSystem": "iOS 17.6+",
+      "applicationCategory": "UtilitiesApplication",
+      "url": "https://apps.apple.com/us/app/roofingcalc-pro/id6761068784",
+      "downloadUrl": "https://apps.apple.com/us/app/roofingcalc-pro/id6761068784",
+      "description": "Free professional roofing calculator for iPhone and iPad with four calculators: roof area and materials (area in square feet and roofing squares, shingle bundles, underlayment rolls, ridge cap), pitch (ratio, degrees, percentage, slope factor, hip/valley factor), rafter length (common, hip and valley), and job cost estimator (materials, labor, waste, total). PDF export, automatic calculation history, imperial and metric units, fully offline, high-contrast dark theme, large tap targets. No ads, no subscription, no account, no data collected.",
+      "image": "https://loveikolabs.com/icons/roofingcalc.jpeg",
+      "softwareVersion": "1.0",
+      "datePublished": "2026-03-26",
+      "inLanguage": "en",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free — all features included",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      ],
+      "featureList": [
+        "Roof area in square feet and roofing squares",
+        "Shingle bundles, underlayment rolls and ridge cap quantities",
+        "Pitch as ratio, degrees and percentage with slope and hip/valley factors",
+        "Common, hip and valley rafter lengths",
+        "Job cost estimator: materials, labor, waste and total",
+        "One-page PDF export",
+        "Automatic calculation history, searchable by date or project",
+        "Imperial and metric units",
+        "Works fully offline",
+        "No ads, no subscription, no account, no data collected"
+      ],
+      "creator": {
+        "@id": "https://loveikolabs.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://loveikolabs.com/apps/roofingcalc/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is RoofingCalc Pro really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every feature is included — no hidden costs, no per-report charges, no premium tier, no ads and no popups."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work without internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All calculations run locally on your device, so it works on the roof, in rural areas and anywhere without signal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many squares is my roof?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One roofing square is 100 square feet of roof surface. Multiply the footprint area by the slope factor for your pitch to get sloped area, then divide by 100. RoofingCalc Pro does this for you from footprint dimensions and pitch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many bundles of shingles per square?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many standard 3-tab and architectural shingles need three bundles per square, but coverage varies by product — always check the manufacturer's label. RoofingCalc Pro calculates bundles, underlayment rolls and ridge cap from your roof area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert roof pitch to degrees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pitch is rise over a 12-inch run. Degrees = arctangent(rise ÷ 12). For example, 6/12 ≈ 26.6°, 4/12 ≈ 18.4°, 12/12 = 45°. The pitch calculator converts between ratio, degrees and percentage in either direction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can it calculate hip and valley rafters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Enter run and pitch to get common, hip and valley rafter lengths using the correct slope and hip/valley factors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I send an estimate to a client?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Export a professional one-page PDF with all calculations and send it from the job site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it measure my roof from satellite images?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. RoofingCalc Pro is a calculator — you enter the measurements. For aerial measurement, services like GAF QuickMeasure or EagleView sell reports."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data does RoofingCalc Pro collect?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "None. No account, no analytics, no ads. Your calculations stay on your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it safe to measure a roof myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof work is dangerous. Use proper fall protection and never go on a wet, icy or steep roof without training and equipment. Measuring from the ground or from plans is often safer for homeowners."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://loveikolabs.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Apps",
+          "item": "https://loveikolabs.com/apps/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "RoofingCalc Pro",
+          "item": "https://loveikolabs.com/apps/roofingcalc/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="ll-cursor" aria-hidden="true"></div>
+<div class="ll-cursor-ring" aria-hidden="true"></div>
+
+<header class="ll-nav">
+  <a class="ll-nav__logo" href="/">
+    <img src="/icons/logo.png" alt="Loveiko Labs">
+    <span class="ll-nav__logo-text">Loveiko <span>Labs</span></span>
+  </a>
+  <ul class="ll-nav__links">
+    <li><a href="/">Studio</a></li>
+    <li><a href="/apps/">All Apps</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+</header>
+
+<main class="ll-page">
+
+  <nav class="ll-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Loveiko Labs</a><span>/</span><a href="/apps/">Apps</a><span>/</span>RoofingCalc Pro
+  </nav>
+
+  <section class="ll-hero">
+    <div class="ll-hero__icon">
+      <img src="/icons/roofingcalc.jpeg" alt="RoofingCalc Pro app icon" width="96" height="96">
+    </div>
+    <p class="ll-eyebrow">iOS App · Pro Tools · Roofing</p>
+    <h1>RoofingCalc Pro — the roofing calculator that <em>works on the roof</em></h1>
+    <p class="ll-hero__sub">Four calculators in one free app: roof area and materials, pitch, rafter length and job cost. Punch in measurements, get squares, bundles, rafter lengths and a job price, then export a clean one-page PDF for the client or the claim file — fully offline, with big tap targets for gloved hands. No ads, no subscription, no account.</p>
+    <div class="ll-hero__cta">
+      <a class="ll-btn" href="https://apps.apple.com/us/app/roofingcalc-pro/id6761068784?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=roofingcalc" target="_blank" rel="noopener">Download on the App Store</a>
+      <a class="ll-btn ll-btn--ghost" href="#how">See how it works</a>
+    </div>
+    <p class="ll-hero__meta">iPhone &amp; iPad · iOS 17.6+ · 100% free · works offline · zero data collected</p>
+  </section>
+
+  <nav class="ll-jump" aria-label="On this page">
+    <a href="#what">What it is</a>
+    <a href="#who">Who it's for</a>
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#compare">Compare</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <section class="ll-section ll-reveal" id="what">
+    <p class="ll-kicker">Overview</p>
+    <h2>What is RoofingCalc Pro?</h2>
+    <p class="ll-lead">RoofingCalc Pro is a professional roofing calculator for roofers, contractors, estimators, insurance adjusters, apprentices and DIY homeowners who need fast, correct roofing math on the job site — even with no signal.</p>
+    <p>Roofing math is not hard, but it is easy to get wrong on a ladder in the sun: converting footprint to sloped area, area to squares, squares to bundles, run and pitch to rafter length, and all of it to a price with waste. RoofingCalc Pro does those conversions instantly and keeps every calculation in history.</p>
+    <p>It is deliberately simple: no aerial measurement subscriptions, no per-report fees, no CRM. You bring the measurements; it gives you the numbers and a PDF. Everything runs locally on the device — it works on the roof, in rural areas, anywhere.</p>
+    <p><strong>Completely free.</strong> Every feature is included — no hidden costs, no premium tier, no ads, no popups. RoofingCalc Pro collects zero data: no account, no analytics.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="who">
+    <p class="ll-kicker">Audience</p>
+    <h2>Who RoofingCalc Pro is built for</h2>
+    <div class="ll-cards">
+      <div class="ll-card">
+        <h3>Professional roofers</h3>
+        <p>Area, materials and rafter lengths on every job; PDF estimates from the truck.</p>
+      </div>
+      <div class="ll-card">
+        <h3>General contractors</h3>
+        <p>Quick, reliable roofing math when roofing isn't your primary trade.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Insurance adjusters</h3>
+        <p>Roof area and replacement cost for storm-damage claims, with a PDF for the file.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Roofing apprentices</h3>
+        <p>Learn the formulas — slope factor, hip/valley factor — while getting accurate answers.</p>
+      </div>
+      <div class="ll-card">
+        <h3>DIY homeowners</h3>
+        <p>Estimate materials before calling contractors, so you can read their quotes with confidence.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Anyone without signal</h3>
+        <p>Everything runs on the device. No internet, no problem.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal" id="features">
+    <p class="ll-kicker">Capabilities</p>
+    <h2>Four calculators, one free app</h2>
+    <ul class="ll-features">
+      <li><strong>Roof area &amp; materials.</strong> Enter footprint dimensions and pitch. Get roof area in square feet and in roofing squares (1 square = 100 sq ft), plus shingle bundles, underlayment rolls and ridge cap pieces.</li>
+      <li><strong>Pitch calculator.</strong> Enter rise and run to get pitch as a ratio (e.g. 6/12), in degrees and as a percentage — or enter any one value and calculate the others. Slope factor and hip/valley factor are shown for your own calculations.</li>
+      <li><strong>Rafter length.</strong> Enter run and pitch to get common, hip and valley rafter lengths using the correct geometric factors. Cut lumber right the first time.</li>
+      <li><strong>Job cost estimator.</strong> Enter roof area, material cost per square, labor rate and waste factor for a full breakdown: materials, labor, waste allowance and total job price.</li>
+      <li><strong>PDF export.</strong> A professional one-page report with all calculations — send it to the client, adjuster or office from the job site.</li>
+      <li><strong>History, units and job-site UI.</strong> Every calculation saved automatically and searchable by date or project. Imperial or metric with one tap. High-contrast green-on-dark theme readable in bright sun; big tap targets for gloves.</li>
+    </ul>
+  </section>
+
+  <section class="ll-section ll-reveal" id="how">
+    <p class="ll-kicker">Workflow</p>
+    <h2>How to estimate a re-roof in five steps</h2>
+    <p>A typical re-roof estimate with RoofingCalc Pro, from tape measure to PDF.</p>
+    <ol class="ll-steps">
+      <li><strong>Measure the footprint and pitch.</strong><span>Measure the building footprint including overhangs, and get the pitch — rise over a 12-inch run. If you only have degrees or percent, the pitch calculator converts it.</span></li>
+      <li><strong>Calculate area and squares.</strong><span>Enter dimensions and pitch in Roof Area &amp; Materials. You get sloped area in square feet and roofing squares. Example: a 2,000 sq ft footprint at 6/12 pitch (slope factor ≈ 1.118) is about 2,236 sq ft, or ≈ 22.4 squares.</span></li>
+      <li><strong>Get materials.</strong><span>Read off shingle bundles, underlayment rolls and ridge cap. Standard 3-tab and many architectural shingles run three bundles per square — check the manufacturer's coverage for the product you use.</span></li>
+      <li><strong>Price the job.</strong><span>In the Job Cost Estimator, enter material cost per square, labor rate and a waste factor (commonly around 10% for simple gables and more for complex hip roofs with valleys). You get materials, labor, waste and total.</span></li>
+      <li><strong>Export the PDF.</strong><span>Generate the one-page report and send it to the client or adjuster. The calculation stays in history for when the client calls back.</span></li>
+    </ol>
+  </section>
+
+  <section class="ll-section ll-reveal" id="compare">
+    <p class="ll-kicker">Comparison</p>
+    <h2>RoofingCalc Pro vs GAF QuickMeasure vs RedX Roof vs Construction Master Pro vs Roof Pitch Factor</h2>
+    <p>Based on each app's public App Store listing in October 2026. These tools do different jobs: GAF QuickMeasure sells aerial measurement reports, RedX Roof is a 3D framing and blueprint tool, Construction Master Pro is the classic feet-inch-fraction construction calculator, and Roof Pitch Factor measures pitch with the camera. RoofingCalc Pro is the free, offline, roofing-only calculator with PDF export.</p>
+    <div class="ll-table-wrap">
+      <table class="ll-table">
+        <thead>
+          <tr><th>&nbsp;</th><th class="is-us">RoofingCalc Pro</th><th>GAF QuickMeasure</th><th>RedX Roof</th><th>Construction Master Pro</th><th>Roof Pitch Factor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Price</td><td class="is-us">Free, all features</td><td>Reports from $18 each</td><td>Pro features paid</td><td>Free</td><td>Free</td></tr>
+          <tr><td>Roof area + squares</td><td class="is-us">✓</td><td>✓ measured from aerial</td><td>✓</td><td>✓</td><td>—</td></tr>
+          <tr><td>Bundles / underlayment / ridge cap</td><td class="is-us">✓</td><td>partial (report lengths)</td><td>material lists</td><td>✓ lumber / materials</td><td>—</td></tr>
+          <tr><td>Pitch conversions (ratio / degrees / %)</td><td class="is-us">✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓ via camera</td></tr>
+          <tr><td>Common / hip / valley rafters</td><td class="is-us">✓</td><td>—</td><td>✓ + jack rafters, 3D</td><td>✓</td><td>—</td></tr>
+          <tr><td>Job cost estimate</td><td class="is-us">✓</td><td>—</td><td>—</td><td>partial</td><td>—</td></tr>
+          <tr><td>PDF export</td><td class="is-us">✓</td><td>✓ report</td><td>✓ blueprints</td><td>—</td><td>—</td></tr>
+          <tr><td>Works offline</td><td class="is-us">✓</td><td>—</td><td>partial</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Measures the roof for you</td><td class="is-us">—</td><td>✓</td><td>—</td><td>—</td><td>pitch only</td></tr>
+          <tr><td>No ads / no data collected</td><td class="is-us">✓</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px;"><strong>Honest read:</strong> Pick GAF QuickMeasure when you need measurements without climbing. Pick RedX Roof for full 3D framing plans and cut lists. Pick Construction Master Pro if you want one calculator for every trade. Pick RoofingCalc Pro when you already have measurements and want area, materials, rafters, a price and a PDF — free, offline, with no account.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="scenarios">
+    <p class="ll-kicker">In the wild</p>
+    <h2>Real scenarios where RoofingCalc Pro earns its keep</h2>
+    <div class="ll-scenarios">
+      <div class="ll-scenario">
+        <h3>The storm-damage claim</h3>
+        <p>An adjuster inspects hail damage on a rural property with no signal. She enters the footprint and pitch, calculates replacement area and cost, and exports the PDF for the claim file before leaving the driveway.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>The Saturday bid</h3>
+        <p>A small roofing crew owner quotes three jobs on a Saturday. Each takes minutes: measure, calculate squares and bundles, apply his labor rate and a 12% waste factor, and send the PDF from the truck.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>Cutting rafters for a shed</h3>
+        <p>A homeowner framing a 10×12 shed with a 4/12 roof uses the rafter calculator for common rafter length and double-checks the pitch in degrees for the miter saw.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>Checking a quote</h3>
+        <p>Before hiring a roofer, a homeowner estimates squares and material quantities herself — and walks into the quote conversation knowing roughly what the job requires.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal" id="pricing">
+    <p class="ll-kicker">Pricing</p>
+    <h2>Free. Every feature. No catch.</h2>
+    <div class="ll-pricing">
+      <div class="ll-price ll-price--featured">
+        <h3>RoofingCalc Pro</h3>
+        <p class="ll-price__amount">$0 <span>forever</span></p>
+        <ul>
+          <li>All four calculators</li>
+          <li>PDF export and calculation history</li>
+          <li>Imperial &amp; metric, fully offline</li>
+          <li>No ads, no subscription, no account</li>
+          <li>Zero data collected</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px;">RoofingCalc Pro is free on iPhone and iPad. There are no in-app purchases, no per-report charges and no premium tier.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="faq">
+    <p class="ll-kicker">Questions</p>
+    <h2>Frequently asked questions</h2>
+    <div class="ll-faq">
+      <details>
+        <summary>Is RoofingCalc Pro really free?</summary>
+        <div class="ll-faq__a"><p>Yes. Every feature is included — no hidden costs, no per-report charges, no premium tier, no ads and no popups.</p></div>
+      </details>
+      <details>
+        <summary>Does it work without internet?</summary>
+        <div class="ll-faq__a"><p>Yes. All calculations run locally on your device, so it works on the roof, in rural areas and anywhere without signal.</p></div>
+      </details>
+      <details>
+        <summary>How many squares is my roof?</summary>
+        <div class="ll-faq__a"><p>One roofing square is 100 square feet of roof surface. Multiply the footprint area by the slope factor for your pitch to get sloped area, then divide by 100. RoofingCalc Pro does this for you from footprint dimensions and pitch.</p></div>
+      </details>
+      <details>
+        <summary>How many bundles of shingles per square?</summary>
+        <div class="ll-faq__a"><p>Many standard 3-tab and architectural shingles need three bundles per square, but coverage varies by product — always check the manufacturer's label. RoofingCalc Pro calculates bundles, underlayment rolls and ridge cap from your roof area.</p></div>
+      </details>
+      <details>
+        <summary>How do I convert roof pitch to degrees?</summary>
+        <div class="ll-faq__a"><p>Pitch is rise over a 12-inch run. Degrees = arctangent(rise ÷ 12). For example, 6/12 ≈ 26.6°, 4/12 ≈ 18.4°, 12/12 = 45°. The pitch calculator converts between ratio, degrees and percentage in either direction.</p></div>
+      </details>
+      <details>
+        <summary>Can it calculate hip and valley rafters?</summary>
+        <div class="ll-faq__a"><p>Yes. Enter run and pitch to get common, hip and valley rafter lengths using the correct slope and hip/valley factors.</p></div>
+      </details>
+      <details>
+        <summary>Can I send an estimate to a client?</summary>
+        <div class="ll-faq__a"><p>Yes. Export a professional one-page PDF with all calculations and send it from the job site.</p></div>
+      </details>
+      <details>
+        <summary>Does it measure my roof from satellite images?</summary>
+        <div class="ll-faq__a"><p>No. RoofingCalc Pro is a calculator — you enter the measurements. For aerial measurement, services like GAF QuickMeasure or EagleView sell reports.</p></div>
+      </details>
+      <details>
+        <summary>What data does RoofingCalc Pro collect?</summary>
+        <div class="ll-faq__a"><p>None. No account, no analytics, no ads. Your calculations stay on your device.</p></div>
+      </details>
+      <details>
+        <summary>Is it safe to measure a roof myself?</summary>
+        <div class="ll-faq__a"><p>Roof work is dangerous. Use proper fall protection and never go on a wet, icy or steep roof without training and equipment. Measuring from the ground or from plans is often safer for homeowners.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="ll-section ll-cta-band ll-reveal">
+    <h2>Roofing math in seconds — <em>free, offline, no account</em>.</h2>
+    <div class="ll-hero__cta">
+      <a class="ll-btn" href="https://apps.apple.com/us/app/roofingcalc-pro/id6761068784?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=roofingcalc" target="_blank" rel="noopener">Download RoofingCalc Pro on the App Store</a>
+    </div>
+    <p class="ll-hero__meta">iPhone &amp; iPad · no ads · no subscription · zero data collected</p>
+  </section>
+
+  <section class="ll-section ll-reveal">
+    <p class="ll-kicker">More from the studio</p>
+    <h2>Related Loveiko Labs apps</h2>
+    <div class="ll-related">
+      <a class="ll-related-card" href="/apps/pestsnap/">
+        <h3>PestSnap →</h3>
+        <p>Home pest identifier — handy when a roof inspection turns up droppings, nests or termite evidence.</p>
+      </a>
+      <a class="ll-related-card" href="/apps/snapflip/">
+        <h3>SnapFlip →</h3>
+        <p>Resale scanner for tools and gear — check what used equipment is actually worth.</p>
+      </a>
+      <a class="ll-related-card" href="/best-roofing-calculator-apps-2026/">
+        <h3>Best roofing calculator apps 2026 →</h3>
+        <p>Full ranking of seven roofing apps — how RoofingCalc Pro compares with GAF QuickMeasure, RedX Roof, Construction Master Pro and others.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal">
+    <div class="ll-disclaimer">
+      <p><strong>Estimates, not engineering.</strong> RoofingCalc Pro provides calculations for estimating purposes. Always verify measurements, check manufacturer coverage and installation requirements, and follow local building codes. Structural decisions, including rafter sizing and spans, should be confirmed against code tables or by a qualified professional.</p>
+      <p><strong>Safety.</strong> Working on roofs is hazardous. Use appropriate fall protection and follow OSHA or local safety rules.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ll-footer">
+  <div class="ll-footer__grid">
+    <div>
+      <strong class="ll-footer__brand">Loveiko <span>Labs</span></strong>
+      <p>Independent iOS studio building single-purpose AI apps that solve one problem in 30 seconds. Pattaya, Thailand · founded 2024.</p>
+    </div>
+    <div>
+      <strong>RoofingCalc Pro</strong>
+      <ul>
+        <li><a href="#what">Overview</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#compare">Comparison</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/best-roofing-calculator-apps-2026/">Best Roofing Calculator Apps 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Studio</strong>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/apps/">All apps</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="mailto:loveykovl@gmail.com">Press &amp; partnerships</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="ll-footer__legal">© 2026 Loveiko Labs. RoofingCalc Pro provides estimates only. GAF QuickMeasure, RedX Roof, Construction Master Pro, Roof Pitch Factor, iRoofing and Pitch Gauge are trademarks of their respective owners; Loveiko Labs is not affiliated with them. App Store is a trademark of Apple Inc.</p>
+</footer>
+
+<script>
+/* scroll reveal */
+(function(){
+  var els=document.querySelectorAll('.ll-reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:0.12});
+  els.forEach(function(e){io.observe(e);});
+})();
+/* custom cursor — desktop pointers only */
+(function(){
+  if(!window.matchMedia||!matchMedia('(pointer:fine)').matches)return;
+  var dot=document.querySelector('.ll-cursor'),ring=document.querySelector('.ll-cursor-ring');
+  if(!dot||!ring)return;
+  document.body.classList.add('ll-cursor-ready');
+  var mx=0,my=0,rx=0,ry=0,shown=false;
+  addEventListener('mousemove',function(e){
+    mx=e.clientX;my=e.clientY;
+    dot.style.transform='translate('+(mx-3.5)+'px,'+(my-3.5)+'px)';
+    if(!shown){shown=true;dot.classList.add('on');ring.classList.add('on');}
+  },{passive:true});
+  (function loop(){rx+=(mx-rx)*0.2;ry+=(my-ry)*0.2;
+    ring.style.transform='translate('+(rx-15)+'px,'+(ry-15)+'px)';
+    requestAnimationFrame(loop);})();
+  addEventListener('mouseover',function(e){
+    var hot=e.target.closest('a,button,summary');
+    dot.classList.toggle('lg',!!hot);ring.classList.toggle('lg',!!hot);
+  });
+})();
+/* jump-nav scroll-spy — highlights the section you're reading */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.ll-jump a'));
+  if(!links.length||!('IntersectionObserver'in window))return;
+  var map={};
+  links.forEach(function(l){var id=l.getAttribute('href').slice(1);if(id)map[id]=l;});
+  var spy=new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(en.isIntersecting){
+        links.forEach(function(l){l.classList.remove('is-active');});
+        if(map[en.target.id])map[en.target.id].classList.add('is-active');
+      }
+    });
+  },{rootMargin:'-130px 0px -65% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s);});
+})();
+</script>
+
+</body>
+</html>

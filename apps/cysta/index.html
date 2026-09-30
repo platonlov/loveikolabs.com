@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08080a">
+<title>Cysta AI — PCOS Tracker for Irregular Periods, Symptoms, Labs &amp; TTC | Loveiko Labs</title>
+<meta name="description" content="Cysta AI is a PCOS tracking app for iPhone: log symptoms, irregular cycles, meals, weight, supplements and lab results in one place, ask an evidence-informed AI Coach, and export a doctor-ready PDF. 7-day free trial.">
+<meta name="keywords" content="PCOS tracker app, PCOS app iPhone, polycystic ovary syndrome tracker, irregular period tracker, PCOS symptom tracker, PCOS diet app, insulin resistance PCOS app, PCOS fertility tracker, PCOS lab results, Cysta AI">
+<meta name="author" content="Valeriy Loveyko / Loveiko Labs">
+<link rel="canonical" href="https://loveikolabs.com/apps/cysta/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://loveikolabs.com/apps/cysta/">
+<meta property="og:title" content="Cysta AI — One Clear Place for Everything PCOS">
+<meta property="og:description" content="Symptoms, irregular cycles, meals, weight, labs and TTC signs in one PCOS tracker — plus an AI Coach and a doctor-ready PDF.">
+<meta property="og:image" content="https://loveikolabs.com/icons/cysta.jpeg">
+<meta property="og:site_name" content="Loveiko Labs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cysta AI — One Clear Place for Everything PCOS">
+<meta name="twitter:description" content="Symptoms, irregular cycles, meals, weight, labs and TTC signs in one PCOS tracker — plus an AI Coach and a doctor-ready PDF.">
+<meta name="twitter:image" content="https://loveikolabs.com/icons/cysta.jpeg">
+
+<link rel="icon" type="image/png" href="https://loveikolabs.com/icons/cysta.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "@id": "https://loveikolabs.com/apps/cysta/#app",
+      "name": "Cysta AI: PCOS Tracker",
+      "alternateName": "Cysta AI",
+      "operatingSystem": "iOS 17.0+",
+      "applicationCategory": "HealthApplication",
+      "url": "https://apps.apple.com/us/app/cysta-ai-pcos-tracker/id6769523580",
+      "downloadUrl": "https://apps.apple.com/us/app/cysta-ai-pcos-tracker/id6769523580",
+      "description": "PCOS tracking app for people with polycystic ovary syndrome. Logs symptoms, period flow and irregular cycle patterns, meals, weight, supplements, a photo journal for visible changes such as acne and hair, trying-to-conceive context with ovulation signs and an estimated fertile window, and lab results (scanned or entered manually). Includes an evidence-informed AI Coach that uses recorded context and can show supporting sources, trend review, reminders, and a doctor-ready PDF summary. Informational and organizational only — not a medical device; does not diagnose or treat PCOS.",
+      "image": "https://loveikolabs.com/icons/cysta.jpeg",
+      "softwareVersion": "2.0",
+      "datePublished": "2026-05-24",
+      "inLanguage": "en",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Cysta AI Pro Weekly",
+          "price": "7.99",
+          "priceCurrency": "USD",
+          "description": "Auto-renewing weekly subscription. 7-day free trial for eligible new subscribers. Regional pricing applies."
+        },
+        {
+          "@type": "Offer",
+          "name": "Cysta AI Pro Annual",
+          "price": "39.99",
+          "priceCurrency": "USD",
+          "description": "Auto-renewing annual subscription, billed at purchase, no trial. Regional pricing applies."
+        }
+      ],
+      "featureList": [
+        "PCOS symptom, period flow and irregular cycle logging",
+        "Meal, food note, weight and supplement routine tracking",
+        "Photo journal for visible changes such as acne and hair",
+        "TTC context, ovulation signs and estimated fertile window",
+        "Scan bloodwork or enter lab results manually",
+        "Evidence-informed AI Coach that can show supporting sources",
+        "Combined trend review across cycles, symptoms, meals, weight and labs",
+        "Doctor-ready PDF summary from the records you choose",
+        "Explicit consent before AI features process messages, photos or lab images"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "creator": {
+        "@id": "https://loveikolabs.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://loveikolabs.com/apps/cysta/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Cysta AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cysta AI is a PCOS tracking app for iPhone. It keeps PCOS symptoms, irregular cycles, meals, weight, supplements, a photo journal, TTC context and lab results in one place, adds an evidence-informed AI Coach that uses your recorded context, and exports a doctor-ready PDF. It is for informational, educational and organizational purposes only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Cysta AI diagnose PCOS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Cysta AI is not a medical device and does not diagnose or treat PCOS. PCOS is diagnosed by a clinician, typically using criteria that combine cycle history, signs or blood tests for elevated androgens, and ultrasound findings, after ruling out other causes. Cysta AI helps you organize the information that conversation needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work if my periods are very irregular or absent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — that is the main reason it exists. Cysta AI records what actually happens (flow, spotting, gaps) rather than assuming a regular cycle, so long or absent cycles show up accurately in your history. Absent periods for three months or more are worth raising with a clinician."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the AI Coach do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can ask about PCOS symptoms, diet, insulin resistance, hormones, cycle changes, fertility and everyday routines. The Coach uses the context you recorded, organizes educational guidance and can show supporting sources. It is designed to help you understand patterns and prepare questions, not to make medical decisions for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I track lab results for PCOS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Scan a bloodwork report or enter values manually, and Cysta AI keeps each panel organized next to your symptom and cycle history. Interpretation of lab values for your situation belongs to your clinician; the app keeps them in one place and helps you prepare questions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Cysta AI useful when trying to conceive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Track TTC context and ovulation signs alongside your cycle history and see an estimated fertile window. With irregular PCOS cycles, any fertile window estimate is less certain — it is a planning aid, not a guarantee and not a contraceptive method. A fertility specialist can advise on ovulation testing and treatment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Cysta AI different from Flo or Clue?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flo and Clue are excellent general cycle trackers with very large user bases. Cysta AI is narrower: it is built around PCOS, keeps lab results and a photo journal for visible changes in the same record, and includes an AI Coach that reads your own logs. Many people with PCOS use a general tracker for years before switching to something PCOS-specific."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Cysta AI different from PCOS Pal or Cysterhood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PCOS Pal and Cysterhood are structured programs — lessons, meal plans, recipes, workouts and coaching. Cysta AI is a tracker and organizer: it does not give you a meal plan, but it records what you eat, how you feel, your cycles and your labs in one timeline for you and your clinician. Some people use a program and a tracker together."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my photos and lab images?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cysta AI requests clear consent before AI features process Coach messages, photos or lab images. See the privacy policy linked in the App Store listing for full detail on storage and processing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Cysta AI cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the US, Cysta AI Pro is $7.99 per week with a 7-day free trial for eligible new subscribers, or $39.99 per year (no trial). Prices vary by storefront and are shown before purchase. Subscriptions auto-renew unless cancelled at least 24 hours before the period ends."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I see a doctor instead of using an app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "See a clinician for a PCOS diagnosis or treatment decisions, periods absent for three months or more, very heavy bleeding, severe pelvic pain, signs of pregnancy complications, or rapid unexplained weight change. For severe pain, heavy bleeding with dizziness or fainting, call 911 or your local emergency number."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://loveikolabs.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Apps",
+          "item": "https://loveikolabs.com/apps/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cysta AI",
+          "item": "https://loveikolabs.com/apps/cysta/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="ll-cursor" aria-hidden="true"></div>
+<div class="ll-cursor-ring" aria-hidden="true"></div>
+
+<header class="ll-nav">
+  <a class="ll-nav__logo" href="/">
+    <img src="/icons/logo.png" alt="Loveiko Labs">
+    <span class="ll-nav__logo-text">Loveiko <span>Labs</span></span>
+  </a>
+  <ul class="ll-nav__links">
+    <li><a href="/">Studio</a></li>
+    <li><a href="/apps/">All Apps</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+</header>
+
+<main class="ll-page">
+
+  <nav class="ll-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Loveiko Labs</a><span>/</span><a href="/apps/">Apps</a><span>/</span>Cysta AI
+  </nav>
+
+  <section class="ll-hero">
+    <div class="ll-hero__icon">
+      <img src="/icons/cysta.jpeg" alt="Cysta AI app icon" width="96" height="96">
+    </div>
+    <p class="ll-eyebrow">iOS App · Women's Health · PCOS</p>
+    <h1>Cysta AI — <em>one clear place</em> for everything PCOS</h1>
+    <p class="ll-hero__sub">Irregular periods, symptoms, meals, weight, supplements, fertility questions and lab results usually live in five different apps and a notes file. Cysta AI puts them in one PCOS-specific tracker, lets you ask an evidence-informed AI Coach about your own patterns, and turns the records you choose into a doctor-ready PDF.</p>
+    <div class="ll-hero__cta">
+      <a class="ll-btn" href="https://apps.apple.com/us/app/cysta-ai-pcos-tracker/id6769523580?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=cysta" target="_blank" rel="noopener">Download on the App Store</a>
+      <a class="ll-btn ll-btn--ghost" href="#how">See how it works</a>
+    </div>
+    <p class="ll-hero__meta">iPhone · iOS 17.0+ · 7-day free trial on Weekly · 20 languages</p>
+  </section>
+
+  <nav class="ll-jump" aria-label="On this page">
+    <a href="#what">What it is</a>
+    <a href="#who">Who it's for</a>
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#compare">Compare</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <section class="ll-section ll-reveal" id="what">
+    <p class="ll-kicker">Overview</p>
+    <h2>What is Cysta AI?</h2>
+    <p class="ll-lead">Cysta AI is a PCOS tracking app for people with polycystic ovary syndrome who want symptoms, cycles, food, weight, fertility context and bloodwork in one place — and a clearer summary to bring to their doctor.</p>
+    <p>PCOS is not one symptom. It is irregular or absent periods, acne, unwanted hair growth or hair thinning, weight changes, insulin resistance, and — for many people — questions about fertility. Generic period trackers are built around a predictable 28-day cycle; PCOS cycles often are not predictable. Cysta AI is built around PCOS specifically, so irregular cycles are the expected case, not an error.</p>
+    <p>It is organizational, not clinical. Cysta AI does not diagnose PCOS, does not prescribe metformin, inositol, spironolactone or any treatment, and does not replace a gynecologist or endocrinologist. It helps you keep an honest record and prepare better questions — the decisions stay with you and your clinician.</p>
+    <p><strong>What makes it different:</strong> most PCOS apps are either a meal-plan program or a cycle predictor. Cysta AI is a tracker first — cycles, symptoms, meals, weight, supplements, a photo journal for visible changes, TTC signs and lab panels in one timeline — with an AI Coach that reads your recorded context and can show the sources behind its educational answers.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="who">
+    <p class="ll-kicker">Audience</p>
+    <h2>Who Cysta AI is built for</h2>
+    <div class="ll-cards">
+      <div class="ll-card">
+        <h3>Newly diagnosed with PCOS</h3>
+        <p>You left the appointment with a diagnosis and a handful of pamphlets. Start logging cycles, symptoms and meals from day one so the follow-up visit has three months of real data instead of guesses.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Irregular or absent periods</h3>
+        <p>Standard period apps keep "predicting" a period that does not come. Cysta AI records what actually happened — flow, spotting, gaps — so the pattern your doctor sees is the true one.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Trying to conceive with PCOS</h3>
+        <p>Log ovulation signs and TTC context alongside cycle history, see your estimated fertile window, and bring an organized record to a fertility consultation.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Managing insulin resistance through food</h3>
+        <p>Meals, food notes, weight and supplements in the same timeline as symptoms. Ask the Coach about diet and insulin resistance, and see how your routines line up with how you feel.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Tracking acne and hair changes</h3>
+        <p>The photo journal follows visible changes — acne, hirsutism, hair thinning — over months, which is how slow hormonal changes actually become visible.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Keeping lab results in one place</h3>
+        <p>Scan bloodwork or enter it manually — testosterone, SHBG, AMH, HbA1c, lipids, whatever your doctor ordered — and keep every panel organized next to the symptoms it relates to.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal" id="features">
+    <p class="ll-kicker">Capabilities</p>
+    <h2>What Cysta AI does for people with PCOS</h2>
+    <ul class="ll-features">
+      <li><strong>Cycle tracking built for irregular cycles.</strong> Record flow, spotting and gaps without the app assuming a textbook 28-day rhythm. Review cycle history over months to see the real pattern — the thing your gynecologist actually asks about.</li>
+      <li><strong>Symptom, meal, weight and supplement log.</strong> Log PCOS symptoms, meals and food notes, weight and supplement routines in one daily flow. Everything lands on the same timeline, so you can compare what changed before a good or a bad week.</li>
+      <li><strong>Photo journal for visible changes.</strong> Acne, unwanted hair growth and hair thinning change slowly. A dated photo journal makes slow change visible and gives you something concrete to show at an appointment.</li>
+      <li><strong>TTC context and estimated fertile window.</strong> Track ovulation signs and trying-to-conceive context alongside your cycle history. The fertile window is an estimate from your own records — useful for planning, not a contraceptive method.</li>
+      <li><strong>Lab results — scanned or typed.</strong> Scan a bloodwork report or enter results manually, then keep each panel organized. Values stay next to the symptoms and routines they relate to, instead of in a PDF you cannot find.</li>
+      <li><strong>Evidence-informed AI Coach.</strong> Ask about PCOS symptoms, diet, insulin resistance, hormones, cycle changes, fertility and everyday routines. The Coach uses the context you recorded, organizes educational guidance and can show supporting sources. It helps you understand patterns and prepare questions — it does not make medical decisions.</li>
+      <li><strong>Doctor-ready PDF summary.</strong> Choose which records to include and export a clean summary for your gynecologist, endocrinologist, dietitian or fertility clinic.</li>
+      <li><strong>Consent-first AI.</strong> Cysta AI asks for clear consent before AI features process Coach messages, photos or lab images. Reminders help you stay consistent with the records that matter to your routine.</li>
+    </ul>
+  </section>
+
+  <section class="ll-section ll-reveal" id="how">
+    <p class="ll-kicker">Workflow</p>
+    <h2>How to track PCOS in a way your doctor can actually use — a 90-day framework</h2>
+    <p>PCOS management is measured in months, not days. This is the workflow Cysta AI is built around.</p>
+    <ol class="ll-steps">
+      <li><strong>Day 1 — set your baseline.</strong><span>Log where you are today: last period date, current symptoms, weight, supplements and any medication your doctor has already prescribed. If you have recent bloodwork, scan it in. A baseline is what makes month three meaningful.</span></li>
+      <li><strong>Weeks 1–4 — log lightly, every day.</strong><span>A short daily check-in beats a detailed weekly one. Symptoms, meals, flow or spotting, and anything unusual — sleep, stress, a new supplement. Use reminders so the habit survives a busy week.</span></li>
+      <li><strong>Weeks 4–8 — start asking questions.</strong><span>Once there are a few weeks of data, ask the AI Coach about what you see: "Do my symptoms cluster around certain meals?" "What does research say about inositol and cycle regularity?" Treat answers as education and material for your next appointment.</span></li>
+      <li><strong>Month 2–3 — review trends, add photos and labs.</strong><span>Look at cycle history, symptoms, meals, weight and photo-journal entries together. If your clinician ordered follow-up labs, add them next to the first panel.</span></li>
+      <li><strong>Before the appointment — export the PDF.</strong><span>Pick the records that matter and export a doctor-ready summary. Bring your questions. A clinician can do far more with 90 days of organized records than with "my periods are kind of irregular".</span></li>
+    </ol>
+  </section>
+
+  <section class="ll-section ll-reveal" id="compare">
+    <p class="ll-kicker">Comparison</p>
+    <h2>Cysta AI vs Flo vs PCOS Pal vs Cysterhood vs Premom</h2>
+    <p>An honest side-by-side based on each app's public App Store listing in October 2026. Flo and Premom are far larger and more established; PCOS Pal and Cysterhood are PCOS programs built around lessons, meal plans and coaching. Cysta AI is the tracker-first option that keeps labs, photos and an AI Coach in the same record.</p>
+    <div class="ll-table-wrap">
+      <table class="ll-table">
+        <thead>
+          <tr><th>&nbsp;</th><th class="is-us">Cysta AI</th><th>Flo</th><th>PCOS Pal</th><th>Cysterhood</th><th>Premom</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Built specifically for PCOS</td><td class="is-us">✓</td><td>— general cycle app</td><td>✓</td><td>✓</td><td>partial (ovulation-first)</td></tr>
+          <tr><td>Irregular cycle logging</td><td class="is-us">✓</td><td>✓</td><td>partial</td><td>partial</td><td>✓</td></tr>
+          <tr><td>Symptom + meal + weight log</td><td class="is-us">✓</td><td>partial</td><td>✓ meal plans + weight</td><td>✓ habit trackers</td><td>partial</td></tr>
+          <tr><td>Lab result scan / storage</td><td class="is-us">✓</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>Photo journal (acne, hair)</td><td class="is-us">✓</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>Fertile window / TTC tools</td><td class="is-us">✓ estimate</td><td>✓</td><td>—</td><td>—</td><td>✓ ovulation test reader + BBT</td></tr>
+          <tr><td>AI Coach using your own records</td><td class="is-us">✓ can show sources</td><td>partial</td><td>—</td><td>weekly human coaching</td><td>—</td></tr>
+          <tr><td>Structured meal plans &amp; recipes</td><td class="is-us">—</td><td>—</td><td>✓</td><td>✓ 250+ recipes</td><td>—</td></tr>
+          <tr><td>Doctor-ready PDF export</td><td class="is-us">✓</td><td>partial</td><td>—</td><td>—</td><td>partial</td></tr>
+          <tr><td>Installed base</td><td class="is-us">New (May 2026)</td><td>500M+ users claimed</td><td>2.5K+ ratings</td><td>650+ ratings</td><td>60K+ ratings</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px;"><strong>Honest read:</strong> Pick Flo or Clue if you want the most polished general cycle tracker. Pick Premom if ovulation testing is your main goal. Pick Cysterhood or PCOS Pal if you want a guided meal-and-workout program. Pick Cysta AI if you want one PCOS record that holds cycles, symptoms, meals, photos and labs together — and a PDF that summarizes it for your doctor.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="scenarios">
+    <p class="ll-kicker">In the wild</p>
+    <h2>Real scenarios where Cysta AI earns its keep</h2>
+    <div class="ll-scenarios">
+      <div class="ll-scenario">
+        <h3>The follow-up appointment</h3>
+        <p>Maya was diagnosed with PCOS in March and told to "come back in three months". She logged every day in Cysta AI, scanned her April bloodwork and exported a PDF the night before. Her endocrinologist spent the visit on her actual cycle gaps and symptom pattern instead of reconstructing them from memory.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>The period that never arrives</h3>
+        <p>Leah's generic period app kept predicting a period on day 28, then day 35, then flagging her as "late". In Cysta AI she simply records what happens. After four months, the history shows 41- to 67-day cycles — exactly the information her gynecologist needed.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>Trying to conceive, organized</h3>
+        <p>Priya and her partner are trying to conceive. She logs ovulation signs and TTC context next to her cycle history and brings the export to a fertility consultation, where the clinic uses it to decide which tests to order first.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>Food and insulin resistance</h3>
+        <p>Sam asks the Coach what research says about carbohydrate timing and insulin resistance in PCOS, then compares her own meal notes with symptom days. She walks into a dietitian appointment with specific questions and three weeks of real meals logged.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal" id="pricing">
+    <p class="ll-kicker">Pricing</p>
+    <h2>7-day free trial, then Weekly or Annual</h2>
+    <div class="ll-pricing">
+      <div class="ll-price">
+        <h3>Cysta AI Pro Weekly</h3>
+        <p class="ll-price__amount">$7.99 <span>/ week</span></p>
+        <ul>
+          <li>7-day free trial for eligible new subscribers</li>
+          <li>Full tracker, AI Coach, labs and PDF export</li>
+          <li>Cancel anytime in Apple settings</li>
+        </ul>
+      </div>
+      <div class="ll-price ll-price--featured">
+        <h3>Cysta AI Pro Annual</h3>
+        <p class="ll-price__amount">$39.99 <span>/ year</span></p>
+        <ul>
+          <li>≈ $0.77 / week — the better value</li>
+          <li>Everything in Weekly</li>
+          <li>Billed once per year, no trial</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px;">US prices shown; local prices are displayed in the App Store before purchase and vary by storefront. The Weekly plan starts with a 7-day free trial for eligible new subscribers; the Annual plan is billed at purchase and has no trial. Subscriptions auto-renew unless cancelled at least 24 hours before the period ends — manage in iPhone Settings → Apple ID → Subscriptions.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="faq">
+    <p class="ll-kicker">Questions</p>
+    <h2>Frequently asked questions</h2>
+    <div class="ll-faq">
+      <details>
+        <summary>What is Cysta AI?</summary>
+        <div class="ll-faq__a"><p>Cysta AI is a PCOS tracking app for iPhone. It keeps PCOS symptoms, irregular cycles, meals, weight, supplements, a photo journal, TTC context and lab results in one place, adds an evidence-informed AI Coach that uses your recorded context, and exports a doctor-ready PDF. It is for informational, educational and organizational purposes only.</p></div>
+      </details>
+      <details>
+        <summary>Can Cysta AI diagnose PCOS?</summary>
+        <div class="ll-faq__a"><p>No. Cysta AI is not a medical device and does not diagnose or treat PCOS. PCOS is diagnosed by a clinician, typically using criteria that combine cycle history, signs or blood tests for elevated androgens, and ultrasound findings, after ruling out other causes. Cysta AI helps you organize the information that conversation needs.</p></div>
+      </details>
+      <details>
+        <summary>Does it work if my periods are very irregular or absent?</summary>
+        <div class="ll-faq__a"><p>Yes — that is the main reason it exists. Cysta AI records what actually happens (flow, spotting, gaps) rather than assuming a regular cycle, so long or absent cycles show up accurately in your history. Absent periods for three months or more are worth raising with a clinician.</p></div>
+      </details>
+      <details>
+        <summary>What does the AI Coach do?</summary>
+        <div class="ll-faq__a"><p>You can ask about PCOS symptoms, diet, insulin resistance, hormones, cycle changes, fertility and everyday routines. The Coach uses the context you recorded, organizes educational guidance and can show supporting sources. It is designed to help you understand patterns and prepare questions, not to make medical decisions for you.</p></div>
+      </details>
+      <details>
+        <summary>Can I track lab results for PCOS?</summary>
+        <div class="ll-faq__a"><p>Yes. Scan a bloodwork report or enter values manually, and Cysta AI keeps each panel organized next to your symptom and cycle history. Interpretation of lab values for your situation belongs to your clinician; the app keeps them in one place and helps you prepare questions.</p></div>
+      </details>
+      <details>
+        <summary>Is Cysta AI useful when trying to conceive?</summary>
+        <div class="ll-faq__a"><p>Yes. Track TTC context and ovulation signs alongside your cycle history and see an estimated fertile window. With irregular PCOS cycles, any fertile window estimate is less certain — it is a planning aid, not a guarantee and not a contraceptive method. A fertility specialist can advise on ovulation testing and treatment.</p></div>
+      </details>
+      <details>
+        <summary>How is Cysta AI different from Flo or Clue?</summary>
+        <div class="ll-faq__a"><p>Flo and Clue are excellent general cycle trackers with very large user bases. Cysta AI is narrower: it is built around PCOS, keeps lab results and a photo journal for visible changes in the same record, and includes an AI Coach that reads your own logs. Many people with PCOS use a general tracker for years before switching to something PCOS-specific.</p></div>
+      </details>
+      <details>
+        <summary>How is Cysta AI different from PCOS Pal or Cysterhood?</summary>
+        <div class="ll-faq__a"><p>PCOS Pal and Cysterhood are structured programs — lessons, meal plans, recipes, workouts and coaching. Cysta AI is a tracker and organizer: it does not give you a meal plan, but it records what you eat, how you feel, your cycles and your labs in one timeline for you and your clinician. Some people use a program and a tracker together.</p></div>
+      </details>
+      <details>
+        <summary>What happens to my photos and lab images?</summary>
+        <div class="ll-faq__a"><p>Cysta AI requests clear consent before AI features process Coach messages, photos or lab images. See the privacy policy linked in the App Store listing for full detail on storage and processing.</p></div>
+      </details>
+      <details>
+        <summary>How much does Cysta AI cost?</summary>
+        <div class="ll-faq__a"><p>In the US, Cysta AI Pro is $7.99 per week with a 7-day free trial for eligible new subscribers, or $39.99 per year (no trial). Prices vary by storefront and are shown before purchase. Subscriptions auto-renew unless cancelled at least 24 hours before the period ends.</p></div>
+      </details>
+      <details>
+        <summary>When should I see a doctor instead of using an app?</summary>
+        <div class="ll-faq__a"><p>See a clinician for a PCOS diagnosis or treatment decisions, periods absent for three months or more, very heavy bleeding, severe pelvic pain, signs of pregnancy complications, or rapid unexplained weight change. For severe pain, heavy bleeding with dizziness or fainting, call 911 or your local emergency number.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="ll-section ll-cta-band ll-reveal">
+    <h2>Stop scattering PCOS across five apps — <em>keep one clear record</em>.</h2>
+    <div class="ll-hero__cta">
+      <a class="ll-btn" href="https://apps.apple.com/us/app/cysta-ai-pcos-tracker/id6769523580?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=cysta" target="_blank" rel="noopener">Download Cysta AI on the App Store</a>
+    </div>
+    <p class="ll-hero__meta">7-day free trial on Weekly · iOS 17.0+ · not a medical device</p>
+  </section>
+
+  <section class="ll-section ll-reveal">
+    <p class="ll-kicker">More from the studio</p>
+    <h2>Related Loveiko Labs apps</h2>
+    <div class="ll-related">
+      <a class="ll-related-card" href="/apps/hepatica/">
+        <h3>Hepatica →</h3>
+        <p>Fatty liver diet and lab companion. Relevant because PCOS and insulin resistance are linked with fatty liver — Hepatica explains ALT, AST and FIB-4 in plain language.</p>
+      </a>
+      <a class="ll-related-card" href="/apps/folik/">
+        <h3>Folik →</h3>
+        <p>Hair loss tracker with a calibrated photo journal. Relevant for PCOS-related hair thinning that you want to track precisely over months.</p>
+      </a>
+      <a class="ll-related-card" href="/best-pcos-tracker-apps-2026/">
+        <h3>Best PCOS apps 2026 →</h3>
+        <p>Full ranking of seven PCOS apps — how Cysta AI compares with Flo, Clue, PCOS Pal, PCOS Polly, Cysterhood and Premom.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal">
+    <div class="ll-disclaimer">
+      <p><strong>Important medical disclaimer.</strong> Cysta AI is for informational, educational and organizational purposes only. It is not a medical device. It does not diagnose, treat or cure PCOS or any other condition, and it does not replace a physician, gynecologist, endocrinologist or other qualified healthcare professional. AI output can be incomplete or wrong. Talk to your clinician before changing diet, supplements, medication or fertility plans.</p>
+      <p><strong>Seek medical care for:</strong> no period for three months or more; very heavy bleeding or bleeding with dizziness or fainting; severe pelvic or abdominal pain; a positive pregnancy test with pain or bleeding; symptoms of very high or low blood sugar. In an emergency call 911 (US) or your local emergency number. For a mental health crisis, call or text 988 (US Suicide and Crisis Lifeline).</p>
+      <p>Fertile window estimates are based on your own records and are not a method of contraception.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ll-footer">
+  <div class="ll-footer__grid">
+    <div>
+      <strong class="ll-footer__brand">Loveiko <span>Labs</span></strong>
+      <p>Independent iOS studio building single-purpose AI apps that solve one problem in 30 seconds. Pattaya, Thailand · founded 2024.</p>
+    </div>
+    <div>
+      <strong>Cysta AI</strong>
+      <ul>
+        <li><a href="#what">Overview</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#compare">Comparison</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/best-pcos-tracker-apps-2026/">Best PCOS Apps 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Studio</strong>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/apps/">All apps</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="mailto:loveykovl@gmail.com">Press &amp; partnerships</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="ll-footer__legal">© 2026 Loveiko Labs. Cysta AI is an educational tracking app, not a medical device, and does not diagnose or treat PCOS. Flo, Clue, PCOS Pal, Cysterhood and Premom are trademarks of their respective owners; Loveiko Labs is not affiliated with them. App Store is a trademark of Apple Inc.</p>
+</footer>
+
+<script>
+/* scroll reveal */
+(function(){
+  var els=document.querySelectorAll('.ll-reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:0.12});
+  els.forEach(function(e){io.observe(e);});
+})();
+/* custom cursor — desktop pointers only */
+(function(){
+  if(!window.matchMedia||!matchMedia('(pointer:fine)').matches)return;
+  var dot=document.querySelector('.ll-cursor'),ring=document.querySelector('.ll-cursor-ring');
+  if(!dot||!ring)return;
+  document.body.classList.add('ll-cursor-ready');
+  var mx=0,my=0,rx=0,ry=0,shown=false;
+  addEventListener('mousemove',function(e){
+    mx=e.clientX;my=e.clientY;
+    dot.style.transform='translate('+(mx-3.5)+'px,'+(my-3.5)+'px)';
+    if(!shown){shown=true;dot.classList.add('on');ring.classList.add('on');}
+  },{passive:true});
+  (function loop(){rx+=(mx-rx)*0.2;ry+=(my-ry)*0.2;
+    ring.style.transform='translate('+(rx-15)+'px,'+(ry-15)+'px)';
+    requestAnimationFrame(loop);})();
+  addEventListener('mouseover',function(e){
+    var hot=e.target.closest('a,button,summary');
+    dot.classList.toggle('lg',!!hot);ring.classList.toggle('lg',!!hot);
+  });
+})();
+/* jump-nav scroll-spy — highlights the section you're reading */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.ll-jump a'));
+  if(!links.length||!('IntersectionObserver'in window))return;
+  var map={};
+  links.forEach(function(l){var id=l.getAttribute('href').slice(1);if(id)map[id]=l;});
+  var spy=new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(en.isIntersecting){
+        links.forEach(function(l){l.classList.remove('is-active');});
+        if(map[en.target.id])map[en.target.id].classList.add('is-active');
+      }
+    });
+  },{rootMargin:'-130px 0px -65% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s);});
+})();
+</script>
+
+</body>
+</html>

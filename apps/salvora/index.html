@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08080a">
+<title>Salvora — AI Eczema Tracker: Flares, Triggers, Itch, Sleep &amp; POEM-Style Severity | Loveiko Labs</title>
+<meta name="description" content="Salvora is a private eczema (atopic dermatitis) tracker for iPhone: log flares, itch, rash, sleep, foods, triggers and care routines, follow a POEM-style severity trend, keep a photo timeline on your phone and export a doctor-ready summary. 7-day free trial.">
+<meta name="keywords" content="eczema tracker app, atopic dermatitis app, eczema flare tracker, eczema trigger tracker, POEM score app, eczema photo diary, child eczema tracker, itch tracker, dermatology appointment app, Salvora">
+<meta name="author" content="Valeriy Loveyko / Loveiko Labs">
+<link rel="canonical" href="https://loveikolabs.com/apps/salvora/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://loveikolabs.com/apps/salvora/">
+<meta property="og:title" content="Salvora — A Calmer Way to Understand Your Eczema">
+<meta property="og:description" content="Flares, itch, sleep, triggers and care routines in one private record, with a POEM-style trend and a photo timeline for your dermatologist.">
+<meta property="og:image" content="https://loveikolabs.com/icons/salvora.jpeg">
+<meta property="og:site_name" content="Loveiko Labs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Salvora — A Calmer Way to Understand Your Eczema">
+<meta name="twitter:description" content="Flares, itch, sleep, triggers and care routines in one private record, with a POEM-style trend and a photo timeline for your dermatologist.">
+<meta name="twitter:image" content="https://loveikolabs.com/icons/salvora.jpeg">
+
+<link rel="icon" type="image/png" href="https://loveikolabs.com/icons/salvora.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "@id": "https://loveikolabs.com/apps/salvora/#app",
+      "name": "Salvora: AI Eczema Tracker",
+      "alternateName": "Salvora",
+      "operatingSystem": "iOS 17.0+",
+      "applicationCategory": "HealthApplication",
+      "url": "https://apps.apple.com/us/app/salvora-ai-eczema-tracker/id6768401099",
+      "downloadUrl": "https://apps.apple.com/us/app/salvora-ai-eczema-tracker/id6768401099",
+      "description": "Educational eczema tracking app for adults and parents managing atopic dermatitis and recurring flares. Logs flares and flare dates; itch, rash, dry skin and sleep loss; food, allergy, stress, weather, product and routine triggers; creams, moisturizers, topical steroids, baths and other care steps; POEM-style self-reported severity over time; photos and notes. Opt-in AI summarizes patterns in logs and photos. Doctor-ready summary with flare timeline, POEM-style trend, symptom notes, trigger log, care routine history and photo timeline. Shows AAD and NEA published warning signs. No account; photos stored on iPhone; no ads; no third-party analytics. Not a medical device.",
+      "image": "https://loveikolabs.com/icons/salvora.jpeg",
+      "softwareVersion": "2.0",
+      "datePublished": "2026-05-16",
+      "inLanguage": "en",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Salvora Pro Weekly",
+          "price": "7.99",
+          "priceCurrency": "USD",
+          "description": "Auto-renewing weekly subscription with a 7-day free trial for eligible Apple IDs."
+        },
+        {
+          "@type": "Offer",
+          "name": "Salvora Pro Annual",
+          "price": "39.99",
+          "priceCurrency": "USD",
+          "description": "Auto-renewing annual subscription with a 7-day free trial for eligible Apple IDs."
+        }
+      ],
+      "featureList": [
+        "Flare and flare-date logging",
+        "Itch, rash, dry skin and sleep-loss tracking",
+        "Trigger log: food, allergy, stress, weather, products and routines",
+        "Care routine history: creams, moisturizers, topical steroids, baths",
+        "POEM-style self-reported severity trend",
+        "Photo timeline stored on your iPhone",
+        "Opt-in AI pattern summaries of logs and photos",
+        "Doctor-ready summary for dermatology, allergy, pediatric or primary care visits",
+        "AAD and NEA published warning signs",
+        "No account, no ads, no third-party analytics"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "4",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "creator": {
+        "@id": "https://loveikolabs.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://loveikolabs.com/apps/salvora/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Salvora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Salvora is an educational AI eczema tracker for iPhone. It records flares, itch, rash, sleep, foods, triggers and care routines, tracks a POEM-style severity trend, keeps a photo timeline on your iPhone and exports a doctor-ready summary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Salvora diagnose eczema?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Salvora does not diagnose eczema, identify diseases, prescribe treatment or replace a clinician. Its optional AI summarizes patterns in your own logs and photos so they're easier to review."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is POEM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "POEM (Patient-Oriented Eczema Measure) is a widely used questionnaire in which patients rate eczema symptoms such as itch, sleep disturbance, bleeding, weeping, cracking, flaking and dryness over the past week. Salvora uses a POEM-style self-reported severity score to show your trend over time; it is for personal tracking, not a clinical assessment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Salvora find my eczema triggers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It helps you compare your flare history with the context you recorded — foods, stress, weather, allergens, products and routines. Triggers become clearer over weeks of consistent logging. Suspected food allergies should be evaluated by an allergist rather than by elimination alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Salvora for my child?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Parents can organize a child's eczema history — flares, sleep disruption, foods, care routines and photos — and share the summary with a pediatrician, pediatric dermatologist or allergist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are my photos stored?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Photos are stored on your iPhone. No account is required, AI analysis is opt-in, and there are no ads or third-party analytics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "EczemaWise is shutting down — can Salvora replace it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EczemaWise has ended new account creation and existing users can continue only through December 18, 2026. Salvora covers the core jobs — flares, triggers, care routines, a severity trend and a doctor-ready summary — in a private, on-device record. Start with baseline photos and your current routine so your history continues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Salvora cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Salvora Pro is $39.99 per year or $7.99 per week in the US, each with a 7-day free trial for eligible Apple IDs. Both plans unlock the same features and auto-renew unless cancelled at least 24 hours before renewal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I contact a clinician urgently?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contact a clinician promptly for signs of skin infection — spreading redness, warmth, pus, yellow crusting, or painful clustered blisters (which can signal eczema herpeticum and needs same-day care) — or for fever, rapidly worsening skin, or a flare that doesn't respond to your usual plan. Call 911 or your local emergency number for allergic reactions with swelling of the face or throat or difficulty breathing."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://loveikolabs.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Apps",
+          "item": "https://loveikolabs.com/apps/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Salvora",
+          "item": "https://loveikolabs.com/apps/salvora/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="ll-cursor" aria-hidden="true"></div>
+<div class="ll-cursor-ring" aria-hidden="true"></div>
+
+<header class="ll-nav">
+  <a class="ll-nav__logo" href="/">
+    <img src="/icons/logo.png" alt="Loveiko Labs">
+    <span class="ll-nav__logo-text">Loveiko <span>Labs</span></span>
+  </a>
+  <ul class="ll-nav__links">
+    <li><a href="/">Studio</a></li>
+    <li><a href="/apps/">All Apps</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+</header>
+
+<main class="ll-page">
+
+  <nav class="ll-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Loveiko Labs</a><span>/</span><a href="/apps/">Apps</a><span>/</span>Salvora
+  </nav>
+
+  <section class="ll-hero">
+    <div class="ll-hero__icon">
+      <img src="/icons/salvora.jpeg" alt="Salvora app icon" width="96" height="96">
+    </div>
+    <p class="ll-eyebrow">iOS App · Skin Health · Eczema</p>
+    <h1>Salvora — a calmer way to <em>understand your eczema</em></h1>
+    <p class="ll-hero__sub">Eczema flares rarely have one cause. It's the new detergent, the bad week of sleep, the cold snap and the skipped moisturizer — all at once. Salvora keeps flares, itch, sleep, triggers and care routines in one private record, tracks a POEM-style severity trend over time and builds a photo timeline that stays on your iPhone — so your next dermatology visit starts with a clear history.</p>
+    <div class="ll-hero__cta">
+      <a class="ll-btn" href="https://apps.apple.com/us/app/salvora-ai-eczema-tracker/id6768401099?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=salvora" target="_blank" rel="noopener">Download on the App Store</a>
+      <a class="ll-btn ll-btn--ghost" href="#how">See how it works</a>
+    </div>
+    <p class="ll-hero__meta">iPhone · iOS 17.0+ · no account · photos stay on your iPhone · 7-day free trial</p>
+  </section>
+
+  <nav class="ll-jump" aria-label="On this page">
+    <a href="#what">What it is</a>
+    <a href="#who">Who it's for</a>
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#compare">Compare</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <section class="ll-section ll-reveal" id="what">
+    <p class="ll-kicker">Overview</p>
+    <h2>What is Salvora?</h2>
+    <p class="ll-lead">Salvora is an AI eczema tracker for people living with atopic dermatitis, recurring flares, dry or itchy skin and changing care routines — and for parents organizing a child's eczema history.</p>
+    <p>Eczema is a pattern condition. The single most useful thing you can bring to a dermatologist is a history: when flares happened, how bad they were, what changed beforehand and what you used on your skin. Memory is terrible at this — especially at 2 a.m. with an itching child.</p>
+    <p>Salvora records that history in a few taps: flare dates; itch, rash, dryness and sleep loss; food, allergy, stress, weather, product and routine triggers; creams, moisturizers, topical steroids and baths. A POEM-style self-reported severity score turns "it's been bad lately" into a trend line. Photos build a skin timeline that stays on your phone.</p>
+    <p><strong>AI context, not a diagnosis.</strong> Opt-in AI can summarize patterns across your logs and photos so they are easier to review. Salvora does not diagnose eczema, identify diseases, prescribe treatment or replace a clinician. It can show you the warning signs published by the American Academy of Dermatology (AAD) and the National Eczema Association (NEA) and tell you when they warrant a call.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="who">
+    <p class="ll-kicker">Audience</p>
+    <h2>Who Salvora is built for</h2>
+    <div class="ll-cards">
+      <div class="ll-card">
+        <h3>Adults with atopic dermatitis</h3>
+        <p>Recurring flares, dry itchy skin, a shelf of creams you've half-tried. Build a history that shows what actually happens before a flare and what helps.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Parents of a child with eczema</h3>
+        <p>Organize your child's flares, sleep disruption, foods and care routines in one place — ready for the pediatrician or pediatric dermatologist.</p>
+      </div>
+      <div class="ll-card">
+        <h3>People who lose sleep to itch</h3>
+        <p>Sleep loss is one of the most disruptive parts of eczema and one clinicians ask about. Track it next to flares and routines.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Anyone testing a new routine</h3>
+        <p>New moisturizer, new wash, a different bath routine? Record the change and see the POEM-style trend before and after.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Before a dermatology or allergy visit</h3>
+        <p>Export a summary with flare timeline, severity trend, symptom notes, triggers, care routines and photos.</p>
+      </div>
+      <div class="ll-card">
+        <h3>Privacy-first users</h3>
+        <p>No account. Photos stored on your iPhone. AI analysis is opt-in. No ads and no third-party analytics.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal" id="features">
+    <p class="ll-kicker">Capabilities</p>
+    <h2>What Salvora tracks — and why each piece matters</h2>
+    <ul class="ll-features">
+      <li><strong>Flares and flare dates.</strong> The backbone of any eczema history. Log when a flare starts and how it progresses.</li>
+      <li><strong>Itch, rash, dry skin and sleep loss.</strong> The symptoms that shape daily life — including the nights lost to scratching.</li>
+      <li><strong>Trigger log.</strong> Food, allergy, stress, weather, products and routines. Over time Salvora helps you compare your flare history with the context you recorded.</li>
+      <li><strong>Care routine history.</strong> Creams, moisturizers, topical steroids, baths and other care steps — what you used, when, and how skin responded.</li>
+      <li><strong>POEM-style severity trend.</strong> A self-reported severity score modeled on the style of POEM (Patient-Oriented Eczema Measure), tracked over weeks so change is visible.</li>
+      <li><strong>Photo timeline on your iPhone.</strong> Dated photos and notes of your skin, stored on device. Slow change becomes visible; appointments become concrete.</li>
+      <li><strong>Opt-in AI pattern summaries.</strong> When you choose, AI summarizes patterns across logs and photos so records are easier to review. Context, not diagnosis.</li>
+      <li><strong>Doctor-ready summary + warning signs.</strong> Flare timeline, severity trend, symptom notes, trigger log, care history and photo timeline in one summary. AAD- and NEA-published warning signs show when to call a clinician.</li>
+    </ul>
+  </section>
+
+  <section class="ll-section ll-reveal" id="how">
+    <p class="ll-kicker">Workflow</p>
+    <h2>How to build an eczema history your dermatologist can use — a 6-week framework</h2>
+    <p>Eczema changes over weeks. This is the rhythm Salvora is built around.</p>
+    <ol class="ll-steps">
+      <li><strong>Day 1 — baseline.</strong><span>Record today's skin: where it's affected, itch, sleep last night, and a POEM-style severity score. Take baseline photos of the affected areas. List your current care routine.</span></li>
+      <li><strong>Daily — a 30-second log.</strong><span>Itch, sleep, anything unusual (new product, stress, weather change, new food), and what you applied. Short and consistent beats detailed and occasional.</span></li>
+      <li><strong>When a flare starts — log it immediately.</strong><span>Mark the flare, add a photo, note what changed in the previous 48 hours. This is where trigger patterns come from.</span></li>
+      <li><strong>Weekly — severity score and review.</strong><span>Log a weekly POEM-style score and look at the trend. If AI summaries are on, review what patterns it highlights — as questions, not conclusions.</span></li>
+      <li><strong>Before the appointment — export.</strong><span>Export the doctor-ready summary. Bring questions about what the trend shows, which triggers seem to recur and how your routine could change.</span></li>
+    </ol>
+  </section>
+
+  <section class="ll-section ll-reveal" id="compare">
+    <p class="ll-kicker">Comparison</p>
+    <h2>Salvora vs EczemaWise vs EczemaLess vs Skintrics vs Bearable</h2>
+    <p>Based on each app's public App Store listing in October 2026. Note: EczemaWise, built with the National Eczema Association, has ended new account creation and existing users can continue only through December 18, 2026. EczemaLess positions itself as clinical decision support for diagnosed patients; Skintrics covers several skin conditions; Bearable is a general symptom tracker.</p>
+    <div class="ll-table-wrap">
+      <table class="ll-table">
+        <thead>
+          <tr><th>&nbsp;</th><th class="is-us">Salvora</th><th>EczemaWise</th><th>EczemaLess</th><th>Skintrics</th><th>Bearable</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Accepting new users</td><td class="is-us">✓</td><td>— (sunsetting Dec 2026)</td><td>✓</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Eczema-specific flare tracking</td><td class="is-us">✓</td><td>✓</td><td>✓</td><td>✓ multi-condition</td><td>partial</td></tr>
+          <tr><td>Trigger log (food, stress, weather, products)</td><td class="is-us">✓</td><td>✓</td><td>✓</td><td>✓ with confidence ratings</td><td>✓ correlations</td></tr>
+          <tr><td>POEM-style severity trend</td><td class="is-us">✓</td><td>partial</td><td>AI severity rating from photo</td><td>0–10 daily score</td><td>—</td></tr>
+          <tr><td>Photo timeline</td><td class="is-us">✓ on device</td><td>—</td><td>✓</td><td>✓</td><td>—</td></tr>
+          <tr><td>Care routine history (creams, steroids, baths)</td><td class="is-us">✓</td><td>✓ treatment research</td><td>✓ care plan</td><td>partial</td><td>✓ medication</td></tr>
+          <tr><td>Doctor-ready summary</td><td class="is-us">✓</td><td>✓ shared decision making</td><td>—</td><td>—</td><td>✓ exports</td></tr>
+          <tr><td>No account, no third-party analytics</td><td class="is-us">✓</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>Food / gut scoring</td><td class="is-us">—</td><td>—</td><td>—</td><td>✓</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px;"><strong>Honest read:</strong> If you used EczemaWise, you'll need a new home before December 2026 — Salvora is designed for exactly that job: flares, triggers, care routines and a doctor-ready summary. Pick Skintrics if you manage several skin conditions and want food scoring. Pick Bearable if eczema is one of many things you track. Pick Salvora for a private, eczema-focused record with a severity trend and photo timeline that stays on your phone.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="scenarios">
+    <p class="ll-kicker">In the wild</p>
+    <h2>Real scenarios where Salvora earns its keep</h2>
+    <div class="ll-scenarios">
+      <div class="ll-scenario">
+        <h3>The winter flare mystery</h3>
+        <p>Rachel's hands flared every December. Six weeks of logging in Salvora showed the flares started days after switching to a heavier-scented hand soap at work and worsened with cold, dry weather — a combination she could finally bring to her dermatologist.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>A toddler's bad nights</h3>
+        <p>Ben and Ola logged their two-year-old's itch, sleep, foods and moisturizer routine. The summary they exported showed sleep loss tracked closely with flares on the legs — and gave the pediatric dermatologist a clear timeline instead of exhausted guesses.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>Leaving EczemaWise</h3>
+        <p>Sam had used EczemaWise for years and saw the sunset notice. She started a fresh record in Salvora with baseline photos and her current routine so her history continues without a gap.</p>
+      </div>
+      <div class="ll-scenario">
+        <h3>Testing a new routine</h3>
+        <p>After her dermatologist suggested a new moisturizer routine, Lina tracked her POEM-style score weekly. Four weeks later the trend — and the photo timeline — made the follow-up conversation simple.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal" id="pricing">
+    <p class="ll-kicker">Pricing</p>
+    <h2>7-day free trial on both plans</h2>
+    <div class="ll-pricing">
+      <div class="ll-price">
+        <h3>Salvora Pro Weekly</h3>
+        <p class="ll-price__amount">$7.99 <span>/ week</span></p>
+        <ul>
+          <li>7-day free trial for eligible Apple IDs</li>
+          <li>All features unlocked</li>
+          <li>Cancel anytime in Apple settings</li>
+        </ul>
+      </div>
+      <div class="ll-price ll-price--featured">
+        <h3>Salvora Pro Annual</h3>
+        <p class="ll-price__amount">$39.99 <span>/ year</span></p>
+        <ul>
+          <li>7-day free trial for eligible Apple IDs</li>
+          <li>Same features as Weekly</li>
+          <li>≈ $0.77 / week</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px;font-size:13.5px;">US prices shown; local prices vary by storefront. Both plans unlock the same features and include a 7-day free trial for eligible Apple IDs. Subscriptions auto-renew unless cancelled at least 24 hours before renewal — manage in iPhone Settings → Apple ID → Subscriptions.</p>
+  </section>
+
+  <section class="ll-section ll-reveal" id="faq">
+    <p class="ll-kicker">Questions</p>
+    <h2>Frequently asked questions</h2>
+    <div class="ll-faq">
+      <details>
+        <summary>What is Salvora?</summary>
+        <div class="ll-faq__a"><p>Salvora is an educational AI eczema tracker for iPhone. It records flares, itch, rash, sleep, foods, triggers and care routines, tracks a POEM-style severity trend, keeps a photo timeline on your iPhone and exports a doctor-ready summary.</p></div>
+      </details>
+      <details>
+        <summary>Can Salvora diagnose eczema?</summary>
+        <div class="ll-faq__a"><p>No. Salvora does not diagnose eczema, identify diseases, prescribe treatment or replace a clinician. Its optional AI summarizes patterns in your own logs and photos so they're easier to review.</p></div>
+      </details>
+      <details>
+        <summary>What is POEM?</summary>
+        <div class="ll-faq__a"><p>POEM (Patient-Oriented Eczema Measure) is a widely used questionnaire in which patients rate eczema symptoms such as itch, sleep disturbance, bleeding, weeping, cracking, flaking and dryness over the past week. Salvora uses a POEM-style self-reported severity score to show your trend over time; it is for personal tracking, not a clinical assessment.</p></div>
+      </details>
+      <details>
+        <summary>Can Salvora find my eczema triggers?</summary>
+        <div class="ll-faq__a"><p>It helps you compare your flare history with the context you recorded — foods, stress, weather, allergens, products and routines. Triggers become clearer over weeks of consistent logging. Suspected food allergies should be evaluated by an allergist rather than by elimination alone.</p></div>
+      </details>
+      <details>
+        <summary>Can I use Salvora for my child?</summary>
+        <div class="ll-faq__a"><p>Yes. Parents can organize a child's eczema history — flares, sleep disruption, foods, care routines and photos — and share the summary with a pediatrician, pediatric dermatologist or allergist.</p></div>
+      </details>
+      <details>
+        <summary>Where are my photos stored?</summary>
+        <div class="ll-faq__a"><p>Photos are stored on your iPhone. No account is required, AI analysis is opt-in, and there are no ads or third-party analytics.</p></div>
+      </details>
+      <details>
+        <summary>EczemaWise is shutting down — can Salvora replace it?</summary>
+        <div class="ll-faq__a"><p>EczemaWise has ended new account creation and existing users can continue only through December 18, 2026. Salvora covers the core jobs — flares, triggers, care routines, a severity trend and a doctor-ready summary — in a private, on-device record. Start with baseline photos and your current routine so your history continues.</p></div>
+      </details>
+      <details>
+        <summary>How much does Salvora cost?</summary>
+        <div class="ll-faq__a"><p>Salvora Pro is $39.99 per year or $7.99 per week in the US, each with a 7-day free trial for eligible Apple IDs. Both plans unlock the same features and auto-renew unless cancelled at least 24 hours before renewal.</p></div>
+      </details>
+      <details>
+        <summary>When should I contact a clinician urgently?</summary>
+        <div class="ll-faq__a"><p>Contact a clinician promptly for signs of skin infection — spreading redness, warmth, pus, yellow crusting, or painful clustered blisters (which can signal eczema herpeticum and needs same-day care) — or for fever, rapidly worsening skin, or a flare that doesn't respond to your usual plan. Call 911 or your local emergency number for allergic reactions with swelling of the face or throat or difficulty breathing.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="ll-section ll-cta-band ll-reveal">
+    <h2>Bring your dermatologist <em>a history, not a guess</em>.</h2>
+    <div class="ll-hero__cta">
+      <a class="ll-btn" href="https://apps.apple.com/us/app/salvora-ai-eczema-tracker/id6768401099?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=salvora" target="_blank" rel="noopener">Download Salvora on the App Store</a>
+    </div>
+    <p class="ll-hero__meta">No account · photos stay on your iPhone · 7-day free trial</p>
+  </section>
+
+  <section class="ll-section ll-reveal">
+    <p class="ll-kicker">More from the studio</p>
+    <h2>Related Loveiko Labs apps</h2>
+    <div class="ll-related">
+      <a class="ll-related-card" href="/apps/bumpcheck/">
+        <h3>BumpCheck →</h3>
+        <p>Ingredient scanner for skincare, medication and food — handy when checking products before they go on sensitive skin during pregnancy.</p>
+      </a>
+      <a class="ll-related-card" href="/apps/pestsnap/">
+        <h3>PestSnap →</h3>
+        <p>Bug and bite identifier — for when an itchy spot might be a bite rather than a flare.</p>
+      </a>
+      <a class="ll-related-card" href="/best-eczema-tracker-apps-2026/">
+        <h3>Best eczema apps 2026 →</h3>
+        <p>Full ranking of six eczema apps — how Salvora compares with EczemaWise, EczemaLess, Skintrics, Bearable and Aysa.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="ll-section ll-reveal">
+    <div class="ll-disclaimer">
+      <p><strong>Important medical disclaimer.</strong> Salvora is an educational tracking tool, not a medical device. It does not diagnose, prescribe or treat. It can show the warning signs published by the AAD and NEA and indicate when they warrant a call — it is not a substitute for emergency services. Salvora is not affiliated with, endorsed by or sponsored by the American Academy of Dermatology or the National Eczema Association.</p>
+      <p><strong>Seek care for:</strong> signs of infection, painful clustered blisters or punched-out sores, fever, rapidly worsening skin, or allergic reactions. Call 911 (US) or your local emergency number for facial or throat swelling or breathing difficulty.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ll-footer">
+  <div class="ll-footer__grid">
+    <div>
+      <strong class="ll-footer__brand">Loveiko <span>Labs</span></strong>
+      <p>Independent iOS studio building single-purpose AI apps that solve one problem in 30 seconds. Pattaya, Thailand · founded 2024.</p>
+    </div>
+    <div>
+      <strong>Salvora</strong>
+      <ul>
+        <li><a href="#what">Overview</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#compare">Comparison</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="/best-eczema-tracker-apps-2026/">Best Eczema Apps 2026</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Studio</strong>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/apps/">All apps</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="mailto:loveykovl@gmail.com">Press &amp; partnerships</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="ll-footer__legal">© 2026 Loveiko Labs. Salvora is an educational tracking tool, not a medical device. EczemaWise, EczemaLess, Skintrics, Bearable and Aysa are trademarks of their respective owners; Loveiko Labs is not affiliated with them. App Store is a trademark of Apple Inc.</p>
+</footer>
+
+<script>
+/* scroll reveal */
+(function(){
+  var els=document.querySelectorAll('.ll-reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:0.12});
+  els.forEach(function(e){io.observe(e);});
+})();
+/* custom cursor — desktop pointers only */
+(function(){
+  if(!window.matchMedia||!matchMedia('(pointer:fine)').matches)return;
+  var dot=document.querySelector('.ll-cursor'),ring=document.querySelector('.ll-cursor-ring');
+  if(!dot||!ring)return;
+  document.body.classList.add('ll-cursor-ready');
+  var mx=0,my=0,rx=0,ry=0,shown=false;
+  addEventListener('mousemove',function(e){
+    mx=e.clientX;my=e.clientY;
+    dot.style.transform='translate('+(mx-3.5)+'px,'+(my-3.5)+'px)';
+    if(!shown){shown=true;dot.classList.add('on');ring.classList.add('on');}
+  },{passive:true});
+  (function loop(){rx+=(mx-rx)*0.2;ry+=(my-ry)*0.2;
+    ring.style.transform='translate('+(rx-15)+'px,'+(ry-15)+'px)';
+    requestAnimationFrame(loop);})();
+  addEventListener('mouseover',function(e){
+    var hot=e.target.closest('a,button,summary');
+    dot.classList.toggle('lg',!!hot);ring.classList.toggle('lg',!!hot);
+  });
+})();
+/* jump-nav scroll-spy — highlights the section you're reading */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.ll-jump a'));
+  if(!links.length||!('IntersectionObserver'in window))return;
+  var map={};
+  links.forEach(function(l){var id=l.getAttribute('href').slice(1);if(id)map[id]=l;});
+  var spy=new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(en.isIntersecting){
+        links.forEach(function(l){l.classList.remove('is-active');});
+        if(map[en.target.id])map[en.target.id].classList.add('is-active');
+      }
+    });
+  },{rootMargin:'-130px 0px -65% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s);});
+})();
+</script>
+
+</body>
+</html>
