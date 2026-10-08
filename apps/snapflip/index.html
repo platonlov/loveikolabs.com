@@ -7,21 +7,21 @@
 <meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 <script>document.documentElement.classList.add('js')</script>
-<title>SnapFlip — Thrift Scanner with Real eBay Sold Prices · Flip Score 1-100 | Loveiko Labs</title>
-<meta name="description" content="SnapFlip is the only thrift scanner that connects to the eBay API for real completed sale prices — not AI guesses. Flip Score 1-100, BUY/SKIP verdict, multi-platform pricing (eBay, Mercari, Poshmark), profit calculator, AI listing generator. $4.99/wk · $29.99/yr.">
+<title>SnapFlip: Thrift Scanner with Real eBay Sold Prices</title>
+<meta name="description" content="Thrift scanner with real eBay sold prices, a flip score and listing help, so you know what to buy before you reach the checkout. iPhone.">
 <meta name="keywords" content="thrift scanner app, thrift profit scanner, real ebay sold prices, flip score, BUY or SKIP thrift, mercari poshmark price check, reseller scanner app, thrift store flipping app, snapflip vs thriftai, garage sale scanner, estate sale app">
 <meta name="author" content="Valeriy Loveyko / Loveiko Labs">
 <link rel="canonical" href="https://loveikolabs.com/apps/snapflip/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://loveikolabs.com/apps/snapflip/">
-<meta property="og:title" content="SnapFlip — Thrift Scanner with Real eBay Sold Prices">
-<meta property="og:description" content="Scan any item in 3 seconds. Real eBay sold prices, not AI guesses. Flip Score 1-100. BUY/SKIP verdict. Multi-platform pricing across eBay, Mercari, Poshmark.">
+<meta property="og:title" content="SnapFlip: Thrift Scanner with Real eBay Sold Prices">
+<meta property="og:description" content="Thrift scanner with real eBay sold prices, a flip score and listing help, so you know what to buy before you reach the checkout. iPhone.">
 <meta property="og:image" content="https://loveikolabs.com/icons/snapflip.jpeg">
 <meta property="og:site_name" content="Loveiko Labs">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SnapFlip — Thrift Scanner with Real eBay Prices">
-<meta name="twitter:description" content="Scan thrift items, see REAL sold prices, get Flip Score 1-100, generate AI listing for eBay/Mercari/Poshmark.">
+<meta name="twitter:title" content="SnapFlip: Thrift Scanner with Real eBay Sold Prices">
+<meta name="twitter:description" content="Thrift scanner with real eBay sold prices, a flip score and listing help, so you know what to buy before you reach the checkout. iPhone.">
 <meta name="twitter:image" content="https://loveikolabs.com/icons/snapflip.jpeg">
 
 <link rel="icon" type="image/jpeg" href="https://loveikolabs.com/icons/snapflip.jpeg">
@@ -46,17 +46,31 @@
       "description": "iOS reseller's scanner that connects to the eBay API to show real completed sale prices (not AI estimates) for thrift store finds. Returns a Flip Score 1-100, BUY/SKIP verdict, multi-platform pricing across eBay/Mercari/Poshmark, sales velocity, profit calculator with platform fees, and a one-tap AI listing generator.",
       "image": "https://loveikolabs.com/icons/snapflip.jpeg",
       "offers": [
-        { "@type": "Offer", "name": "Weekly Subscription", "price": "4.99", "priceCurrency": "USD" },
-        { "@type": "Offer", "name": "Annual Subscription", "price": "29.99", "priceCurrency": "USD" }
+        {
+          "@type": "Offer",
+          "name": "Weekly Subscription",
+          "price": "4.99",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Annual Subscription",
+          "price": "29.99",
+          "priceCurrency": "USD"
+        }
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
-        "ratingCount": "22",
-        "bestRating": "5",
-        "worstRating": "1"
+        "ratingCount": 22,
+        "bestRating": 5,
+        "worstRating": 1
       },
-      "creator": { "@id": "https://loveikolabs.com/#organization" }
+      "creator": {
+        "@id": "https://loveikolabs.com/#organization"
+      },
+      "dateModified": "2026-09-07",
+      "softwareVersion": "1.8.1"
     },
     {
       "@type": "FAQPage",
@@ -65,116 +79,183 @@
         {
           "@type": "Question",
           "name": "What makes SnapFlip different from other thrift scanner apps?",
-          "acceptedAnswer": { "@type": "Answer", "text": "SnapFlip is the only consumer thrift scanner that connects directly to the eBay API for real completed sale prices. Other apps show AI-estimated prices that can be off by 30-50% from reality. Every price in SnapFlip carries a source badge — real sold data or AI estimate — so you always know what you're looking at. You can tap 'See on eBay' to verify any price against live completed listings." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SnapFlip is the only consumer thrift scanner that connects directly to the eBay API for real completed sale prices. Other apps show AI-estimated prices that can be off by 30-50% from reality. Every price in SnapFlip carries a source badge — real sold data or AI estimate — so you always know what you're looking at. You can tap 'See on eBay' to verify any price against live completed listings."
+          }
         },
         {
           "@type": "Question",
           "name": "How accurate is the Flip Score?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The Flip Score combines three signals: profit margin (your potential buy price vs recent sold prices), demand (sold count in last 30 days), and sell-through rate (how often the item moves vs sits unsold). 80+ is a clear BUY. 40-79 is a maybe (check details). Under 40 is SKIP. Most accurate on branded items with active listings; obscure items show lower confidence." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Flip Score combines three signals: profit margin (your potential buy price vs recent sold prices), demand (sold count in last 30 days), and sell-through rate (how often the item moves vs sits unsold). 80+ is a clear BUY. 40-79 is a maybe (check details). Under 40 is SKIP. Most accurate on branded items with active listings; obscure items show lower confidence."
+          }
         },
         {
           "@type": "Question",
           "name": "What does 'real eBay sold prices' actually mean?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It means the prices come from completed eBay listings — items that actually sold, not items currently listed at aspirational prices. SnapFlip pulls this from the eBay developer API. Other apps either scrape current asking prices (which are usually higher than what items actually sell for) or generate AI estimates from training data. Real sold data is the only number that matters when deciding what to pay at a thrift store." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It means the prices come from completed eBay listings — items that actually sold, not items currently listed at aspirational prices. SnapFlip pulls this from the eBay developer API. Other apps either scrape current asking prices (which are usually higher than what items actually sell for) or generate AI estimates from training data. Real sold data is the only number that matters when deciding what to pay at a thrift store."
+          }
         },
         {
           "@type": "Question",
           "name": "Why are eBay sold prices more useful than current listings?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A current listing is what someone hopes to get. A sold listing is what someone actually got. The gap is often 30-50%. Example: a Patagonia fleece might be listed at $120 by ten sellers, but actual completed sales over the last 30 days range from $65-95. The $120 number is irrelevant to your sourcing decision. SnapFlip shows you the $65-95 number." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A current listing is what someone hopes to get. A sold listing is what someone actually got. The gap is often 30-50%. Example: a Patagonia fleece might be listed at $120 by ten sellers, but actual completed sales over the last 30 days range from $65-95. The $120 number is irrelevant to your sourcing decision. SnapFlip shows you the $65-95 number."
+          }
         },
         {
           "@type": "Question",
           "name": "How does SnapFlip identify what an item is?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Apple Vision framework plus a custom AI model trained on resale-relevant categories. Best results when the brand tag, model number, or maker mark is visible. For clothing, photograph the tag. For sneakers, photograph the tongue label. For electronics, photograph the serial sticker. If uncertain, the Refine Analysis feature lets you add another photo or type the item manually." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Apple Vision framework plus a custom AI model trained on resale-relevant categories. Best results when the brand tag, model number, or maker mark is visible. For clothing, photograph the tag. For sneakers, photograph the tongue label. For electronics, photograph the serial sticker. If uncertain, the Refine Analysis feature lets you add another photo or type the item manually."
+          }
         },
         {
           "@type": "Question",
           "name": "Does SnapFlip work on clothing, sneakers, electronics, books?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — plus toys, home goods, vintage items, collectibles, jewelry, accessories, kitchen items, and tools. Best results on items with clear branding visible. Unbranded or generic items work but with lower-confidence scores." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — plus toys, home goods, vintage items, collectibles, jewelry, accessories, kitchen items, and tools. Best results on items with clear branding visible. Unbranded or generic items work but with lower-confidence scores."
+          }
         },
         {
           "@type": "Question",
           "name": "Does SnapFlip handle vintage and antique items?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Vintage clothing (designer vintage, denim, band tees), mid-century home goods, vintage electronics, antique books, and collectibles all work. Era recognition is approximate — for fine antiques requiring deep expertise, consult a specialist." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Vintage clothing (designer vintage, denim, band tees), mid-century home goods, vintage electronics, antique books, and collectibles all work. Era recognition is approximate — for fine antiques requiring deep expertise, consult a specialist."
+          }
         },
         {
           "@type": "Question",
           "name": "Can SnapFlip authenticate luxury items?",
-          "acceptedAnswer": { "@type": "Answer", "text": "SnapFlip identifies items but is not built for authentication. For luxury handbags, Loveiko Labs makes VeriBag (22-point photo authentication). For luxury watches, WatchSnap. For fine jewelry, JewelSnap. If SnapFlip identifies an item as a high-value luxury piece, the verdict will recommend professional authentication before purchase." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SnapFlip identifies items but is not built for authentication. For luxury handbags, Loveiko Labs makes VeriBag (22-point photo authentication). For luxury watches, WatchSnap. For fine jewelry, JewelSnap. If SnapFlip identifies an item as a high-value luxury piece, the verdict will recommend professional authentication before purchase."
+          }
         },
         {
           "@type": "Question",
           "name": "What if the scan identifies an item incorrectly?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Use the Refine Analysis feature — add a clearer photo (especially of the brand tag), or type the item manually. The scan re-runs with corrected input at no extra scan cost. If high-confidence scans are consistently wrong, email loveykovl@gmail.com with the photo — this feedback improves the AI directly." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the Refine Analysis feature — add a clearer photo (especially of the brand tag), or type the item manually. The scan re-runs with corrected input at no extra scan cost. If high-confidence scans are consistently wrong, email loveykovl@gmail.com with the photo — this feedback improves the AI directly."
+          }
         },
         {
           "@type": "Question",
           "name": "Does SnapFlip work without internet?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Internet is required because both AI identification and eBay sold-price lookup happen in real time via cloud APIs. On a typical 4G/5G connection, scan-to-verdict completes in under 3 seconds. Saved scans in your Flip Collection can be viewed offline." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Internet is required because both AI identification and eBay sold-price lookup happen in real time via cloud APIs. On a typical 4G/5G connection, scan-to-verdict completes in under 3 seconds. Saved scans in your Flip Collection can be viewed offline."
+          }
         },
         {
           "@type": "Question",
           "name": "How does multi-platform pricing work?",
-          "acceptedAnswer": { "@type": "Answer", "text": "For every scanned item, SnapFlip shows side-by-side average sale prices on eBay, Mercari, and Poshmark. Generally: eBay pays best for electronics and vintage, Poshmark pays best for women's branded clothing, Mercari is fastest-selling for everyday items. The app shows the data so you can pick the right platform for each item." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For every scanned item, SnapFlip shows side-by-side average sale prices on eBay, Mercari, and Poshmark. Generally: eBay pays best for electronics and vintage, Poshmark pays best for women's branded clothing, Mercari is fastest-selling for everyday items. The app shows the data so you can pick the right platform for each item."
+          }
         },
         {
           "@type": "Question",
           "name": "How is the profit calculator different from just subtracting fees?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It accounts for all three platforms' actual fee structures and shipping. eBay: 13% final value fee plus payment processing. Mercari: 10% plus 2.9% payment processing. Poshmark: 20% flat (items over $15) or $2.95 (items under $15) plus shipping. Enter buy price and platform — see net profit after all fees and shipping. Saves the mental math when making fast decisions in a store." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It accounts for all three platforms' actual fee structures and shipping. eBay: 13% final value fee plus payment processing. Mercari: 10% plus 2.9% payment processing. Poshmark: 20% flat (items over $15) or $2.95 (items under $15) plus shipping. Enter buy price and platform — see net profit after all fees and shipping. Saves the mental math when making fast decisions in a store."
+          }
         },
         {
           "@type": "Question",
           "name": "What's the AI listing generator and how does it save time?",
-          "acceptedAnswer": { "@type": "Answer", "text": "One tap produces a complete listing: title (optimized for the chosen platform's search algorithm), description (matching the item's identified condition, brand, materials), and suggested price (based on multi-platform data). Copy to clipboard, paste in eBay/Mercari/Poshmark app, post. Saves 15-20 minutes per listing — significant when listing 30 items from a single thrift haul." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One tap produces a complete listing: title (optimized for the chosen platform's search algorithm), description (matching the item's identified condition, brand, materials), and suggested price (based on multi-platform data). Copy to clipboard, paste in eBay/Mercari/Poshmark app, post. Saves 15-20 minutes per listing — significant when listing 30 items from a single thrift haul."
+          }
         },
         {
           "@type": "Question",
           "name": "How fresh is the eBay sold price data?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sold prices reflect the most recent completed listings — typically updated within hours of actual sale. The sales velocity metric shows count over the last 30 days. For trending items (sneaker releases, viral products) prices change weekly. For stable categories (vintage jewelry, mid-century furniture) prices are stable over months." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sold prices reflect the most recent completed listings — typically updated within hours of actual sale. The sales velocity metric shows count over the last 30 days. For trending items (sneaker releases, viral products) prices change weekly. For stable categories (vintage jewelry, mid-century furniture) prices are stable over months."
+          }
         },
         {
           "@type": "Question",
           "name": "Is SnapFlip affiliated with eBay, Mercari, or Poshmark?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. SnapFlip uses publicly available data and the official eBay developer API to fetch sold prices. It is not affiliated with, endorsed by, or operated in partnership with eBay, Mercari, Poshmark, Depop, Vinted, or Goodwill." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. SnapFlip uses publicly available data and the official eBay developer API to fetch sold prices. It is not affiliated with, endorsed by, or operated in partnership with eBay, Mercari, Poshmark, Depop, Vinted, or Goodwill."
+          }
         },
         {
           "@type": "Question",
           "name": "What's a good Flip Score to buy at?",
-          "acceptedAnswer": { "@type": "Answer", "text": "General rule: 80+ is a confident BUY (good margin, active demand). 60-79 is worth considering if your buy price is well below the lower end of the sold range. 40-59 is marginal — only worth it for very cheap finds or items you'd keep anyway. Under 40 is SKIP unless you have specialty knowledge the AI lacks." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "General rule: 80+ is a confident BUY (good margin, active demand). 60-79 is worth considering if your buy price is well below the lower end of the sold range. 40-59 is marginal — only worth it for very cheap finds or items you'd keep anyway. Under 40 is SKIP unless you have specialty knowledge the AI lacks."
+          }
         },
         {
           "@type": "Question",
           "name": "How is SnapFlip different from googling 'eBay sold' on a thrift run?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Speed and completeness. Googling each item takes 5-15 minutes per piece: identify it, find the right search, filter to sold listings, scan results, do mental math on fees. SnapFlip does all of this in 3 seconds plus shows Mercari and Poshmark comps simultaneously. On a thrift run with 50 candidate items, that's the difference between getting through 5 items and getting through all 50." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Speed and completeness. Googling each item takes 5-15 minutes per piece: identify it, find the right search, filter to sold listings, scan results, do mental math on fees. SnapFlip does all of this in 3 seconds plus shows Mercari and Poshmark comps simultaneously. On a thrift run with 50 candidate items, that's the difference between getting through 5 items and getting through all 50."
+          }
         },
         {
           "@type": "Question",
           "name": "What's the difference between weekly and annual subscription?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Both unlock identical features. Weekly is $4.99/week with a 7-day free trial — best for short-term needs (one estate sale weekend, occasional thrifting). Annual is $29.99/year — saves 88% vs weekly billing. Best for serious resellers who source weekly. Cancel anytime in Settings > Apple ID > Subscriptions." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both unlock identical features. Weekly is $4.99/week with a 7-day free trial — best for short-term needs (one estate sale weekend, occasional thrifting). Annual is $29.99/year — saves 88% vs weekly billing. Best for serious resellers who source weekly. Cancel anytime in Settings > Apple ID > Subscriptions."
+          }
         },
         {
           "@type": "Question",
           "name": "How do I cancel SnapFlip Pro?",
-          "acceptedAnswer": { "@type": "Answer", "text": "All Pro subscriptions are managed through Apple's standard subscription system. To cancel: open Settings app, tap your Apple ID, tap Subscriptions, find SnapFlip, tap Cancel Subscription. Cancellation takes effect at end of current billing period. The 7-day free trial can be cancelled any time before it ends with no charge." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All Pro subscriptions are managed through Apple's standard subscription system. To cancel: open Settings app, tap your Apple ID, tap Subscriptions, find SnapFlip, tap Cancel Subscription. Cancellation takes effect at end of current billing period. The 7-day free trial can be cancelled any time before it ends with no charge."
+          }
         },
         {
           "@type": "Question",
           "name": "Can I export my Flip Collection for tax purposes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Flip Collection saves every scan with buy price tracking. You can view total portfolio value, sort by Flip Score, filter by category. CSV export is available for Pro subscribers — useful for tax season if reselling is a business. Includes scan date, identified item, buy price, sold-price range, and platform recommendation for each entry." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Flip Collection saves every scan with buy price tracking. You can view total portfolio value, sort by Flip Score, filter by category. CSV export is available for Pro subscribers — useful for tax season if reselling is a business. Includes scan date, identified item, buy price, sold-price range, and platform recommendation for each entry."
+          }
         }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://loveikolabs.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://loveikolabs.com/apps/" },
-        { "@type": "ListItem", "position": 3, "name": "SnapFlip", "item": "https://loveikolabs.com/apps/snapflip/" }
       ]
     }
   ]
 }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -190,11 +271,11 @@
 <a class="ll-skip" href="#main">Skip to content</a>
 <header class="ll-nav">
   <div class="ll-nav__inner">
-    <a class="ll-logo" href="/" aria-label="Loveiko Labs home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="llg-nav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14b8a6"/><stop offset=".38" stop-color="#3b82f6"/><stop offset=".7" stop-color="#8b5cf6"/><stop offset="1" stop-color="#fb7185"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="#0e1116"/><rect x=".5" y=".5" width="31" height="31" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".12"/><path d="M9.5 9v13.5h5.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 9v13.5H24" fill="none" stroke="url(#llg-nav)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ll-logo__text">Loveiko <span>Labs</span></span></a>
+    <a class="ll-logo" href="/" aria-label="Loveiko Labs home"><img class="ll-logo__mark" src="/icons/logo-96.png" width="30" height="30" alt=""><span class="ll-logo__text">Loveiko <span>Labs</span></span></a>
     <button class="ll-nav__toggle" type="button" aria-expanded="false" aria-controls="ll-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <div class="ll-nav__menu" id="ll-menu">
-      <ul class="ll-nav__links"><li><a href="/health/"><i style="background:var(--health)"></i>Health</a></li><li><a href="/pregnancy-baby/"><i style="background:var(--baby)"></i>Pregnancy &amp; Baby</a></li><li><a href="/resale/"><i style="background:var(--resale)"></i>Resale</a></li><li><a href="/home-style/"><i style="background:var(--home)"></i>Home &amp; Style</a></li><li><a href="/guides/">Guides</a></li><li><a href="/about/">About</a></li></ul>
-      <a class="ll-nav__cta" href="/apps/">All 17 apps</a>
+      <ul class="ll-nav__links"><li><a href="/health/"><i style="background:var(--health)"></i>Health</a></li><li><a href="/pregnancy-baby/"><i style="background:var(--baby)"></i>Pregnancy &amp; Baby</a></li><li><a href="/resale/"><i style="background:var(--resale)"></i>Resale</a></li><li><a href="/home-style/"><i style="background:var(--home)"></i>Home &amp; Style</a></li><li><a href="/mind-faith/"><i style="background:var(--mind)"></i>Mind &amp; Faith</a></li><li><a href="/guides/">Guides</a></li><li><a href="/about/">About</a></li></ul>
+      <a class="ll-nav__cta" href="/apps/">All 19 apps</a>
     </div>
   </div>
 </header>
@@ -203,11 +284,11 @@
 
   <nav class="ll-breadcrumb" aria-label="Breadcrumb"><a href="/">Loveiko Labs</a><span>/</span><a href="/resale/">Resale &amp; Valuation</a><span>/</span>SnapFlip</nav>
 
-  <section class="ll-hero">
-    <div class="ll-hero__icon">
+  <section class="ll-hero ll-hero--app">
+    <div class="ll-hero__text">
+    <div class="ll-hero__id"><div class="ll-hero__icon">
       <img src="/icons/snapflip.jpeg" alt="SnapFlip app icon" width="96" height="96">
-    </div>
-    <p class="ll-eyebrow">iOS App · Thrift Scanner · Real Sold Data</p>
+    </div><p class="ll-eyebrow">iOS App · Thrift Scanner · Real Sold Data</p></div>
     <h1>SnapFlip — the only thrift scanner with <em>real eBay sold prices</em></h1>
     <p class="ll-hero__sub">Point your iPhone at any item in Goodwill, at a garage sale, or an estate sale. In three seconds SnapFlip returns the Flip Score (1-100), a BUY or SKIP verdict, and real eBay sold prices from the last 30 days — not AI guesses. Every price has a source badge so you always know exactly what you're looking at.</p>
     <div class="ll-hero__rating">
@@ -218,6 +299,8 @@
       <a class="ll-btn ll-btn--ghost" href="#how">See how it works</a>
     </div>
     <p class="ll-hero__meta">iOS 17.0+ · 7-day free trial · $4.99/wk or $29.99/yr · Cancel anytime in Apple Settings</p>
+    </div>
+    <div class="ll-hero__shots" aria-hidden="true"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c8/bf/4f/c8bf4fca-4706-c5c1-7e1b-468b1a446610/01-hook.jpg/460x0w.webp" alt="SnapFlip screenshot 1" width="460" height="1000" fetchpriority=high decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/50/02/d1/5002d119-e7c0-d3d3-d0b1-1971a340fa63/02-score.jpg/460x0w.webp" alt="SnapFlip screenshot 2" width="460" height="1000" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/99/dc/00/99dc0075-d827-820c-422f-c3c39cdc3ae4/03-prices.jpg/460x0w.webp" alt="SnapFlip screenshot 3" width="460" height="1000" loading="lazy" decoding="async"></div><!-- /shots -->
   </section>
 
   <nav class="ll-jump" aria-label="On this page">
@@ -284,7 +367,7 @@
       <li><strong>Refine Analysis</strong> — if the initial scan confidence is low, add a second photo (especially the brand tag) or type the item manually. Scan re-runs at no extra cost. High-confidence corrections can be emailed directly to the team to improve the AI model.</li>
     </ul>
 
-    <h3 style="margin-top:2rem;">Categories worth scanning in 2026</h3>
+    <h3>Categories worth scanning in 2026</h3>
     <p>Not everything in a thrift store is worth your scan time. Here is where SnapFlip reliably earns its keep — and where to skip without scanning.</p>
     <ul class="ll-features">
       <li><strong>Reliable winners — almost always worth scanning:</strong> vintage band tees (1990s grunge, hip-hop, metal — plain-looking shirts can flip for $80-200), Patagonia / North Face / Arc'teryx outerwear, designer denim (Levi's selvedge, vintage 501s), vintage Pyrex and Le Creuset (specific pattern names matter), vintage electronics (Sony Walkmans, vintage cameras, gaming systems), vintage jewelry.</li>
@@ -303,7 +386,7 @@
       <li><strong>If buying, tap "Generate Listing."</strong><span>One tap produces platform-optimized title, description, and suggested price. Copy to clipboard, open eBay/Mercari/Poshmark app, paste, post. Total time from photo to live listing: under 90 seconds. At checkout, update buy prices in the Flip Collection — end of trip you know exactly what you spent and projected total return. End of month, CSV export for accounting.</span></li>
     </ol>
 
-    <h3 style="margin-top:2rem;">Platform routing — where to list once you've bought</h3>
+    <h3>Platform routing — where to list once you've bought</h3>
     <p>Same item can sell for 30-40% more on the right platform. SnapFlip's multi-platform pricing shows the breakdown so you can route each item correctly at the point of purchase.</p>
     <div class="ll-table-wrap">
       <table class="ll-table">
@@ -347,7 +430,7 @@
         </tbody>
       </table>
     </div>
-    <p style="margin-top:16px;font-size:13.5px;"><em>Full disclosure: SnapFlip is our app. ThriftAI has a 1,000× larger review base and has been tested by hundreds of thousands of resellers — a genuine strength if you weight track record heavily. It also works on older iPhones (iOS 14+) where SnapFlip does not. Choose SnapFlip if you need real sold data, multi-platform pricing, and a listing generator. Choose ThriftAI if you're on an older device or prefer the established market leader. Both offer free trials — try both, scan the same five items, compare prices against live eBay sold listings. Whichever matches reality better is your app.</em></p>
+    <p class="ll-note"><em>Full disclosure: SnapFlip is our app. ThriftAI has a 1,000× larger review base and has been tested by hundreds of thousands of resellers — a genuine strength if you weight track record heavily. It also works on older iPhones (iOS 14+) where SnapFlip does not. Choose SnapFlip if you need real sold data, multi-platform pricing, and a listing generator. Choose ThriftAI if you're on an older device or prefer the established market leader. Both offer free trials — try both, scan the same five items, compare prices against live eBay sold listings. Whichever matches reality better is your app.</em></p>
   </section>
 
   <section class="ll-section ll-reveal" id="scenarios">
@@ -406,7 +489,7 @@
         </ul>
       </div>
     </div>
-    <p style="margin-top:16px;font-size:13.5px;">Trial auto-converts to weekly billing unless cancelled at least 24 hours before it ends. All cancellation is handled by Apple in Settings → Apple ID → Subscriptions. Subscriptions auto-renew until cancelled. No hidden charges.</p>
+    <p class="ll-note">Trial auto-converts to weekly billing unless cancelled at least 24 hours before it ends. All cancellation is handled by Apple in Settings → Apple ID → Subscriptions. Subscriptions auto-renew until cancelled. No hidden charges.</p>
   </section>
 
   <section class="ll-section ll-reveal" id="faq">
@@ -534,13 +617,14 @@
 
 <footer class="ll-footer">
   <div class="ll-footer__grid">
-    <div>
-      <a class="ll-logo" href="/" aria-label="Loveiko Labs home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="llg-foot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14b8a6"/><stop offset=".38" stop-color="#3b82f6"/><stop offset=".7" stop-color="#8b5cf6"/><stop offset="1" stop-color="#fb7185"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="#0e1116"/><rect x=".5" y=".5" width="31" height="31" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".12"/><path d="M9.5 9v13.5h5.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 9v13.5H24" fill="none" stroke="url(#llg-foot)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ll-logo__text ll-footer__brand">Loveiko <span>Labs</span></span></a>
-      <p>Independent iOS studio making focused apps for health, family, resale and the home. Pattaya, Thailand.</p>
+    <div class="ll-footer__about">
+      <a class="ll-logo" href="/" aria-label="Loveiko Labs home"><img class="ll-logo__mark" src="/icons/logo-96.png" width="30" height="30" alt=""><span class="ll-logo__text ll-footer__brand">Loveiko <span>Labs</span></span></a>
+      <p>Independent iOS studio making focused apps for health, family, resale, home and daily practice. Pattaya, Thailand.</p>
+      <a class="ll-footer__mail" href="mailto:loveykovl@gmail.com">loveykovl@gmail.com</a>
     </div>
     <div><strong><a href="/health/">Health</a></strong><ul><li><a href="/apps/jabwell/">JabWell</a></li><li><a href="/apps/calibrum/">Calibrum</a></li><li><a href="/apps/stacksnap/">StackSnap</a></li><li><a href="/apps/folik/">Folik</a></li><li><a href="/apps/salvora/">Salvora</a></li><li><a href="/apps/cysta/">Cysta AI</a></li><li><a href="/apps/hepatica/">Hepatica</a></li><li><a href="/apps/refluxora/">Refluxora</a></li></ul></div>
-    <div><strong><a href="/resale/">Resale &amp; Valuation</a></strong><ul><li><a href="/apps/watchsnap/">WatchSnap</a></li><li><a href="/apps/jewelsnap/">JewelSnap</a></li><li><a href="/apps/veribag/">VeriBag</a></li><li><a href="/apps/snapflip/">SnapFlip</a></li></ul></div>
-    <div><strong><a href="/pregnancy-baby/">Pregnancy &amp; Baby</a></strong><ul><li><a href="/apps/bumpcheck/">BumpCheck</a></li><li><a href="/apps/crysnap/">CrySnap</a></li></ul><strong style="margin-top:22px"><a href="/home-style/">Home &amp; Style</a></strong><ul><li><a href="/apps/pestsnap/">PestSnap</a></li><li><a href="/apps/roofingcalc/">RoofingCalc Pro</a></li><li><a href="/apps/colorcheck/">ColorCheck</a></li></ul></div>
+    <div><strong><a href="/resale/">Resale &amp; Valuation</a></strong><ul><li><a href="/apps/watchsnap/">WatchSnap</a></li><li><a href="/apps/jewelsnap/">JewelSnap</a></li><li><a href="/apps/veribag/">VeriBag</a></li><li><a href="/apps/snapflip/">SnapFlip</a></li></ul><strong class="ll-footer__gap"><a href="/mind-faith/">Mind &amp; Faith</a></strong><ul><li><a href="/apps/sakinah/">Sakinah</a></li><li><a href="/apps/herself/">Herself</a></li></ul></div>
+    <div><strong><a href="/pregnancy-baby/">Pregnancy &amp; Baby</a></strong><ul><li><a href="/apps/bumpcheck/">BumpCheck</a></li><li><a href="/apps/crysnap/">CrySnap</a></li></ul><strong class="ll-footer__gap"><a href="/home-style/">Home &amp; Style</a></strong><ul><li><a href="/apps/pestsnap/">PestSnap</a></li><li><a href="/apps/roofingcalc/">RoofingCalc Pro</a></li><li><a href="/apps/colorcheck/">ColorCheck</a></li></ul></div>
     <div><strong>SnapFlip</strong><ul>
         <li><a href="#what">Overview</a></li>
         <li><a href="#features">Features</a></li>
@@ -555,8 +639,8 @@
         <li><a href="/about/">About</a></li>
         <li><a href="/editorial-policy/">Editorial policy</a></li>
         <li><a href="/apps/">All apps</a></li>
+        <li><a href="/guides/">All guides</a></li>
         <li><a href="https://apps.apple.com/us/developer/valeriy-loveyko/id1478618306" rel="noopener">App Store page</a></li>
-        <li><a href="mailto:loveykovl@gmail.com">Contact</a></li>
       </ul>
     </div>
   </div>

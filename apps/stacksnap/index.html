@@ -7,21 +7,21 @@
 <meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 <script>document.documentElement.classList.add('js')</script>
-<title>StackSnap — Supplement Tracker, Vitamin Scanner &amp; Drug Interaction Checker | Loveiko Labs</title>
-<meta name="description" content="StackSnap scans your supplement bottles and shows you exactly what you're spending, what you're overdosing on, and what's safe with your prescriptions. Built on NIH DSLD (130,000+ products) and RxNav drug-interaction data. 7-day free trial · $4.99/wk · $39.99/yr.">
+<title>StackSnap: Supplement Tracker &amp; Vitamin Label Scanner</title>
+<meta name="description" content="Scan supplement labels, spot duplicate nutrients and over-limit doses, and see what your stack really costs per month. iPhone app.">
 <meta name="keywords" content="supplement tracker, vitamin scanner, drug interaction checker, supplement scanner app, pill reminder app, NIH DSLD app, RxNav interaction checker, supplement savings, nootropic tracker, vitamin organizer, supplement audit app">
 <meta name="author" content="Valeriy Loveyko / Loveiko Labs">
 <link rel="canonical" href="https://loveikolabs.com/apps/stacksnap/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://loveikolabs.com/apps/stacksnap/">
-<meta property="og:title" content="StackSnap — See What You're Spending. See What You're Saving.">
-<meta property="og:description" content="Scan any supplement bottle, get instant ingredient breakdown from NIH DSLD, check drug interactions with RxNav, see exactly where your money is going to waste.">
+<meta property="og:title" content="StackSnap: Supplement Tracker &amp; Vitamin Label Scanner">
+<meta property="og:description" content="Scan supplement labels, spot duplicate nutrients and over-limit doses, and see what your stack really costs per month. iPhone app.">
 <meta property="og:image" content="https://loveikolabs.com/icons/stacksnap.jpeg">
 <meta property="og:site_name" content="Loveiko Labs">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="StackSnap — Supplement Tracker That Shows You Dollars Saved">
-<meta name="twitter:description" content="Scan bottles, audit your shelf, save money. Plus drug interaction checker and doctor PDF. 7-day free trial.">
+<meta name="twitter:title" content="StackSnap: Supplement Tracker &amp; Vitamin Label Scanner">
+<meta name="twitter:description" content="Scan supplement labels, spot duplicate nutrients and over-limit doses, and see what your stack really costs per month. iPhone app.">
 <meta name="twitter:image" content="https://loveikolabs.com/icons/stacksnap.jpeg">
 
 <link rel="icon" type="image/jpeg" href="https://loveikolabs.com/icons/stacksnap.jpeg">
@@ -46,19 +46,33 @@
       "downloadUrl": "https://apps.apple.com/us/app/stacksnap-supplement-scanner/id6761888709",
       "description": "iOS supplement tracker, vitamin scanner, and drug interaction checker. Scan any supplement bottle to get instant ingredient breakdown from the NIH DSLD database (130,000+ products). Checks drug interactions using the RxNav reference database (same one pharmacists use). Features a unique dollar-savings counter that quantifies money saved by avoiding duplicates, overdoses, and low-quality brands. Includes smart timing reminders, doctor-ready 1-page PDF export, transparent benchmark pricing, and HealthKit integration.",
       "image": "https://loveikolabs.com/icons/stacksnap.jpeg",
-      "softwareVersion": "1.4",
+      "softwareVersion": "1.7",
       "datePublished": "2026-04-13",
-      "dateModified": "2026-05-13",
+      "dateModified": "2026-07-20",
       "offers": [
-        { "@type": "Offer", "name": "StackSnap Pro Weekly", "price": "4.99", "priceCurrency": "USD", "category": "subscription", "description": "Weekly subscription, 7-day free trial, full Pro access" },
-        { "@type": "Offer", "name": "StackSnap Pro Annual", "price": "39.99", "priceCurrency": "USD", "category": "subscription", "description": "Annual subscription, saves over 84% vs weekly" }
+        {
+          "@type": "Offer",
+          "name": "StackSnap Pro Weekly",
+          "price": "4.99",
+          "priceCurrency": "USD",
+          "category": "subscription",
+          "description": "Weekly subscription, 7-day free trial, full Pro access"
+        },
+        {
+          "@type": "Offer",
+          "name": "StackSnap Pro Annual",
+          "price": "39.99",
+          "priceCurrency": "USD",
+          "category": "subscription",
+          "description": "Annual subscription, saves over 84% vs weekly"
+        }
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
-        "ratingCount": "12",
-        "bestRating": "5",
-        "worstRating": "1"
+        "ratingCount": 12,
+        "bestRating": 5,
+        "worstRating": 1
       },
       "featureList": [
         "Savings counter — quantifies money saved monthly in actual dollars",
@@ -74,7 +88,9 @@
         "SwiftData local-first storage — no data loss on logout",
         "7-day free trial with full Pro access — no quiz, no email gate, no surprise charges"
       ],
-      "creator": { "@id": "https://loveikolabs.com/#organization" }
+      "creator": {
+        "@id": "https://loveikolabs.com/#organization"
+      }
     },
     {
       "@type": "FAQPage",
@@ -83,116 +99,183 @@
         {
           "@type": "Question",
           "name": "How does StackSnap calculate the savings counter?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Four categories of avoided cost: duplicate ingredients (two supplements containing overlapping active ingredients), potential overdoses (amounts above tolerable upper intake levels), low-quality brand premium (where you pay above the U.S. median for the same ingredient), and supplements with no published evidence for the stated benefit. The dollar amount reflects what the average user could redirect by acting on findings. Actual savings depend on which supplements you choose to discontinue or replace — StackSnap shows the information, you make the call." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Four categories of avoided cost: duplicate ingredients (two supplements containing overlapping active ingredients), potential overdoses (amounts above tolerable upper intake levels), low-quality brand premium (where you pay above the U.S. median for the same ingredient), and supplements with no published evidence for the stated benefit. The dollar amount reflects what the average user could redirect by acting on findings. Actual savings depend on which supplements you choose to discontinue or replace — StackSnap shows the information, you make the call."
+          }
         },
         {
           "@type": "Question",
           "name": "How accurate is the drug interaction checker?",
-          "acceptedAnswer": { "@type": "Answer", "text": "StackSnap uses RxNav, the National Library of Medicine's drug interaction reference database — the same dataset pharmacists consult. Interactions are based on documented mechanisms: cytochrome P450 effects (drugs metabolized through liver enzymes), absorption competition (iron vs calcium), blood-thinning additivity (fish oil + warfarin), blood-pressure compounding (potassium + ACE inhibitors). This is a screening tool, not a medical diagnosis. Always confirm any flagged interaction with your pharmacist or doctor before changing any supplement or medication." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "StackSnap uses RxNav, the National Library of Medicine's drug interaction reference database — the same dataset pharmacists consult. Interactions are based on documented mechanisms: cytochrome P450 effects (drugs metabolized through liver enzymes), absorption competition (iron vs calcium), blood-thinning additivity (fish oil + warfarin), blood-pressure compounding (potassium + ACE inhibitors). This is a screening tool, not a medical diagnosis. Always confirm any flagged interaction with your pharmacist or doctor before changing any supplement or medication."
+          }
         },
         {
           "@type": "Question",
           "name": "What is the NIH DSLD database?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The NIH Dietary Supplement Label Database (DSLD) is a U.S. National Institutes of Health database indexing over 130,000 supplement product labels with verified ingredient amounts and source citations. StackSnap pulls scan results directly from DSLD rather than using proprietary 'TrustScore' systems that change without explanation. Every ingredient you see has a documented government-database source — verifiable in the public NIH database." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The NIH Dietary Supplement Label Database (DSLD) is a U.S. National Institutes of Health database indexing over 130,000 supplement product labels with verified ingredient amounts and source citations. StackSnap pulls scan results directly from DSLD rather than using proprietary 'TrustScore' systems that change without explanation. Every ingredient you see has a documented government-database source — verifiable in the public NIH database."
+          }
         },
         {
           "@type": "Question",
           "name": "Is StackSnap a medical device or does it give medical advice?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. StackSnap is a general wellness app designed to help organize and understand your supplement routine. It is not a medical device, is not FDA-cleared as such, and does not provide medical advice, diagnosis, or treatment recommendations. Always consult a qualified healthcare professional — your doctor, pharmacist, or registered dietitian — before starting, stopping, or changing any supplement or medication. Do not disregard professional medical advice based on information from this app." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. StackSnap is a general wellness app designed to help organize and understand your supplement routine. It is not a medical device, is not FDA-cleared as such, and does not provide medical advice, diagnosis, or treatment recommendations. Always consult a qualified healthcare professional — your doctor, pharmacist, or registered dietitian — before starting, stopping, or changing any supplement or medication. Do not disregard professional medical advice based on information from this app."
+          }
         },
         {
           "@type": "Question",
           "name": "How much does StackSnap cost? Is there a free trial?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — 7-day free trial with full Pro access. No 20-question quiz, no email signup gate, no credit card required upfront. After the trial: $4.99/week or $39.99/year (saves over 84% vs weekly billing). Cancel in two taps via Settings > Apple ID > Subscriptions." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — 7-day free trial with full Pro access. No 20-question quiz, no email signup gate, no credit card required upfront. After the trial: $4.99/week or $39.99/year (saves over 84% vs weekly billing). Cancel in two taps via Settings > Apple ID > Subscriptions."
+          }
         },
         {
           "@type": "Question",
           "name": "Will StackSnap diagnose what I should take?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. StackSnap is an organizational and informational tool, not a recommendation engine. It tells you what you are taking, what overlaps exist, what amounts are above standard upper intake levels, and what interactions might exist with your prescriptions. It does not tell you what you should take — that is a decision to make with your doctor or registered dietitian." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. StackSnap is an organizational and informational tool, not a recommendation engine. It tells you what you are taking, what overlaps exist, what amounts are above standard upper intake levels, and what interactions might exist with your prescriptions. It does not tell you what you should take — that is a decision to make with your doctor or registered dietitian."
+          }
         },
         {
           "@type": "Question",
           "name": "What supplement categories does StackSnap work on?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Broadly: anything indexed in NIH DSLD. Vitamins (A, B-complex, C, D, E, K), minerals (calcium, magnesium, zinc, iron, selenium, chromium), amino acids (L-theanine, glutamine, taurine, BCAAs), herbal supplements (turmeric, ashwagandha, ginkgo, milk thistle), nootropics (Alpha-GPC, Lion's Mane, Bacopa, Phosphatidylserine), omega-3s, probiotics, protein powders, pre-workout supplements, sleep aids (melatonin, valerian, L-tryptophan), adaptogens, and most other dietary supplements indexed by NIH DSLD." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Broadly: anything indexed in NIH DSLD. Vitamins (A, B-complex, C, D, E, K), minerals (calcium, magnesium, zinc, iron, selenium, chromium), amino acids (L-theanine, glutamine, taurine, BCAAs), herbal supplements (turmeric, ashwagandha, ginkgo, milk thistle), nootropics (Alpha-GPC, Lion's Mane, Bacopa, Phosphatidylserine), omega-3s, probiotics, protein powders, pre-workout supplements, sleep aids (melatonin, valerian, L-tryptophan), adaptogens, and most other dietary supplements indexed by NIH DSLD."
+          }
         },
         {
           "@type": "Question",
           "name": "Does StackSnap have a drug interaction database for prescriptions?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. RxNav covers FDA-approved prescription medications and their documented interactions with supplements and other drugs. Add your prescriptions once (input by drug name or scan the prescription label), and StackSnap automatically cross-references them whenever you scan a new supplement." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. RxNav covers FDA-approved prescription medications and their documented interactions with supplements and other drugs. Add your prescriptions once (input by drug name or scan the prescription label), and StackSnap automatically cross-references them whenever you scan a new supplement."
+          }
         },
         {
           "@type": "Question",
           "name": "What is the doctor PDF and when should I use it?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A clean 1-page PDF summary of every supplement in your stack: brand, ingredient, daily amount, timing, and any flagged interactions or potential overdoses. Use before any healthcare provider visit — primary care annual exams, endocrinologist visits, pharmacist consultations, naturopath sessions, pre-op consultations. Saves 5-10 minutes of fumbling through bottles and gives your provider real information to work from." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A clean 1-page PDF summary of every supplement in your stack: brand, ingredient, daily amount, timing, and any flagged interactions or potential overdoses. Use before any healthcare provider visit — primary care annual exams, endocrinologist visits, pharmacist consultations, naturopath sessions, pre-op consultations. Saves 5-10 minutes of fumbling through bottles and gives your provider real information to work from."
+          }
         },
         {
           "@type": "Question",
           "name": "Can StackSnap remind me when to take each supplement?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Smart reminders organize by recommended timing: fat-soluble vitamins (A, D, E, K) with the largest meal, magnesium glycinate at night for sleep support, B-complex in the morning away from caffeine, berberine with carb-heavy meals, melatonin 30 minutes before sleep, iron away from coffee and dairy. All reminders are customizable with per-supplement schedules." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Smart reminders organize by recommended timing: fat-soluble vitamins (A, D, E, K) with the largest meal, magnesium glycinate at night for sleep support, B-complex in the morning away from caffeine, berberine with carb-heavy meals, melatonin 30 minutes before sleep, iron away from coffee and dairy. All reminders are customizable with per-supplement schedules."
+          }
         },
         {
           "@type": "Question",
           "name": "What is the difference between weekly and annual subscription?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Identical features. Weekly is $4.99/week (best for short-term tracking during a new health protocol). Annual is $39.99/year (saves over 84% vs weekly). For most users who scan their stack once or twice a month and review interactions periodically, annual is the better economic choice — most users identify more than $39.99 in savings in the first month alone." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Identical features. Weekly is $4.99/week (best for short-term tracking during a new health protocol). Annual is $39.99/year (saves over 84% vs weekly). For most users who scan their stack once or twice a month and review interactions periodically, annual is the better economic choice — most users identify more than $39.99 in savings in the first month alone."
+          }
         },
         {
           "@type": "Question",
           "name": "How do I cancel StackSnap Pro?",
-          "acceptedAnswer": { "@type": "Answer", "text": "All subscriptions are managed through Apple. To cancel: open Settings, tap your Apple ID, tap Subscriptions, find StackSnap, tap Cancel Subscription. Takes effect at end of current billing period. The 7-day trial can be cancelled any time before it ends with no charge." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All subscriptions are managed through Apple. To cancel: open Settings, tap your Apple ID, tap Subscriptions, find StackSnap, tap Cancel Subscription. Takes effect at end of current billing period. The 7-day trial can be cancelled any time before it ends with no charge."
+          }
         },
         {
           "@type": "Question",
           "name": "Where does my data go? Is it private?",
-          "acceptedAnswer": { "@type": "Answer", "text": "StackSnap uses SwiftData local-first storage — your supplement stack data is stored on your iPhone first, with iCloud sync optional. Anonymous scan metadata may be used to improve the AI model. Health-related data is never shared with third parties or used for advertising. Full privacy policy: https://love8ko.github.io/stacksnap/privacy-policy.html" }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "StackSnap uses SwiftData local-first storage — your supplement stack data is stored on your iPhone first, with iCloud sync optional. Anonymous scan metadata may be used to improve the AI model. Health-related data is never shared with third parties or used for advertising. Full privacy policy: https://love8ko.github.io/stacksnap/privacy-policy.html"
+          }
         },
         {
           "@type": "Question",
           "name": "Will I lose my stack data if I cancel?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Your scanned stack data persists locally on the device even after cancellation or sign-out (unlike Care/of, Prove It, and similar apps that wipe the stack on logout). You retain read access to historical scans, the doctor PDF feature, and your stack list — but lose access to new scans, the interaction checker, and ongoing reminders unless you resubscribe." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Your scanned stack data persists locally on the device even after cancellation or sign-out (unlike Care/of, Prove It, and similar apps that wipe the stack on logout). You retain read access to historical scans, the doctor PDF feature, and your stack list — but lose access to new scans, the interaction checker, and ongoing reminders unless you resubscribe."
+          }
         },
         {
           "@type": "Question",
           "name": "Does StackSnap track supplements I bought from non-US brands?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Coverage is strongest for U.S.-marketed brands indexed by NIH DSLD. For European, Australian, or Asian brands not in DSLD, you can manually enter the ingredient list and StackSnap will check it against the same overlap and interaction logic. The NIH database keeps growing, so coverage improves over time." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Coverage is strongest for U.S.-marketed brands indexed by NIH DSLD. For European, Australian, or Asian brands not in DSLD, you can manually enter the ingredient list and StackSnap will check it against the same overlap and interaction logic. The NIH database keeps growing, so coverage improves over time."
+          }
         },
         {
           "@type": "Question",
           "name": "Can StackSnap detect counterfeit or fake supplements?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Counterfeit detection requires lab testing of the contents. StackSnap reads the label and the database entry, not the actual substance in the bottle. For verifying authenticity of expensive or rare supplements, third-party testing (LabDoor, ConsumerLab) remains necessary. StackSnap can flag suspicious patterns (unusually low price for a high-end ingredient, unlisted manufacturer) but cannot confirm or rule out counterfeits." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Counterfeit detection requires lab testing of the contents. StackSnap reads the label and the database entry, not the actual substance in the bottle. For verifying authenticity of expensive or rare supplements, third-party testing (LabDoor, ConsumerLab) remains necessary. StackSnap can flag suspicious patterns (unusually low price for a high-end ingredient, unlisted manufacturer) but cannot confirm or rule out counterfeits."
+          }
         },
         {
           "@type": "Question",
           "name": "Is StackSnap suitable for tracking my child's supplements?",
-          "acceptedAnswer": { "@type": "Answer", "text": "StackSnap is designed for adult supplement tracking. Pediatric dosing has different upper intake limits, age-specific interaction profiles, and considerations that StackSnap is not specifically calibrated for. The doctor PDF feature still works for organizing the list for pediatric visits — but always consult a pediatrician for dosing or interaction questions specific to children." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "StackSnap is designed for adult supplement tracking. Pediatric dosing has different upper intake limits, age-specific interaction profiles, and considerations that StackSnap is not specifically calibrated for. The doctor PDF feature still works for organizing the list for pediatric visits — but always consult a pediatrician for dosing or interaction questions specific to children."
+          }
         },
         {
           "@type": "Question",
           "name": "Does StackSnap work with HealthKit?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. StackSnap integrates with Apple HealthKit so your supplement schedule and adherence can sit alongside your other health data (workouts, sleep, prescriptions). HealthKit integration is optional and can be enabled or disabled in Settings." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. StackSnap integrates with Apple HealthKit so your supplement schedule and adherence can sit alongside your other health data (workouts, sleep, prescriptions). HealthKit integration is optional and can be enabled or disabled in Settings."
+          }
         },
         {
           "@type": "Question",
           "name": "What happens if StackSnap flags an interaction with my medication?",
-          "acceptedAnswer": { "@type": "Answer", "text": "You see an alert with: the specific interaction mechanism (e.g., 'St. John's Wort accelerates the metabolism of many medications via CYP3A4 induction, potentially reducing efficacy'), the severity classification (theoretical, mild, moderate, severe), and a recommendation to consult your pharmacist or doctor before making any changes. Never stop a prescribed medication based on a StackSnap flag — always speak to your prescribing physician first. The flag is the AI noticing a documented risk; the clinical judgment about what to do is your healthcare provider's." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You see an alert with: the specific interaction mechanism (e.g., 'St. John's Wort accelerates the metabolism of many medications via CYP3A4 induction, potentially reducing efficacy'), the severity classification (theoretical, mild, moderate, severe), and a recommendation to consult your pharmacist or doctor before making any changes. Never stop a prescribed medication based on a StackSnap flag — always speak to your prescribing physician first. The flag is the AI noticing a documented risk; the clinical judgment about what to do is your healthcare provider's."
+          }
         },
         {
           "@type": "Question",
           "name": "How does StackSnap compare to SuppCo and Prove It?",
-          "acceptedAnswer": { "@type": "Answer", "text": "SuppCo (18,780 App Store reviews) shows proprietary TrustScores that fluctuate without explanation. StackSnap shows you dollar-savings from your specific stack plus the underlying ingredient data sourced directly to NIH DSLD entries. Prove It (13,842 reviews) is currently struggling with 83% of recent reviews rating 1 star, primarily due to dark-pattern paywall complaints and absence of a real free trial. StackSnap is built specifically as the honest alternative: full Pro access during the 7-day trial, no quiz, transparent pricing, RxNav interaction checks, doctor PDF export." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SuppCo (18,780 App Store reviews) shows proprietary TrustScores that fluctuate without explanation. StackSnap shows you dollar-savings from your specific stack plus the underlying ingredient data sourced directly to NIH DSLD entries. Prove It (13,842 reviews) is currently struggling with 83% of recent reviews rating 1 star, primarily due to dark-pattern paywall complaints and absence of a real free trial. StackSnap is built specifically as the honest alternative: full Pro access during the 7-day trial, no quiz, transparent pricing, RxNav interaction checks, doctor PDF export."
+          }
         }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://loveikolabs.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://loveikolabs.com/apps/" },
-        { "@type": "ListItem", "position": 3, "name": "StackSnap", "item": "https://loveikolabs.com/apps/stacksnap/" }
       ]
     }
   ]
 }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -208,11 +291,11 @@
 <a class="ll-skip" href="#main">Skip to content</a>
 <header class="ll-nav">
   <div class="ll-nav__inner">
-    <a class="ll-logo" href="/" aria-label="Loveiko Labs home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="llg-nav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14b8a6"/><stop offset=".38" stop-color="#3b82f6"/><stop offset=".7" stop-color="#8b5cf6"/><stop offset="1" stop-color="#fb7185"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="#0e1116"/><rect x=".5" y=".5" width="31" height="31" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".12"/><path d="M9.5 9v13.5h5.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 9v13.5H24" fill="none" stroke="url(#llg-nav)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ll-logo__text">Loveiko <span>Labs</span></span></a>
+    <a class="ll-logo" href="/" aria-label="Loveiko Labs home"><img class="ll-logo__mark" src="/icons/logo-96.png" width="30" height="30" alt=""><span class="ll-logo__text">Loveiko <span>Labs</span></span></a>
     <button class="ll-nav__toggle" type="button" aria-expanded="false" aria-controls="ll-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <div class="ll-nav__menu" id="ll-menu">
-      <ul class="ll-nav__links"><li><a href="/health/"><i style="background:var(--health)"></i>Health</a></li><li><a href="/pregnancy-baby/"><i style="background:var(--baby)"></i>Pregnancy &amp; Baby</a></li><li><a href="/resale/"><i style="background:var(--resale)"></i>Resale</a></li><li><a href="/home-style/"><i style="background:var(--home)"></i>Home &amp; Style</a></li><li><a href="/guides/">Guides</a></li><li><a href="/about/">About</a></li></ul>
-      <a class="ll-nav__cta" href="/apps/">All 17 apps</a>
+      <ul class="ll-nav__links"><li><a href="/health/"><i style="background:var(--health)"></i>Health</a></li><li><a href="/pregnancy-baby/"><i style="background:var(--baby)"></i>Pregnancy &amp; Baby</a></li><li><a href="/resale/"><i style="background:var(--resale)"></i>Resale</a></li><li><a href="/home-style/"><i style="background:var(--home)"></i>Home &amp; Style</a></li><li><a href="/mind-faith/"><i style="background:var(--mind)"></i>Mind &amp; Faith</a></li><li><a href="/guides/">Guides</a></li><li><a href="/about/">About</a></li></ul>
+      <a class="ll-nav__cta" href="/apps/">All 19 apps</a>
     </div>
   </div>
 </header>
@@ -221,11 +304,11 @@
 
   <nav class="ll-breadcrumb" aria-label="Breadcrumb"><a href="/">Loveiko Labs</a><span>/</span><a href="/health/">Health</a><span>/</span>StackSnap</nav>
 
-  <section class="ll-hero">
-    <div class="ll-hero__icon">
+  <section class="ll-hero ll-hero--app">
+    <div class="ll-hero__text">
+    <div class="ll-hero__id"><div class="ll-hero__icon">
       <img src="/icons/stacksnap.jpeg" alt="StackSnap app icon" width="96" height="96">
-    </div>
-    <p class="ll-eyebrow">iOS App · Supplement Tracker · Drug Interaction Checker</p>
+    </div><p class="ll-eyebrow">iOS App · Supplement Tracker · Drug Interaction Checker</p></div>
     <h1>StackSnap — your supplement shelf, <em>audited</em>.</h1>
     <p class="ll-hero__sub">You spend $100+ a month on supplements. Do you know if half of them are doing anything — or if some are quietly cancelling each other out? StackSnap scans any bottle, breaks down every ingredient using the NIH DSLD database (130,000+ products), and shows you exactly what you're spending versus what you're saving. Plus a drug interaction checker powered by the same RxNav database pharmacists use.</p>
     <div class="ll-hero__rating">
@@ -236,6 +319,8 @@
       <a class="ll-btn ll-btn--ghost" href="#how">See how it works</a>
     </div>
     <p class="ll-hero__meta">iOS 17.0+ · 7-day free trial with full Pro access · No quiz · Cancel anytime in Apple Settings</p>
+    </div>
+    <div class="ll-hero__shots" aria-hidden="true"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/32/c7/93/32c79374-2df8-dcb8-143e-9055b0d6205c/01-save.jpg/460x0w.webp" alt="StackSnap screenshot 1" width="460" height="1000" fetchpriority=high decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/68/14/766814ca-aad5-9965-ca5f-23eab37848fc/02-score.jpg/460x0w.webp" alt="StackSnap screenshot 2" width="460" height="1000" loading="lazy" decoding="async"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/67/dc/72/67dc7213-70e4-66aa-6fec-c82ef18c933f/03-scan.jpg/460x0w.webp" alt="StackSnap screenshot 3" width="460" height="1000" loading="lazy" decoding="async"></div><!-- /shots -->
   </section>
 
   <nav class="ll-jump" aria-label="On this page">
@@ -385,7 +470,7 @@
         </ul>
       </div>
     </div>
-    <p style="margin-top:16px;font-size:13.5px;">Trial auto-converts to weekly billing unless cancelled at least 24 hours before it ends. All cancellation is handled by Apple in Settings → Apple ID → Subscriptions. The annual subscription ($39.99) typically pays for itself in the first month — most users identify more than $39.99 in savings in their first stack audit.</p>
+    <p class="ll-note">Trial auto-converts to weekly billing unless cancelled at least 24 hours before it ends. All cancellation is handled by Apple in Settings → Apple ID → Subscriptions. The annual subscription ($39.99) typically pays for itself in the first month — most users identify more than $39.99 in savings in their first stack audit.</p>
   </section>
 
   <section class="ll-section ll-reveal" id="faq">
@@ -640,13 +725,14 @@
 
 <footer class="ll-footer">
   <div class="ll-footer__grid">
-    <div>
-      <a class="ll-logo" href="/" aria-label="Loveiko Labs home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="llg-foot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14b8a6"/><stop offset=".38" stop-color="#3b82f6"/><stop offset=".7" stop-color="#8b5cf6"/><stop offset="1" stop-color="#fb7185"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="#0e1116"/><rect x=".5" y=".5" width="31" height="31" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".12"/><path d="M9.5 9v13.5h5.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 9v13.5H24" fill="none" stroke="url(#llg-foot)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ll-logo__text ll-footer__brand">Loveiko <span>Labs</span></span></a>
-      <p>Independent iOS studio making focused apps for health, family, resale and the home. Pattaya, Thailand.</p>
+    <div class="ll-footer__about">
+      <a class="ll-logo" href="/" aria-label="Loveiko Labs home"><img class="ll-logo__mark" src="/icons/logo-96.png" width="30" height="30" alt=""><span class="ll-logo__text ll-footer__brand">Loveiko <span>Labs</span></span></a>
+      <p>Independent iOS studio making focused apps for health, family, resale, home and daily practice. Pattaya, Thailand.</p>
+      <a class="ll-footer__mail" href="mailto:loveykovl@gmail.com">loveykovl@gmail.com</a>
     </div>
     <div><strong><a href="/health/">Health</a></strong><ul><li><a href="/apps/jabwell/">JabWell</a></li><li><a href="/apps/calibrum/">Calibrum</a></li><li><a href="/apps/stacksnap/">StackSnap</a></li><li><a href="/apps/folik/">Folik</a></li><li><a href="/apps/salvora/">Salvora</a></li><li><a href="/apps/cysta/">Cysta AI</a></li><li><a href="/apps/hepatica/">Hepatica</a></li><li><a href="/apps/refluxora/">Refluxora</a></li></ul></div>
-    <div><strong><a href="/resale/">Resale &amp; Valuation</a></strong><ul><li><a href="/apps/watchsnap/">WatchSnap</a></li><li><a href="/apps/jewelsnap/">JewelSnap</a></li><li><a href="/apps/veribag/">VeriBag</a></li><li><a href="/apps/snapflip/">SnapFlip</a></li></ul></div>
-    <div><strong><a href="/pregnancy-baby/">Pregnancy &amp; Baby</a></strong><ul><li><a href="/apps/bumpcheck/">BumpCheck</a></li><li><a href="/apps/crysnap/">CrySnap</a></li></ul><strong style="margin-top:22px"><a href="/home-style/">Home &amp; Style</a></strong><ul><li><a href="/apps/pestsnap/">PestSnap</a></li><li><a href="/apps/roofingcalc/">RoofingCalc Pro</a></li><li><a href="/apps/colorcheck/">ColorCheck</a></li></ul></div>
+    <div><strong><a href="/resale/">Resale &amp; Valuation</a></strong><ul><li><a href="/apps/watchsnap/">WatchSnap</a></li><li><a href="/apps/jewelsnap/">JewelSnap</a></li><li><a href="/apps/veribag/">VeriBag</a></li><li><a href="/apps/snapflip/">SnapFlip</a></li></ul><strong class="ll-footer__gap"><a href="/mind-faith/">Mind &amp; Faith</a></strong><ul><li><a href="/apps/sakinah/">Sakinah</a></li><li><a href="/apps/herself/">Herself</a></li></ul></div>
+    <div><strong><a href="/pregnancy-baby/">Pregnancy &amp; Baby</a></strong><ul><li><a href="/apps/bumpcheck/">BumpCheck</a></li><li><a href="/apps/crysnap/">CrySnap</a></li></ul><strong class="ll-footer__gap"><a href="/home-style/">Home &amp; Style</a></strong><ul><li><a href="/apps/pestsnap/">PestSnap</a></li><li><a href="/apps/roofingcalc/">RoofingCalc Pro</a></li><li><a href="/apps/colorcheck/">ColorCheck</a></li></ul></div>
     <div><strong>StackSnap</strong><ul>
         <li><a href="#what">Overview</a></li>
         <li><a href="#features">Features</a></li>
@@ -661,8 +747,8 @@
         <li><a href="/about/">About</a></li>
         <li><a href="/editorial-policy/">Editorial policy</a></li>
         <li><a href="/apps/">All apps</a></li>
+        <li><a href="/guides/">All guides</a></li>
         <li><a href="https://apps.apple.com/us/developer/valeriy-loveyko/id1478618306" rel="noopener">App Store page</a></li>
-        <li><a href="mailto:loveykovl@gmail.com">Contact</a></li>
       </ul>
     </div>
   </div>

@@ -76,16 +76,12 @@ def totals():
 
 
 # ───────────────────────────── shared chrome ─────────────────────────────
-def logo_svg(uid):
-    return (f'<svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="{uid}" x1="0" y1="0" x2="1" y2="1">'
-            '<stop offset="0" stop-color="#14b8a6"/><stop offset=".38" stop-color="#3b82f6"/><stop offset=".7" stop-color="#8b5cf6"/>'
-            '<stop offset="1" stop-color="#fb7185"/></linearGradient></defs>'
-            '<rect width="32" height="32" rx="9" fill="#0e1116"/><rect x=".5" y=".5" width="31" height="31" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".12"/>'
-            '<path d="M9.5 9v13.5h5.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
-            f'<path d="M18.5 9v13.5H24" fill="none" stroke="url(#{uid})" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+def logo_svg(uid=None):
+    return '<img class="ll-logo__mark" src="/icons/logo-96.png" width="30" height="30" alt="">'
 
 
-NAV_LABEL = {"health": "Health", "baby": "Pregnancy &amp; Baby", "resale": "Resale", "home": "Home &amp; Style"}
+
+NAV_LABEL = {"health": "Health", "baby": "Pregnancy &amp; Baby", "resale": "Resale", "home": "Home &amp; Style", "mind": "Mind &amp; Faith"}
 
 
 def nav(active=None):
@@ -109,29 +105,35 @@ def nav(active=None):
 
 
 def footer(extra_col="", legal=None):
-    def col(key):
+    def lis(key):
+        return "".join(f'<li><a href="/apps/{a["slug"]}/">{e(a["name"])}</a></li>' for a in APPS if a["hub"] == key)
+
+    def head(key, top=False):
         h = HUB[key]
-        lis = "".join(f'<li><a href="/apps/{a["slug"]}/">{e(a["name"])}</a></li>' for a in APPS if a["hub"] == key)
-        return f'<div><strong><a href="/{h["slug"]}/">{h["name"].replace("&", "&amp;")}</a></strong><ul>{lis}</ul></div>'
+        st = ' class="ll-footer__gap"' if top else ""
+        return f'<strong{st}><a href="/{h["slug"]}/">{h["name"].replace("&", "&amp;")}</a></strong>'
     legal = legal or "App Store and iPhone are trademarks of Apple Inc. Brand names are used for identification only."
+    guides = extra_col or ('<div><strong><a href="/guides/">Guides</a></strong><ul>' + "".join(
+        f'<li><a href="/guides/#{h["slug"]}">{h["name"].replace("&", "&amp;")}</a></li>' for h in HUBS) + '</ul></div>')
     return f'''<footer class="ll-footer">
   <div class="ll-footer__grid">
-    <div>
-      <a class="ll-logo" href="/" aria-label="Loveiko Labs home">{logo_svg("llg-foot")}<span class="ll-logo__text ll-footer__brand">Loveiko <span>Labs</span></span></a>
-      <p>Independent iOS studio making focused apps for health, family, resale and the home. Pattaya, Thailand.</p>
+    <div class="ll-footer__about">
+      <a class="ll-logo" href="/" aria-label="Loveiko Labs home">{logo_svg()}<span class="ll-logo__text ll-footer__brand">Loveiko <span>Labs</span></span></a>
+      <p>Independent iOS studio making focused apps for health, family, resale, home and daily practice. Pattaya, Thailand.</p>
+      <a class="ll-footer__mail" href="mailto:{EMAIL}">{EMAIL}</a>
     </div>
-    {col("health")}
-    {col("resale")}
-    <div>{col("baby")[5:-6]}<strong style="margin-top:22px"><a href="/home-style/">Home &amp; Style</a></strong><ul>{"".join(f'<li><a href="/apps/{a["slug"]}/">{e(a["name"])}</a></li>' for a in APPS if a["hub"] == "home")}</ul></div>
-    {extra_col or '<div><strong><a href="/guides/">Guides</a></strong><ul>' + "".join(f'<li><a href="/guides/#{h["slug"]}">{h["name"].replace("&", "&amp;")} guides</a></li>' for h in HUBS) + '</ul></div>'}
+    <div>{head("health")}<ul>{lis("health")}</ul></div>
+    <div>{head("resale")}<ul>{lis("resale")}</ul>{head("mind", True)}<ul>{lis("mind")}</ul></div>
+    <div>{head("baby")}<ul>{lis("baby")}</ul>{head("home", True)}<ul>{lis("home")}</ul></div>
+    {guides}
     <div>
       <strong>Studio</strong>
       <ul>
         <li><a href="/about/">About</a></li>
         <li><a href="/editorial-policy/">Editorial policy</a></li>
         <li><a href="/apps/">All apps</a></li>
+        <li><a href="/guides/">All guides</a></li>
         <li><a href="{DEV_URL}" rel="noopener">App Store page</a></li>
-        <li><a href="mailto:{EMAIL}">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -146,9 +148,9 @@ HEAD_COMMON = ('<meta name="theme-color" content="#fafaf7" media="(prefers-color
                '<meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)">\n'
                '<meta name="color-scheme" content="light dark">\n'
                '<script>document.documentElement.classList.add(\'js\')</script>')
-FAVICON = ('<link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">\n'
-           '<link rel="icon" href="/icons/favicons/favicon-32x32.png?v=6" sizes="32x32" type="image/png">\n'
-           '<link rel="apple-touch-icon" href="/icons/favicons/apple-touch-icon.png?v=6">')
+FAVICON = ('<link rel="icon" href="/icons/favicons/favicon.ico?v=5" sizes="any">\n'
+           '<link rel="icon" href="/icons/favicons/favicon-32x32.png?v=5" sizes="32x32" type="image/png">\n'
+           '<link rel="apple-touch-icon" href="/icons/favicons/apple-touch-icon.png?v=5">')
 
 
 def ld(obj):
@@ -157,7 +159,7 @@ def ld(obj):
 
 def page(path, title, desc, body, schema=(), theme="", active=None, og_title=None):
     url = SITE + path
-    og = SITE + "/icons/og-image.jpg"
+    og = SITE + "/icons/og-image.jpg?v=2"
     head = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -286,7 +288,7 @@ def app_ld(app):
 
 
 ORG = {"@context": "https://schema.org", "@type": "Organization", "@id": SITE + "/#organization", "name": "Loveiko Labs",
-       "url": SITE + "/", "logo": {"@type": "ImageObject", "url": SITE + "/icons/logo-mark.png", "width": 512, "height": 512},
+       "url": SITE + "/", "logo": {"@type": "ImageObject", "url": SITE + "/icons/logo-512.png", "width": 512, "height": 512},
        "description": "Independent iOS app studio in Pattaya, Thailand, making focused apps for health tracking, pregnancy and baby, resale valuation and the home.",
        "foundingDate": "2024", "founder": {"@type": "Person", "@id": SITE + "/about/#founder", "name": FOUNDER, "jobTitle": "Founder"},
        "address": {"@type": "PostalAddress", "addressLocality": "Pattaya", "addressCountry": "TH"},
@@ -330,7 +332,7 @@ def build_home():
   <div class="ll-wrap ll-home-hero__grid">
     <div class="ll-enter">
       <a class="ll-badge" href="/about/"><b>Independent</b> iOS studio · Pattaya, Thailand</a>
-      <h1>{len(APPS)} focused iPhone apps for health, family, resale <em>and home.</em></h1>
+      <h1>{len(APPS)} focused iPhone apps for health, family, resale, home <em>and faith.</em></h1>
       <p class="ll-home-hero__sub">Loveiko Labs is an independent iOS studio. Each of our apps solves one specific problem, like tracking a condition, checking an ingredient or valuing a watch, and says plainly what it can't do.</p>
       <div class="ll-home-hero__cta">
         <a class="ll-btn" href="#hubs">Explore the apps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
@@ -353,7 +355,7 @@ def build_home():
 <section class="ll-band" id="hubs">
   <div class="ll-wrap">
     <div class="ll-head ll-reveal">
-      <div><p class="ll-kicker">Four categories</p><h2 class="ll-h2">Find the app for <em>your</em> problem.</h2></div>
+      <div><p class="ll-kicker">{len(HUBS)} categories</p><h2 class="ll-h2">Find the app for <em>your</em> problem.</h2></div>
       <p>Every category has its own page with the apps, honest comparisons with alternatives and answers to the questions people ask most.</p>
     </div>
     <div class="ll-hubs ll-stagger">{"".join(tiles)}</div>
@@ -409,7 +411,7 @@ def build_home():
       <div><dt>Founder</dt><dd>{FOUNDER}</dd></div>
       <div><dt>Based in</dt><dd>Pattaya, Thailand</dd></div>
       <div><dt>Apps live</dt><dd>{len(APPS)} on iOS</dd></div>
-      <div><dt>Contact</dt><dd><a href="mailto:{EMAIL}" style="text-decoration:none">Email us</a></dd></div>
+      <div><dt>Contact</dt><dd><a href="mailto:{EMAIL}" class="ll-plain">Email us</a></dd></div>
     </dl>
   </div>
 </section>
@@ -417,8 +419,8 @@ def build_home():
 <section class="ll-wrap">
   <div class="ll-cta-band ll-reveal">
     <h2>Have a question, a partnership or <em>an idea?</em></h2>
-    <p style="margin:-10px auto 26px;max-width:52ch">Email is the fastest way to reach the studio. We usually reply within a day.</p>
-    <div class="ll-hero__cta" style="margin:0">
+    <p class="ll-cta-band__sub">Email is the fastest way to reach the studio. We usually reply within a day.</p>
+    <div class="ll-hero__cta ll-cta-band__actions">
       <a class="ll-btn" href="mailto:{EMAIL}">{EMAIL}</a>
       <a class="ll-btn ll-btn--ghost" href="{DEV_URL}" rel="noopener" target="_blank">See us on the App Store ↗</a>
     </div>
@@ -432,12 +434,22 @@ def build_home():
         {"@context": "https://schema.org", "@type": "ItemList", "name": "Loveiko Labs iOS apps", "numberOfItems": len(APPS),
          "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": app_ld(a)} for i, a in enumerate(APPS)]},
     ]
-    page("/", "Loveiko Labs — focused iPhone apps for health, family, resale and home",
-         f"Independent iOS studio with {len(APPS)} focused apps: health trackers for GLP-1, TRT, PCOS, eczema and more; pregnancy and baby tools; watch, jewelry and handbag valuation; and home and style helpers.",
+    page("/", "Loveiko Labs — focused iPhone apps by an independent studio",
+         f"Independent iOS studio with {len(APPS)} focused iPhone apps: health trackers, pregnancy and baby tools, watch and jewelry valuation, home helpers and faith.",
          body, schema, og_title="Loveiko Labs — focused iPhone apps")
 
 
 # ───────────────────────────── hub pages ─────────────────────────────
+def hub_shots(apps):
+    picks = (apps * 3)[:3]
+    seen, imgs = {}, []
+    for a in picks:
+        k = seen.get(a["slug"], 0); seen[a["slug"]] = k + 1
+        shots = S(a)["screenshots"]
+        imgs.append(f'<img src="{shots[min(k, len(shots) - 1)]}" alt="" width="460" height="1000" decoding="async">')
+    return '<div class="ll-hero__shots" aria-hidden="true">' + "".join(imgs) + "</div>"
+
+
 def build_hub(h):
     apps = hub_apps(h["key"])
     url = f'{SITE}/{h["slug"]}/'
@@ -446,18 +458,21 @@ def build_hub(h):
     body = f'''
 <div class="ll-wrap">
   {crumbs_html(trail)}
-  <section class="ll-hub-hero">
-    <div class="ll-icons">{"".join(icon(a, 60) for a in apps)}</div>
-    <p class="ll-eyebrow">{h["eyebrow"].replace("&", "&amp;")}</p>
-    <h1>{h["h1"]}</h1>
-    <div class="ll-prose">{"".join(f"<p>{e(p)}</p>" for p in h["intro"])}</div>
-    <p class="ll-updated">Last reviewed {TODAY_H} · <a href="/editorial-policy/" style="color:inherit">Editorial policy</a></p>
+  <section class="ll-hub-hero ll-hub-hero--split">
+    <div>
+      <div class="ll-icons">{"".join(icon(a, 60) for a in apps)}</div>
+      <p class="ll-eyebrow">{h["eyebrow"].replace("&", "&amp;")}</p>
+      <h1>{h["h1"]}</h1>
+      <div class="ll-prose">{"".join(f"<p>{e(p)}</p>" for p in h["intro"])}</div>
+      <p class="ll-updated">Last reviewed {TODAY_H} · <a href="/editorial-policy/" class="ll-plain">Editorial policy</a></p>
+    </div>
+    {hub_shots(apps)}
   </section>
 
   <section class="ll-section" id="apps">
     <p class="ll-kicker">The apps</p>
     <h2>{h["title"]} by Loveiko Labs</h2>
-    <div class="ll-apps ll-stagger" style="margin-top:28px">{"".join(app_card(a, large=True) for a in apps)}</div>
+    <div class="ll-apps ll-stagger">{"".join(app_card(a, large=True) for a in apps)}</div>
   </section>
 
   <section class="ll-section ll-reveal" id="guides">
@@ -476,7 +491,7 @@ def build_hub(h):
   <section class="ll-section ll-reveal">
     <p class="ll-kicker">More from the studio</p>
     <h2>Other categories</h2>
-    <div class="ll-hub-links" style="margin-top:24px">{others}</div>
+    <div class="ll-hub-links">{others}</div>
   </section>
 </div>
 '''
@@ -489,8 +504,8 @@ def build_hub(h):
         crumbs_ld(trail),
         faq_ld(h["faq"], url),
     ]
-    page(f'/{h["slug"]}/', f'{h["title"]} for iPhone — {", ".join(a["name"] for a in apps)} | Loveiko Labs' if len(apps) <= 4 else f'{h["title"]} for iPhone — {len(apps)} focused trackers | Loveiko Labs',
-         h["meta"], body, schema, theme=f't-{h["key"]}', active=h["key"])
+    page(f'/{h["slug"]}/', f'{h["title"].capitalize()} for iPhone | Loveiko Labs',
+         h["desc"], body, schema, theme=f't-{h["key"]}', active=h["key"])
 
 
 # ───────────────────────────── apps index / guides index ─────────────────────────────
@@ -499,8 +514,8 @@ def build_apps_index():
     sections = "".join(f'''
   <section class="ll-section t-{h["key"]}" id="{h["slug"]}">
     <p class="ll-kicker">{h["name"].replace("&", "&amp;")}</p>
-    <h2><a href="/{h["slug"]}/" style="text-decoration:none;color:inherit">{h["title"]} →</a></h2>
-    <div class="ll-apps ll-stagger" style="margin-top:24px">{"".join(app_card(a) for a in hub_apps(h["key"]))}</div>
+    <h2><a href="/{h["slug"]}/" class="ll-plain">{h["title"]} →</a></h2>
+    <div class="ll-apps ll-stagger">{"".join(app_card(a) for a in hub_apps(h["key"]))}</div>
   </section>''' for h in HUBS)
     body = f'''
 <div class="ll-wrap">
@@ -536,7 +551,7 @@ def build_guides_index():
     schema = [crumbs_ld(trail), {"@context": "https://schema.org", "@type": "CollectionPage", "url": SITE + "/guides/", "name": "Loveiko Labs buyer's guides",
               "hasPart": [{"@type": "Article", "headline": a["guide_title"], "url": f'{SITE}/{a["guide"]}/'} for a in APPS]}]
     page("/guides/", "Best iPhone app guides 2026 — honest comparisons | Loveiko Labs",
-         "Side-by-side comparisons of the best iOS apps for GLP-1, TRT, PCOS, eczema, pregnancy, baby cry, watch, jewelry and handbag checks, pests, roofing and colour analysis.",
+         "Honest side-by-side comparisons of the best iPhone apps for GLP-1, TRT, PCOS, eczema, pregnancy, watches, jewelry, pests, prayer, affirmations and more.",
          body, schema, active="guides")
 
 
@@ -544,7 +559,7 @@ def build_guides_index():
 def build_about():
     trail = [("Loveiko Labs", "/"), ("About", "/about/")]
     hubs = "".join(f'''<div class="t-{h["key"]}"><h3 style="display:flex;align-items:center;gap:8px;margin-bottom:12px"><i style="width:8px;height:8px;border-radius:50%;background:var(--accent)"></i><a href="/{h["slug"]}/" style="text-decoration:none;color:inherit">{h["name"].replace("&", "&amp;")}</a></h3>
-      <div class="ll-apps" style="grid-template-columns:1fr">{"".join(app_card(a) for a in hub_apps(h["key"]))}</div></div>''' for h in HUBS)
+      <div class="ll-apps ll-apps--stack">{"".join(app_card(a) for a in hub_apps(h["key"]))}</div></div>''' for h in HUBS)
     body = f'''
 <div class="ll-wrap">
   {crumbs_html(trail)}
@@ -574,7 +589,7 @@ def build_about():
   <section class="ll-section" id="principles">
     <p class="ll-kicker">How we build</p>
     <h2>Principles we don't break</h2>
-    <div class="ll-principles ll-stagger" style="margin-top:28px">
+    <div class="ll-principles ll-stagger">
       <div class="ll-principle"><h3>One job, done well</h3><p>Snap, scan, log or record, and get a structured answer fast. No dashboards to learn.</p></div>
       <div class="ll-principle"><h3>Honest about limits</h3><p>No app here claims a certification, guarantee or affiliation it does not have. Every product page carries scope and limitation notes.</p></div>
       <div class="ll-principle"><h3>Grounded in sources</h3><p>Where an app touches health or authentication, its AI leans on public reference material (NIH, FDA, RxNav, clinical society guidance, documented brand references) and says so.</p></div>
@@ -585,7 +600,7 @@ def build_about():
   <section class="ll-section" id="apps">
     <p class="ll-kicker">The portfolio</p>
     <h2>{len(APPS)} apps, {len(APPS)} specific problems</h2>
-    <div class="ll-guides" style="margin-top:28px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">{hubs}</div>
+    <div class="ll-guides ll-guides--wide">{hubs}</div>
   </section>
 
   <section class="ll-section" id="contact">
@@ -708,16 +723,106 @@ def patch_ratings(s, app):
     return s
 
 
+# ───────────────────────────── layout unification for legacy pages ─────────────────────────────
+HERO_RE = re.compile(r'<section class="ll-hero( ll-hero--app| ll-hero--guide)?">(.*?)\n  </section>', re.S)
+SHOTS_RE = re.compile(r'<div class="ll-hero__shots"[^>]*>.*?</div><!-- /shots -->', re.S)
+
+
+def shots_html(app, n=3):
+    urls = S(app)["screenshots"][:n]
+    lazy = 'loading="lazy"'
+    imgs = "".join(f'<img src="{u}" alt="{e(app["name"])} screenshot {i + 1}" width="460" height="1000" {"fetchpriority=high" if i == 0 else lazy} decoding="async">' for i, u in enumerate(urls))
+    return f'<div class="ll-hero__shots" aria-hidden="true">{imgs}</div><!-- /shots -->'
+
+
+def patch_layout(s, app=None, guide=False):
+    """Bring legacy page markup onto the v3 system: two-column app hero, no inline spacing."""
+    m = HERO_RE.search(s)
+    if m and app and not guide:
+        if m.group(1):
+            s = SHOTS_RE.sub(lambda _: shots_html(app), s, count=1)
+        else:
+            inner = m.group(2)
+            icon = re.search(r'\s*<div class="ll-hero__icon">.*?</div>', inner, re.S)
+            eb = re.search(r'\s*<p class="ll-eyebrow">.*?</p>', inner, re.S)
+            rest = inner
+            for x in (icon, eb):
+                if x:
+                    rest = rest.replace(x.group(0), "", 1)
+            ident = f'<div class="ll-hero__id">{icon.group(0).strip() if icon else ""}{eb.group(0).strip() if eb else ""}</div>'
+            new = f'<section class="ll-hero ll-hero--app">\n    <div class="ll-hero__text">\n    {ident}{rest}\n    </div>\n    {shots_html(app)}\n  </section>'
+            s = s[:m.start()] + new + s[m.end():]
+    elif m and guide and not m.group(1):
+        s = s[:m.start()] + '<section class="ll-hero ll-hero--guide">' + m.group(2) + "\n  </section>" + s[m.end():]
+    s = s.replace('<p style="margin-top:16px;font-size:13.5px;">', '<p class="ll-note">')
+    s = s.replace('<p style="margin-top:8px;font-size:13.5px;">', '<p class="ll-note">')
+    s = re.sub(r'(<(?:h3|p|div)(?: class="[^"]*")?) style="margin-(?:top|bottom):[0-9.]+(?:px|rem);?"', r"\1", s)
+    return s
+
+
+LD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
+
+
+def clean_ld(s, app=None):
+    """Drop page-level BreadcrumbList nodes (build adds the canonical one) and sync app facts from the store."""
+    def fix(m):
+        try:
+            data = json.loads(m.group(1))
+        except ValueError:
+            return m.group(0)
+        nodes = data.get("@graph") if isinstance(data, dict) else None
+        if nodes is None:
+            return m.group(0)
+        data["@graph"] = [n for n in nodes if n.get("@type") != "BreadcrumbList"]
+        if app:
+            st = S(app)
+            for n in data["@graph"]:
+                if n.get("@type") == "MobileApplication" and str(n.get("@id", "")).endswith("/apps/%s/#app" % app["slug"]):
+                    if st.get("updated"):
+                        n["dateModified"] = st["updated"]
+                    if st.get("version"):
+                        n["softwareVersion"] = st["version"]
+                    if st["count"]:
+                        n["aggregateRating"] = {"@type": "AggregateRating", "ratingValue": rating_str(app), "ratingCount": st["count"], "bestRating": 5, "worstRating": 1}
+                    else:
+                        n.pop("aggregateRating", None)
+        return '<script type="application/ld+json">\n' + json.dumps(data, indent=2, ensure_ascii=False) + "\n</script>"
+    return LD_RE.sub(fix, s)
+
+
+def set_desc(s, desc):
+    for pat in (r'(<meta name="description" content=")[^"]*(")', r'(<meta property="og:description" content=")[^"]*(")',
+                r'(<meta name="twitter:description" content=")[^"]*(")'):
+        s = re.sub(pat, lambda m: m.group(1) + e(desc) + m.group(2), s, count=1)
+    return s
+
+
+def set_titles(s, title):
+    t = e(title, quote=False)
+    s = re.sub(r"<title>.*?</title>", lambda _: f"<title>{t}</title>", s, count=1, flags=re.S)
+    s = re.sub(r'(<meta property="og:title" content=")[^"]*(")', lambda m: m.group(1) + e(title) + m.group(2), s, count=1)
+    s = re.sub(r'(<meta name="twitter:title" content=")[^"]*(")', lambda m: m.group(1) + e(title) + m.group(2), s, count=1)
+    return s
+
+
 def patch_pages():
     for a in APPS:
         h = HUB[a["hub"]]
         # app page
         p = ROOT / "apps" / a["slug"] / "index.html"
+        if not p.exists() or not (ROOT / a["guide"] / "index.html").exists():
+            print("  skip (page missing):", a["slug"])
+            continue
         s = p.read_text()
         trail = [("Loveiko Labs", "/"), (h["name"], f'/{h["slug"]}/'), (a["name"], f'/apps/{a["slug"]}/')]
         links = f'<li><a href="/{a["guide"]}/">{e(a["guide_title"])}</a></li><li><a href="/{h["slug"]}/">More {h["name"].replace("&", "&amp;")} apps</a></li>'
         s = patch_common(s, f't-{h["key"]}', trail, app_col(FOOT_RE.search(s).group(0) if FOOT_RE.search(s) else "", e(a["name"]), links))
         s = patch_ratings(s, a)
+        s = patch_layout(s, a)
+        s = clean_ld(s, a)
+        s = set_titles(s, a["seo_title"])
+        if a.get("seo_desc"):
+            s = set_desc(s, a["seo_desc"])
         p.write_text(s)
         # guide page
         g = ROOT / a["guide"] / "index.html"
@@ -726,6 +831,11 @@ def patch_pages():
         links = f'<li><a href="/apps/{a["slug"]}/">{e(a["name"])} overview</a></li><li><a href="/{h["slug"]}/">{h["name"].replace("&", "&amp;")} apps</a></li><li><a href="/guides/">All guides</a></li>'
         s = patch_common(s, f't-{h["key"]}', trail, f'<div><strong>Related</strong><ul>{links}</ul></div>')
         s = FAKE_QUOTES_RE.sub("", s)
+        s = patch_layout(s, a, guide=True)
+        s = clean_ld(s)
+        s = set_titles(s, a["guide_seo_title"])
+        if a.get("guide_seo_desc"):
+            s = set_desc(s, a["guide_seo_desc"])
         g.write_text(s)
     print(f"patched {len(APPS)} app pages + {len(APPS)} guides")
 
@@ -745,7 +855,8 @@ def build_llms():
     s = p.read_text()
     block = ["## Site structure", "",
              f"- Home: {SITE}/", f"- All apps: {SITE}/apps/", f"- Buyer's guides: {SITE}/guides/",
-             f"- About: {SITE}/about/", f"- Editorial policy: {SITE}/editorial-policy/", ""]
+             f"- About: {SITE}/about/", f"- Editorial policy: {SITE}/editorial-policy/",
+             f"- Full site text for AI assistants: {SITE}/llms-full.txt", ""]
     for h in HUBS:
         block.append(f'### {h["name"]} — {SITE}/{h["slug"]}/')
         for a in hub_apps(h["key"]):
@@ -767,18 +878,60 @@ def build_404():
     tiles = "".join(f'<a class="t-{h["key"]}" href="/{h["slug"]}/">{h["name"].replace("&", "&amp;")}<span>{len(hub_apps(h["key"]))} apps →</span></a>' for h in HUBS)
     body = f'''
 <div class="ll-wrap">
-  <section class="ll-hub-hero" style="padding-top:96px">
+  <section class="ll-hub-hero ll-hub-hero--tall">
     <p class="ll-eyebrow">404</p>
     <h1>This page <em>doesn't exist</em>.</h1>
     <div class="ll-prose"><p>The link may be old or mistyped. Pick a category below or go back to the <a href="/">home page</a>.</p></div>
   </section>
-  <section class="ll-section"><div class="ll-hub-links" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">{tiles}</div></section>
+  <section class="ll-section"><div class="ll-hub-links">{tiles}</div></section>
 </div>'''
     page("/404/", "Page not found | Loveiko Labs", "This page does not exist on loveikolabs.com.", body)
     src = ROOT / "404" / "index.html"
     (ROOT / "404.html").write_text(src.read_text().replace('<link rel="canonical" href="https://loveikolabs.com/404/">', '<meta name="robots" content="noindex">'))
     src.unlink(); src.parent.rmdir()
     print("wrote 404.html")
+
+
+def build_llms_full():
+    """Plain-text dump of every page's main content for AI crawlers (llms-full.txt convention)."""
+    from html.parser import HTMLParser
+
+    class T(HTMLParser):
+        skip_tags = {"script", "style", "nav", "header", "footer", "svg", "button", "figure"}
+        block = {"p", "li", "h1", "h2", "h3", "h4", "tr", "summary", "div", "section", "article", "br", "td", "th"}
+
+        def __init__(self):
+            super().__init__(); self.out = []; self.skip = 0; self.in_main = False
+
+        def handle_starttag(self, tag, attrs):
+            if tag == "main": self.in_main = True
+            if tag in self.skip_tags: self.skip += 1
+            if tag in ("h1", "h2", "h3"): self.out.append("\n" + "#" * int(tag[1]) + " ")
+            elif tag == "li": self.out.append("\n- ")
+            elif tag in ("td", "th"): self.out.append(" | ")
+            elif tag in self.block: self.out.append("\n")
+
+        def handle_endtag(self, tag):
+            if tag in self.skip_tags and self.skip: self.skip -= 1
+            if tag == "main": self.in_main = False
+
+        def handle_data(self, d):
+            if self.in_main and not self.skip: self.out.append(d)
+
+    order = ["/", "/about/", "/editorial-policy/", "/guides/"] + [f'/{h["slug"]}/' for h in HUBS] + \
+            [x for a in APPS for x in (f'/apps/{a["slug"]}/', f'/{a["guide"]}/')]
+    parts = [f"# Loveiko Labs — full site text\n\nGenerated {TODAY_ISO} from {SITE}. Short index: {SITE}/llms.txt\n"]
+    for u in order:
+        f = ROOT / "index.html" if u == "/" else ROOT / u.strip("/") / "index.html"
+        if not f.exists():
+            continue
+        t = T(); t.feed(f.read_text())
+        txt = re.sub(r"[ \t]+", " ", "".join(t.out))
+        txt = re.sub(r"(?m)^\s*-\s*$", "", txt)
+        txt = re.sub(r"\n\s*\n+", "\n\n", txt).strip()
+        parts.append(f"\n\n---\n\nURL: {SITE}{u}\n\n{txt}")
+    (ROOT / "llms-full.txt").write_text("".join(parts) + "\n")
+    print("wrote llms-full.txt", round((ROOT / "llms-full.txt").stat().st_size / 1024), "KB")
 
 
 if __name__ == "__main__":
@@ -796,3 +949,4 @@ if __name__ == "__main__":
     patch_pages()
     build_sitemap()
     build_llms()
+    build_llms_full()
