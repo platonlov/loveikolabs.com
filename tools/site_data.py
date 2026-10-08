@@ -102,19 +102,22 @@ HUBS = [
     },
     {
         "key": "mind",
-        "desc": 'Sakinah explains the words of your salah phrase by phrase, and Herself plays one-minute affirmation scenes in an AI copy of your voice. iPhone.',
+        "desc": 'Two Sparrows puts a Bible verse on your Lock Screen, Sakinah explains the words of your salah, and Herself plays one-minute affirmation scenes. iPhone.',
         "slug": "mind-faith",
         "name": "Mind & Faith",
         "title": "Mind and faith apps",
         "h1": "Quiet daily practice for <em>mind</em> and faith.",
-        "eyebrow": "Mind & Faith · 2 apps",
-        "meta": "Two iPhone apps for daily practice: Sakinah explains the words of the Muslim prayer phrase by phrase, and Herself turns your goals into one-minute affirmation scenes read in a copy of your own voice.",
-        "short": "Understand the words of your prayer, and a calm daily affirmation practice.",
+        "eyebrow": "Mind & Faith · 3 apps",
+        "meta": "Three iPhone apps for daily practice: Two Sparrows puts a Bible verse of the day on your Lock Screen, Home Screen and StandBy, Sakinah explains the words of the Muslim prayer phrase by phrase, and Herself turns your goals into one-minute affirmation scenes read in a copy of your own voice.",
+        "short": "A Bible verse on your Lock Screen, the words of your salah explained, and a calm affirmation practice.",
         "intro": [
+            "Two Sparrows is a Bible verse widget for your Lock Screen, Home Screen and StandBy. A new verse arrives every morning, chosen for what is on your heart, with every word from the Berean Standard Bible. No ads, no feed, no streaks.",
             "Sakinah explains the salah you already know by heart: Al-Fatiha, the words of the prayer and short surahs, one phrase at a time, with the Arabic text, its meaning and recitation. Prayer times and the qibla are included and stay free.",
             "Herself is a self-practice tool for calm and confidence. You describe what you want, read aloud for 15 seconds, and hear a one-minute scene of your moment going well in an AI voice made from yours. It is not therapy and does not promise results.",
         ],
         "faq": [
+            ("Does Two Sparrows write its own Bible verses with AI?",
+             "No. Every verse comes from the Berean Standard Bible. AI only helps find verses that fit how you feel or what you type, and the Scripture only setting hides every AI feature."),
             ("Does Sakinah give religious rulings?",
              "No. Sakinah explains the meaning of the words. It does not judge your prayer or your pronunciation and does not give fatwas. For practice, follow your teacher and your community."),
             ("Are prayer times and qibla free in Sakinah?",
@@ -173,12 +176,14 @@ APPS = [
      "tagline": "Understand the words of your salah phrase by phrase, with recitation, prayer times and qibla.", "tag": "Prayer"},
     {"slug": "herself", "name": "Herself", "hub": "mind", "store_id": 6816159497, "guide": "best-affirmation-apps-2026", "guide_title": "Best affirmation apps 2026", "seo_title": 'Herself: Affirmations in Your Own Voice', "guide_seo_title": 'Best Affirmation Apps 2026: 5 iPhone Apps Compared',
      "tagline": "One-minute affirmation scenes of your moment going well, read in an AI copy of your own voice.", "tag": "Affirmations"},
+    {"slug": "two-sparrows", "name": "Two Sparrows", "hub": "mind", "store_id": 6815332799, "guide": "best-bible-verse-widget-apps-2026", "guide_title": "Best Bible verse widget apps 2026", "seo_title": 'Two Sparrows: Bible Verse Widget for Your Lock Screen', "guide_seo_title": 'Best Bible Verse Widget Apps 2026: 7 iPhone Apps Compared',
+     "tagline": "A Bible verse of the day on your Lock Screen, Home Screen and StandBy, every word from Scripture.", "tag": "Bible"},
 ]
 
 # Hero carousel: (app slug, index into the App Store screenshot list)
 HERO_POSTERS = [
     ("watchsnap", 1), ("cysta", 0), ("crysnap", 0), ("stacksnap", 0),
-    ("colorcheck", 0), ("sakinah", 0), ("jewelsnap", 0), ("herself", 0), ("veribag", 0),
+    ("colorcheck", 0), ("two-sparrows", 0), ("sakinah", 0), ("jewelsnap", 0), ("herself", 0), ("veribag", 0),
 ]
 
 SITE = "https://loveikolabs.com"

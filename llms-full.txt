@@ -7,7 +7,7 @@ Generated 2026-10-08 from https://loveikolabs.com. Short index: https://loveikol
 
 URL: https://loveikolabs.com/
 
-# 19 focused iPhone apps for health, family, resale, home and faith.
+# 20 focused iPhone apps for health, family, resale, home and faith.
 
 Loveiko Labs builds iPhone apps that each solve one specific problem, like tracking a condition, checking an ingredient or valuing a watch, and says plainly what it can't do.
 
@@ -16,7 +16,7 @@ Loveiko Labs builds iPhone apps that each solve one specific problem, like track
 
 4.8★App Store rating
 
-19apps live
+20apps live
 
 168countries
 
@@ -49,11 +49,11 @@ Identify, value and screen watches, jewelry, handbags and thrift finds.
 
 Pest identification, a free roofing calculator and personal colour analysis.
 
-2 apps
+3 apps
 
 ### Mind & Faith
 
-Understand the words of your prayer, and a calm daily affirmation practice.
+A Bible verse on your Lock Screen, the words of your salah explained, and a calm affirmation practice.
 
 Just shipped
 ## New on the App Store.
@@ -63,6 +63,12 @@ New apps ship every month. These are the latest; the full catalogue, grouped by 
  Herself Affirmations
 
 One-minute affirmation scenes of your moment going well, read in an AI copy of your own voice.
+
+New on the App Store
+
+ Two Sparrows Bible
+
+A Bible verse of the day on your Lock Screen, Home Screen and StandBy, every word from Scripture.
 
 New on the App Store
 
@@ -90,13 +96,7 @@ Fatty-liver companion that explains ALT, AST, GGT and FIB-4 against your own rep
 
 ★5.0
 
- Salvora Eczema
-
-Private eczema record for flares, itch, sleep and triggers, with a photo timeline for your dermatologist.
-
-★4.5
-
- All 19 apps 
+ All 20 apps 
 
 Buyer's guides
 ## Compare before you download.
@@ -127,7 +127,7 @@ Side-by-side rankings of the best iOS apps for one need, competitors included. W
  Best jewelry identifier apps
  Includes JewelSnap
 
- All 19 guides 
+ All 20 guides 
 
 How we build
 ## Four rules every app follows.
@@ -148,7 +148,7 @@ Most apps need no account, and records stay on your iPhone wherever the feature 
 
 Every app is free to download on iPhone and live in 168 countries. New ones ship every month.
 
- Browse all 19 apps
+ Browse all 20 apps
  See us on the App Store ↗
 
 ---
@@ -159,7 +159,7 @@ iOS studio · since 2024
 
 # One problem, one app, one honest answer.
 
-Loveiko Labs builds focused, single-purpose iPhone apps. Each one answers one specific, real-world question and ends when that question is answered clearly, with the next step you can actually take. 19 apps are live on the App Store in 168 countries, and the catalogue grows every month.
+Loveiko Labs builds focused, single-purpose iPhone apps. Each one answers one specific, real-world question and ends when that question is answered clearly, with the next step you can actually take. 20 apps are live on the App Store in 168 countries, and the catalogue grows every month.
 
 The studio
 
@@ -171,7 +171,7 @@ Most apps try to do everything. We do the opposite. Every app starts with a sing
 
 Founded2024
 
-Apps live19 on iOS
+Apps live20 on iOS
 
 Available in168 countries
 
@@ -230,7 +230,7 @@ We review hub pages and guides when apps or competitors change, and the review d
 
 URL: https://loveikolabs.com/guides/
 
-Buyer's guides · 19 comparisons
+Buyer's guides · 20 comparisons
 
 # The best iOS apps for each need, ranked honestly.
 
@@ -263,9 +263,10 @@ How we research and update these pages is described in our editorial policy.
 - Best roofing calculator apps
 - Best color analysis apps
 
-### Mind & Faith2 guides
+### Mind & Faith3 guides
 - Best Quran & prayer apps
 - Best affirmation apps
+- Best Bible verse widget apps
 
 ---
 
@@ -408,7 +409,7 @@ More from the studio
 
 ## Other categories
 
-Pregnancy & Baby2 apps →Resale & Valuation4 apps →Home & Style3 apps →Mind & Faith2 apps →
+Pregnancy & Baby2 apps →Resale & Valuation4 apps →Home & Style3 apps →Mind & Faith3 apps →
 
 ---
 
@@ -476,7 +477,7 @@ More from the studio
 
 ## Other categories
 
-Health8 apps →Resale & Valuation4 apps →Home & Style3 apps →Mind & Faith2 apps →
+Health8 apps →Resale & Valuation4 apps →Home & Style3 apps →Mind & Faith3 apps →
 
 ---
 
@@ -568,7 +569,7 @@ More from the studio
 
 ## Other categories
 
-Health8 apps →Pregnancy & Baby2 apps →Home & Style3 apps →Mind & Faith2 apps →
+Health8 apps →Pregnancy & Baby2 apps →Home & Style3 apps →Mind & Faith3 apps →
 
 ---
 
@@ -648,16 +649,17 @@ More from the studio
 
 ## Other categories
 
-Health8 apps →Pregnancy & Baby2 apps →Resale & Valuation4 apps →Mind & Faith2 apps →
+Health8 apps →Pregnancy & Baby2 apps →Resale & Valuation4 apps →Mind & Faith3 apps →
 
 ---
 
 URL: https://loveikolabs.com/mind-faith/
 
-Mind & Faith · 2 apps
+Mind & Faith · 3 apps
 
 # Quiet daily practice for mind and faith.
 
+Two Sparrows is a Bible verse widget for your Lock Screen, Home Screen and StandBy. A new verse arrives every morning, chosen for what is on your heart, with every word from the Berean Standard Bible. No ads, no feed, no streaks.
 Sakinah explains the salah you already know by heart: Al-Fatiha, the words of the prayer and short surahs, one phrase at a time, with the Arabic text, its meaning and recitation. Prayer times and the qibla are included and stay free.
 Herself is a self-practice tool for calm and confidence. You describe what you want, read aloud for 15 seconds, and hear a one-minute scene of your moment going well in an AI voice made from yours. It is not therapy and does not promise results.
 
@@ -687,6 +689,16 @@ New on the App Store
  Compare alternatives
  App Store ↗
 
+### Two Sparrows Bible
+
+A Bible verse of the day on your Lock Screen, Home Screen and StandBy, every word from Scripture.
+
+New on the App Store
+
+ About Two Sparrows
+ Compare alternatives
+ App Store ↗
+
 Compare
 
 ## Independent comparisons, competitors included
@@ -697,11 +709,16 @@ Each guide ranks the best iOS apps for one need, explains where competitors are 
 How Sakinah compares with the alternatives on features, price and limits.
 ### Best affirmation apps 2026 →
 How Herself compares with the alternatives on features, price and limits.
+### Best Bible verse widget apps 2026 →
+How Two Sparrows compares with the alternatives on features, price and limits.
 
 Questions
 
 ## Frequently asked questions
 
+Does Two Sparrows write its own Bible verses with AI?
+
+No. Every verse comes from the Berean Standard Bible. AI only helps find verses that fit how you feel or what you type, and the Scripture only setting hides every AI feature.
 Does Sakinah give religious rulings?
 
 No. Sakinah explains the meaning of the words. It does not judge your prayer or your pronunciation and does not give fatwas. For practice, follow your teacher and your community.
@@ -10052,3 +10069,488 @@ I am and Herself both put a line on your Lock Screen and Home Screen. Motivation
 Independent ranking disclosure. This article is an editorial ranking published by Loveiko Labs. We make Herself, which is ranked #1 with full disclosure. We are not affiliated with Monkey Taps (I am, Motivation), Precise Wellness (ThinkUp) or Broftware House (Mantra). Information about other apps is summarized from their public App Store listings at time of writing, October 2026; features, ratings and prices change.
 
 Not therapy or medical advice. Nothing in this article is therapy, counseling or medical advice, and no app here guarantees results. If you're in crisis, call or text 988 (US) or your local emergency number.
+
+---
+
+URL: https://loveikolabs.com/apps/two-sparrows/
+
+iOS App · Mind & Faith · Bible verse widget
+
+# Two Sparrows — a Bible verse where you already look
+
+A new verse of the day on your Lock Screen every morning, chosen for what's on your heart, with the full verse always visible. Every word from the Berean Standard Bible. No ads, no feed, no streaks.
+
+ Download on the App Store
+ See how it works
+
+iPhone · iOS 17.0+ · 7-day free trial on Weekly · works offline · no ads
+
+Overview
+
+## What is Two Sparrows?
+
+Two Sparrows is a Bible verse widget for iPhone. It puts a new verse on your Lock Screen every morning, adds Home Screen widgets in three sizes and a StandBy view for your nightstand, and helps you find verses for how you feel. Every word comes from the Berean Standard Bible.
+
+Most of us pick up the phone dozens of times a day. Two Sparrows puts Scripture on the screen you already look at, sized so the whole verse fits, not a cut-off line. The larger widgets let you listen, save, share or get another verse without opening the app.
+
+The name comes from Matthew 10:31: "So do not be afraid; you are worth more than many sparrows." The app is built to be calm: no ads, no feed, no chat and no streaks. Missed a day? Nothing resets.
+
+What Two Sparrows does not do. It does not write Scripture with AI. Every verse is from the Berean Standard Bible, and the short notes under "About this verse" come from the Two Sparrows editors. AI only helps match verses to how you feel or what you type, and the "Scripture only" setting hides every AI feature. Two Sparrows is not a church, a pastor or a counselor.
+
+Audience
+
+## Who Two Sparrows is for
+
+### You reach for your phone first thing
+
+The first thing you see in the morning can be a verse instead of notifications. A new one arrives on your Lock Screen every day, the full verse, sized to fit.
+
+### You need a word for a hard moment
+
+Anxious, afraid, grieving, lonely, weary or can't sleep: tap how you feel, or say it in your own words, and get verses that fit.
+
+### You want Scripture, not a feed
+
+No ads, no social feed, no chat and no streaks. Turn on "Scripture only" and every AI feature disappears.
+
+### You would rather listen
+
+Verses and prayers are read aloud, word for word. Play your saved verses with a sleep timer at night.
+
+### You want a gentle daily rhythm
+
+7-day paths give you one verse, one prayer and one small step a day, with an evening prayer at the time you choose. Skip a day and nothing resets.
+
+### You share verses with people you love
+
+Send a verse as a clean picture for a Story, a square post or a wallpaper, and keep the ones that matter in Saved.
+
+Capabilities
+
+## What Two Sparrows includes
+
+- Lock Screen verse. A new Bible verse every morning, the full verse, sized to fit. You can also pin a saved verse to your Lock Screen.
+
+- Home Screen widgets in three sizes. The larger widgets have Listen, Save, Share and Another verse buttons right on the widget.
+
+- StandBy. A nightstand view with a calm Candle look at night. Looks to choose from: Linen, Candle, Paper, Plain Dark and large text.
+
+- Guided setup. Add the Lock Screen and Home Screen widgets in one guided pass, with a short video for each step.
+
+- A verse for how you feel. Tap anxious, afraid, grieving, can't sleep, lonely, weary or grateful, or type or speak your own words, and get fitting verses from the Scripture library. Every verse opens in its chapter, with related verses to keep reading.
+
+- 7-day paths. Peace for anxious hearts, Trust when you're afraid, Comfort in grief, Sleep in peace, You are not alone, Start the day with God, 7 Psalms to pray, and Words of Jesus.
+
+- Listen and pray. Verses and prayers read aloud, word for word. Saved verses play with a sleep timer, and an evening prayer arrives at the time you choose, the only reminder the app sends.
+
+- The whole Bible, offline. The full Berean Standard Bible is on your iPhone and works without a connection. Share any verse as a picture in Story, Square or Wallpaper format.
+
+Workflow
+
+## How Two Sparrows works — your first week
+
+The free week is designed to become a habit you keep without trying, not a plan you fall behind on.
+
+- Day 1 — set up your widgets.A guided pass adds the Lock Screen and Home Screen widgets, with a short video for each step. Pick a look: Linen, Candle, Paper, Plain Dark or large text.
+
+- Every morning — a new verse.Your Lock Screen shows a new verse, the full text, sized to fit. Want a different one? Tap Another verse on the larger widget.
+
+- When you need it — a verse for how you feel.Tap a feeling or say what's on your mind, and read verses that fit. Each opens in its chapter with related verses.
+
+- Along the way — a 7-day path.One verse, one prayer and one small step a day. Listen instead of reading if you prefer, and set the time for your evening prayer.
+
+- Day 7 — decide.The weekly plan starts on day 7 unless you cancel in Settings at least 24 hours before. Cancel in time and you pay nothing.
+
+Comparison
+
+## Two Sparrows vs YouVersion vs Bible Widgets vs Bible Chat vs Blessed
+
+An honest side-by-side based on each app's public App Store listing at time of writing, October 2026. YouVersion is the largest Bible app in the world and free. Two Sparrows is narrower: a verse where you already look, with nothing else competing for your attention. "Not listed" means we did not find the feature in the app's App Store description.
+
+ |   | Two Sparrows | YouVersion Bible App | Bible Widgets | Bible Chat | Blessed
+
+ | Lock Screen verse widget | ✓ full verse, sized to fit | not listed | ✓ | ✓ | not listed (Home Screen widget listed)
+
+ | StandBy view | ✓ Candle look at night | not listed | not listed | not listed | not listed
+
+ | Verses for how you feel | ✓ tap a feeling or use your own words | not listed | not listed | not listed | ✓ blessing matched to your mood
+
+ | Full Bible | ✓ Berean Standard Bible, offline | ✓ 3,500+ versions | not listed | ✓ 7 versions | audio Bible listed (NIV, KJV, ESV)
+
+ | Audio | ✓ verses and prayers read aloud | ✓ audio Bibles (select versions) | not listed | not listed | ✓
+
+ | AI chat | — none; AI only matches verses, can be turned off | not listed | not listed | ✓ chat conversations | ✓ Bible Chat
+
+ | Streaks | No streaks | not listed | not listed | not listed | prayer streak
+
+ | Ads | No ads | not listed | ads removed with Premium | not listed | ad-free with Premium
+
+ | Price model | $7.99/week after 7-day trial, or $39.99/year | Free | Free + Premium | Free + Premium ($4.99/week after 7-day trial) | Free + weekly or annual Premium
+
+ | App Store rating | No ratings yet (released Oct 2026) | 4.9★ · ~13.8M ratings | 4.9★ · ~117K ratings | 4.9★ · ~365K ratings | 4.9★ · ~104K ratings
+
+Honest read: Pick YouVersion if you want the full Bible in many translations, reading plans and community, free. Pick Bible Widgets if you want widgets that also show prayers, quotes and affirmations with your own photos. Pick Bible Chat or Blessed if you want AI chat and a community around your reading. Pick Two Sparrows if you want Scripture on your Lock Screen and StandBy with nothing else competing for your attention. See the full Bible verse widget apps guide.
+
+In practice
+
+## Situations where Two Sparrows helps
+
+Illustrative examples of how the features fit into a day, not user reviews.
+
+### The first unlock of the day
+
+You pick up your phone at 6:40 and, before any notification, read today's verse on the Lock Screen. It is the whole verse, not a line that ends in "…".
+
+### A worried afternoon
+
+A message from the doctor's office leaves you uneasy. You open Two Sparrows, tap "Anxious" and read three verses. One of them opens in its chapter, and you keep reading.
+
+### A night you can't sleep
+
+Your phone sits on its charger in StandBy with the Candle look. You start the Sleep in peace path, listen to tonight's verse and prayer, and let your saved verses play with a sleep timer.
+
+### A verse for a friend
+
+A friend is grieving. You find a verse in Comfort in grief, share it as a clean Square picture, and save it for yourself too.
+
+Pricing
+
+## 7-day free trial, then Weekly or Yearly
+
+### Two Sparrows Pro Weekly
+
+$7.99 / week
+
+- 7-day free trial for new subscribers
+
+- Every feature unlocked
+
+- Cancel anytime in Apple settings
+
+### Two Sparrows Pro Yearly
+
+$39.99 / year
+
+- ≈ $0.77 / week, the lowest price per week
+
+- Everything in Weekly
+
+- Billed once per year, no free trial
+
+US prices shown; local prices are displayed in the app before you subscribe. Payment is charged to your Apple ID at confirmation of purchase, or when the free trial ends. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Manage them in iPhone Settings → Apple ID → Subscriptions.
+
+Questions
+
+## Frequently asked questions
+
+What is Two Sparrows?
+
+Two Sparrows is a Bible verse widget for iPhone. It shows a new verse of the day on your Lock Screen, offers Home Screen widgets in three sizes and a StandBy view, and helps you find verses for how you feel. Every word comes from the Berean Standard Bible.
+
+Which Bible translation does Two Sparrows use?
+
+The Berean Standard Bible (BSB), a modern English translation in the public domain. The whole BSB is stored on your iPhone, so it works offline.
+
+Does Two Sparrows use AI to write verses?
+
+No. There are no AI-written words in the Scripture. AI only helps match verses to how you feel or to what you type or say. If you prefer none at all, turn on "Scripture only" and every AI feature is hidden.
+
+How do I put a Bible verse on my iPhone Lock Screen?
+
+Two Sparrows walks you through it. A guided setup adds the Lock Screen and Home Screen widgets in one pass, with a short video for each step. After that, a new verse appears on your Lock Screen every morning.
+
+Does it work with StandBy?
+
+Yes. When your iPhone is charging on its side, StandBy shows your verse, with a calm Candle look at night.
+
+Can I listen instead of reading?
+
+Yes. Verses and prayers are read aloud, word for word, and you can play your saved verses with a sleep timer. The larger Home Screen widgets have a Listen button.
+
+Are there ads, streaks or a social feed?
+
+No. Two Sparrows has no ads, no feed, no chat and no streaks. If you miss a day of a 7-day path, nothing resets. The only reminder it sends is an evening prayer at the time you choose.
+
+How does the free week work?
+
+New subscribers on the weekly plan get 7 days free with every feature. On day 7 the weekly plan starts unless you cancel in Settings at least 24 hours before. If you cancel in time, you pay nothing.
+
+How much does Two Sparrows cost?
+
+In the US, Two Sparrows Pro is $7.99 per week after a 7-day free trial for new subscribers, or $39.99 per year with no free trial. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period.
+
+Which languages is Two Sparrows available in?
+
+The App Store lists English, French, German, Portuguese and Spanish. Two Sparrows needs iOS 17.0 or later.
+
+About Scripture. All Scripture in Two Sparrows is from the Berean Standard Bible, which is in the public domain. The short notes under "About this verse" are written by the Two Sparrows editors and are not part of Scripture.
+
+About AI. AI is used only to suggest verses that fit a feeling or the words you type or say. Like any AI, its suggestions can miss; the verses themselves are always quoted word for word. "Scripture only" turns every AI feature off.
+
+Not pastoral or medical care. Two Sparrows is a devotional tool. It is not a substitute for your church, a pastor, a counselor or medical care. If you are in crisis, call or text 988 in the US or your local emergency number.
+
+More from the studio
+
+## Related on Loveiko Labs
+
+### Best Bible verse widget apps 2026 →
+
+How Two Sparrows compares with YouVersion, Bible Widgets, Bible Chat, Blessed and others, and when another app is the better pick.
+
+### Mind & Faith apps →
+
+Our apps for quiet daily practice, including Two Sparrows, Sakinah and Herself.
+
+### All Loveiko Labs apps →
+
+Focused iPhone apps for health, family, resale, the home, and mind and faith.
+
+## Put God's word where you already look.
+
+ Download Two Sparrows on the App Store
+
+7-day free trial on Weekly · iOS 17.0+ · no ads, no streaks
+
+---
+
+URL: https://loveikolabs.com/best-bible-verse-widget-apps-2026/
+
+Editorial · 2026 Guide · Last updated October 2026
+
+# Best Bible Verse Widget Apps 2026 — Scripture on your Lock Screen
+
+Seven iPhone apps that put a Bible verse on your Lock Screen or Home Screen, compared honestly, including our own with full disclosure.
+
+ See the list
+
+Last updated October 2026 · ratings checked on the US App Store at time of writing
+
+At a glance
+
+Apps compared7
+CategoryMind & Faith
+ We make Two SparrowsIt is in this ranking. Where a competitor is the better pick, the guide says so.
+
+Overview
+
+## How we chose these apps
+
+A verse widget answers a simple wish: to see Scripture during the day without having to remember to open an app. Some apps do only that; others wrap the widget in reading plans, AI chat, community feeds and streaks. This guide covers seven iPhone apps worth considering in 2026 and who each one is really for.
+
+We looked at what matters in daily use, not what looks good on a store page:
+
+- Where the verse shows up. Lock Screen, Home Screen, StandBy, and whether the full verse fits.
+
+- Where the words come from. A published Bible translation, word for word, or generated text.
+
+- Finding the right verse. Verses for how you feel, topics, or a fixed verse of the day.
+
+- Depth. The whole Bible, reading plans, audio, or just a daily verse.
+
+- Calm by design. Ads, feeds, chat, streaks and notifications, or the absence of them.
+
+- Price and track record. What is free, what is paid, and how many ratings the app has.
+
+None of these apps replaces your church, your pastor or your own time in Scripture. App descriptions below are summarized from each app's public App Store listing at time of writing, October 2026.
+
+The List
+
+## 7 Bible verse widget apps for iPhone in 2026
+
+01
+
+### Two Sparrows — Best Calm Lock Screen & StandBy Verse Widget (Our App, Full Disclosure)
+
+Disclosure. Two Sparrows is built by Loveiko Labs, the studio publishing this article. We list it first for one specific need: Scripture on the screens you already look at, with nothing else competing for your attention. If you want the full Bible in many translations or a long track record, see #2.
+
+What it is. A Bible verse widget for the Lock Screen, Home Screen and StandBy. A new verse arrives every morning, chosen for what is on your heart, with the full verse always visible. Every word is from the Berean Standard Bible. You can tap how you feel (anxious, afraid, grieving, can't sleep, lonely, weary, grateful) or say it in your own words to get fitting verses, each opening in its chapter.
+
+Best for. People who want a verse on the Lock Screen and nightstand, and a calm app around it rather than a feed.
+
+Strengths. Home Screen widgets in three sizes with Listen, Save, Share and Another verse on the larger ones. StandBy with a Candle look at night. Guided widget setup with a short video for each step. Eight 7-day paths with one verse, one prayer and one small step a day. Verses and prayers read aloud, a sleep timer, and the whole Bible offline. No ads, no feed, no chat, no streaks, and a "Scripture only" switch that hides every AI feature.
+
+Limitations. Released October 2026, with no App Store ratings yet. One translation (Berean Standard Bible). No community or reading plans beyond the 7-day paths. Subscription: $7.99/week after a 7-day free trial, or $39.99/year.
+
+Two Sparrows overview on Loveiko Labs
+
+02
+
+### YouVersion Bible App — Best Free Full Bible
+
+What it is. The free Bible app from Life.Church: 3,500+ Bible versions in 2,300+ languages, thousands of reading plans, audio Bibles for select versions, prayer lists, videos, and notes and highlights that sync with a free account. Its listing says it has been downloaded over 700 million times.
+
+Best for. Anyone who wants the whole Bible in their preferred translation, reading plans and friends to read with, at no cost.
+
+Strengths. 4.9★ from about 13.8M ratings at time of writing, October 2026. Free. Huge choice of translations including NIV, ESV, NKJV, NLT and KJV. Offline reading for select versions.
+
+Limitations. A full Bible platform rather than a widget app; a Lock Screen verse widget is not listed in its App Store description. With plans, videos, friends and prayer lists, there is a lot in one app.
+
+Bible (YouVersion) on the App Store
+
+03
+
+### Bible Widgets: Verses & Prayer — Best for Customizable Widgets
+
+What it is. A widget-first app from Monkey Taps for the Lock Screen and Home Screen. Widgets can show Bible verses, prayers, Christian quotes or affirmations, over your own photo or a gallery background, with scheduled reminders and themed collections.
+
+Best for. People who want widgets that mix verses with prayers and quotes, styled with their own photos.
+
+Strengths. 4.9★ from about 117K ratings at time of writing, October 2026. Lock Screen and Home Screen widgets, custom backgrounds, collections, and offline access to saved content.
+
+Limitations. Free with ads; Premium removes ads and unlocks unlimited reminders. The full Bible, audio and StandBy are not listed. Content categories include quotes and affirmations, not only Scripture.
+
+Bible Widgets: Verses & Prayer on the App Store
+
+04
+
+### Bible Chat: Daily Devotional — Best for AI Chat and Devotionals
+
+What it is. An all-in-one Christian app from Book Vitals: a Bible verse widget for the Lock Screen or Home Screen, a daily plan, topical study plans, a holy calendar, live prayer, personalized devotionals and chat conversations about faith. Bible versions listed: NKJV, KJV, WMB, FBV, World English Bible, Amplified and NASB.
+
+Best for. People who want to ask questions and talk through their faith, with a verse widget as part of a bigger app.
+
+Strengths. 4.9★ from about 365K ratings at time of writing, October 2026. Lock Screen verse widget, several translations, and structured study plans.
+
+Limitations. Premium unlocks unlimited conversations and exclusive widget designs, with a 7-day free trial and then $4.99/week per its listing. A chat-centered app may not suit people who want Scripture only. StandBy is not listed.
+
+Bible Chat: Daily Devotional on the App Store
+
+05
+
+### Blessed — Best for Community and Live Prayer
+
+What it is. A daily prayer and Scripture routine from Everblessed Technology: a morning blessing with a verse and prayer matched to how you feel, a daily verse and guided prayer, night prayer, daily live streams with pastors, Bible Chat for questions, an audio Bible (NIV, KJV, ESV) and a community for prayer requests.
+
+Best for. People who want company in their faith routine: comments, prayer requests and live streams.
+
+Strengths. 4.9★ from about 104K ratings at time of writing, October 2026. Mood-matched verses and prayers, audio, and a Home Screen verse widget.
+
+Limitations. Premium (weekly or annual) adds audio plans, unlimited Bible Chat and an ad-free experience. Prayer streaks and a community feed may not suit people who want a quiet app. A Lock Screen widget is not listed.
+
+Blessed - Daily Verse & Prayer on the App Store
+
+06
+
+### #Bible - Verse of the Day — Best Simple Daily Verse, Free
+
+What it is. A verse of the day app from Godward LLC. Its App Store description is mostly a user testimonial; it mentions daily verses, devotionals and music that plays while you read.
+
+Best for. People who want one verse a day in a simple, free app.
+
+Strengths. 4.9★ from about 391K ratings at time of writing, October 2026. Free to use, with optional patronage subscriptions for those who want to support it.
+
+Limitations. Widgets, the full Bible and audio are not listed in its App Store description, so check the app itself before relying on them.
+
+#Bible - Verse of the Day on the App Store
+
+07
+
+### Bible Path: Prayers & Widgets — Best for an Hourly Verse
+
+What it is. A devotional app from Deep Flow Software Services with an hourly verse widget for the Home Screen or Lock Screen, animated Bible stories, Bible Chat, an audio Bible, daily verses and prayers, and faith-building exercises.
+
+Best for. People who want a new verse every hour rather than once a day.
+
+Strengths. 4.8★ from about 44.6K ratings at time of writing, October 2026. Hourly Lock Screen or Home Screen widget, audio and animated stories.
+
+Limitations. Pricing details and the Bible translation are not listed in its App Store description. With chat, stories and exercises, it is a broader app than a widget alone.
+
+Bible Path: Prayers & Widgets on the App Store
+
+Side by side
+
+## Feature comparison
+
+"Not listed" means we did not find the feature in the app's App Store description at time of writing, October 2026.
+
+ |   | Two Sparrows | YouVersion | Bible Widgets | Bible Chat | Blessed | #Bible | Bible Path
+
+ | Lock Screen verse widget | ✓ | not listed | ✓ | ✓ | not listed | not listed | ✓ hourly
+
+ | Home Screen widget | ✓ three sizes, with buttons | not listed | ✓ | ✓ | ✓ | not listed | ✓ hourly
+
+ | StandBy | ✓ | not listed | not listed | not listed | not listed | not listed | not listed
+
+ | Verses for how you feel | ✓ | not listed | not listed | not listed | ✓ | not listed | not listed
+
+ | Full Bible text | ✓ BSB, offline | ✓ 3,500+ versions | not listed | ✓ 7 versions | audio Bible | not listed | audio Bible
+
+ | Audio | ✓ | ✓ select versions | not listed | not listed | ✓ | music while reading | ✓
+
+ | AI chat | — | not listed | not listed | ✓ | ✓ | not listed | ✓
+
+ | Ads | No ads | not listed | removed with Premium | not listed | ad-free with Premium | not listed | not listed
+
+ | Price model | $7.99/wk after 7-day trial or $39.99/yr | Free | Free + Premium | Free + $4.99/wk Premium | Free + Premium | Free, optional patronage | Free to download
+
+ | App Store rating (Oct 2026) | No ratings yet | 4.9★ · ~13.8M | 4.9★ · ~117K | 4.9★ · ~365K | 4.9★ · ~104K | 4.9★ · ~391K | 4.8★ · ~44.6K
+
+How we judged
+
+## Which app fits your situation
+
+An honest guide does not put the publisher's app first without saying why. Here is where each app genuinely wins, including the cases where ours is not the right pick. Ratings and review counts were checked on the US App Store in October 2026.
+
+ | Your situation | Best pick
+
+ | You want a verse on your Lock Screen and nightstand, and a quiet app | Two Sparrows
+
+ | You want the full Bible in your translation, free | YouVersion
+
+ | You want widgets with prayers, quotes and your own photos | Bible Widgets
+
+ | You want to ask questions and talk about your faith | Bible Chat or Blessed
+
+ | You want community, prayer requests and live streams | Blessed
+
+ | You want a verse for how you feel right now | Two Sparrows or Blessed
+
+ | You want a new verse every hour | Bible Path
+
+ | Track record matters most | YouVersion
+
+ | You want to pay nothing at all | YouVersion or #Bible
+
+### What none of these apps do
+
+None of these apps, including ours, replaces your church, a pastor or your own reading of Scripture in context. A widget is a reminder and a doorway, not a Bible study.
+
+Many people use two apps: one for reading the whole Bible and following plans, and one for a verse on the Lock Screen. That is a perfectly good setup.
+
+Questions
+
+## Frequently asked questions
+
+Why is your own app listed first?
+
+Two Sparrows is the only app in this list built around a full verse on the Lock Screen, Home Screen and StandBy with nothing else competing for attention: no ads, no feed, no chat and no streaks. It is also the newest app here, released in October 2026 with no ratings yet, and it has one translation. If you want the full Bible in many translations or a long track record, YouVersion is the stronger pick.
+
+How do I put a Bible verse on my iPhone Lock Screen?
+
+Install a verse widget app, then touch and hold your Lock Screen, tap Customize, choose the Lock Screen and add the app's widget. Two Sparrows walks you through this with a short video for each step. Bible Widgets, Bible Chat and Bible Path also list Lock Screen widgets.
+
+What is the best free Bible app?
+
+The YouVersion Bible App is free, with thousands of versions and reading plans, according to its App Store listing. #Bible - Verse of the Day is free to use with optional patronage subscriptions. Most other apps here are free to download with paid upgrades.
+
+Which app shows Bible verses in StandBy?
+
+Two Sparrows lists a StandBy view with a calm Candle look at night. StandBy is not listed in the App Store descriptions of the other apps in this guide.
+
+Do these apps write Bible verses with AI?
+
+Verse apps generally quote published translations. Two Sparrows states that every word comes from the Berean Standard Bible with no AI-written words, and its "Scripture only" setting hides every AI feature. Bible Chat, Blessed and Bible Path include chat features; their answers are generated, while the verses they show come from the translations they list.
+
+Which app helps when I feel anxious or can't sleep?
+
+Two Sparrows lets you tap a feeling such as anxious, afraid or can't sleep and read verses that fit, with 7-day paths like Peace for anxious hearts and Sleep in peace. Blessed matches a morning verse and prayer to how you feel. If you are in crisis, call or text 988 in the US or your local emergency number.
+
+## Put God's word where you already look.
+
+ Learn about Two Sparrows
+
+7-day free trial on Weekly · iOS 17.0+ · more apps in Mind & Faith
+
+Independent guide disclosure. This article is an editorial guide published by Loveiko Labs. We make Two Sparrows, which is listed first with full disclosure. We are not affiliated with Life.Church (YouVersion), Monkey Taps (Bible Widgets), Book Vitals Inc. (Bible Chat), Everblessed Technology Inc. (Blessed), Godward LLC (#Bible) or Deep Flow Software Services (Bible Path). Information about other apps is summarized from their public App Store listings at time of writing, October 2026; features, prices and ratings change.
+
+Not pastoral advice. Nothing in this article is pastoral, counseling or medical advice. For guidance, talk to your church or a pastor you trust.

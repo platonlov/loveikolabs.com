@@ -872,6 +872,8 @@ def build_llms():
         s = re.sub(re.escape(start) + r".*?" + re.escape(end), start + "\n" + block_s + end, s, flags=re.S)
     else:
         s = s.replace("\n## About", f"\n{start}\n{block_s}{end}\n\n## About", 1)
+    s = re.sub(r"with \d+ focused iPhone apps", f"with {len(APPS)} focused iPhone apps", s)
+    s = re.sub(r"Portfolio: \d+ shipped iOS apps", f"Portfolio: {len(APPS)} shipped iOS apps", s)
     p.write_text(s)
     print("updated llms.txt")
 
