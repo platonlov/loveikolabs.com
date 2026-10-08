@@ -3,3 +3,14 @@
 
 # GEO pack source material — deployed pages live at repo root, not this folder
 GEO PACKS/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+
+# Cloudflare build output
+.dist/
+.wrangler/

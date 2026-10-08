@@ -1,0 +1,11 @@
+// Cloudflare Workers Static Assets config for loveikolabs.com.
+// Deploy with tools/deploy-cloudflare.sh (builds ./.dist from the repo, then `wrangler deploy`).
+{
+  "name": "loveikolabs",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./.dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
