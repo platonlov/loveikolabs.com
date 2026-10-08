@@ -13,14 +13,15 @@ import datetime, html, json, re, sys, urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from site_data import HUBS, APPS, HERO_POSTERS, SITE, EMAIL, FOUNDER  # noqa: E402
+from site_data import HUBS, APPS, HERO_POSTERS, SITE  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 STORE = Path(__file__).parent / "store.json"
 TODAY = datetime.date.today()
 TODAY_ISO = TODAY.isoformat()
 TODAY_H = TODAY.strftime("%B %Y")
-DEV_URL = "https://apps.apple.com/us/developer/valeriy-loveyko/id1478618306"
+DEV_URL = "https://apps.apple.com/us/developer/id1478618306"
+ASSET_V = "4"  # bump when styles.css / site.js change (browsers cache them for a day)
 
 HUB = {h["key"]: h for h in HUBS}
 APP = {a["slug"]: a for a in APPS}
@@ -86,9 +87,13 @@ NAV_LABEL = {"health": "Health", "baby": "Pregnancy &amp; Baby", "resale": "Resa
 
 def nav(active=None):
     cur = ' aria-current="page"'
-    items = "".join(
-        f'<li><a href="/{h["slug"]}/"{cur if active == h["key"] else ""}><i style="background:var(--{h["key"]})"></i>{NAV_LABEL[h["key"]]}</a></li>'
+    hub_on = active in HUB
+    cats = "".join(
+        f'<a class="t-{h["key"]}" href="/{h["slug"]}/"{cur if active == h["key"] else ""}><i></i><span>{NAV_LABEL[h["key"]]}</span><small>{len(hub_apps(h["key"]))}</small></a>'
         for h in HUBS)
+    chev = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
+    items = (f'<li class="ll-drop"><button class="ll-drop__btn{" is-current" if hub_on else ""}" type="button" aria-expanded="false" aria-controls="ll-cats">Categories{chev}</button>'
+             f'<div class="ll-drop__panel" id="ll-cats"><p class="ll-drop__label">Categories</p>{cats}</div></li>')
     items += f'<li><a href="/guides/"{cur if active == "guides" else ""}>Guides</a></li>'
     items += f'<li><a href="/about/"{cur if active == "about" else ""}>About</a></li>'
     return f'''<a class="ll-skip" href="#main">Skip to content</a>
@@ -98,42 +103,31 @@ def nav(active=None):
     <button class="ll-nav__toggle" type="button" aria-expanded="false" aria-controls="ll-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <div class="ll-nav__menu" id="ll-menu">
       <ul class="ll-nav__links">{items}</ul>
-      <a class="ll-nav__cta" href="/apps/">All {len(APPS)} apps</a>
+      <a class="ll-nav__cta" href="/apps/"{cur if active == "apps" else ""}>All {len(APPS)} apps</a>
     </div>
   </div>
 </header>'''
 
 
 def footer(extra_col="", legal=None):
-    def lis(key):
-        return "".join(f'<li><a href="/apps/{a["slug"]}/">{e(a["name"])}</a></li>' for a in APPS if a["hub"] == key)
-
-    def head(key, top=False):
-        h = HUB[key]
-        st = ' class="ll-footer__gap"' if top else ""
-        return f'<strong{st}><a href="/{h["slug"]}/">{h["name"].replace("&", "&amp;")}</a></strong>'
     legal = legal or "App Store and iPhone are trademarks of Apple Inc. Brand names are used for identification only."
-    guides = extra_col or ('<div><strong><a href="/guides/">Guides</a></strong><ul>' + "".join(
-        f'<li><a href="/guides/#{h["slug"]}">{h["name"].replace("&", "&amp;")}</a></li>' for h in HUBS) + '</ul></div>')
+    cats = "".join(f'<li><a href="/{h["slug"]}/">{h["name"].replace("&", "&amp;")}</a></li>' for h in HUBS)
     return f'''<footer class="ll-footer">
   <div class="ll-footer__grid">
     <div class="ll-footer__about">
       <a class="ll-logo" href="/" aria-label="Loveiko Labs home">{logo_svg()}<span class="ll-logo__text ll-footer__brand">Loveiko <span>Labs</span></span></a>
-      <p>Independent iOS studio making focused apps for health, family, resale, home and daily practice. Pattaya, Thailand.</p>
-      <a class="ll-footer__mail" href="mailto:{EMAIL}">{EMAIL}</a>
+      <p>Focused iPhone apps for health, family, resale, home and faith. One problem per app.</p>
     </div>
-    <div>{head("health")}<ul>{lis("health")}</ul></div>
-    <div>{head("resale")}<ul>{lis("resale")}</ul>{head("mind", True)}<ul>{lis("mind")}</ul></div>
-    <div>{head("baby")}<ul>{lis("baby")}</ul>{head("home", True)}<ul>{lis("home")}</ul></div>
-    {guides}
+    <div><strong>Categories</strong><ul>{cats}</ul></div>
+    {extra_col}
     <div>
       <strong>Studio</strong>
       <ul>
+        <li><a href="/apps/">All apps</a></li>
+        <li><a href="/guides/">Buyer's guides</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="/editorial-policy/">Editorial policy</a></li>
-        <li><a href="/apps/">All apps</a></li>
-        <li><a href="/guides/">All guides</a></li>
-        <li><a href="{DEV_URL}" rel="noopener">App Store page</a></li>
+        <li><a href="{DEV_URL}" rel="noopener">App Store ↗</a></li>
       </ul>
     </div>
   </div>
@@ -183,7 +177,7 @@ def page(path, title, desc, body, schema=(), theme="", active=None, og_title=Non
 <meta name="twitter:image" content="{og}">
 {FAVICON}
 {FONTS}
-<link rel="stylesheet" href="/styles.css?v=3">
+<link rel="stylesheet" href="/styles.css?v={ASSET_V}">
 {chr(10).join(ld(s) for s in schema)}
 </head>
 <body class="{theme}">
@@ -192,7 +186,7 @@ def page(path, title, desc, body, schema=(), theme="", active=None, og_title=Non
 {body}
 </main>
 {footer()}
-<script src="/site.js?v=3" defer></script>
+<script src="/site.js?v={ASSET_V}" defer></script>
 </body>
 </html>
 '''
@@ -211,7 +205,7 @@ def stars_meta(app):
     r = rating_str(app)
     if not r:
         return '<span>New on the App Store</span>'
-    return f'<span class="stars">★</span><span>{r}</span><span>· {S(app)["count"]} ratings</span>'
+    return f'<span class="stars">★</span><span>{r}</span>'
 
 
 def app_card(app, large=False):
@@ -244,14 +238,37 @@ def hub_apps(key):
     return [a for a in APPS if a["hub"] == key]
 
 
+def short_guide(app):
+    """Guide title without the trailing year, for compact lists."""
+    return re.sub(r"\s+20\d\d$", "", app["guide_title"])
+
+
 def guides_block(keys=None, heading=True):
     keys = keys or [h["key"] for h in HUBS]
-    cols = []
+    groups = []
     for k in keys:
         h = HUB[k]
-        lis = "".join(f'<li><a href="/{a["guide"]}/">{e(a["guide_title"])}</a></li>' for a in hub_apps(k))
-        cols.append(f'<div class="t-{k}" id="{h["slug"]}"><h3><i></i>{h["name"].replace("&", "&amp;")}</h3><ul>{lis}</ul></div>')
-    return f'<div class="ll-guides ll-stagger">{"".join(cols)}</div>'
+        apps = hub_apps(k)
+        lis = "".join(f'<li><a href="/{a["guide"]}/">{icon(a, 28)}<span>{e(short_guide(a))}</span></a></li>' for a in apps)
+        groups.append(f'<div class="ll-guides__group t-{k}" id="{h["slug"]}"><h3><i></i>{h["name"].replace("&", "&amp;")}<span>{len(apps)} guide{"s" if len(apps) > 1 else ""}</span></h3><ul>{lis}</ul></div>')
+    return f'<div class="ll-guides">{"".join(groups)}</div>'
+
+
+def featured_guides(n=6):
+    """One guide per category (the app with most ratings), topped up by overall rating count."""
+    by_count = sorted(APPS, key=lambda a: -S(a)["count"])
+    picks = []
+    for h in HUBS:
+        top = next((a for a in by_count if a["hub"] == h["key"]), None)
+        if top:
+            picks.append(top)
+    picks += [a for a in by_count if a not in picks][:max(0, n - len(picks))]
+    cards = "".join(f'''<a class="ll-gcard t-{a["hub"]}" href="/{a["guide"]}/">
+        <span class="ll-gcard__cat"><i></i>{HUB[a["hub"]]["name"].replace("&", "&amp;")}</span>
+        <span class="ll-gcard__title">{e(short_guide(a))}</span>
+        <span class="ll-gcard__foot">{icon(a, 28)}<span>Includes {e(a["name"])}</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>''' for a in picks[:n])
+    return f'<div class="ll-gcards ll-stagger">{cards}</div>'
 
 
 def faq_html(items):
@@ -289,15 +306,13 @@ def app_ld(app):
 
 ORG = {"@context": "https://schema.org", "@type": "Organization", "@id": SITE + "/#organization", "name": "Loveiko Labs",
        "url": SITE + "/", "logo": {"@type": "ImageObject", "url": SITE + "/icons/logo-512.png", "width": 512, "height": 512},
-       "description": "Independent iOS app studio in Pattaya, Thailand, making focused apps for health tracking, pregnancy and baby, resale valuation and the home.",
-       "foundingDate": "2024", "founder": {"@type": "Person", "@id": SITE + "/about/#founder", "name": FOUNDER, "jobTitle": "Founder"},
-       "address": {"@type": "PostalAddress", "addressLocality": "Pattaya", "addressCountry": "TH"},
-       "email": EMAIL, "sameAs": [DEV_URL]}
+       "description": "iOS app studio making focused iPhone apps for health tracking, pregnancy and baby, resale valuation, the home and faith.",
+       "foundingDate": "2024", "sameAs": [DEV_URL]}
 
 
 # ───────────────────────────── homepage ─────────────────────────────
 def build_home():
-    n_ratings, avg = totals()
+    _, avg = totals()
     posters = []
     for i, (slug, idx) in enumerate(HERO_POSTERS):
         a = APP[slug]; h = HUB[a["hub"]]
@@ -323,25 +338,23 @@ def build_home():
         <div class="ll-icons">{"".join(icon(a, 52) for a in apps)}</div>
       </a>''')
 
-    chips = '<button class="ll-chip" type="button" data-filter="all" aria-pressed="true">All apps</button>' + "".join(
-        f'<button class="ll-chip" type="button" data-filter="{h["key"]}" aria-pressed="false"><i style="background:var(--{h["key"]})"></i>{h["name"].replace("&", "&amp;")}</button>' for h in HUBS)
+    newest = sorted(APPS, key=lambda a: S(a).get("released") or "", reverse=True)[:6]
 
     body = f'''
 <section class="ll-home-hero">
   <div class="ll-aura" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   <div class="ll-wrap ll-home-hero__grid">
     <div class="ll-enter">
-      <a class="ll-badge" href="/about/"><b>Independent</b> iOS studio · Pattaya, Thailand</a>
       <h1>{len(APPS)} focused iPhone apps for health, family, resale, home <em>and faith.</em></h1>
-      <p class="ll-home-hero__sub">Loveiko Labs is an independent iOS studio. Each of our apps solves one specific problem, like tracking a condition, checking an ingredient or valuing a watch, and says plainly what it can't do.</p>
+      <p class="ll-home-hero__sub">Loveiko Labs builds iPhone apps that each solve one specific problem, like tracking a condition, checking an ingredient or valuing a watch, and says plainly what it can't do.</p>
       <div class="ll-home-hero__cta">
         <a class="ll-btn" href="#hubs">Explore the apps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
         <a class="ll-btn ll-btn--ghost" href="/about/">How we build</a>
       </div>
       <div class="ll-trust">
-        <div><strong>{avg:.1f}★</strong><span>average across {n_ratings} App Store ratings</span></div>
-        <div><strong>{len(APPS)}</strong><span>apps in {len(HUBS)} categories</span></div>
-        <div><strong>168</strong><span>App Store countries</span></div>
+        <div><strong>{avg:.1f}<b aria-hidden="true">★</b></strong><span>App Store rating</span></div>
+        <div><strong>{len(APPS)}</strong><span>apps live</span></div>
+        <div><strong>168</strong><span>countries</span></div>
       </div>
     </div>
     <div class="ll-stage" aria-roledescription="carousel" aria-label="App Store screenshots">
@@ -365,11 +378,11 @@ def build_home():
 <section class="ll-band ll-band--alt" id="apps">
   <div class="ll-wrap">
     <div class="ll-head ll-reveal">
-      <div><p class="ll-kicker">The catalogue</p><h2 class="ll-h2">All {len(APPS)} apps</h2></div>
-      <p>Free to download on iPhone. Each app page covers what it does, who it is for, pricing and what it does not do.</p>
+      <div><p class="ll-kicker">Just shipped</p><h2 class="ll-h2">New on the <em>App Store</em>.</h2></div>
+      <p>New apps ship every month. These are the latest; the full catalogue, grouped by category, is on the apps page.</p>
     </div>
-    <div class="ll-chips" role="group" aria-label="Filter apps by category">{chips}</div>
-    <div class="ll-apps">{"".join(app_card(a) for a in APPS)}</div>
+    <div class="ll-apps ll-stagger">{"".join(app_card(a) for a in newest)}</div>
+    <a class="ll-more" href="/apps/">All {len(APPS)} apps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </section>
 
@@ -377,9 +390,10 @@ def build_home():
   <div class="ll-wrap">
     <div class="ll-head ll-reveal">
       <div><p class="ll-kicker">Buyer's guides</p><h2 class="ll-h2">Compare before you <em>download</em>.</h2></div>
-      <p>Side-by-side rankings of the best iOS apps in each category, competitors included. We make one app in every list, and each guide says so up front.</p>
+      <p>Side-by-side rankings of the best iOS apps for one need, competitors included. We make one app in every list, and each guide says so up front.</p>
     </div>
-    {guides_block()}
+    {featured_guides()}
+    <a class="ll-more" href="/guides/">All {len(APPS)} guides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </section>
 
@@ -397,31 +411,12 @@ def build_home():
   </div>
 </section>
 
-<section class="ll-band" id="studio">
-  <div class="ll-wrap ll-split">
-    <div class="ll-reveal">
-      <p class="ll-kicker">The studio</p>
-      <h2 class="ll-h2">Small, independent and <em>focused</em>.</h2>
-      <div class="ll-prose">
-        <p>Loveiko Labs was founded in 2024 by {FOUNDER}. It is self-funded, with no agency work and no investor roadmap: just apps, shipped and refined in public on the App Store.</p>
-        <p>Read about <a href="/about/">how the studio works</a> and the <a href="/editorial-policy/">editorial policy</a> behind our guides and health pages.</p>
-      </div>
-    </div>
-    <dl class="ll-facts ll-reveal">
-      <div><dt>Founder</dt><dd>{FOUNDER}</dd></div>
-      <div><dt>Based in</dt><dd>Pattaya, Thailand</dd></div>
-      <div><dt>Apps live</dt><dd>{len(APPS)} on iOS</dd></div>
-      <div><dt>Contact</dt><dd><a href="mailto:{EMAIL}" class="ll-plain">Email us</a></dd></div>
-    </dl>
-  </div>
-</section>
-
 <section class="ll-wrap">
   <div class="ll-cta-band ll-reveal">
-    <h2>Have a question, a partnership or <em>an idea?</em></h2>
-    <p class="ll-cta-band__sub">Email is the fastest way to reach the studio. We usually reply within a day.</p>
+    <h2>One problem, one app. <em>Find yours.</em></h2>
+    <p class="ll-cta-band__sub">Every app is free to download on iPhone and live in 168 countries. New ones ship every month.</p>
     <div class="ll-hero__cta ll-cta-band__actions">
-      <a class="ll-btn" href="mailto:{EMAIL}">{EMAIL}</a>
+      <a class="ll-btn" href="/apps/">Browse all {len(APPS)} apps</a>
       <a class="ll-btn ll-btn--ghost" href="{DEV_URL}" rel="noopener" target="_blank">See us on the App Store ↗</a>
     </div>
   </div>
@@ -434,8 +429,8 @@ def build_home():
         {"@context": "https://schema.org", "@type": "ItemList", "name": "Loveiko Labs iOS apps", "numberOfItems": len(APPS),
          "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": app_ld(a)} for i, a in enumerate(APPS)]},
     ]
-    page("/", "Loveiko Labs — focused iPhone apps by an independent studio",
-         f"Independent iOS studio with {len(APPS)} focused iPhone apps: health trackers, pregnancy and baby tools, watch and jewelry valuation, home helpers and faith.",
+    page("/", "Loveiko Labs — focused iPhone apps for health, family, resale and home",
+         f"iOS studio with {len(APPS)} focused iPhone apps: health trackers, pregnancy and baby tools, watch and jewelry valuation, home helpers and faith.",
          body, schema, og_title="Loveiko Labs — focused iPhone apps")
 
 
@@ -523,14 +518,14 @@ def build_apps_index():
   <section class="ll-hub-hero">
     <p class="ll-eyebrow">The catalogue · {len(APPS)} apps</p>
     <h1>Every Loveiko Labs app, <em>by category</em>.</h1>
-    <div class="ll-prose"><p>{len(APPS)} focused iPhone apps across health, pregnancy and baby, resale and valuation, and home and style. All are free to download and each page lists what the app does not do.</p></div>
+    <div class="ll-prose"><p>{len(APPS)} focused iPhone apps across health, pregnancy and baby, resale and valuation, home and style, and mind and faith. All are free to download and each page lists what the app does not do.</p></div>
   </section>
   {sections}
 </div>'''
     schema = [crumbs_ld(trail), {"@context": "https://schema.org", "@type": "ItemList", "name": "All Loveiko Labs apps", "numberOfItems": len(APPS),
               "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f'{SITE}/apps/{a["slug"]}/', "name": a["name"]} for i, a in enumerate(APPS)]}]
     page("/apps/", f"All {len(APPS)} Loveiko Labs iPhone apps by category | Loveiko Labs",
-         f"The full Loveiko Labs catalogue: {len(APPS)} focused iPhone apps for health tracking, pregnancy and baby, resale and valuation, and home and style.", body, schema)
+         f"The full Loveiko Labs catalogue: {len(APPS)} focused iPhone apps for health tracking, pregnancy and baby, resale and valuation, home and style, and faith.", body, schema, active="apps")
 
 
 def build_guides_index():
@@ -558,30 +553,28 @@ def build_guides_index():
 # ───────────────────────────── about / editorial ─────────────────────────────
 def build_about():
     trail = [("Loveiko Labs", "/"), ("About", "/about/")]
-    hubs = "".join(f'''<div class="t-{h["key"]}"><h3 style="display:flex;align-items:center;gap:8px;margin-bottom:12px"><i style="width:8px;height:8px;border-radius:50%;background:var(--accent)"></i><a href="/{h["slug"]}/" style="text-decoration:none;color:inherit">{h["name"].replace("&", "&amp;")}</a></h3>
-      <div class="ll-apps ll-apps--stack">{"".join(app_card(a) for a in hub_apps(h["key"]))}</div></div>''' for h in HUBS)
     body = f'''
 <div class="ll-wrap">
   {crumbs_html(trail)}
   <section class="ll-hub-hero">
-    <p class="ll-eyebrow">Independent iOS studio · since 2024</p>
+    <p class="ll-eyebrow">iOS studio · since 2024</p>
     <h1>One problem, one app, <em>one honest answer</em>.</h1>
-    <div class="ll-prose"><p>Loveiko Labs is an independent iOS studio building focused, single-purpose apps. Each one answers one specific, real-world question and ends when that question is answered clearly, with the next step you can actually take. {len(APPS)} apps are live on the App Store in 168 countries.</p></div>
+    <div class="ll-prose"><p>Loveiko Labs builds focused, single-purpose iPhone apps. Each one answers one specific, real-world question and ends when that question is answered clearly, with the next step you can actually take. {len(APPS)} apps are live on the App Store in 168 countries, and the catalogue grows every month.</p></div>
   </section>
 
   <section class="ll-section ll-split" id="studio">
     <div class="ll-reveal">
       <p class="ll-kicker">The studio</p>
-      <h2 class="ll-h2">A small studio with a <em>narrow</em> definition of done.</h2>
+      <h2 class="ll-h2">Many apps, one <em>narrow</em> definition of done.</h2>
       <div class="ll-prose">
-        <p>Loveiko Labs was founded in 2024 by {FOUNDER}. It is independent and self-funded: no agency work, no investor roadmap, no feature padding.</p>
-        <p>Most apps try to do everything. We do the opposite. Every app starts with a single question (is this gold real, is this ingredient okay in pregnancy, why is the baby crying, what do these liver numbers mean) and a feature ships only if it helps answer it.</p>
+        <p>Loveiko Labs started in 2024. It is self-funded: no agency work, no investor roadmap, no feature padding.</p>
+        <p>Most apps try to do everything. We do the opposite. Every app starts with a single question (is this gold real, is this ingredient okay in pregnancy, why is the baby crying, what do these liver numbers mean) and a feature ships only if it helps answer it. That is what lets us ship a lot of apps without any of them turning into a dashboard.</p>
       </div>
     </div>
-    <dl class="ll-facts ll-reveal" id="founder">
-      <div><dt>Founder</dt><dd>{FOUNDER}</dd></div>
+    <dl class="ll-facts ll-reveal">
       <div><dt>Founded</dt><dd>2024</dd></div>
-      <div><dt>Based in</dt><dd>Pattaya, Thailand</dd></div>
+      <div><dt>Apps live</dt><dd>{len(APPS)} on iOS</dd></div>
+      <div><dt>Available in</dt><dd>168 countries</dd></div>
       <div><dt>Platform</dt><dd>iPhone · iOS 17+</dd></div>
     </dl>
   </section>
@@ -596,39 +589,24 @@ def build_about():
       <div class="ll-principle"><h3>Private by default</h3><p>Camera and audio processing stays on-device or in a private request wherever possible. We collect only what an app needs to work.</p></div>
     </div>
   </section>
-
-  <section class="ll-section" id="apps">
-    <p class="ll-kicker">The portfolio</p>
-    <h2>{len(APPS)} apps, {len(APPS)} specific problems</h2>
-    <div class="ll-guides ll-guides--wide">{hubs}</div>
-  </section>
-
-  <section class="ll-section" id="contact">
-    <p class="ll-kicker">Contact</p>
-    <h2>Get in touch</h2>
-    <p>Press, partnerships, corrections or a question about one of the apps: email is the fastest way to reach the studio.</p>
-    <p><strong>Email:</strong> <a href="mailto:{EMAIL}">{EMAIL}</a><br><strong>App Store:</strong> <a href="{DEV_URL}" rel="noopener">{FOUNDER} developer page</a></p>
-  </section>
 </div>'''
     schema = [ORG, crumbs_ld(trail), {"@context": "https://schema.org", "@type": "AboutPage", "url": SITE + "/about/", "name": "About Loveiko Labs",
-              "mainEntity": {"@id": SITE + "/#organization"}},
-              {"@context": "https://schema.org", "@type": "Person", "@id": SITE + "/about/#founder", "name": FOUNDER, "jobTitle": "Founder, Loveiko Labs",
-               "worksFor": {"@id": SITE + "/#organization"}, "sameAs": [DEV_URL]}]
-    page("/about/", "About Loveiko Labs — independent iOS studio | Loveiko Labs",
-         f"Loveiko Labs is an independent iOS studio founded in 2024 by {FOUNDER} in Pattaya, Thailand, building {len(APPS)} focused apps for health, family, resale and home.",
+              "mainEntity": {"@id": SITE + "/#organization"}}]
+    page("/about/", "About Loveiko Labs — iOS app studio | Loveiko Labs",
+         f"Loveiko Labs is an iOS studio founded in 2024, building {len(APPS)} focused iPhone apps for health, family, resale, home and faith, one problem per app.",
          body, schema, active="about")
 
 
 def build_editorial():
     trail = [("Loveiko Labs", "/"), ("Editorial policy", "/editorial-policy/")]
     sections = [
-        ("Who writes these pages", f"App pages, hub pages and buyer's guides are written and maintained by the Loveiko Labs studio, led by founder {FOUNDER}. We are app developers, not clinicians, appraisers or authenticators, and we write from that position."),
+        ("Who writes these pages", "App pages, hub pages and buyer's guides are written and maintained by the Loveiko Labs team. We are app developers, not clinicians, appraisers or authenticators, and we write from that position."),
         ("Disclosure", "We make one app in every buyer's guide. Each guide says so at the top. Where a competitor is cheaper, more established or better suited to a specific need, the guide says that too. We do not accept payment for placement and we do not use affiliate links."),
         ("Sources", "Health pages rely on published guidance from public bodies and clinical societies, such as the FDA, NIH, CDC, ACOG, Mayo Clinic and specialty society guidelines, and on each app's own documented behaviour. Valuation and authentication pages rely on documented brand references and public market data. Competitor details come from their App Store listings at the time of writing."),
         ("Health information", "Nothing on this site is medical advice. Our health apps organise your own records, explain terms and numbers on your own reports and help you prepare for appointments. They do not diagnose or treat any condition. Talk to your clinician before changing medication, supplements or diet."),
         ("Authenticity and valuation", "Photo-based checks are a screening step, not certified authentication or a formal appraisal. For high-value purchases, insurance or sale, use a qualified professional who can inspect the item in person."),
         ("Ratings and numbers", "App Store ratings shown on this site are taken from Apple's public data and refreshed when pages are rebuilt. Prices are in US dollars as listed on the US App Store and may differ by country."),
-        ("Updates and corrections", f"We review hub pages and guides when apps or competitors change, and the review date is shown on each hub page. If you spot an error, email {EMAIL} and we will correct it."),
+        ("Updates and corrections", "We review hub pages and guides when apps or competitors change, and the review date is shown on each hub page. When we find an error, or someone points one out, we correct the page and update that date."),
     ]
     body = f'''
 <div class="ll-wrap">
@@ -672,7 +650,7 @@ def app_col(old_footer, fallback_title, links):
     """Keep the page-specific column (e.g. 'WatchSnap' anchors + guide link)."""
     m = re.findall(r'<div>\s*<strong>([^<]*)</strong>\s*(<ul>.*?</ul>)\s*</div>', old_footer, re.S)
     for title, ul in m:
-        if title.strip() not in ("Studio", "Loveiko Labs"):
+        if title.strip() not in ("Studio", "Loveiko Labs", "Categories"):
             return f'<div><strong>{title.strip()}</strong>{ul}</div>'
     return f'<div><strong>{fallback_title}</strong><ul>{links}</ul></div>'
 
@@ -683,10 +661,10 @@ def patch_common(s, theme, trail, extra_col, legal_default=None):
     s = CURSOR_RE.sub("", s)
     s = NAV_RE.sub(lambda _: nav(None), s, count=1)
     s = FOOT_RE.sub(lambda _: footer(extra_col, legal), s, count=1)
-    s = SCRIPT_RE.sub('<script src="/site.js?v=3" defer></script>', s)
+    s = SCRIPT_RE.sub(f'<script src="/site.js?v={ASSET_V}" defer></script>', s)
     s = FONTS_RE.sub(FONTS, s, count=1)
     s = THEME_RE.sub(HEAD_COMMON + "\n", s, count=1)
-    s = CSS_RE.sub('<link rel="stylesheet" href="/styles.css?v=3">', s, count=1)
+    s = CSS_RE.sub(f'<link rel="stylesheet" href="/styles.css?v={ASSET_V}">', s, count=1)
     s = BODY_RE.sub(f'<body class="{theme}">', s, count=1)
     s = CRUMB_RE.sub(lambda _: crumbs_html(trail), s, count=1)
     s = CRUMB_LD_RE.sub("", s)
@@ -705,7 +683,7 @@ def patch_ratings(s, app):
     if r:
         s = agg.sub(lambda m: f'{m.group(1)}"{r}"{m.group(2)}"{st["count"]}"', s, count=1)
         s = re.sub(r'(<div class="ll-hero__rating">).*?(</div>)',
-                   lambda m: f'{m.group(1)}\n      <span class="stars">★★★★★</span> <span>{r}</span> <span class="muted">· {st["count"]} ratings on the App Store</span>\n    {m.group(2)}', s, count=1, flags=re.S)
+                   lambda m: f'{m.group(1)}\n      <span class="stars">★★★★★</span> <span>{r}</span> <span class="muted">on the App Store</span>\n    {m.group(2)}', s, count=1, flags=re.S)
         old_counts = set()
 
         def td(m):

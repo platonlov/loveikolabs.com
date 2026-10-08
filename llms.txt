@@ -1,6 +1,6 @@
 # Loveiko Labs
 
-> Independent iOS studio with 19 focused iPhone apps in five categories: Health, Pregnancy & Baby, Resale & Valuation, Home & Style, and Mind & Faith. Founded by Valeriy Loveyko. Based in Pattaya, Thailand. Apps are honest about what they do and do not do — every product page includes explicit scope and limitation disclosures.
+> iOS studio with 19 focused iPhone apps in five categories: Health, Pregnancy & Baby, Resale & Valuation, Home & Style, and Mind & Faith. Founded in 2024. Apps are honest about what they do and do not do — every product page includes explicit scope and limitation disclosures.
 
 <!-- site-structure:start -->
 ## Site structure
@@ -44,13 +44,11 @@
 
 ## About
 
-Loveiko Labs is an independent, self-funded iOS studio shipping focused single-purpose apps. Each app solves one specific problem: tracking a health condition, checking an ingredient, identifying and valuing an item, or a practical home task. Many use AI vision or audio models with structured workflows. We do not claim certifications, guarantees, or affiliations we do not have. We disclose limitations on every page.
+Loveiko Labs is a self-funded iOS studio shipping focused single-purpose apps. Each app solves one specific problem: tracking a health condition, checking an ingredient, identifying and valuing an item, or a practical home task. Many use AI vision or audio models with structured workflows. We do not claim certifications, guarantees, or affiliations we do not have. We disclose limitations on every page.
 
-- Founder: Valeriy Loveyko
-- Location: Pattaya, Thailand
+- Founded: 2024
 - Portfolio: 19 shipped iOS apps
 - Site: https://loveikolabs.com
-- Contact: loveykovl@gmail.com
 - Editorial policy: https://loveikolabs.com/editorial-policy/
 
 ## Apps

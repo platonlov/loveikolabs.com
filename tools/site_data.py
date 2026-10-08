@@ -182,5 +182,3 @@ HERO_POSTERS = [
 ]
 
 SITE = "https://loveikolabs.com"
-EMAIL = "loveykovl@gmail.com"
-FOUNDER = "Valeriy Loveyko"
