@@ -21,7 +21,7 @@ TODAY = datetime.date.today()
 TODAY_ISO = TODAY.isoformat()
 TODAY_H = TODAY.strftime("%B %Y")
 DEV_URL = "https://apps.apple.com/us/developer/id1478618306"
-ASSET_V = "4"  # bump when styles.css / site.js change (browsers cache them for a day)
+ASSET_V = "5"  # bump when styles.css / site.js change (browsers cache them for a day)
 
 HUB = {h["key"]: h for h in HUBS}
 APP = {a["slug"]: a for a in APPS}
@@ -100,7 +100,7 @@ def nav(active=None):
 <header class="ll-nav">
   <div class="ll-nav__inner">
     <a class="ll-logo" href="/" aria-label="Loveiko Labs home">{logo_svg("llg-nav")}<span class="ll-logo__text">Loveiko <span>Labs</span></span></a>
-    <button class="ll-nav__toggle" type="button" aria-expanded="false" aria-controls="ll-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <button class="ll-nav__toggle" type="button" aria-expanded="false" aria-controls="ll-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
     <div class="ll-nav__menu" id="ll-menu">
       <ul class="ll-nav__links">{items}</ul>
       <a class="ll-nav__cta" href="/apps/"{cur if active == "apps" else ""}>All {len(APPS)} apps</a>
@@ -353,8 +353,8 @@ def build_home():
       </div>
       <div class="ll-trust">
         <div><strong>{avg:.1f}<b aria-hidden="true">★</b></strong><span>App Store rating</span></div>
-        <div><strong>{len(APPS)}</strong><span>apps live</span></div>
-        <div><strong>168</strong><span>countries</span></div>
+        <div><strong data-count="{len(APPS)}">{len(APPS)}</strong><span>apps live</span></div>
+        <div><strong data-count="168">168</strong><span>countries</span></div>
       </div>
     </div>
     <div class="ll-stage" aria-roledescription="carousel" aria-label="App Store screenshots">
@@ -738,6 +738,29 @@ def patch_layout(s, app=None, guide=False):
     return s
 
 
+GLANCE_RE = re.compile(r'\s*<aside class="ll-glance".*?</aside>', re.S)
+GUIDE_HERO_RE = re.compile(r'(<section class="ll-hero ll-hero--guide">.*?)(\n  </section>)', re.S)
+
+
+def add_glance(s, app):
+    """Fill the empty side of a guide hero: how many apps are ranked, the category, and our own app disclosed."""
+    s = GLANCE_RE.sub("", s)
+    m = GUIDE_HERO_RE.search(s)
+    if not m:
+        return s
+    h = HUB[app["hub"]]
+    n = len(re.findall(r'class="ll-rank-item\b', s))
+    facts = (f'<div><dt>Apps compared</dt><dd>{n}</dd></div>' if n else "") + \
+            f'<div><dt>Category</dt><dd><a href="/{h["slug"]}/">{h["name"].replace("&", "&amp;")}</a></dd></div>'
+    aside = f'''
+    <aside class="ll-glance" aria-label="At a glance">
+      <p class="ll-glance__label">At a glance</p>
+      <dl class="ll-glance__facts">{facts}</dl>
+      <a class="ll-glance__app" href="/apps/{app["slug"]}/">{icon(app, 44)}<span><b>We make {e(app["name"])}</b><small>It is in this ranking. Where a competitor is the better pick, the guide says so.</small></span></a>
+    </aside>'''
+    return s[:m.end(1)] + aside + s[m.end(1):]
+
+
 LD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
 
 
@@ -810,6 +833,7 @@ def patch_pages():
         s = patch_common(s, f't-{h["key"]}', trail, f'<div><strong>Related</strong><ul>{links}</ul></div>')
         s = FAKE_QUOTES_RE.sub("", s)
         s = patch_layout(s, a, guide=True)
+        s = add_glance(s, a)
         s = clean_ld(s)
         s = set_titles(s, a["guide_seo_title"])
         if a.get("guide_seo_desc"):

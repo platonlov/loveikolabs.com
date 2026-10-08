@@ -43,7 +43,12 @@
 
   --sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --serif: 'Instrument Serif', ui-serif, Georgia, serif;
-  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);      /* expo-out: entrances, hovers */
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);  /* in-out: crossfades, loops */
+  --t-fast: 160ms;    /* colour, opacity */
+  --t-base: 280ms;    /* hover lift, press, small panels */
+  --t-slow: 520ms;    /* height changes, larger moves */
+  --t-reveal: 800ms;  /* scroll and page entrances */
   --r-sm: 10px; --r-md: 16px; --r-lg: 24px; --r-xl: 32px;
   --wrap: 1160px;
 }
@@ -159,7 +164,6 @@ a { color: inherit; }
   border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer;
   align-items: center; justify-content: center;
 }
-.ll-nav__toggle svg { width: 18px; height: 18px; }
 
 @media (max-width: 800px) {
   .ll-nav__inner { padding: 0 16px; }
@@ -205,12 +209,12 @@ a { color: inherit; }
     position: absolute; top: calc(100% + 12px); left: 50%; width: 264px; padding: 6px;
     background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); box-shadow: var(--shadow-lg);
     opacity: 0; visibility: hidden; transform: translate(-50%, -6px) scale(.98); transform-origin: 50% 0;
-    transition: opacity .16s var(--ease), transform .24s var(--ease), visibility 0s .24s;
+    transition: opacity var(--t-fast) var(--ease), transform var(--t-base) var(--ease), visibility 0s var(--t-base);
   }
   .ll-drop__panel::before { content: ''; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }
   .ll-drop.is-open .ll-drop__panel {
     opacity: 1; visibility: visible; transform: translate(-50%, 0) scale(1);
-    transition: opacity .16s var(--ease), transform .24s var(--ease), visibility 0s;
+    transition: opacity var(--t-fast) var(--ease), transform var(--t-base) var(--ease), visibility 0s;
   }
 }
 @media (max-width: 800px) {
@@ -392,7 +396,7 @@ a { color: inherit; }
   padding: 26px; box-shadow: var(--shadow-sm);
   transition: transform .3s var(--ease), box-shadow .3s, border-color .3s;
 }
-.ll-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
+.ll-card:hover { box-shadow: var(--shadow-md); border-color: var(--border-strong); }
 .ll-card h3 { margin-bottom: 8px; }
 .ll-card p { font-size: 15px; line-height: 1.7; margin: 0; color: var(--muted); }
 
@@ -535,7 +539,7 @@ a { color: inherit; }
   box-shadow: var(--shadow-sm);
   transition: transform .3s var(--ease), box-shadow .3s, border-color .3s;
 }
-.ll-related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
+.ll-related-card:hover { box-shadow: var(--shadow-md); border-color: var(--border-strong); }
 .ll-related-card h3 { color: var(--text); margin-bottom: 6px; font-size: 16.5px; }
 .ll-related-card p { color: var(--muted); font-size: 14.5px; line-height: 1.6; margin: 0; }
 
@@ -764,7 +768,7 @@ a { color: inherit; }
   border-radius: 50%; background: var(--accent); opacity: .16; filter: blur(50px);
   transition: transform .8s var(--ease), opacity .4s;
 }
-.ll-hub-tile:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+.ll-hub-tile:hover { box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
 .ll-hub-tile:hover::after { opacity: .24; }
 .ll-hub-tile__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
 .ll-hub-tile__count { font-size: 13px; font-weight: 600; color: var(--accent-ink); background: var(--surface); padding: 5px 12px; border-radius: 999px; }
@@ -811,7 +815,7 @@ a { color: inherit; }
   background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow-sm);
   transition: transform .35s var(--ease), box-shadow .35s, border-color .35s, opacity .35s;
 }
-.ll-app:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+.ll-app:hover { box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
 .ll-app img { width: 64px; height: 64px; border-radius: 15px; flex: none; box-shadow: var(--shadow-sm); }
 .ll-app__body { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
 .ll-app__name { display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 620; letter-spacing: -0.02em; }
@@ -856,7 +860,7 @@ a { color: inherit; }
   border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--border);
   color: var(--text); text-decoration: none;
 }
-.ll-gcard:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
+.ll-gcard:hover { box-shadow: var(--shadow-md); border-color: var(--border-strong); }
 .ll-gcard__cat { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; color: var(--muted); }
 .ll-gcard__cat i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 .ll-gcard__title { font-size: 20px; font-weight: 650; letter-spacing: -0.025em; line-height: 1.2; text-wrap: balance; }
@@ -919,31 +923,144 @@ a { color: inherit; }
   text-decoration: none; color: var(--text); background: var(--accent-soft);
   font-weight: 600; letter-spacing: -0.01em; transition: transform .3s var(--ease);
 }
-.ll-hub-links a:hover { transform: translateY(-2px); }
+.ll-hub-links a:hover { border-color: var(--border-strong); }
 .ll-hub-links a span { margin-left: auto; color: var(--accent-ink); font-size: 13px; font-weight: 600; }
 
 /* ─────────────────────────────  REVEAL  ─────────────────────────────
    Entrance motion uses `translate` (not `transform`) so hover lifts and
    component transforms keep working after an element has revealed. */
-.js .ll-reveal { opacity: 0; translate: 0 18px; transition: opacity .9s var(--ease), translate .9s var(--ease); }
+.js .ll-reveal { opacity: 0; translate: 0 16px; transition: opacity var(--t-reveal) var(--ease), translate var(--t-reveal) var(--ease); }
 .js .ll-reveal.in { opacity: 1; translate: 0 0; }
-.js .ll-stagger > * { opacity: 0; translate: 0 16px; transition: opacity .8s var(--ease), translate .8s var(--ease), transform .35s var(--ease), box-shadow .35s, border-color .35s; }
+.js .ll-stagger > * { opacity: 0; translate: 0 16px; transition: opacity var(--t-reveal) var(--ease), translate var(--t-reveal) var(--ease), transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease), border-color var(--t-base) var(--ease); }
 .js .ll-stagger.in > * { opacity: 1; translate: 0 0; }
-.js .ll-stagger.in > *:nth-child(2) { transition-delay: .06s, .06s, 0s, 0s, 0s; }
-.js .ll-stagger.in > *:nth-child(3) { transition-delay: .12s, .12s, 0s, 0s, 0s; }
-.js .ll-stagger.in > *:nth-child(4) { transition-delay: .18s, .18s, 0s, 0s, 0s; }
-.js .ll-stagger.in > *:nth-child(5) { transition-delay: .24s, .24s, 0s, 0s, 0s; }
-.js .ll-stagger.in > *:nth-child(6) { transition-delay: .30s, .30s, 0s, 0s, 0s; }
-.js .ll-stagger.in > *:nth-child(n+7) { transition-delay: .36s, .36s, 0s, 0s, 0s; }
+.js .ll-stagger.in > *:nth-child(2) { transition-delay: .05s, .05s, 0s, 0s, 0s; }
+.js .ll-stagger.in > *:nth-child(3) { transition-delay: .10s, .10s, 0s, 0s, 0s; }
+.js .ll-stagger.in > *:nth-child(4) { transition-delay: .15s, .15s, 0s, 0s, 0s; }
+.js .ll-stagger.in > *:nth-child(5) { transition-delay: .20s, .20s, 0s, 0s, 0s; }
+.js .ll-stagger.in > *:nth-child(6) { transition-delay: .25s, .25s, 0s, 0s, 0s; }
+.js .ll-stagger.in > *:nth-child(n+7) { transition-delay: .30s, .30s, 0s, 0s, 0s; }
 
 /* hero entrance */
-.js .ll-enter > * { opacity: 0; animation: ll-fade 1s var(--ease) forwards; }
+.js .ll-enter > * { opacity: 0; animation: ll-fade var(--t-reveal) var(--ease) forwards; }
 .js .ll-enter > *:nth-child(2) { animation-delay: .08s; }
 .js .ll-enter > *:nth-child(3) { animation-delay: .16s; }
 .js .ll-enter > *:nth-child(4) { animation-delay: .24s; }
 .js .ll-enter > *:nth-child(5) { animation-delay: .32s; }
 
+
+/* ═════════════════════════════  LAYOUT BALANCE  ═════════════════════════════ */
+/* card grids never leave an orphan: 3 per row, a short last row splits the width */
+@media (min-width: 900px) {
+  .ll-cards, .ll-scenarios, .ll-apps { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .ll-cards > *, .ll-scenarios > *, .ll-apps > * { grid-column: span 2; }
+  :is(.ll-cards, .ll-scenarios, .ll-apps):has(> :last-child:nth-child(3n+2)) > :nth-last-child(-n+2) { grid-column: span 3; }
+  :is(.ll-cards, .ll-scenarios, .ll-apps):has(> :last-child:nth-child(3n+1)) > :nth-last-child(-n+4) { grid-column: span 3; }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .ll-cards, .ll-scenarios, .ll-apps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  :is(.ll-cards, .ll-scenarios, .ll-apps) > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+/* comfortable reading measure for long-form blocks */
+.ll-rank, .ll-steps, .ll-section > ul, .ll-section > ol { max-width: 880px; }
+
+/* guide hero: text left, "at a glance" card right */
+.ll-hero--guide { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); column-gap: 64px; align-items: start; }
+.ll-hero--guide > :not(.ll-glance) { grid-column: 1; }
+.ll-hero--guide > .ll-glance { grid-column: 2; grid-row: 1 / span 4; align-self: center; }
+.ll-hero--guide + .ll-section { padding-top: 32px; }
+@media (max-width: 900px) {
+  .ll-hero--guide { grid-template-columns: 1fr; }
+  .ll-hero--guide > .ll-glance { grid-column: 1; grid-row: auto; margin-top: 12px; }
+}
+.ll-glance { padding: 22px; border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+.ll-glance__label { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); margin: 0 0 14px; }
+.ll-glance__facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin: 0 0 12px; background: var(--border); border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; }
+.ll-glance__facts div { background: var(--surface); padding: 14px 16px; }
+.ll-glance__facts dt { font-size: 12.5px; color: var(--muted); margin-bottom: 4px; }
+.ll-glance__facts dd { font-size: 22px; font-weight: 650; letter-spacing: -0.03em; line-height: 1.15; }
+.ll-glance__facts dd a { font-size: 15px; letter-spacing: -0.01em; color: var(--text); text-decoration: none; }
+.ll-glance__facts dd a:hover { color: var(--accent-ink); }
+.ll-glance__app { display: flex; gap: 14px; align-items: center; padding: 12px; margin: 0 -12px -12px; border-radius: var(--r-md); color: var(--text); text-decoration: none; transition: background-color var(--t-fast); }
+.ll-glance__app:hover { background: var(--surface-2); }
+.ll-glance__app img { width: 44px; height: 44px; border-radius: 11px; flex: none; }
+.ll-glance__app b { display: block; font-size: 15px; font-weight: 620; letter-spacing: -0.01em; }
+.ll-glance__app small { display: block; margin-top: 2px; font-size: 13px; line-height: 1.5; color: var(--muted); }
+
+/* ═════════════════════════════  MOTION SYSTEM  ═════════════════════════════
+   One vocabulary everywhere: colour changes take --t-fast, hover/press --t-base,
+   entrances --t-reveal. Cards lift 2px on hover, everything presses to .98.   */
+
+/* cards: same lift, shadow and border response */
+.ll-card, .ll-related-card, .ll-app, .ll-gcard, .ll-hub-tile, .ll-hub-links a, .ll-rank-item {
+  transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease), border-color var(--t-base) var(--ease), background-color var(--t-fast);
+}
+@media (hover: hover) {
+  .ll-card:hover, .ll-related-card:hover, .ll-app:hover, .ll-gcard:hover, .ll-hub-tile:hover, .ll-hub-links a:hover { transform: translateY(-2px); }
+}
+@media (hover: none) {
+  .ll-card:hover, .ll-related-card:hover, .ll-app:hover, .ll-gcard:hover, .ll-hub-tile:hover, .ll-hub-links a:hover,
+  .ll-btn:hover, .ll-nav__cta:hover { transform: none; box-shadow: none; }
+}
+/* press feedback */
+.ll-card:active, .ll-related-card:active, .ll-app:active, .ll-gcard:active, .ll-hub-tile:active, .ll-hub-links a:active {
+  transform: scale(.985); transition-duration: 120ms;
+}
+.ll-btn, .ll-nav__cta, .ll-drop__btn, .ll-chip, .ll-app__links a, .ll-nav__toggle {
+  transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease), background-color var(--t-fast), border-color var(--t-fast), color var(--t-fast), opacity var(--t-fast);
+}
+.ll-btn:active, .ll-nav__cta:active, .ll-drop__btn:active, .ll-chip:active, .ll-app__links a:active, .ll-nav__toggle:active { transform: scale(.97); transition-duration: 100ms; }
+
+/* page entrance: hero content rises in, in reading order */
+.js .ll-hub-hero > *, .js .ll-hero__text > *, .js .ll-hero--guide > * { animation: ll-fade var(--t-reveal) var(--ease) both; }
+.js .ll-hub-hero > :nth-child(2), .js .ll-hero__text > :nth-child(2), .js .ll-hero--guide > :nth-child(2) { animation-delay: .05s; }
+.js .ll-hub-hero > :nth-child(3), .js .ll-hero__text > :nth-child(3), .js .ll-hero--guide > :nth-child(3) { animation-delay: .10s; }
+.js .ll-hub-hero > :nth-child(4), .js .ll-hero__text > :nth-child(4), .js .ll-hero--guide > :nth-child(4) { animation-delay: .15s; }
+.js .ll-hub-hero > :nth-child(n+5), .js .ll-hero__text > :nth-child(n+5), .js .ll-hero--guide > :nth-child(n+5) { animation-delay: .20s; }
+
+/* page-to-page: quick crossfade, header stays put (Chrome, Safari 18.2+) */
+@view-transition { navigation: auto; }
+::view-transition-group(root) { animation-duration: 240ms; animation-timing-function: var(--ease-io); }
+
+/* mobile menu: burger morphs into a close icon, items cascade in */
+.ll-nav__toggle { position: relative; }
+.ll-nav__toggle span {
+  position: absolute; left: 50%; width: 16px; height: 1.8px; margin-left: -8px; border-radius: 2px; background: currentColor;
+  transition: transform var(--t-base) var(--ease), opacity var(--t-fast);
+}
+.ll-nav__toggle span:nth-child(1) { top: calc(50% - 6px); }
+.ll-nav__toggle span:nth-child(2) { top: calc(50% - 1px); }
+.ll-nav__toggle span:nth-child(3) { top: calc(50% + 4px); }
+.ll-nav.is-open .ll-nav__toggle span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.ll-nav.is-open .ll-nav__toggle span:nth-child(2) { opacity: 0; }
+.ll-nav.is-open .ll-nav__toggle span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+@media (max-width: 800px) {
+  .ll-drop__panel > *, .ll-nav__links > li:not(.ll-drop), .ll-nav__cta {
+    opacity: 0; translate: 0 -6px; transition: opacity var(--t-base) var(--ease), translate var(--t-slow) var(--ease);
+  }
+  .ll-nav.is-open .ll-drop__panel > *, .ll-nav.is-open .ll-nav__links > li:not(.ll-drop), .ll-nav.is-open .ll-nav__cta { opacity: 1; translate: 0 0; }
+  .ll-nav.is-open .ll-drop__panel > :nth-child(2) { transition-delay: .03s; }
+  .ll-nav.is-open .ll-drop__panel > :nth-child(3) { transition-delay: .06s; }
+  .ll-nav.is-open .ll-drop__panel > :nth-child(4) { transition-delay: .09s; }
+  .ll-nav.is-open .ll-drop__panel > :nth-child(5) { transition-delay: .12s; }
+  .ll-nav.is-open .ll-drop__panel > :nth-child(6) { transition-delay: .15s; }
+  .ll-nav.is-open .ll-nav__links > li:nth-child(2) { transition-delay: .18s; }
+  .ll-nav.is-open .ll-nav__links > li:nth-child(3) { transition-delay: .21s; }
+  .ll-nav.is-open .ll-nav__cta { transition-delay: .24s; }
+}
+
+/* FAQ answers slide open instead of jumping (where the browser supports it) */
+@supports (interpolate-size: allow-keywords) {
+  :root { interpolate-size: allow-keywords; }
+  .ll-faq details::details-content {
+    block-size: 0; overflow: hidden;
+    transition: block-size var(--t-slow) var(--ease), content-visibility var(--t-slow) allow-discrete;
+  }
+  .ll-faq details[open]::details-content { block-size: auto; }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
-  .js .ll-reveal, .js .ll-stagger > *, .js .ll-enter > * { opacity: 1; translate: 0 0; }
+  .js .ll-reveal, .js .ll-stagger > *, .js .ll-enter > *, .js .ll-hub-hero > *, .js .ll-hero__text > *, .js .ll-hero--guide > * { opacity: 1; translate: 0 0; }
 }

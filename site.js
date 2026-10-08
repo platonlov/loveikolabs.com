@@ -19,16 +19,15 @@
   var nav = document.querySelector('.ll-nav');
   var toggle = document.querySelector('.ll-nav__toggle');
   if (nav && toggle) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('is-open');
+    var setMenu = function (open) {
+      nav.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       document.body.style.overflow = open ? 'hidden' : '';
-    });
-    nav.addEventListener('click', function (e) {
-      if (e.target.closest('.ll-nav__menu a')) {
-        nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
-      }
-    });
+    };
+    toggle.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
+    nav.addEventListener('click', function (e) { if (e.target.closest('.ll-nav__menu a')) setMenu(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); } });
   }
 
   /* categories dropdown: hover-intent on desktop, click/tap everywhere, Esc and outside click close */
@@ -89,6 +88,24 @@
           card.classList.toggle('is-hidden', f !== 'all' && card.getAttribute('data-hub') !== f);
         });
       });
+    });
+  }
+
+  /* stat count-up: numbers tick up once, in sync with the hero entrance */
+  var counters = [].slice.call(document.querySelectorAll('[data-count]'));
+  if (counters.length && !reduce && window.requestAnimationFrame) {
+    counters.forEach(function (el) {
+      var to = parseInt(el.getAttribute('data-count'), 10);
+      if (!to) return;
+      setTimeout(function () {
+        if (document.hidden) return; /* background tab: keep the final number */
+        var t0 = performance.now(), dur = 1100;
+        (function tick(now) {
+          var k = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - k, 4);
+          el.textContent = String(Math.round(to * eased));
+          if (k < 1) requestAnimationFrame(tick);
+        })(t0);
+      }, 380);
     });
   }
 
