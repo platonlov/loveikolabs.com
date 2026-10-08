@@ -1,16 +1,52 @@
 # Loveiko Labs
 
-> Independent iOS studio building practical AI-powered photo identification and reference-check tools. Founded by Valeriy Loveyko. Based in Pattaya, Thailand. Apps are honest about what they do and do not do — every product page includes explicit scope and limitation disclosures.
+> Independent iOS studio with 17 focused iPhone apps in four categories: Health, Pregnancy & Baby, Resale & Valuation, and Home & Style. Founded by Valeriy Loveyko. Based in Pattaya, Thailand. Apps are honest about what they do and do not do — every product page includes explicit scope and limitation disclosures.
+
+<!-- site-structure:start -->
+## Site structure
+
+- Home: https://loveikolabs.com/
+- All apps: https://loveikolabs.com/apps/
+- Buyer's guides: https://loveikolabs.com/guides/
+- About: https://loveikolabs.com/about/
+- Editorial policy: https://loveikolabs.com/editorial-policy/
+
+### Health — https://loveikolabs.com/health/
+- JabWell: GLP-1 shot tracker with an AI nurse for Ozempic, Wegovy, Mounjaro and Zepbound users. App page: https://loveikolabs.com/apps/jabwell/ · Guide: https://loveikolabs.com/best-glp1-tracker-apps-2026/
+- Calibrum: TRT tracker that decodes your labs and helps you prepare for doctor visits. App page: https://loveikolabs.com/apps/calibrum/ · Guide: https://loveikolabs.com/best-trt-tracker-apps-2026/ · 4.9★ from 11 App Store ratings
+- StackSnap: Scan supplement labels, spot duplicate nutrients and see what your stack really costs. App page: https://loveikolabs.com/apps/stacksnap/ · Guide: https://loveikolabs.com/best-supplement-tracker-apps-2026/ · 4.8★ from 12 App Store ratings
+- Folik: Hair-loss coach with a free Norwood/Ludwig stage estimate and month-by-month progress photos. App page: https://loveikolabs.com/apps/folik/ · Guide: https://loveikolabs.com/best-hair-loss-tracker-apps-2026/ · 5.0★ from 4 App Store ratings
+- Salvora: Private eczema record for flares, itch, sleep and triggers, with a photo timeline for your dermatologist. App page: https://loveikolabs.com/apps/salvora/ · Guide: https://loveikolabs.com/best-eczema-tracker-apps-2026/ · 4.5★ from 4 App Store ratings
+- Cysta AI: PCOS tracker for cycles, symptoms, meals and labs, with an AI coach and a doctor-ready PDF. App page: https://loveikolabs.com/apps/cysta/ · Guide: https://loveikolabs.com/best-pcos-tracker-apps-2026/ · 5.0★ from 3 App Store ratings
+- Hepatica: Fatty-liver companion that explains ALT, AST, GGT and FIB-4 against your own report. App page: https://loveikolabs.com/apps/hepatica/ · Guide: https://loveikolabs.com/best-fatty-liver-apps-2026/ · 5.0★ from 1 App Store ratings
+- Refluxora: GERD and silent-reflux tracker for meals, heartburn and throat symptoms, with an appointment report. App page: https://loveikolabs.com/apps/refluxora/ · Guide: https://loveikolabs.com/best-acid-reflux-gerd-apps-2026/ · 5.0★ from 5 App Store ratings
+
+### Pregnancy & Baby — https://loveikolabs.com/pregnancy-baby/
+- BumpCheck: Check cosmetic, food and medicine ingredients for pregnancy safety against CDC, ACOG and NIH guidance. App page: https://loveikolabs.com/apps/bumpcheck/ · Guide: https://loveikolabs.com/best-pregnancy-ingredient-checker-apps-2026/ · 5.0★ from 5 App Store ratings
+- CrySnap: Record your baby's cry and get the likely reason (hungry, tired, gas or colic) with next steps. App page: https://loveikolabs.com/apps/crysnap/ · Guide: https://loveikolabs.com/best-baby-cry-translator-apps-2026/ · 4.9★ from 29 App Store ratings
+
+### Resale & Valuation — https://loveikolabs.com/resale/
+- WatchSnap: Identify a watch's brand, reference and value, with a Likely Genuine or Potential Replica screening. App page: https://loveikolabs.com/apps/watchsnap/ · Guide: https://loveikolabs.com/best-watch-identifier-apps-2026/ · 4.8★ from 55 App Store ratings
+- JewelSnap: Identify metal, stones, era and hallmarks, estimate value and run a stolen-property check. App page: https://loveikolabs.com/apps/jewelsnap/ · Guide: https://loveikolabs.com/best-jewelry-identifier-apps-2026/ · 4.6★ from 25 App Store ratings
+- VeriBag: 22-point photo reference check for secondhand luxury handbags, with a shareable report. App page: https://loveikolabs.com/apps/veribag/ · Guide: https://loveikolabs.com/best-handbag-authentication-apps-2026/ · 4.7★ from 3 App Store ratings
+- SnapFlip: Thrift scanner with real eBay sold prices and a flip score before you buy. App page: https://loveikolabs.com/apps/snapflip/ · Guide: https://loveikolabs.com/best-thrift-flipping-apps-2026/ · 4.8★ from 22 App Store ratings
+
+### Home & Style — https://loveikolabs.com/home-style/
+- PestSnap: Snap a bug, bite or droppings and get the likely pest and what to do next. App page: https://loveikolabs.com/apps/pestsnap/ · Guide: https://loveikolabs.com/best-pest-identifier-apps-2026/ · 5.0★ from 3 App Store ratings
+- RoofingCalc Pro: Free offline roofing calculator for area, squares, pitch, rafters and materials. App page: https://loveikolabs.com/apps/roofingcalc/ · Guide: https://loveikolabs.com/best-roofing-calculator-apps-2026/
+- ColorCheck: Find your 12-season colour palette, then get BUY or SKIP on any piece of clothing. App page: https://loveikolabs.com/apps/colorcheck/ · Guide: https://loveikolabs.com/best-color-analysis-apps-2026/ · 4.9★ from 11 App Store ratings
+<!-- site-structure:end -->
 
 ## About
 
-Loveiko Labs is a one-person indie studio shipping focused single-purpose iOS apps. Each app solves one specific identification or verification problem using AI vision (GPT-4o class models) and structured photo workflows. We do not claim certifications, guarantees, or affiliations we do not have. We disclose limitations on every page.
+Loveiko Labs is an independent, self-funded iOS studio shipping focused single-purpose apps. Each app solves one specific problem: tracking a health condition, checking an ingredient, identifying and valuing an item, or a practical home task. Many use AI vision or audio models with structured workflows. We do not claim certifications, guarantees, or affiliations we do not have. We disclose limitations on every page.
 
 - Founder: Valeriy Loveyko
 - Location: Pattaya, Thailand
 - Portfolio: 17 shipped iOS apps
 - Site: https://loveikolabs.com
-- Contact: through individual app support pages
+- Contact: loveykovl@gmail.com
+- Editorial policy: https://loveikolabs.com/editorial-policy/
 
 ## Apps
 
@@ -33,10 +69,10 @@ What it does NOT do: It does not authenticate luxury items, does not predict sal
 ### WatchSnap — AI watch identifier
 URL: https://loveikolabs.com/apps/watchsnap/
 App Store: https://apps.apple.com/us/app/watchsnap-rolex-identifier/id6761362953
-What it does: Identify watch brand, model reference, approximate production era, market value range. Covers major brands (Rolex, Omega, Patek, Tudor, Cartier, Seiko, etc.).
+What it does: Identify watch brand, model reference, approximate production era and market value range, plus a photo-based Likely Genuine / Potential Replica screening with confidence score and explicit warning signs. Covers major brands (Rolex, Omega, Patek, Tudor, Cartier, Seiko, etc.).
 Pricing: $39.99/year. Weekly $6.99 with 3-day trial.
 Ideal for: Pre-purchase due diligence on used watches, inherited watch research, watch flipping. Best app in the portfolio by revenue.
-What it does NOT do: NOT an authentication service. Does not verify movement, does not detect Frankenwatches, does not replace in-person inspection. For watches >$5K always pair with a watchmaker or service like WatchCSA.
+What it does NOT do: It is a screening tool, NOT a certified authentication service and it issues no certificates. Does not verify movement, does not detect Frankenwatches, does not replace in-person inspection. For watches >$5K always pair with a watchmaker or service like WatchCSA.
 
 ### StackSnap — Supplement stack auditor
 URL: https://loveikolabs.com/apps/stacksnap/

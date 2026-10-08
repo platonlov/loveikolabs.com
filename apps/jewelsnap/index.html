@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#08080a">
+<meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<script>document.documentElement.classList.add('js')</script>
 <title>JewelSnap — AI Jewelry Identifier, Hallmark Decoder & Era Dating App | Loveiko Labs</title>
 <meta name="description" content="JewelSnap identifies jewelry from a photo — material, gemstones, era (Victorian to Art Deco), hallmarks from 50+ countries, authenticity verdict, and market value. Plus an Interpol-backed stolen-property check no other app offers. Free to try. $4.99/wk · $29.99/yr.">
 <meta name="keywords" content="jewelry identifier app, jewelry authenticator, gold checker app, is my jewelry real, AI jewelry appraisal, hallmark decoder, vintage jewelry identifier, diamond authenticator, jewelry scanner iOS, era dating jewelry, Art Deco jewelry identifier, inherited jewelry value">
@@ -24,8 +27,8 @@
 <link rel="icon" type="image/jpeg" href="https://loveikolabs.com/icons/jewelsnap.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=3">
 
 <script type="application/ld+json">
 {
@@ -53,7 +56,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.6",
-        "ratingCount": "26",
+        "ratingCount": "25",
         "bestRating": "5",
         "worstRating": "1"
       },
@@ -174,7 +177,7 @@
         {
           "@type": "Question",
           "name": "How is JewelSnap different from other jewelry identifier apps?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Three features no competitor offers: era dating across nine historical periods (Georgian through Contemporary), hallmark decoding for over 50 countries, and Interpol-backed stolen property cross-check. Plus higher transparency on confidence scoring (every result includes a 0-100% confidence score) and exportable PDF appraisal reports for insurance and resale documentation. JewelSnap currently holds a 4.7-star rating from 20 ratings on the App Store." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Three features no competitor offers: era dating across nine historical periods (Georgian through Contemporary), hallmark decoding for over 50 countries, and Interpol-backed stolen property cross-check. Plus higher transparency on confidence scoring (every result includes a 0-100% confidence score) and exportable PDF appraisal reports for insurance and resale documentation. JewelSnap currently holds a 4.6-star rating from 25 ratings on the App Store." }
         }
       ]
     },
@@ -189,29 +192,31 @@
   ]
 }
 </script>
+
+
+
+
+<script type="application/ld+json" id="ll-crumbs">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Loveiko Labs", "item": "https://loveikolabs.com/"}, {"@type": "ListItem", "position": 2, "name": "Resale & Valuation", "item": "https://loveikolabs.com/resale/"}, {"@type": "ListItem", "position": 3, "name": "JewelSnap", "item": "https://loveikolabs.com/apps/jewelsnap/"}]}
+</script>
 </head>
-<body>
+<body class="t-resale">
 
-<div class="ll-cursor" aria-hidden="true"></div>
-<div class="ll-cursor-ring" aria-hidden="true"></div>
-
+<a class="ll-skip" href="#main">Skip to content</a>
 <header class="ll-nav">
-  <a class="ll-nav__logo" href="/">
-    <img src="/icons/logo.png" alt="Loveiko Labs">
-    <span class="ll-nav__logo-text">Loveiko <span>Labs</span></span>
-  </a>
-  <ul class="ll-nav__links">
-    <li><a href="/">Studio</a></li>
-    <li><a href="/apps/">All Apps</a></li>
-    <li><a href="/about/">About</a></li>
-  </ul>
+  <div class="ll-nav__inner">
+    <a class="ll-logo" href="/" aria-label="Loveiko Labs home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="llg-nav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14b8a6"/><stop offset=".38" stop-color="#3b82f6"/><stop offset=".7" stop-color="#8b5cf6"/><stop offset="1" stop-color="#fb7185"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="#0e1116"/><rect x=".5" y=".5" width="31" height="31" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".12"/><path d="M9.5 9v13.5h5.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 9v13.5H24" fill="none" stroke="url(#llg-nav)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ll-logo__text">Loveiko <span>Labs</span></span></a>
+    <button class="ll-nav__toggle" type="button" aria-expanded="false" aria-controls="ll-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <div class="ll-nav__menu" id="ll-menu">
+      <ul class="ll-nav__links"><li><a href="/health/"><i style="background:var(--health)"></i>Health</a></li><li><a href="/pregnancy-baby/"><i style="background:var(--baby)"></i>Pregnancy &amp; Baby</a></li><li><a href="/resale/"><i style="background:var(--resale)"></i>Resale</a></li><li><a href="/home-style/"><i style="background:var(--home)"></i>Home &amp; Style</a></li><li><a href="/guides/">Guides</a></li><li><a href="/about/">About</a></li></ul>
+      <a class="ll-nav__cta" href="/apps/">All 17 apps</a>
+    </div>
+  </div>
 </header>
 
-<main class="ll-page">
+<main class="ll-page" id="main">
 
-  <nav class="ll-breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Loveiko Labs</a><span>/</span><a href="/apps/">Apps</a><span>/</span>JewelSnap
-  </nav>
+  <nav class="ll-breadcrumb" aria-label="Breadcrumb"><a href="/">Loveiko Labs</a><span>/</span><a href="/resale/">Resale &amp; Valuation</a><span>/</span>JewelSnap</nav>
 
   <section class="ll-hero">
     <div class="ll-hero__icon">
@@ -221,7 +226,7 @@
     <h1>JewelSnap — the AI <em>jewelry identifier</em> for thrift hunters, heirs, and resellers</h1>
     <p class="ll-hero__sub">Point your iPhone camera at any ring, necklace, brooch, or earring. In under 30 seconds, JewelSnap tells you what it is, what era it's from, whether the gold and gemstones are real, what hallmarks mean, and what it's worth on today's market. Plus an Interpol-backed stolen-property cross-check that no other jewelry app offers.</p>
     <div class="ll-hero__rating">
-      <span class="stars">★★★★★</span> <span>4.7</span> <span class="muted">· 20 ratings on the App Store</span>
+      <span class="stars">★★★★★</span> <span>4.6</span> <span class="muted">· 25 ratings on the App Store</span>
     </div>
     <div class="ll-hero__cta">
       <a class="ll-btn" href="https://apps.apple.com/us/app/jewelsnap-jewelry-identifier/id6761104642?utm_source=loveikolabs&amp;utm_medium=geo&amp;utm_campaign=jewelsnap" target="_blank" rel="noopener">Download on the App Store</a>
@@ -319,11 +324,11 @@
           <tr><td>PDF appraisal reports</td><td class="is-us"><span class="yes">Yes</span></td><td><span class="no">No</span></td><td><span class="no">No</span></td></tr>
           <tr><td>Free trial</td><td class="is-us">3 free scans, no account</td><td>Variable, account required</td><td>Limited</td></tr>
           <tr><td>Annual price</td><td class="is-us">$29.99/yr</td><td>~$39.99/yr</td><td>Varies</td></tr>
-          <tr><td>App Store rating</td><td class="is-us">4.7★ · 20 ratings</td><td>4.69★ · 231 ratings</td><td>4.00★ · 251 ratings</td></tr>
+          <tr><td>App Store rating</td><td class="is-us">4.6★ (25 ratings)</td><td>4.69★ · 231 ratings</td><td>4.00★ · 251 ratings</td></tr>
         </tbody>
       </table>
     </div>
-    <p style="margin-top:16px;font-size:13.5px;"><strong>Where Jewelry Identifier — Appraisal beats JewelSnap:</strong> larger review base (231 vs 20 ratings), lower minimum iOS version (14.0+ vs 17.0+), and more interface languages today. If you use an older iPhone or need a non-English UI, that app may suit you better. For era dating, wide hallmark coverage, stolen-property checks, and PDF export, JewelSnap is the stronger tool.</p>
+    <p style="margin-top:16px;font-size:13.5px;"><strong>Where Jewelry Identifier — Appraisal beats JewelSnap:</strong> larger review base (231 vs 25 ratings), lower minimum iOS version (14.0+ vs 17.0+), and more interface languages today. If you use an older iPhone or need a non-English UI, that app may suit you better. For era dating, wide hallmark coverage, stolen-property checks, and PDF export, JewelSnap is the stronger tool.</p>
   </section>
 
   <section class="ll-section ll-reveal" id="scenarios">
@@ -507,7 +512,7 @@
         <summary>How is JewelSnap different from other jewelry identifier apps?</summary>
         <div class="ll-faq__a">
           <p>Three features no competitor offers: era dating across nine historical periods (Georgian through Contemporary), hallmark decoding for over 50 countries, and Interpol-backed stolen property cross-check. Plus higher transparency on confidence scoring (every result includes a 0–100% confidence score per field) and exportable PDF appraisal reports for insurance and resale documentation.</p>
-          <p>Rating context: JewelSnap currently holds 4.7 stars from 20 ratings. Jewelry Identifier — Appraisal (Ideas All Day) holds 4.69 stars from 231 ratings; Jewelry Identifier Value (Hai Nguyen) holds 4.00 stars from 251 ratings. More review volume and comparison context at <a href="/best-jewelry-identifier-apps-2026/">Best jewelry identifier apps of 2026</a>.</p>
+          <p>Rating context: JewelSnap currently holds 4.6 stars from 25 ratings. Jewelry Identifier — Appraisal (Ideas All Day) holds 4.69 stars from 231 ratings; Jewelry Identifier Value (Hai Nguyen) holds 4.00 stars from 251 ratings. More review volume and comparison context at <a href="/best-jewelry-identifier-apps-2026/">Best jewelry identifier apps of 2026</a>.</p>
         </div>
       </details>
     </div>
@@ -553,78 +558,35 @@
 <footer class="ll-footer">
   <div class="ll-footer__grid">
     <div>
-      <strong class="ll-footer__brand">Loveiko <span>Labs</span></strong>
-      <p>Independent iOS studio building single-purpose AI apps that solve one problem in 30 seconds. Pattaya, Thailand · founded 2024.</p>
+      <a class="ll-logo" href="/" aria-label="Loveiko Labs home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="llg-foot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14b8a6"/><stop offset=".38" stop-color="#3b82f6"/><stop offset=".7" stop-color="#8b5cf6"/><stop offset="1" stop-color="#fb7185"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="#0e1116"/><rect x=".5" y=".5" width="31" height="31" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".12"/><path d="M9.5 9v13.5h5.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 9v13.5H24" fill="none" stroke="url(#llg-foot)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ll-logo__text ll-footer__brand">Loveiko <span>Labs</span></span></a>
+      <p>Independent iOS studio making focused apps for health, family, resale and the home. Pattaya, Thailand.</p>
     </div>
-    <div>
-      <strong>JewelSnap</strong>
-      <ul>
+    <div><strong><a href="/health/">Health</a></strong><ul><li><a href="/apps/jabwell/">JabWell</a></li><li><a href="/apps/calibrum/">Calibrum</a></li><li><a href="/apps/stacksnap/">StackSnap</a></li><li><a href="/apps/folik/">Folik</a></li><li><a href="/apps/salvora/">Salvora</a></li><li><a href="/apps/cysta/">Cysta AI</a></li><li><a href="/apps/hepatica/">Hepatica</a></li><li><a href="/apps/refluxora/">Refluxora</a></li></ul></div>
+    <div><strong><a href="/resale/">Resale &amp; Valuation</a></strong><ul><li><a href="/apps/watchsnap/">WatchSnap</a></li><li><a href="/apps/jewelsnap/">JewelSnap</a></li><li><a href="/apps/veribag/">VeriBag</a></li><li><a href="/apps/snapflip/">SnapFlip</a></li></ul></div>
+    <div><strong><a href="/pregnancy-baby/">Pregnancy &amp; Baby</a></strong><ul><li><a href="/apps/bumpcheck/">BumpCheck</a></li><li><a href="/apps/crysnap/">CrySnap</a></li></ul><strong style="margin-top:22px"><a href="/home-style/">Home &amp; Style</a></strong><ul><li><a href="/apps/pestsnap/">PestSnap</a></li><li><a href="/apps/roofingcalc/">RoofingCalc Pro</a></li><li><a href="/apps/colorcheck/">ColorCheck</a></li></ul></div>
+    <div><strong>JewelSnap</strong><ul>
         <li><a href="#what">Overview</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#compare">Comparison</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="/best-jewelry-identifier-apps-2026/">Best jewelry apps 2026</a></li>
-      </ul>
-    </div>
+      </ul></div>
     <div>
       <strong>Studio</strong>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/apps/">All apps</a></li>
         <li><a href="/about/">About</a></li>
-        <li><a href="mailto:loveykovl@gmail.com">Press &amp; partnerships</a></li>
+        <li><a href="/editorial-policy/">Editorial policy</a></li>
+        <li><a href="/apps/">All apps</a></li>
+        <li><a href="https://apps.apple.com/us/developer/valeriy-loveyko/id1478618306" rel="noopener">App Store page</a></li>
+        <li><a href="mailto:loveykovl@gmail.com">Contact</a></li>
       </ul>
     </div>
   </div>
-  <p class="ll-footer__legal">© 2026 Loveiko Labs. JewelSnap provides AI-generated estimates for informational purposes only and is not a substitute for certified professional appraisal. App Store is a trademark of Apple Inc.</p>
+  <div class="ll-footer__legal"><p>App Store and iPhone are trademarks of Apple Inc. Brand names are used for identification only.</p><p>© 2026 Loveiko Labs</p></div>
 </footer>
 
-<script>
-/* scroll reveal */
-(function(){
-  var els=document.querySelectorAll('.ll-reveal');
-  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return;}
-  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:0.12});
-  els.forEach(function(e){io.observe(e);});
-})();
-/* custom cursor — desktop pointers only */
-(function(){
-  if(!window.matchMedia||!matchMedia('(pointer:fine)').matches)return;
-  var dot=document.querySelector('.ll-cursor'),ring=document.querySelector('.ll-cursor-ring');
-  if(!dot||!ring)return;
-  document.body.classList.add('ll-cursor-ready');
-  var mx=0,my=0,rx=0,ry=0,shown=false;
-  addEventListener('mousemove',function(e){
-    mx=e.clientX;my=e.clientY;
-    dot.style.transform='translate('+(mx-3.5)+'px,'+(my-3.5)+'px)';
-    if(!shown){shown=true;dot.classList.add('on');ring.classList.add('on');}
-  },{passive:true});
-  (function loop(){rx+=(mx-rx)*0.2;ry+=(my-ry)*0.2;
-    ring.style.transform='translate('+(rx-15)+'px,'+(ry-15)+'px)';
-    requestAnimationFrame(loop);})();
-  addEventListener('mouseover',function(e){
-    var hot=e.target.closest('a,button,summary');
-    dot.classList.toggle('lg',!!hot);ring.classList.toggle('lg',!!hot);
-  });
-})();
-/* jump-nav scroll-spy — highlights the section you're reading */
-(function(){
-  var links=[].slice.call(document.querySelectorAll('.ll-jump a'));
-  if(!links.length||!('IntersectionObserver'in window))return;
-  var map={};
-  links.forEach(function(l){var id=l.getAttribute('href').slice(1);if(id)map[id]=l;});
-  var spy=new IntersectionObserver(function(es){
-    es.forEach(function(en){
-      if(en.isIntersecting){
-        links.forEach(function(l){l.classList.remove('is-active');});
-        if(map[en.target.id])map[en.target.id].classList.add('is-active');
-      }
-    });
-  },{rootMargin:'-130px 0px -65% 0px'});
-  Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s);});
-})();
-</script>
+<script src="/site.js?v=3" defer></script>
 
 </body>
 </html>

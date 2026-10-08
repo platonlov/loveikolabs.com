@@ -1,0 +1,45 @@
+<!doctype html><meta charset="utf-8"><title>asset render</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<body style="margin:0;background:#ddd"><div id="log"></div>
+<script>
+const APPS=['jabwell','calibrum','stacksnap','folik','salvora','cysta','hepatica','refluxora','bumpcheck','crysnap','watchsnap','jewelsnap','veribag','snapflip','pestsnap','roofingcalc','colorcheck'];
+const load=src=>new Promise((r,j)=>{const i=new Image();i.onload=()=>r(i);i.onerror=j;i.src=src;});
+function rr(c,x,y,w,h,r){c.beginPath();c.roundRect(x,y,w,h,r);}
+async function mark(size){
+  const cv=document.createElement('canvas');cv.width=cv.height=size;const c=cv.getContext('2d');
+  const svg=await load('/icons/favicon.svg');c.drawImage(svg,0,0,size,size);return cv;
+}
+async function og(){
+  const W=1200,H=630,cv=document.createElement('canvas');cv.width=W;cv.height=H;const c=cv.getContext('2d');
+  c.fillStyle='#fafaf7';c.fillRect(0,0,W,H);
+  for(const [x,y,r,col,a] of [[860,60,360,'#14b8a6',.30],[1120,250,330,'#8b5cf6',.28],[900,560,320,'#fb7185',.26],[1180,620,260,'#f59e0b',.22]]){
+    const g=c.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,col+Math.round(a*255).toString(16).padStart(2,'0'));g.addColorStop(1,col+'00');c.fillStyle=g;c.fillRect(0,0,W,H);
+  }
+  const logo=await load('/icons/favicon.svg');c.drawImage(logo,72,64,52,52);
+  c.fillStyle='#0e1116';c.font='600 30px Inter';c.fillText('Loveiko',140,101);const lw=c.measureText('Loveiko ').width;
+  c.fillStyle='#565c6a';c.font='500 30px Inter';c.fillText('Labs',140+lw,101);
+  c.fillStyle='#0e1116';c.font='680 74px Inter';c.letterSpacing='-3px';
+  c.fillText('Focused iPhone apps for',72,236);c.fillText('health, family, resale',72,318);
+  c.font='italic 400 84px "Instrument Serif"';c.letterSpacing='-1px';
+  const t='and home.';const tw=c.measureText(t).width;const gr=c.createLinearGradient(72,0,72+tw,0);
+  [['#14b8a6',0],['#3b82f6',.34],['#8b5cf6',.58],['#fb7185',.8],['#f59e0b',1]].forEach(([s,o])=>gr.addColorStop(o,s));
+  c.fillStyle=gr;c.fillText(t,72,404);
+  c.letterSpacing='0px';c.fillStyle='#565c6a';c.font='500 26px Inter';c.fillText('17 apps · Health · Pregnancy & Baby · Resale & Valuation · Home & Style',72,462);
+  const icons=await Promise.all(APPS.map(s=>load('/icons/sm/'+s+'.jpg')));
+  let x=72;const y=518,sz=58,gap=8;
+  icons.forEach(im=>{c.save();rr(c,x,y,sz,sz,14);c.clip();c.drawImage(im,x,y,sz,sz);c.restore();x+=sz+gap;});
+  return cv;
+}
+async function save(name,cv){const r=await fetch('http://localhost:8412/?name='+name,{method:'POST',body:cv.toDataURL('image/png')});return name+': '+await r.text();}
+(async()=>{
+  await document.fonts.load('680 74px Inter');await document.fonts.load('italic 84px "Instrument Serif"');await document.fonts.load('500 26px Inter');
+  const out=[];
+  out.push(await save('favicon-16x16.png',await mark(16)));
+  out.push(await save('favicon-32x32.png',await mark(32)));
+  out.push(await save('apple-touch-icon.png',await mark(180)));
+  out.push(await save('android-chrome-192x192.png',await mark(192)));
+  out.push(await save('logo-mark.png',await mark(512)));
+  const o=await og();document.body.appendChild(o);out.push(await save('og-image.png',o));
+  document.getElementById('log').textContent=out.join(' | ');window.DONE=out;
+})();
+</script>
