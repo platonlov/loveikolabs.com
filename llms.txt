@@ -35,12 +35,12 @@
 ### Home & Style — https://loveikolabs.com/home-style/
 - PestSnap: Snap a bug, bite or droppings and get the likely pest and what to do next. App page: https://loveikolabs.com/apps/pestsnap/ · Guide: https://loveikolabs.com/best-pest-identifier-apps-2026/ · 5.0★ from 3 App Store ratings
 - RoofingCalc Pro: Free offline roofing calculator for area, squares, pitch, rafters and materials. App page: https://loveikolabs.com/apps/roofingcalc/ · Guide: https://loveikolabs.com/best-roofing-calculator-apps-2026/
-- ColorCheck: Find your 12-season colour palette, then get BUY or SKIP on any piece of clothing. App page: https://loveikolabs.com/apps/colorcheck/ · Guide: https://loveikolabs.com/best-color-analysis-apps-2026/ · 4.9★ from 11 App Store ratings
+- ColorCheck: Find your 12-season color palette, then get BUY or SKIP on any piece of clothing. App page: https://loveikolabs.com/apps/colorcheck/ · Guide: https://loveikolabs.com/best-color-analysis-apps-2026/ · 4.9★ from 11 App Store ratings
 
 ### Mind & Faith — https://loveikolabs.com/mind-faith/
 - Sakinah: Understand the words of your salah phrase by phrase, with recitation, prayer times and qibla. App page: https://loveikolabs.com/apps/sakinah/ · Guide: https://loveikolabs.com/best-quran-prayer-apps-2026/
 - Herself: One-minute affirmation scenes of your moment going well, read in an AI copy of your own voice. App page: https://loveikolabs.com/apps/herself/ · Guide: https://loveikolabs.com/best-affirmation-apps-2026/
-- Two Sparrows: A Bible verse of the day on your Lock Screen, Home Screen and StandBy, every word from Scripture. App page: https://loveikolabs.com/apps/two-sparrows/ · Guide: https://loveikolabs.com/best-bible-verse-widget-apps-2026/
+- Two Sparrows: A Bible verse of the day on your Lock Screen, Home Screen and StandBy, every verse quoted from Scripture. App page: https://loveikolabs.com/apps/two-sparrows/ · Guide: https://loveikolabs.com/best-bible-verse-widget-apps-2026/
 <!-- site-structure:end -->
 
 ## About
@@ -210,7 +210,7 @@ What it does NOT do: It is not therapy or medical care and does not promise resu
 URL: https://loveikolabs.com/apps/two-sparrows/
 App Store: https://apps.apple.com/us/app/two-sparrows-bible-widget/id6815332799
 What it does: Puts a new Bible verse on the iPhone Lock Screen every morning, chosen for what is on your heart, with the full verse sized to fit; Home Screen widgets in three sizes with Listen, Save, Share and Another verse; a StandBy view. Verses for how you feel (tap a feeling or use your own words), eight 7-day paths, verses and prayers read aloud, a sleep timer, sharing as pictures, and the whole Berean Standard Bible offline.
-Scripture: Every word is from the Berean Standard Bible (public domain); no AI-written words. AI only matches verses to feelings or typed words, and a Scripture only setting hides every AI feature.
+Scripture: Every verse is quoted from the Berean Standard Bible (public domain); no AI-written verses. AI only matches verses to feelings or typed words, and a Scripture only setting hides every AI feature.
 Pricing: Weekly $7.99 with a 7-day free trial for new subscribers, or $39.99/year with no trial.
 What it does NOT do: No ads, feed, chat or streaks; it is a devotional tool, not pastoral or medical care.
 

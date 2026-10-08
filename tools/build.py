@@ -271,6 +271,18 @@ def featured_guides(n=6):
     return f'<div class="ll-gcards ll-stagger">{cards}</div>'
 
 
+PRINCIPLES = [
+    ("One job, done well", "Each app answers one specific question. If a feature does not help answer it, it does not ship."),
+    ("Honest about limits", "Every app page says what the app is not: not a diagnosis, not a certified appraisal, not a guarantee."),
+    ("Grounded in sources", "Health answers lean on published guidance from bodies such as the NIH and FDA. Valuation tools rely on documented brand references and market data."),
+    ("Private by default", "Most apps need no account. Records stay on your iPhone wherever a feature allows, and we collect only what an app needs to work."),
+]
+
+
+def principles_html():
+    return "".join(f'<div class="ll-principle"><h3>{e(t)}</h3><p>{e(d)}</p></div>' for t, d in PRINCIPLES)
+
+
 def faq_html(items):
     return '<div class="ll-faq">' + "".join(
         f'<details><summary>{e(q)}</summary><div class="ll-faq__a"><p>{e(a)}</p></div></details>' for q, a in items) + "</div>"
@@ -352,7 +364,7 @@ def build_home():
         <a class="ll-btn ll-btn--ghost" href="/about/">How we build</a>
       </div>
       <div class="ll-trust">
-        <div><strong>{avg:.1f}<b aria-hidden="true">★</b></strong><span>App Store rating</span></div>
+        <div><strong>{avg:.1f}<b aria-hidden="true">★</b></strong><span>avg. App Store rating</span></div>
         <div><strong data-count="{len(APPS)}">{len(APPS)}</strong><span>apps live</span></div>
         <div><strong data-count="168">168</strong><span>countries</span></div>
       </div>
@@ -379,7 +391,7 @@ def build_home():
   <div class="ll-wrap">
     <div class="ll-head ll-reveal">
       <div><p class="ll-kicker">Just shipped</p><h2 class="ll-h2">New on the <em>App Store</em>.</h2></div>
-      <p>New apps ship every month. These are the latest; the full catalogue, grouped by category, is on the apps page.</p>
+      <p>New apps ship every month. These are the latest; the full catalog, grouped by category, is on the apps page.</p>
     </div>
     <div class="ll-apps ll-stagger">{"".join(app_card(a) for a in newest)}</div>
     <a class="ll-more" href="/apps/">All {len(APPS)} apps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -403,10 +415,7 @@ def build_home():
       <div><p class="ll-kicker">How we build</p><h2 class="ll-h2">Four rules every app follows.</h2></div>
     </div>
     <div class="ll-principles ll-stagger">
-      <div class="ll-principle"><h3>One job, done well</h3><p>Each app answers one specific question. If a feature does not help answer it, it does not ship.</p></div>
-      <div class="ll-principle"><h3>Honest about limits</h3><p>Every app page says what the app is not: not a diagnosis, not a certified appraisal, not a guarantee.</p></div>
-      <div class="ll-principle"><h3>Grounded in sources</h3><p>Health and reference answers lean on published guidance such as NIH, FDA and clinical societies, and documented brand references.</p></div>
-      <div class="ll-principle"><h3>Private by default</h3><p>Most apps need no account, and records stay on your iPhone wherever the feature allows it.</p></div>
+      {principles_html()}
     </div>
   </div>
 </section>
@@ -414,7 +423,7 @@ def build_home():
 <section class="ll-wrap">
   <div class="ll-cta-band ll-reveal">
     <h2>One problem, one app. <em>Find yours.</em></h2>
-    <p class="ll-cta-band__sub">Every app is free to download on iPhone and live in 168 countries. New ones ship every month.</p>
+    <p class="ll-cta-band__sub">Every app is free to download on iPhone and available in 168 countries.</p>
     <div class="ll-hero__cta ll-cta-band__actions">
       <a class="ll-btn" href="/apps/">Browse all {len(APPS)} apps</a>
       <a class="ll-btn ll-btn--ghost" href="{DEV_URL}" rel="noopener" target="_blank">See us on the App Store ↗</a>
@@ -429,7 +438,7 @@ def build_home():
         {"@context": "https://schema.org", "@type": "ItemList", "name": "Loveiko Labs iOS apps", "numberOfItems": len(APPS),
          "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": app_ld(a)} for i, a in enumerate(APPS)]},
     ]
-    page("/", "Loveiko Labs — focused iPhone apps for health, family, resale and home",
+    page("/", "Loveiko Labs — iPhone apps that each solve one problem",
          f"iOS studio with {len(APPS)} focused iPhone apps: health trackers, pregnancy and baby tools, watch and jewelry valuation, home helpers, prayer and Bible apps.",
          body, schema, og_title="Loveiko Labs — focused iPhone apps")
 
@@ -472,7 +481,7 @@ def build_hub(h):
 
   <section class="ll-section ll-reveal" id="guides">
     <p class="ll-kicker">Compare</p>
-    <h2>Independent comparisons, <em>competitors included</em></h2>
+    <h2>Honest comparisons, <em>competitors included</em></h2>
     <p>Each guide ranks the best iOS apps for one need, explains where competitors are the better pick, and discloses that we make one of the apps on the list.</p>
     <div class="ll-related">{"".join(f'<a class="ll-related-card" href="/{a["guide"]}/"><h3>{e(a["guide_title"])} →</h3><p>How {e(a["name"])} compares with the alternatives on features, price and limits.</p></a>' for a in apps)}</div>
   </section>
@@ -516,7 +525,7 @@ def build_apps_index():
 <div class="ll-wrap">
   {crumbs_html(trail)}
   <section class="ll-hub-hero">
-    <p class="ll-eyebrow">The catalogue · {len(APPS)} apps</p>
+    <p class="ll-eyebrow">The catalog · {len(APPS)} apps</p>
     <h1>Every Loveiko Labs app, <em>by category</em>.</h1>
     <div class="ll-prose"><p>{len(APPS)} focused iPhone apps across health, pregnancy and baby, resale and valuation, home and style, and mind and faith. All are free to download and each page lists what the app does not do.</p></div>
   </section>
@@ -525,7 +534,7 @@ def build_apps_index():
     schema = [crumbs_ld(trail), {"@context": "https://schema.org", "@type": "ItemList", "name": "All Loveiko Labs apps", "numberOfItems": len(APPS),
               "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f'{SITE}/apps/{a["slug"]}/', "name": a["name"]} for i, a in enumerate(APPS)]}]
     page("/apps/", f"All {len(APPS)} Loveiko Labs iPhone apps by category | Loveiko Labs",
-         f"The full Loveiko Labs catalogue: {len(APPS)} focused iPhone apps for health tracking, pregnancy and baby, resale and valuation, home and style, and mind and faith.", body, schema, active="apps")
+         f"The full Loveiko Labs catalog: {len(APPS)} focused iPhone apps for health tracking, pregnancy and baby, resale and valuation, home and style, and mind and faith.", body, schema, active="apps")
 
 
 def build_guides_index():
@@ -559,7 +568,7 @@ def build_about():
   <section class="ll-hub-hero">
     <p class="ll-eyebrow">iOS studio · since 2024</p>
     <h1>One problem, one app, <em>one honest answer</em>.</h1>
-    <div class="ll-prose"><p>Loveiko Labs builds focused, single-purpose iPhone apps. Each one answers one specific, real-world question and ends when that question is answered clearly, with the next step you can actually take. {len(APPS)} apps are live on the App Store in 168 countries, and the catalogue grows every month.</p></div>
+    <div class="ll-prose"><p>Loveiko Labs builds focused, single-purpose iPhone apps. Each one answers one specific, real-world question clearly and points to the next step you can actually take. {len(APPS)} apps are live on the App Store in 168 countries, and the catalog grows every month.</p></div>
   </section>
 
   <section class="ll-section ll-split" id="studio">
@@ -583,10 +592,7 @@ def build_about():
     <p class="ll-kicker">How we build</p>
     <h2>Principles we don't break</h2>
     <div class="ll-principles ll-stagger">
-      <div class="ll-principle"><h3>One job, done well</h3><p>Snap, scan, log or record, and get a structured answer fast. No dashboards to learn.</p></div>
-      <div class="ll-principle"><h3>Honest about limits</h3><p>No app here claims a certification, guarantee or affiliation it does not have. Every product page carries scope and limitation notes.</p></div>
-      <div class="ll-principle"><h3>Grounded in sources</h3><p>Where an app touches health or authentication, its AI leans on public reference material (NIH, FDA, RxNav, clinical society guidance, documented brand references) and says so.</p></div>
-      <div class="ll-principle"><h3>Private by default</h3><p>Camera and audio processing stays on-device or in a private request wherever possible. We collect only what an app needs to work.</p></div>
+      {principles_html()}
     </div>
   </section>
 </div>'''
@@ -601,9 +607,9 @@ def build_editorial():
     trail = [("Loveiko Labs", "/"), ("Editorial policy", "/editorial-policy/")]
     sections = [
         ("Who writes these pages", "App pages, hub pages and buyer's guides are written and maintained by the Loveiko Labs team. We are app developers, not clinicians, appraisers or authenticators, and we write from that position."),
-        ("Disclosure", "We make one app in every buyer's guide. Each guide says so at the top. Where a competitor is cheaper, more established or better suited to a specific need, the guide says that too. We do not accept payment for placement and we do not use affiliate links."),
-        ("Sources", "Health pages rely on published guidance from public bodies and clinical societies, such as the FDA, NIH, CDC, ACOG, Mayo Clinic and specialty society guidelines, and on each app's own documented behaviour. Valuation and authentication pages rely on documented brand references and public market data. Competitor details come from their App Store listings at the time of writing."),
-        ("Health information", "Nothing on this site is medical advice. Our health apps organise your own records, explain terms and numbers on your own reports and help you prepare for appointments. They do not diagnose or treat any condition. Talk to your clinician before changing medication, supplements or diet."),
+        ("Disclosure", "We make one app in every buyer's guide. Each guide says so at the top. Where a competitor is cheaper, more established or better suited to a specific need, the guide says that too. We do not accept payment for placement, and this site does not use affiliate links. Where an app itself earns a commission from a partner, its app page says so."),
+        ("Sources", "Health pages rely on published guidance from public bodies and clinical societies, such as the FDA, NIH, CDC, ACOG, Mayo Clinic and specialty society guidelines, and on each app's own documented behavior. Valuation and authentication pages rely on documented brand references and public market data. Competitor details come from their App Store listings at the time of writing."),
+        ("Health information", "Nothing on this site is medical advice. Our health apps organize your own records, explain terms and numbers on your own reports and help you prepare for appointments. They do not diagnose or treat any condition. Talk to your clinician before changing medication, supplements or diet."),
         ("Authenticity and valuation", "Photo-based checks are a screening step, not certified authentication or a formal appraisal. For high-value purchases, insurance or sale, use a qualified professional who can inspect the item in person."),
         ("Ratings and numbers", "App Store ratings shown on this site are taken from Apple's public data and refreshed when pages are rebuilt. Prices are in US dollars as listed on the US App Store and may differ by country."),
         ("Updates and corrections", "We review hub pages and guides when apps or competitors change, and the review date is shown on each hub page. When we find an error, or someone points one out, we correct the page and update that date."),

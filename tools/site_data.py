@@ -1,4 +1,4 @@
-"""Single source of truth for the site's app catalogue and hubs.
+"""Single source of truth for the site's app catalog and hubs.
 
 Edit this file, then run `python3 tools/build.py` from the repo root.
 Store numbers (rating, rating count) live in tools/store.json and are
@@ -8,13 +8,13 @@ refreshed from the public iTunes lookup API by `python3 tools/build.py --refresh
 HUBS = [
     {
         "key": "health",
-        "desc": 'Eight focused iPhone health trackers for GLP-1, TRT, supplements, hair loss, eczema, PCOS, fatty liver and GERD. Organise logs and labs. Not medical advice.',
+        "desc": 'Eight focused iPhone health trackers for GLP-1, TRT, supplements, hair loss, eczema, PCOS, fatty liver and GERD. Organize logs and labs. Not medical advice.',
         "slug": "health",
         "name": "Health",
         "title": "Health tracking apps",
         "h1": "Health apps for <em>one condition</em> at a time.",
         "eyebrow": "Health · 8 apps",
-        "meta": "Eight focused iPhone apps for GLP-1, TRT, supplements, hair loss, eczema, PCOS, fatty liver and GERD. They organise your logs, explain your own lab numbers and prepare you for appointments. Not medical advice.",
+        "meta": "Eight focused iPhone apps for GLP-1, TRT, supplements, hair loss, eczema, PCOS, fatty liver and GERD. They organize your logs, explain your own lab numbers and prepare you for appointments. Not medical advice.",
         "short": "Trackers for GLP-1, TRT, supplements, hair loss, eczema, PCOS, fatty liver and reflux.",
         "intro": [
             "Each app here is built around one condition or routine. They keep your symptoms, doses, meals and lab results in one private record, explain the numbers on your own reports in plain language, and turn months of notes into a short summary you can bring to an appointment.",
@@ -22,7 +22,7 @@ HUBS = [
         ],
         "faq": [
             ("Are these apps a substitute for a doctor?",
-             "No. They are organisers and explainers. They help you log what happens between visits, understand the terms on your own lab report and arrive with better questions. Diagnosis and treatment decisions stay with your clinician."),
+             "No. They are organizers and explainers. They help you log what happens between visits, understand the terms on your own lab report and arrive with better questions. Diagnosis and treatment decisions stay with your clinician."),
             ("Where does the AI get its health information?",
              "Answers are grounded in published clinical guidance and public reference sources, such as FDA labelling, NIH resources and Mayo Clinic patient material. Each app page names the sources it relies on and the limits of what it covers."),
             ("Is my health data shared?",
@@ -79,17 +79,17 @@ HUBS = [
     },
     {
         "key": "home",
-        "desc": 'PestSnap identifies bugs and bites, RoofingCalc Pro is a free offline roofing calculator, and ColorCheck finds your colour season. iPhone apps.',
+        "desc": 'PestSnap identifies bugs and bites, RoofingCalc Pro is a free offline roofing calculator, and ColorCheck finds your color season. iPhone apps.',
         "slug": "home-style",
         "name": "Home & Style",
         "title": "Home and style apps",
         "h1": "Small tools for the <em>home</em> and the wardrobe.",
         "eyebrow": "Home & Style · 3 apps",
-        "meta": "Three iPhone apps for the home and wardrobe: PestSnap identifies bugs and bites, RoofingCalc Pro is a free offline roofing calculator, and ColorCheck finds your colour season and checks clothes before you buy.",
-        "short": "Pest identification, a free roofing calculator and personal colour analysis.",
+        "meta": "Three iPhone apps for the home and wardrobe: PestSnap identifies bugs and bites, RoofingCalc Pro is a free offline roofing calculator, and ColorCheck finds your color season and checks clothes before you buy.",
+        "short": "Pest identification, a free roofing calculator and personal color analysis.",
         "intro": [
             "PestSnap identifies the bug, bite or droppings in a photo and tells you what to do next, from a simple fix to calling a professional. RoofingCalc Pro works offline on a roof or in a truck and turns measurements into squares, pitch, rafters and materials.",
-            "ColorCheck finds your 12-season colour palette from a selfie, then gives a BUY or SKIP verdict when you point the camera at a piece of clothing.",
+            "ColorCheck finds your 12-season color palette from a selfie, then gives a BUY or SKIP verdict when you point the camera at a piece of clothing.",
         ],
         "faq": [
             ("Is PestSnap a replacement for an exterminator?",
@@ -97,7 +97,7 @@ HUBS = [
             ("Is RoofingCalc Pro really free?",
              "Yes. RoofingCalc Pro is free on the App Store and the calculators work without an internet connection."),
             ("How accurate is ColorCheck?",
-             "Lighting matters most. ColorCheck combines several photos and asks you to retake them when its confidence is below 70%. It is not a substitute for in-person draping by a trained colour analyst."),
+             "Lighting matters most. ColorCheck combines several photos and asks you to retake them when its confidence is below 70%. It is not a substitute for in-person draping by a trained color analyst."),
         ],
     },
     {
@@ -111,7 +111,7 @@ HUBS = [
         "meta": "Three iPhone apps for daily practice: Two Sparrows puts a Bible verse of the day on your Lock Screen, Home Screen and StandBy, Sakinah explains the words of the Muslim prayer phrase by phrase, and Herself turns your goals into one-minute affirmation scenes read in a copy of your own voice.",
         "short": "A Bible verse on your Lock Screen, the words of your salah explained, and a calm affirmation practice.",
         "intro": [
-            "Two Sparrows is a Bible verse widget for your Lock Screen, Home Screen and StandBy. A new verse arrives every morning, chosen for what is on your heart, with every word from the Berean Standard Bible. No ads, no feed, no streaks.",
+            "Two Sparrows is a Bible verse widget for your Lock Screen, Home Screen and StandBy. A new verse arrives every morning, chosen for what is on your heart, with every verse quoted from the Berean Standard Bible. No ads, no feed, no streaks.",
             "Sakinah explains the salah you already know by heart: Al-Fatiha, the words of the prayer and short surahs, one phrase at a time, with the Arabic text, its meaning and recitation. Prayer times and the qibla are included and stay free.",
             "Herself is a self-practice tool for calm and confidence. You describe what you want, read aloud for 15 seconds, and hear a one-minute scene of your moment going well in an AI voice made from yours. It is not therapy and does not promise results.",
         ],
@@ -169,15 +169,15 @@ APPS = [
      "tagline": "Snap a bug, bite or droppings and get the likely pest and what to do next.", "tag": "Pests"},
     {"slug": "roofingcalc", "name": "RoofingCalc Pro", "hub": "home", "store_id": 6761068784, "guide": "best-roofing-calculator-apps-2026", "guide_title": "Best roofing calculator apps 2026", "seo_title": 'RoofingCalc Pro: Free Offline Roofing Calculator', "guide_seo_title": 'Best Roofing Calculator Apps 2026: 7 Apps Compared', "seo_desc": 'Free offline roofing calculator for iPhone and iPad: roof area in squares, pitch, rafters, shingle bundles, job cost and PDF estimates.', "guide_seo_desc": 'We compare 7 roofing calculator apps for roofers and homeowners on measurements, pitch and rafter tools, offline use, estimates and price.',
      "tagline": "Free offline roofing calculator for area, squares, pitch, rafters and materials.", "tag": "Roofing"},
-    {"slug": "colorcheck", "name": "ColorCheck", "hub": "home", "store_id": 6761604617, "guide": "best-color-analysis-apps-2026", "guide_title": "Best color analysis apps 2026", "seo_title": 'ColorCheck: AI Color Analysis & 12-Season Palette', "guide_seo_title": 'Best Color Analysis Apps 2026, Ranked', "seo_desc": 'Find your 12-season colour palette from a selfie, then point your camera at clothing for a BUY or SKIP verdict. iPhone colour analysis app.', "guide_seo_desc": 'We rank the best AI colour analysis apps of 2026 on season accuracy, palettes, shopping help and price, and when to book a human analyst.',
-     "tagline": "Find your 12-season colour palette, then get BUY or SKIP on any piece of clothing.", "tag": "Colour"},
+    {"slug": "colorcheck", "name": "ColorCheck", "hub": "home", "store_id": 6761604617, "guide": "best-color-analysis-apps-2026", "guide_title": "Best color analysis apps 2026", "seo_title": 'ColorCheck: AI Color Analysis & 12-Season Palette', "guide_seo_title": 'Best Color Analysis Apps 2026, Ranked', "seo_desc": 'Find your 12-season color palette from a selfie, then point your camera at clothing for a BUY or SKIP verdict. iPhone color analysis app.', "guide_seo_desc": 'We rank the best AI color analysis apps of 2026 on season accuracy, palettes, shopping help and price, and when to book a human analyst.',
+     "tagline": "Find your 12-season color palette, then get BUY or SKIP on any piece of clothing.", "tag": "Color"},
     # ── Mind & Faith
     {"slug": "sakinah", "name": "Sakinah", "hub": "mind", "store_id": 6818006263, "guide": "best-quran-prayer-apps-2026", "guide_title": "Best Quran & prayer apps 2026", "seo_title": 'Sakinah: Understand Your Salah, Phrase by Phrase', "guide_seo_title": 'Best Quran & Prayer Apps 2026 to Understand Salah',
      "tagline": "Understand the words of your salah phrase by phrase, with recitation, prayer times and qibla.", "tag": "Prayer"},
     {"slug": "herself", "name": "Herself", "hub": "mind", "store_id": 6816159497, "guide": "best-affirmation-apps-2026", "guide_title": "Best affirmation apps 2026", "seo_title": 'Herself: Affirmations in Your Own Voice', "guide_seo_title": 'Best Affirmation Apps 2026: 5 iPhone Apps Compared',
      "tagline": "One-minute affirmation scenes of your moment going well, read in an AI copy of your own voice.", "tag": "Affirmations"},
     {"slug": "two-sparrows", "name": "Two Sparrows", "hub": "mind", "store_id": 6815332799, "guide": "best-bible-verse-widget-apps-2026", "guide_title": "Best Bible verse widget apps 2026", "seo_title": 'Two Sparrows: Bible Verse Widget for Your Lock Screen', "guide_seo_title": 'Best Bible Verse Widget Apps 2026: 7 iPhone Apps Compared',
-     "tagline": "A Bible verse of the day on your Lock Screen, Home Screen and StandBy, every word from Scripture.", "tag": "Bible"},
+     "tagline": "A Bible verse of the day on your Lock Screen, Home Screen and StandBy, every verse quoted from Scripture.", "tag": "Bible"},
 ]
 
 # Hero carousel: (app slug, index into the App Store screenshot list)
