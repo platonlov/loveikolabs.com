@@ -116,7 +116,7 @@ def footer(extra_col="", legal=None):
   <div class="ll-footer__grid">
     <div class="ll-footer__about">
       <a class="ll-logo" href="/" aria-label="Loveiko Labs home">{logo_svg()}<span class="ll-logo__text ll-footer__brand">Loveiko <span>Labs</span></span></a>
-      <p>Focused iPhone apps for health, family, resale, home and faith. One problem per app.</p>
+      <p>Focused iPhone apps, each built to solve one problem.</p>
     </div>
     <div><strong>Categories</strong><ul>{cats}</ul></div>
     {extra_col}
@@ -306,7 +306,7 @@ def app_ld(app):
 
 ORG = {"@context": "https://schema.org", "@type": "Organization", "@id": SITE + "/#organization", "name": "Loveiko Labs",
        "url": SITE + "/", "logo": {"@type": "ImageObject", "url": SITE + "/icons/logo-512.png", "width": 512, "height": 512},
-       "description": "iOS app studio making focused iPhone apps for health tracking, pregnancy and baby, resale valuation, the home and faith.",
+       "description": "iOS app studio making focused iPhone apps for health tracking, pregnancy and baby, resale valuation, the home, prayer and Scripture.",
        "foundingDate": "2024", "sameAs": [DEV_URL]}
 
 
@@ -345,8 +345,8 @@ def build_home():
   <div class="ll-aura" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   <div class="ll-wrap ll-home-hero__grid">
     <div class="ll-enter">
-      <h1>{len(APPS)} focused iPhone apps for health, family, resale, home <em>and faith.</em></h1>
-      <p class="ll-home-hero__sub">Loveiko Labs builds iPhone apps that each solve one specific problem, like tracking a condition, checking an ingredient or valuing a watch, and says plainly what it can't do.</p>
+      <h1>{len(APPS)} iPhone apps, each built to solve <em>one problem.</em></h1>
+      <p class="ll-home-hero__sub">Track a health condition, check an ingredient in pregnancy, value a watch, keep a Bible verse on your Lock Screen. Each Loveiko Labs app does one job well and says plainly what it can't do.</p>
       <div class="ll-home-hero__cta">
         <a class="ll-btn" href="#hubs">Explore the apps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
         <a class="ll-btn ll-btn--ghost" href="/about/">How we build</a>
@@ -430,7 +430,7 @@ def build_home():
          "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": app_ld(a)} for i, a in enumerate(APPS)]},
     ]
     page("/", "Loveiko Labs — focused iPhone apps for health, family, resale and home",
-         f"iOS studio with {len(APPS)} focused iPhone apps: health trackers, pregnancy and baby tools, watch and jewelry valuation, home helpers and faith.",
+         f"iOS studio with {len(APPS)} focused iPhone apps: health trackers, pregnancy and baby tools, watch and jewelry valuation, home helpers, prayer and Bible apps.",
          body, schema, og_title="Loveiko Labs — focused iPhone apps")
 
 
@@ -525,7 +525,7 @@ def build_apps_index():
     schema = [crumbs_ld(trail), {"@context": "https://schema.org", "@type": "ItemList", "name": "All Loveiko Labs apps", "numberOfItems": len(APPS),
               "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f'{SITE}/apps/{a["slug"]}/', "name": a["name"]} for i, a in enumerate(APPS)]}]
     page("/apps/", f"All {len(APPS)} Loveiko Labs iPhone apps by category | Loveiko Labs",
-         f"The full Loveiko Labs catalogue: {len(APPS)} focused iPhone apps for health tracking, pregnancy and baby, resale and valuation, home and style, and faith.", body, schema, active="apps")
+         f"The full Loveiko Labs catalogue: {len(APPS)} focused iPhone apps for health tracking, pregnancy and baby, resale and valuation, home and style, and mind and faith.", body, schema, active="apps")
 
 
 def build_guides_index():
@@ -593,7 +593,7 @@ def build_about():
     schema = [ORG, crumbs_ld(trail), {"@context": "https://schema.org", "@type": "AboutPage", "url": SITE + "/about/", "name": "About Loveiko Labs",
               "mainEntity": {"@id": SITE + "/#organization"}}]
     page("/about/", "About Loveiko Labs — iOS app studio | Loveiko Labs",
-         f"Loveiko Labs is an iOS studio founded in 2024, building {len(APPS)} focused iPhone apps for health, family, resale, home and faith, one problem per app.",
+         f"Loveiko Labs is an iOS studio founded in 2024, building {len(APPS)} focused iPhone apps for health, family, resale, the home, prayer and Scripture, one problem per app.",
          body, schema, active="about")
 
 
