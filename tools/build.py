@@ -21,7 +21,7 @@ TODAY = datetime.date.today()
 TODAY_ISO = TODAY.isoformat()
 TODAY_H = TODAY.strftime("%B %Y")
 DEV_URL = "https://apps.apple.com/us/developer/id1478618306"
-ASSET_V = "5"  # bump when styles.css / site.js change (browsers cache them for a day)
+ASSET_V = "6"  # bump when styles.css / site.js change (browsers cache them for a day)
 
 HUB = {h["key"]: h for h in HUBS}
 APP = {a["slug"]: a for a in APPS}
@@ -137,7 +137,7 @@ def footer(extra_col="", legal=None):
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">')
+         '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Fraunces:ital,opsz,wght@1,9..144,600&display=swap" rel="stylesheet">')
 HEAD_COMMON = ('<meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)">\n'
                '<meta name="theme-color" content="#0b0c0f" media="(prefers-color-scheme: dark)">\n'
                '<meta name="color-scheme" content="light dark">\n'
@@ -357,7 +357,7 @@ def build_home():
   <div class="ll-aura" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   <div class="ll-wrap ll-home-hero__grid">
     <div class="ll-enter">
-      <h1>{len(APPS)} iPhone apps, each built to solve <em>one problem.</em></h1>
+      <h1>{len(APPS)} iOS apps, each built to solve <em>one problem.</em></h1>
       <p class="ll-home-hero__sub">Track a health condition, check an ingredient in pregnancy, value a watch, keep a Bible verse on your Lock Screen. Each Loveiko Labs app does one job well and says plainly what it can't do.</p>
       <div class="ll-home-hero__cta">
         <a class="ll-btn" href="#hubs">Explore the apps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
