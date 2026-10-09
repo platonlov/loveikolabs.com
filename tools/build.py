@@ -21,7 +21,7 @@ TODAY = datetime.date.today()
 TODAY_ISO = TODAY.isoformat()
 TODAY_H = TODAY.strftime("%B %Y")
 DEV_URL = "https://apps.apple.com/us/developer/id1478618306"
-ASSET_V = "6"  # bump when styles.css / site.js change (browsers cache them for a day)
+ASSET_V = "7"  # bump when styles.css / site.js change (browsers cache them for a day)
 
 HUB = {h["key"]: h for h in HUBS}
 APP = {a["slug"]: a for a in APPS}

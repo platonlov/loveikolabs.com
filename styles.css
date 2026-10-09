@@ -626,10 +626,11 @@ a { color: inherit; }
 .ll-home-hero h1 em {
   font-family: var(--serif); font-style: italic; font-weight: 600; letter-spacing: -0.02em;
   background: var(--brand-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
-  padding-right: .06em;
+  padding-right: .06em; -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
+/* dark: solid fill + text-shadow glow; filter on clipped gradient text renders invisible in older iOS WebKit */
 @media (prefers-color-scheme: dark) {
-  .ll-home-hero h1 em { filter: drop-shadow(0 0 18px rgba(106,197,112,.35)); }
+  .ll-home-hero h1 em { background: none; color: #7fd384; text-shadow: 0 0 18px rgba(106,197,112,.35); }
 }
 .ll-home-hero__sub { font-size: 19px; line-height: 1.6; color: var(--muted); max-width: 52ch; margin-bottom: 32px; text-wrap: pretty; }
 .ll-home-hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
